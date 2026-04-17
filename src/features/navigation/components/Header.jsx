@@ -290,7 +290,9 @@ function Header() {
                   alt={activeService.title}
                   width={520}
                   height={420}
+                  loading="eager"
                   sizes="(max-width: 1024px) 100vw, 33vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </div>

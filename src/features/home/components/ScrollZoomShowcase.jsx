@@ -53,6 +53,8 @@ function ScrollZoomShowcase() {
                   src={image}
                   alt={`Showcase ${index + 1}`}
                   fill
+                  loading={index === 0 || index === 6 ? "eager" : undefined}
+                  priority={index === 0 || index === 6}
                   sizes="(max-width: 768px) 50vw, (max-width: 1100px) 33vw, 25vw"
                 />
               </div>
