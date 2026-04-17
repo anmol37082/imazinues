@@ -59,12 +59,12 @@
   height: 112px;
   overflow: visible;
   position: relative;
-  margin-left: -22px;
+  margin-left: -64px;
 }
 
 .logoImage {
   width: auto;
-  height: 196px;
+  height: 208px;
   object-fit: contain;
   transition: opacity 0.2s ease;
   margin-left: 0;
@@ -719,10 +719,11 @@
     width: 520px;
     flex-basis: 520px;
     height: 96px;
+    margin-left: -56px;
   }
 
   .logoImage {
-    height: 164px;
+    height: 174px;
   }
 
   .menu {
@@ -755,10 +756,11 @@
     width: 440px;
     flex-basis: 440px;
     height: 84px;
+    margin-left: -48px;
   }
 
   .logoImage {
-    height: 142px;
+    height: 150px;
   }
 
   .menu {
@@ -809,10 +811,11 @@
     width: 360px;
     flex-basis: 360px;
     height: 74px;
+    margin-left: -40px;
   }
 
   .logoImage {
-    height: 118px;
+    height: 126px;
   }
 
   .menu {
@@ -1172,11 +1175,11 @@
     width: 390px;
     flex-basis: 390px;
     height: 82px;
-    margin-left: -20px;
+    margin-left: -48px;
   }
 
   .logoImage {
-    height: 140px;
+    height: 148px;
   }
 
   .right {
