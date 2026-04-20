@@ -543,20 +543,25 @@
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.12);
   z-index: 20;
   transform-origin: top center;
-  animation: dropdown-panel-in 0.24s ease-out both;
+  animation: dropdown-panel-in 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .casesDropdown {
   display: block;
   padding: 44px 46px;
   background: var(--nav-surface);
+  max-height: calc(100dvh - 88px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .casesDropdown > *,
 .servicesDropdown > * {
   opacity: 0;
-  transform: translateY(-22px);
-  animation: dropdown-content-in 0.34s ease-out 0.16s both;
+  transform: translateY(26px);
+  filter: blur(8px);
+  animation: dropdown-content-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
 }
 
 .casesDropdownHeader {
@@ -695,15 +700,20 @@
   padding: 8px 12px 8px 8px;
   border-radius: 0;
   opacity: 0;
-  transform: translateY(-18px);
-  animation: dropdown-content-in 0.34s ease-out 0.3s both;
+  transform: translateY(24px);
+  filter: blur(8px);
+  animation: dropdown-content-in 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
 }
 
 .dropCard:nth-child(2) {
-  animation-delay: 0.36s;
+  animation-delay: 0.3s;
 }
 
 .dropCard:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.dropCard:nth-child(4) {
   animation-delay: 0.42s;
 }
 
@@ -812,8 +822,9 @@
   cursor: pointer;
   transition: color 0.2s ease, opacity 0.2s ease;
   opacity: 0;
-  transform: translateY(-18px);
-  animation: dropdown-content-in 0.3s ease-out both;
+  transform: translateY(20px);
+  filter: blur(8px);
+  animation: dropdown-content-in 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .serviceItem:hover {
@@ -868,12 +879,22 @@
   letter-spacing: -0.02em;
 }
 
+.servicesCopyBody,
+.servicesPreviewStage {
+  animation: service-detail-in 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .servicesPreviewImage,
 .servicesPreview img {
   width: 100%;
   height: 360px;
   object-fit: cover;
   display: block;
+}
+
+.servicesPreviewStage {
+  width: 100%;
+  height: 100%;
 }
 
 .servicesCta {
@@ -889,8 +910,9 @@
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
   opacity: 0;
-  transform: translateY(-18px);
-  animation: dropdown-content-in 0.3s ease-out 0.5s both;
+  transform: translateY(20px);
+  filter: blur(8px);
+  animation: dropdown-content-in 0.36s cubic-bezier(0.22, 1, 0.36, 1) 0.42s both;
 }
 
 .servicesCta:hover {
@@ -901,7 +923,7 @@
 @keyframes dropdown-panel-in {
   0% {
     opacity: 0;
-    transform: translateY(14px) scaleY(0.92);
+    transform: translateY(18px) scaleY(0.94);
   }
 
   100% {
@@ -913,12 +935,28 @@
 @keyframes dropdown-content-in {
   0% {
     opacity: 0;
-    transform: translateY(-22px);
+    transform: translateY(26px);
+    filter: blur(8px);
   }
 
   100% {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes service-detail-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
   }
 }
 
@@ -1228,7 +1266,6 @@
     max-height: calc(100dvh - 98px);
     overflow-y: auto;
     overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
     animation: dropdown-panel-in 0.22s ease-out both;
   }
 

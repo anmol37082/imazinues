@@ -9,6 +9,7 @@ import styles from "./Header.module.css";
 function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeServiceId, setActiveServiceId] = useState(servicesData[0].id);
+  const [showAllCases, setShowAllCases] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [hoveredLabel, setHoveredLabel] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -107,6 +108,12 @@ function Header() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (activeDropdown !== "cases") {
+      setShowAllCases(false);
+    }
+  }, [activeDropdown]);
 
   useEffect(() => {
     const shouldLockScroll = Boolean(activeDropdown || isMobileMenuOpen);
@@ -220,7 +227,12 @@ function Header() {
             <div className={`${styles.dropdown} ${styles.casesDropdown}`}>
               <div className={styles.casesDropdownHeader}>
                 <h3>Our latest case studies</h3>
-                <button className={styles.casesLink} type="button">
+                <button
+                  aria-expanded={showAllCases}
+                  className={styles.casesLink}
+                  onClick={() => setShowAllCases((prev) => !prev)}
+                  type="button"
+                >
                   {renderSplitNavLabel("EXPLORE ALL CASES")}
                   <svg
                     aria-hidden="true"
@@ -241,7 +253,7 @@ function Header() {
               </div>
 
               <div className={styles.casesGrid}>
-                {casesData.map((item) => (
+                {(showAllCases ? casesData : casesData.slice(0, 3)).map((item) => (
                   <div className={styles.dropCard} key={item.id}>
                     <div className={styles.cardMedia}>
                       <Image
@@ -309,19 +321,23 @@ function Header() {
               </div>
 
               <div className={styles.servicesCopy}>
-                <p>{activeService.description}</p>
+                <div className={styles.servicesCopyBody} key={activeService.id}>
+                  <p>{activeService.description}</p>
+                </div>
               </div>
 
               <div className={styles.servicesPreview}>
-                <Image
-                  src={activeService.image}
-                  alt={activeService.title}
-                  width={520}
-                  height={420}
-                  className={styles.servicesPreviewImage}
-                  loading="eager"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                />
+                <div className={styles.servicesPreviewStage} key={activeService.id}>
+                  <Image
+                    src={activeService.image}
+                    alt={activeService.title}
+                    width={520}
+                    height={420}
+                    className={styles.servicesPreviewImage}
+                    loading="eager"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                </div>
               </div>
             </div>
           )}
