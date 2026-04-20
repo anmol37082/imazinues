@@ -1,15 +1,15 @@
 const casesData = [
   {
     id: 1,
-    title: "Voco Finance",
-    category: "Finance & Accounting",
+    title: "Uphar hi Uphar",
+    category: "From search engines to social feeds.",
     image:
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
   },
   {
     id: 2,
-    title: "Hogendorp Dental",
-    category: "Healthcare",
+    title: "UK Special course",
+    category: " We craft strategies that get you seen, heard, and remembered.",
     image:
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
   },
