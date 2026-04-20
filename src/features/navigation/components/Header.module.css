@@ -627,14 +627,26 @@
   color: #2f2bff;
 }
 
-.casesLink:hover .navAnimatedBase {
-  opacity: 0;
+.casesLink .navSplitAltBase,
+.casesLink .navSplitAltUp,
+.casesLink .navSplitAltDown {
+  transition-delay: calc(var(--split-index, 0) * 0.08s);
+}
+
+.casesLink:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase {
+  transform: translateY(100%);
+}
+
+.casesLink:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp {
+  transform: translateY(100%);
+}
+
+.casesLink:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase {
   transform: translateY(-100%);
 }
 
-.casesLink:hover .navAnimatedText {
-  opacity: 1;
-  transform: translateY(0);
+.casesLink:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown {
+  transform: translateY(-100%);
 }
 
 .navbarBackdrop {

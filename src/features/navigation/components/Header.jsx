@@ -221,7 +221,7 @@ function Header() {
               <div className={styles.casesDropdownHeader}>
                 <h3>Our latest case studies</h3>
                 <button className={styles.casesLink} type="button">
-                  {renderAnimatedLabel("EXPLORE ALL CASES")}
+                  {renderSplitNavLabel("EXPLORE ALL CASES")}
                   <svg
                     aria-hidden="true"
                     className={styles.btnIcon}
