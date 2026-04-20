@@ -108,6 +108,29 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const shouldLockScroll = Boolean(activeDropdown || isMobileMenuOpen);
+
+    if (!shouldLockScroll) {
+      return undefined;
+    }
+
+    const { body, documentElement } = document;
+    const previousBodyOverflow = body.style.overflow;
+    const previousHtmlOverflow = documentElement.style.overflow;
+    const previousBodyTouchAction = body.style.touchAction;
+
+    body.style.overflow = "hidden";
+    documentElement.style.overflow = "hidden";
+    body.style.touchAction = "none";
+
+    return () => {
+      body.style.overflow = previousBodyOverflow;
+      documentElement.style.overflow = previousHtmlOverflow;
+      body.style.touchAction = previousBodyTouchAction;
+    };
+  }, [activeDropdown, isMobileMenuOpen]);
+
   const renderAnimatedLabel = (label) => (
     <span
       className={styles.navAnimated}
@@ -139,7 +162,11 @@ function Header() {
         const content = char === " " ? "\u00A0" : char;
 
         return (
-          <span className={styles.navSplitCharWrap} key={`${label}-${index}`}>
+          <span
+            className={styles.navSplitCharWrap}
+            key={`${label}-${index}`}
+            style={{ "--split-index": index }}
+          >
             {!isEven && <span className={styles.navSplitAltUp}>{content}</span>}
             <span className={styles.navSplitAltBase}>{content}</span>
             {isEven && <span className={styles.navSplitAltDown}>{content}</span>}
@@ -271,7 +298,7 @@ function Header() {
                     onMouseEnter={() => setActiveServiceId(service.id)}
                     type="button"
                   >
-                    {renderAnimatedLabel(service.title)}
+                    {renderSplitNavLabel(service.title)}
                   </button>
                 ))}
 
@@ -290,9 +317,9 @@ function Header() {
                   alt={activeService.title}
                   width={520}
                   height={420}
+                  className={styles.servicesPreviewImage}
                   loading="eager"
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             </div>
@@ -308,7 +335,7 @@ function Header() {
 
       <div className={styles.right}>
         <button className={styles.btn} type="button">
-          {renderAnimatedLabel("BOOK A CALL")}
+          {renderSplitNavLabel("BOOK A CALL")}
           <svg
             aria-hidden="true"
             className={styles.btnIcon}
@@ -422,7 +449,7 @@ function Header() {
           </div>
 
           <button className={styles.mobileCallButton} type="button">
-            {renderAnimatedLabel("BOOK A CALL")}
+            {renderSplitNavLabel("BOOK A CALL")}
             <svg
               aria-hidden="true"
               className={styles.btnIcon}

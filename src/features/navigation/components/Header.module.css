@@ -8,10 +8,11 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   column-gap: 24px;
-  padding: 9px 16px 9px 0;
+  padding: 6px 16px 6px 0;
   background: rgba(8, 8, 8, 0.42);
-  backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: white;
   position: fixed;
@@ -30,7 +31,7 @@
 }
 
 .navbarCompact {
-  padding: 9px 16px 9px 8px;
+  padding: 6px 16px 6px 8px;
   top: 10px;
   margin: 0 90px;
   border-radius: 0;
@@ -45,8 +46,9 @@
   background: var(--nav-surface);
   color: #111111;
   border-bottom: 1px solid var(--nav-divider);
-  backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  
 }
 
 .logo {
@@ -56,15 +58,15 @@
   justify-self: start;
   width: 620px;
   flex: 0 0 620px;
-  height: 112px;
+  height: 92px;
   overflow: visible;
   position: relative;
-  margin-left: -64px;
+  margin-left: -48px;
 }
 
 .logoImage {
   width: auto;
-  height: 208px;
+  height: 176px;
   object-fit: contain;
   transition: opacity 0.2s ease;
   margin-left: 0;
@@ -104,7 +106,7 @@
   font-style: normal;
   font-weight: 100;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 26px;
   letter-spacing: 1px;
   font-family: "Karla", sans-serif;
 }
@@ -133,6 +135,13 @@
   height: 100%;
 }
 
+.staticLabel {
+  display: inline-block;
+  font-family: "Source Code Pro", "Source Code Pro Fallback", monospace;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
 .navSplitAlt {
   display: inline-flex;
   gap: 0.05em;
@@ -154,7 +163,7 @@
   font-family: "Source Code Pro", "Source Code Pro Fallback", monospace;
   font-weight: 300;
   letter-spacing: 0.08em;
-  transition: transform 0.38s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.16s ease-out;
 }
 
 .navSplitAltUp,
@@ -171,79 +180,249 @@
   top: 100%;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase {
+.casesTrigger:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(odd) .navSplitAltBase {
   transform: translateY(100%);
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp {
+.casesTrigger:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(odd) .navSplitAltUp {
   transform: translateY(100%);
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase {
+.casesTrigger:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(even) .navSplitAltBase {
   transform: translateY(-100%);
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(even) .navSplitAltDown {
   transform: translateY(-100%);
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(1) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(1) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(1) .navSplitAltDown {
   transition-delay: 0s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(2) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(2) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(2) .navSplitAltDown {
   transition-delay: 0.08s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(3) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(3) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(3) .navSplitAltDown {
   transition-delay: 0.16s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(4) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(4) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(4) .navSplitAltDown {
   transition-delay: 0.24s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(5) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(5) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(5) .navSplitAltDown {
   transition-delay: 0.32s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(6) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(6) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(6) .navSplitAltDown {
   transition-delay: 0.4s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(7) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(7) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(7) .navSplitAltDown {
   transition-delay: 0.48s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(8) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(8) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(8) .navSplitAltDown {
   transition-delay: 0.56s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(9) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(9) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(9) .navSplitAltDown {
   transition-delay: 0.64s;
 }
 
-.menu li:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
-.menu li:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
-.menu li:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown {
+.casesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.casesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.casesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.servicesTrigger:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.menu > li > .navSplitAlt:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown,
+.btn:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.btn:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.btn:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.mobileCallButton:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown,
+.serviceItem:hover .navSplitCharWrap:nth-child(10) .navSplitAltBase,
+.serviceItem:hover .navSplitCharWrap:nth-child(10) .navSplitAltUp,
+.serviceItem:hover .navSplitCharWrap:nth-child(10) .navSplitAltDown {
   transition-delay: 0.72s;
 }
 
@@ -275,7 +454,9 @@
   display: none;
 }
 
-.menu li:hover .navAnimatedBase,
+.menu > li:hover > .navAnimated .navAnimatedBase,
+.casesTrigger:hover .navAnimatedBase,
+.servicesTrigger:hover .navAnimatedBase,
 .btn:hover .navAnimatedBase,
 .seeBtn:hover .navAnimatedBase,
 .serviceItem:hover .navAnimatedBase {
@@ -283,7 +464,9 @@
   transform: translateY(-100%);
 }
 
-.menu li:hover .navAnimatedText,
+.menu > li:hover > .navAnimated .navAnimatedText,
+.casesTrigger:hover .navAnimatedText,
+.servicesTrigger:hover .navAnimatedText,
 .btn:hover .navAnimatedText,
 .seeBtn:hover .navAnimatedText,
 .serviceItem:hover .navAnimatedText,
@@ -318,11 +501,23 @@
   background: linear-gradient(90deg, #3b3bff, #6a00ff);
   color: white;
   border: none;
-  padding: 18px 44px;
+  padding: 14px 34px;
   font-size: 15px;
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   cursor: pointer;
+}
+
+.btn .navSplitAltBase,
+.btn .navSplitAltUp,
+.btn .navSplitAltDown,
+.mobileCallButton .navSplitAltBase,
+.mobileCallButton .navSplitAltUp,
+.mobileCallButton .navSplitAltDown {
+  font-family: "Source Code Pro", "Source Code Pro Fallback", monospace;
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
 .btnIcon {
@@ -388,12 +583,14 @@
 }
 
 .servicesCopy {
-  padding-top: 6px;
+  padding-top: 0;
+  align-self: start;
   animation-delay: 0.24s;
 }
 
 .servicesPreview {
   width: 100%;
+  min-height: 360px;
   animation-delay: 0.3s;
 }
 
@@ -446,8 +643,9 @@
   width: 100%;
   height: 100vh;
   background: rgba(10, 10, 10, 0.18);
+   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+ 
   pointer-events: none;
   z-index: 10;
 }
@@ -581,28 +779,55 @@
   background: var(--nav-surface);
 }
 
+/* Updated Service Item with same hover animation as nav links */
 .serviceItem {
+  display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
   padding: 0;
   border: none;
   background: transparent;
   color: #111111;
   font: inherit;
-  font-family: "Vesper Libre", serif;
-  font-size: 28px;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
+  font-family: rinter, "rinter Fallback", Inter, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -1.2px;
   text-align: left;
   cursor: pointer;
+  transition: color 0.2s ease, opacity 0.2s ease;
   opacity: 0;
   transform: translateY(-18px);
   animation: dropdown-content-in 0.3s ease-out both;
 }
 
-.serviceItem .navAnimated {
-  display: inline-block;
-  max-width: 100%;
+.serviceItem:hover {
+  color: #2f2bff;
 }
 
+.serviceItem.active {
+  opacity: 1;
+}
+
+.servicesList:has(.serviceItem:hover) .serviceItem:not(:hover),
+.serviceItem:not(.active) {
+  opacity: 0.62;
+}
+
+/* Service Item font styling for navSplitAlt */
+.serviceItem .navSplitAltBase,
+.serviceItem .navSplitAltUp,
+.serviceItem .navSplitAltDown {
+  font-family: rinter, "rinter Fallback", Inter, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+/* Animation delays for service items */
 .serviceItem:nth-child(1) {
   animation-delay: 0.24s;
 }
@@ -617,6 +842,25 @@
 
 .serviceItem:nth-child(4) {
   animation-delay: 0.42s;
+}
+
+/* Updated servicesCopy with reduced font weight */
+.servicesCopy p {
+  margin: 0;
+  color: #171717;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+}
+
+.servicesPreviewImage,
+.servicesPreview img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
 }
 
 .servicesCta {
@@ -639,33 +883,6 @@
 .servicesCta:hover {
   background: #111111;
   color: #ffffff;
-}
-
-.active {
-  opacity: 1;
-}
-
-.servicesList:has(.serviceItem:hover) .serviceItem:not(:hover),
-.serviceItem:not(.active) {
-  opacity: 0.62;
-}
-
-.servicesCopy p {
-  margin: 0;
-  color: #171717;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: -0.02em;
-}
-
-.servicesPreview img {
-  width: 100%;
-  height: auto;
-  min-height: 420px;
-  object-fit: cover;
-  display: block;
 }
 
 @keyframes dropdown-panel-in {
@@ -706,6 +923,66 @@
   }
 }
 
+@keyframes split-down-fast {
+  0% {
+    transform: translateY(0);
+  }
+
+  8% {
+    transform: translateY(118%);
+  }
+
+  16% {
+    transform: translateY(88%);
+  }
+
+  26% {
+    transform: translateY(110%);
+  }
+
+  42% {
+    transform: translateY(96%);
+  }
+
+  65% {
+    transform: translateY(103%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes split-up-fast {
+  0% {
+    transform: translateY(0);
+  }
+
+  8% {
+    transform: translateY(-118%);
+  }
+
+  16% {
+    transform: translateY(-88%);
+  }
+
+  26% {
+    transform: translateY(-110%);
+  }
+
+  42% {
+    transform: translateY(-96%);
+  }
+
+  65% {
+    transform: translateY(-103%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 @media (max-width: 1440px) {
   .navbar {
     margin: 0 20px;
@@ -719,12 +996,12 @@
   .logo {
     width: 520px;
     flex-basis: 520px;
-    height: 96px;
-    margin-left: -56px;
+    height: 82px;
+    margin-left: -42px;
   }
 
   .logoImage {
-    height: 174px;
+    height: 152px;
   }
 
   .menu {
@@ -737,7 +1014,7 @@
   }
 
   .btn {
-    padding: 16px 28px;
+    padding: 13px 24px;
     font-size: 14px;
   }
 }
@@ -746,7 +1023,7 @@
   .navbar {
     margin: 0 10px;
     column-gap: 14px;
-    padding: 9px 14px 9px 0;
+    padding: 7px 14px 7px 0;
   }
 
   .navbarCompact {
@@ -756,12 +1033,12 @@
   .logo {
     width: 440px;
     flex-basis: 440px;
-    height: 84px;
-    margin-left: -48px;
+    height: 72px;
+    margin-left: -36px;
   }
 
   .logoImage {
-    height: 150px;
+    height: 130px;
   }
 
   .menu {
@@ -792,7 +1069,7 @@
 
   .btn {
     gap: 8px;
-    padding: 14px 18px;
+    padding: 11px 16px;
     font-size: 12px;
   }
 }
@@ -801,7 +1078,7 @@
   .navbar {
     margin: 0 4px;
     column-gap: 10px;
-    padding: 8px 12px 8px 0;
+    padding: 6px 12px 6px 0;
   }
 
   .navbarCompact {
@@ -811,12 +1088,12 @@
   .logo {
     width: 360px;
     flex-basis: 360px;
-    height: 74px;
-    margin-left: -40px;
+    height: 62px;
+    margin-left: -30px;
   }
 
   .logoImage {
-    height: 126px;
+    height: 108px;
   }
 
   .menu {
@@ -834,7 +1111,7 @@
   }
 
   .btn {
-    padding: 12px 14px;
+    padding: 9px 12px;
     font-size: 11px;
   }
 
@@ -859,10 +1136,12 @@
 
   .servicesPreview {
     grid-column: 1 / -1;
+    min-height: 240px;
   }
 
+  .servicesPreviewImage,
   .servicesPreview img {
-    min-height: 260px;
+    height: 240px;
   }
 
   .dropCard {
@@ -878,7 +1157,7 @@
 @media (max-width: 768px) {
   .navbar {
     grid-template-columns: minmax(0, 1fr) auto;
-    padding: 18px 20px 18px 0;
+    padding: 14px 20px 14px 0;
     margin: 0;
   }
 
@@ -1159,8 +1438,8 @@
   }
 
   .servicesCopy p {
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .servicesCta {
@@ -1175,15 +1454,15 @@
     justify-self: start;
     width: 390px;
     flex-basis: 390px;
-    height: 82px;
-    margin-left: -34px;
+    height: 68px;
+    margin-left: -24px;
   }
 
   .logoImage {
-    height: 148px;
+    height: 126px;
   }
 
   .right {
     display: none;
   }
-}
+} 
