@@ -110,12 +110,6 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    if (activeDropdown !== "cases") {
-      setShowAllCases(false);
-    }
-  }, [activeDropdown]);
-
-  useEffect(() => {
     const shouldLockScroll = Boolean(activeDropdown || isMobileMenuOpen);
 
     if (!shouldLockScroll) {
@@ -184,6 +178,11 @@ function Header() {
     </span>
   );
 
+  const closeDesktopDropdowns = () => {
+    setActiveDropdown(null);
+    setShowAllCases(false);
+  };
+
   return (
     <nav
       className={`${styles.navbar}${
@@ -193,7 +192,7 @@ function Header() {
       }`}
       onMouseLeave={() => {
         if (!isMobileMenuOpen) {
-          setActiveDropdown(null);
+          closeDesktopDropdowns();
         }
       }}
     >
@@ -295,7 +294,10 @@ function Header() {
 
         <li
           className={styles.servicesMenu}
-          onMouseEnter={() => setActiveDropdown("services")}
+          onMouseEnter={() => {
+            setShowAllCases(false);
+            setActiveDropdown("services");
+          }}
         >
           <span className={styles.servicesTrigger}>{renderSplitNavLabel("SERVICES +")}</span>
 
@@ -342,10 +344,10 @@ function Header() {
             </div>
           )}
         </li>
-        <li onMouseEnter={() => setActiveDropdown(null)}>
+        <li onMouseEnter={closeDesktopDropdowns}>
           {renderSplitNavLabel("ABOUT US")}
         </li>
-        <li onMouseEnter={() => setActiveDropdown(null)}>
+        <li onMouseEnter={closeDesktopDropdowns}>
           {renderSplitNavLabel("CONTACT")}
         </li>
       </ul>
@@ -377,7 +379,7 @@ function Header() {
         className={styles.mobileMenuToggle}
         onClick={() => {
           setIsMobileMenuOpen((prev) => !prev);
-          setActiveDropdown(null);
+          closeDesktopDropdowns();
           setActiveMobileSection(null);
         }}
         type="button"

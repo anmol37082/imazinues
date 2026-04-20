@@ -27,6 +27,14 @@ const casesData = [
     image:
       "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
   },
+ {
+    id: 5,
+    title: "The Divor ",
+    category: "From search engines to social feeds. ",
+    image:
+      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
+  },
+
 ];
 
 export default casesData;
