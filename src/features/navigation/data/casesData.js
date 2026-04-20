@@ -15,8 +15,8 @@ const casesData = [
   },
   {
     id: 3,
-    title: "ADCM",
-    category: "Construction & Renovation",
+    title: "Brand Identity",
+    category: "From zero to hero",
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
   },
