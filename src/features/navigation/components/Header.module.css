@@ -145,6 +145,7 @@
 .navSplitAlt {
   display: inline-flex;
   gap: 0.05em;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -744,7 +745,7 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   max-width: 10ch;
-  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .cardContent p {
@@ -1212,14 +1213,22 @@
     color: #111111;
     border-top: 1px solid var(--nav-divider);
     box-shadow: 0 24px 44px rgba(0, 0, 0, 0.12);
+    max-height: calc(100dvh - 98px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     animation: dropdown-panel-in 0.22s ease-out both;
   }
 
   .mobileNavList {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .mobileNavEntry {
+    width: 100%;
   }
 
   .mobileNavButton {
@@ -1240,10 +1249,27 @@
     cursor: pointer;
   }
 
+  .mobileNavButton > span:first-child {
+    flex: 1 1 auto;
+  }
+
+  .mobileNavEntry:last-child .mobileNavButton {
+    padding-top: 22px;
+  }
+
   .mobileNavCaret {
     font-size: 18px;
     line-height: 1;
     transition: transform 0.28s ease;
+  }
+
+  .mobileNavCaret,
+  .mobileNavCaretPlaceholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    flex: 0 0 18px;
   }
 
   .mobileAccordion {
@@ -1275,7 +1301,7 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    padding: 6px 0 14px;
+    padding: 8px 0 14px;
     transform-origin: top;
     transform: translateY(-6px);
     transition: transform 0.34s ease;
@@ -1329,7 +1355,7 @@
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    padding: 6px 0 14px;
+    padding: 8px 0 14px;
     transform-origin: top;
     transform: translateY(-6px);
     transition: transform 0.34s ease;

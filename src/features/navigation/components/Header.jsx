@@ -119,10 +119,11 @@ function Header() {
     const previousBodyOverflow = body.style.overflow;
     const previousHtmlOverflow = documentElement.style.overflow;
     const previousBodyTouchAction = body.style.touchAction;
+    const shouldDisableTouch = Boolean(activeDropdown);
 
     body.style.overflow = "hidden";
     documentElement.style.overflow = "hidden";
-    body.style.touchAction = "none";
+    body.style.touchAction = shouldDisableTouch ? "none" : previousBodyTouchAction;
 
     return () => {
       body.style.overflow = previousBodyOverflow;
@@ -373,7 +374,8 @@ function Header() {
       {isMobileMenuOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.mobileNavList}>
-            <button
+            <div className={styles.mobileNavEntry}>
+              <button
               aria-expanded={activeMobileSection === "cases"}
               className={styles.mobileNavButton}
               onClick={() =>
@@ -387,7 +389,7 @@ function Header() {
               </span>
             </button>
 
-            <div
+              <div
               className={`${styles.mobileAccordion}${
                 activeMobileSection === "cases" ? ` ${styles.mobileAccordionOpen}` : ""
               }`}
@@ -410,9 +412,11 @@ function Header() {
                   </div>
                 ))}
               </div>
+              </div>
             </div>
 
-            <button
+            <div className={styles.mobileNavEntry}>
+              <button
               aria-expanded={activeMobileSection === "services"}
               className={styles.mobileNavButton}
               onClick={() =>
@@ -426,7 +430,7 @@ function Header() {
               </span>
             </button>
 
-            <div
+              <div
               className={`${styles.mobileAccordion}${
                 activeMobileSection === "services" ? ` ${styles.mobileAccordionOpen}` : ""
               }`}
@@ -439,13 +443,20 @@ function Header() {
                   </div>
                 ))}
               </div>
+              </div>
             </div>
-            <button className={styles.mobileNavButton} type="button">
-              ABOUT US
-            </button>
-            <button className={styles.mobileNavButton} type="button">
-              CONTACT
-            </button>
+            <div className={styles.mobileNavEntry}>
+              <button className={styles.mobileNavButton} type="button">
+                <span>ABOUT US</span>
+                <span className={styles.mobileNavCaretPlaceholder} aria-hidden="true" />
+              </button>
+            </div>
+            <div className={styles.mobileNavEntry}>
+              <button className={styles.mobileNavButton} type="button">
+                <span>CONTACT</span>
+                <span className={styles.mobileNavCaretPlaceholder} aria-hidden="true" />
+              </button>
+            </div>
           </div>
 
           <button className={styles.mobileCallButton} type="button">
