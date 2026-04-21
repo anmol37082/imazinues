@@ -210,7 +210,6 @@ function Header() {
           alt="Imazine Us"
           width={320}
           height={96}
-          priority
           className={`${styles.logoImage} ${styles.logoImageAlt}`}
         />
       </div>

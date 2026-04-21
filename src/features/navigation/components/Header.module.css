@@ -5,7 +5,7 @@
 
 .navbar {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
   align-items: center;
   column-gap: 24px;
   padding: 6px 16px 6px 0;
@@ -33,7 +33,8 @@
 .navbarCompact {
   padding: 6px 16px 6px 8px;
   top: 10px;
-  margin: 0 90px;
+  margin: 0 clamp(48px, 5vw, 72px);
+  column-gap: 16px;
   border-radius: 0;
 }
 
@@ -56,6 +57,7 @@
   align-items: center;
   justify-content: flex-start;
   justify-self: start;
+  min-width: 0;
   width: 620px;
   flex: 0 0 620px;
   height: 92px;
@@ -91,18 +93,22 @@
   display: flex;
   justify-content: center;
   justify-self: stretch;
+  min-width: 0;
   width: 100%;
   gap: 35px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 -18px;
   padding: 0;
+  flex-wrap: nowrap;
 }
 
 .menu li {
   cursor: pointer;
   position: relative;
   display: flex;
+  flex: 0 1 auto;
   align-items: center;
+  min-width: 0;
   font-style: normal;
   font-weight: 100;
   font-size: 16px;
@@ -144,9 +150,11 @@
 
 .navSplitAlt {
   display: inline-flex;
+  max-width: 100%;
   gap: 0.05em;
   -webkit-user-select: none;
   user-select: none;
+  white-space: nowrap;
 }
 
 .navSplitCharWrap {
@@ -489,6 +497,8 @@
   justify-self: end;
   gap: 20px;
   min-width: 0;
+  padding-left: 12px;
+  flex-shrink: 0;
 }
 
 .mobileMenuToggle {
@@ -499,7 +509,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(90deg, #3b3bff, #6a00ff);
+  flex-shrink: 0;
+  background: #2f2bff;
   color: white;
   border: none;
   padding: 14px 34px;
@@ -507,6 +518,17 @@
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbarCompact .menu {
+  gap: 26px;
+  margin-left: -12px;
+}
+
+.navbarCompact .btn {
+  padding: 12px 24px;
+  font-size: 14px;
 }
 
 .btn .navSplitAltBase,
@@ -548,13 +570,11 @@
 
 .casesDropdown {
   display: block;
-  padding: 44px 46px;
+  padding: 40px 18px;
   background: var(--nav-surface);
   max-height: calc(100dvh - 88px);
   overflow-y: auto;
   overscroll-behavior: contain;
-  scrollbar-gutter: stable;
-  
 }
 
 .casesDropdown > *,
@@ -577,7 +597,7 @@
 .casesGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 14px;
   animation-delay: 0.24s;
 }
 
@@ -720,9 +740,9 @@
 
 .cardMedia {
   position: relative;
-  width: 43%;
+  width: 40%;
   min-width: 155px;
-  flex: 0 0 43%;
+  flex: 0 0 40%;
   min-height: 204px;
   overflow: hidden;
 }
@@ -764,10 +784,16 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
-  line-height: 1.05;
+  font-size: 21px;
+  line-height: 1.1;
   letter-spacing: -0.03em;
-  max-width: 10ch;
+  width: 100%;
+  max-width: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
   overflow-wrap: break-word;
 }
 
@@ -784,7 +810,7 @@
   width: 100%;
   max-width: 198px;
   min-width: 0;
-  background: linear-gradient(90deg, #2f2bff, #261dff);
+  background: #2f2bff;
   color: white;
   border: none;
   padding: 12px 18px;
@@ -814,7 +840,7 @@
   background: transparent;
   color: #111111;
   font: inherit;
-  font-family: rinter, "rinter Fallback", Inter, Arial, Helvetica, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -845,7 +871,7 @@
 .serviceItem .navSplitAltBase,
 .serviceItem .navSplitAltUp,
 .serviceItem .navSplitAltDown {
-  font-family: rinter, "rinter Fallback", Inter, Arial, Helvetica, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
@@ -1201,8 +1227,8 @@
   }
 
   .cardMedia {
-    width: 38%;
-    flex-basis: 38%;
+    width: 36%;
+    flex-basis: 36%;
   }
 }
 
@@ -1446,7 +1472,7 @@
     justify-content: center;
     gap: 12px;
     width: 100%;
-    background: linear-gradient(90deg, #2f2bff, #261dff);
+    background: #2f2bff;
     color: #ffffff;
     border: none;
     padding: 16px 20px;
@@ -1462,7 +1488,7 @@
   }
 
   .casesDropdown {
-    padding: 24px 20px;
+    padding: 24px 12px;
   }
 
   .casesDropdownHeader {
