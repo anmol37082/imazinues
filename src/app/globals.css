@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "AtGeo";
+  src: url("../assets/AtGeodesicTRIAL-SuperItalic (2).otf") format("opentype");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../assets/BwGradual-Thin.otf") format("opentype");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BwGradual";
+  src: url("../assets/BwGradual-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrSonoma";
+  src: url("../assets/BRSonoma-SemiBold-BF654c45268c340.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BrSonoma";
+  src: url("../assets/BRSonoma-Bold-BF654c4526823f5.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 html {
   height: 100%;
 }

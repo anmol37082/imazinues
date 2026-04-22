@@ -1,6 +1,11 @@
 :global(:root) {
   --nav-surface: #ffffff;
   --nav-divider: #e8e8e8;
+  --font-atgeo: "AtGeo", serif;
+  --font-atgeo-weight: 600;
+  --font-bw: "BwGradual", sans-serif;
+  --font-br-sonoma: "BrSonoma", sans-serif;
+  --font-call-button: "Source Code Pro", "Source Code Pro Fallback", monospace;
 }
 
 .navbar {
@@ -591,7 +596,7 @@
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 34px;
-  animation-delay: 0.18s;
+  animation: dropdown-heading-down 0.42s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
 }
 
 .casesGrid {
@@ -624,12 +629,15 @@
 .casesDropdownHeader h3 {
   margin: 0;
   color: rgb(0, 0, 0);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-bw);
   font-style: normal;
   font-weight: 500;
-  font-size: 55px;
-  line-height: 50px;
-  letter-spacing: 0;
+  font-size: 58px;
+  line-height: 54px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  animation: none;
 }
 
 .casesLink {
@@ -771,22 +779,25 @@
   margin-top: auto;
   margin-bottom: 6px;
   color: #222222;
+  font-family: var(--font-bw);
   font-size: 15px;
+  font-weight: 100;
   line-height: 1.28;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   text-transform: none;
 }
 
 .cardContent h4 {
   margin: 0;
   color: rgb(0, 0, 0);
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: var(--font-br-sonoma);
+  font-variant: normal;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 21px;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
+  text-transform: none !important;
   width: 100%;
   max-width: none;
   display: -webkit-box;
@@ -814,11 +825,20 @@
   color: white;
   border: none;
   padding: 12px 18px;
-  font-size: 12px;
-  font-family: "Source Code Pro", "Source Code Pro Fallback";
+  font-size: 13px;
+  font-family: var(--font-call-button);
+  font-weight: 400;
   cursor: pointer;
   border-radius: 0;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+}
+
+.seeBtn .navAnimatedBase,
+.seeBtn .navAnimatedText {
+  font-family: var(--font-call-button);
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: 0.08em;
 }
 
 .servicesDropdown {
@@ -840,11 +860,11 @@
   background: transparent;
   color: #111111;
   font: inherit;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-br-sonoma);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 40px;
-  letter-spacing: -1.2px;
+  letter-spacing: 0.01em;
   text-align: left;
   cursor: pointer;
   transition: color 0.2s ease, opacity 0.2s ease;
@@ -871,11 +891,11 @@
 .serviceItem .navSplitAltBase,
 .serviceItem .navSplitAltUp,
 .serviceItem .navSplitAltDown {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-br-sonoma);
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -1.2px;
+  letter-spacing: 0.01em;
 }
 
 /* Animation delays for service items */
@@ -899,11 +919,11 @@
 .servicesCopy p {
   margin: 0;
   color: #171717;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: var(--font-bw);
   font-size: 16px;
-  font-weight: 200;
-  line-height: 1.6;
-  letter-spacing: -0.02em;
+  font-weight: 100;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 .servicesCopyBody,
@@ -950,12 +970,12 @@
 @keyframes dropdown-panel-in {
   0% {
     opacity: 0;
-    transform: translateY(18px) scaleY(0.94);
+    transform: scaleY(0.98);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0) scaleY(1);
+    transform: scaleY(1);
   }
 }
 
@@ -963,6 +983,20 @@
   0% {
     opacity: 0;
     transform: translateY(26px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes dropdown-heading-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-22px);
     filter: blur(8px);
   }
 
@@ -1497,8 +1531,10 @@
   }
 
   .casesDropdownHeader h3 {
-    font-size: 36px;
-    line-height: 1.1;
+    font-size: 38px;
+    line-height: 1.08;
+    letter-spacing: normal;
+    word-spacing: normal;
   }
 
   .dropCard {
@@ -1541,7 +1577,7 @@
 
   .servicesCopy p {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.38;
   }
 
   .servicesCta {

@@ -1,19 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import casesData from "@/features/navigation/data/casesData";
 import servicesData from "@/features/navigation/data/servicesData";
 import styles from "./Header.module.css";
 
 function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [previewDropdown, setPreviewDropdown] = useState(null);
   const [activeServiceId, setActiveServiceId] = useState(servicesData[0].id);
   const [showAllCases, setShowAllCases] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [hoveredLabel, setHoveredLabel] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMobileSection, setActiveMobileSection] = useState(null);
+  const dropdownOpenTimeoutRef = useRef(null);
 
   const activeService =
     servicesData.find((service) => service.id === activeServiceId) || servicesData[0];
@@ -133,6 +135,14 @@ function Header() {
     };
   }, [activeDropdown, isMobileMenuOpen]);
 
+  useEffect(() => {
+    return () => {
+      if (dropdownOpenTimeoutRef.current) {
+        window.clearTimeout(dropdownOpenTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const renderAnimatedLabel = (label) => (
     <span
       className={styles.navAnimated}
@@ -178,15 +188,36 @@ function Header() {
     </span>
   );
 
+  const scheduleDropdownOpen = (dropdownKey) => {
+    if (dropdownOpenTimeoutRef.current) {
+      window.clearTimeout(dropdownOpenTimeoutRef.current);
+    }
+
+    setPreviewDropdown(dropdownKey);
+
+    dropdownOpenTimeoutRef.current = window.setTimeout(() => {
+      setActiveDropdown(dropdownKey);
+      dropdownOpenTimeoutRef.current = null;
+    }, 500);
+  };
+
   const closeDesktopDropdowns = () => {
+    if (dropdownOpenTimeoutRef.current) {
+      window.clearTimeout(dropdownOpenTimeoutRef.current);
+      dropdownOpenTimeoutRef.current = null;
+    }
+
     setActiveDropdown(null);
+    setPreviewDropdown(null);
     setShowAllCases(false);
   };
 
   return (
     <nav
       className={`${styles.navbar}${
-        activeDropdown || isMobileMenuOpen ? ` ${styles.navbarBlurActive}` : ""
+        activeDropdown || previewDropdown || isMobileMenuOpen
+          ? ` ${styles.navbarBlurActive}`
+          : ""
       }${
         isCompact ? ` ${styles.navbarCompact}` : ""
       }`}
@@ -217,7 +248,7 @@ function Header() {
       <ul className={styles.menu}>
         <li
           className={styles.casesMenu}
-          onMouseEnter={() => setActiveDropdown("cases")}
+          onMouseEnter={() => scheduleDropdownOpen("cases")}
         >
           <span className={styles.casesTrigger}>{renderSplitNavLabel("CASES +")}</span>
 
@@ -295,7 +326,7 @@ function Header() {
           className={styles.servicesMenu}
           onMouseEnter={() => {
             setShowAllCases(false);
-            setActiveDropdown("services");
+            scheduleDropdownOpen("services");
           }}
         >
           <span className={styles.servicesTrigger}>{renderSplitNavLabel("SERVICES +")}</span>
