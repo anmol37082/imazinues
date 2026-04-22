@@ -22,8 +22,8 @@ const Hero = () => {
             Connecting travellers with the world for 20 years.
           </p>
           <h1 className={styles.headline}>
-            People, places, <br />
-            partnerships.
+            Creative agency <br />
+            focused on clarity
           </h1>
         </div>
       </div>
