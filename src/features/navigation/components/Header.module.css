@@ -57,6 +57,10 @@
   
 }
 
+.navbarMobileMenuOpen {
+  border-bottom-color: rgba(17, 17, 17, 0.1);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -1267,6 +1271,10 @@
 }
 
 @media (max-width: 768px) {
+  .navbarMobileMenuOpen {
+    border-bottom-color: rgba(17, 17, 17, 0.06);
+  }
+
   .navbar {
     grid-template-columns: minmax(0, 1fr) auto;
     padding: 14px 20px 14px 0;
@@ -1312,7 +1320,7 @@
 
   .mobileDrawer {
     position: absolute;
-    top: calc(100% + 1px);
+    top: 100%;
     left: 0;
     right: 0;
     z-index: 25;
@@ -1322,8 +1330,7 @@
     padding: 24px 20px 28px;
     background: var(--nav-surface);
     color: #111111;
-    border-top: 1px solid var(--nav-divider);
-    box-shadow: 0 24px 44px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.08);
     max-height: calc(100dvh - 98px);
     overflow-y: auto;
     overscroll-behavior: contain;

@@ -219,6 +219,8 @@ function Header() {
           ? ` ${styles.navbarBlurActive}`
           : ""
       }${
+        isMobileMenuOpen ? ` ${styles.navbarMobileMenuOpen}` : ""
+      }${
         isCompact ? ` ${styles.navbarCompact}` : ""
       }`}
       onMouseLeave={() => {
