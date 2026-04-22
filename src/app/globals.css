@@ -87,7 +87,6 @@ a {
     rgba(255, 255, 255, 0.06) 70%,
     rgba(255, 255, 255, 0) 100%
   );
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.12);
   mask-image: linear-gradient(to top, #000000 0%, #000000 55%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, #000000 0%, #000000 55%, transparent 100%);

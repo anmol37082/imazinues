@@ -9,6 +9,7 @@
 
 .container {
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   background-color: #000000;
   color: #ffffff;
@@ -76,13 +77,15 @@
 
 /* Slider Section */
 .sliderSection {
-  padding: 20px 0 60px;
+  padding: 20px 0 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 .sliderContainer {
   position: relative;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .navButton {
@@ -131,12 +134,17 @@
 .slider {
   display: flex;
   gap: 12px;
+  width: 100%;
+  max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding: 20px 0;
   cursor: grab;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .slider::-webkit-scrollbar {
@@ -256,7 +264,7 @@
   border: 0;
   cursor: pointer;
   padding: 16px 20px 14px;
-  background: #000000;
+  background: transparent;
   color: #ffffff;
   border-radius: 18px;
   display: grid;
@@ -331,7 +339,7 @@
 }
 
 .cardAction:hover {
-  background-color: #111111;
+  background-color: transparent;
 }
 
 .cardAction:hover .cardActionIcon {
@@ -470,6 +478,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    min-height: auto;
+  }
+
   .header {
     padding: 84px 0 30px 20px;
   }
@@ -478,9 +490,38 @@
     padding: 0;
   }
 
+  .slider {
+    padding: 20px 16px;
+    scroll-padding-left: 16px;
+    scroll-padding-right: 16px;
+    overscroll-behavior-x: contain;
+  }
+
   .cardActionOutside {
-    top: -72px;
-    right: 12px;
+    top: -50px;
+    left: 16px;
+    right: auto;
+  }
+
+  .cardAction {
+    padding: 14px 14px 12px;
+    border-radius: 14px;
+    grid-template-columns: auto 22px;
+    column-gap: 10px;
+    row-gap: 0;
+  }
+
+  .cardActionLabel {
+    font-size: 1rem;
+  }
+
+  .cardActionArrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cardActionTrack {
+    display: none;
   }
 
   .sectionNote {
@@ -492,19 +533,21 @@
   .navButton {
     width: 40px;
     height: 40px;
+    top: calc(50% - 24px);
   }
 
   .navButtonLeft {
-    left: 4px;
+    left: 8px;
   }
 
   .navButtonRight {
-    right: 4px;
+    right: 8px;
   }
   
   .card {
-    width: 250px;
-    height: 250px;
+    width: calc(100% - 32px);
+    min-width: calc(100% - 32px);
+    height: 330px;
   }
   
   .floatingWidget {
@@ -522,9 +565,21 @@
 }
 
 @media (max-width: 480px) {
+  .slider {
+    padding: 20px 16px;
+    scroll-padding-left: 16px;
+    scroll-padding-right: 16px;
+    overscroll-behavior-x: contain;
+  }
+
+  .navButton {
+    top: calc(50% - 24px);
+  }
+
   .card {
-    width: 230px;
-    height: 235px;
+    width: calc(100% - 32px);
+    min-width: calc(100% - 32px);
+    height: 350px;
   }
   
   .cardTitle {

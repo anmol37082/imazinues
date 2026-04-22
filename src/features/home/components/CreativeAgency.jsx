@@ -157,10 +157,7 @@ function CreativeAgency() {
           <button
             className={`${styles.cardAction} ${styles.cardActionOutside}`}
             type="button"
-            aria-label={activeCardId ? "Close active project details" : "Open project details"}
-            onClick={() =>
-              setActiveCardId((currentId) => (currentId ? "" : activeCard.id))
-            }
+            aria-label="Start project"
           >
             <span className={styles.cardActionLabel}>Start project</span>
             <span className={styles.cardActionArrow} aria-hidden="true">

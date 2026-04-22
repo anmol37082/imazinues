@@ -8,6 +8,7 @@
   padding: 96px 0 90px;
   background: #000000;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 .intro {
@@ -66,11 +67,13 @@
   width: 70%;
   margin: 56px auto 0;
   transition: width 0.3s ease-out;
+  max-width: 100%;
 }
 
 .image {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: clamp(260px, 42vw, 560px);
   background-position: center;
   background-repeat: no-repeat;
