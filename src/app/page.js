@@ -1,6 +1,8 @@
 import Hero from "../features/home/components/Hero.jsx";
 import CreativeAgency from "@/features/home/components/CreativeAgency.jsx";
 import WhoWeAre from "@/features/home/components/WhoWeAre.jsx";
+// import BottomBlur from "@/features/home/components/BottomBlur.jsx";
+import FeatureGrid from "@/features/home/components/FeatureGrid.jsx";
 
 export default function Home() {
   return (
@@ -8,7 +10,8 @@ export default function Home() {
       <Hero />
       <CreativeAgency />
       <WhoWeAre />
-      <div className="landing-page-bottom-blur" aria-hidden="true" />
+      <FeatureGrid />
+      {/* <BottomBlur /> */}
     </>
   );
 }

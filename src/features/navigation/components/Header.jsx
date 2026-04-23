@@ -198,7 +198,7 @@ function Header() {
     dropdownOpenTimeoutRef.current = window.setTimeout(() => {
       setActiveDropdown(dropdownKey);
       dropdownOpenTimeoutRef.current = null;
-    }, 500);
+    }, 320);
   };
 
   const closeDesktopDropdowns = () => {

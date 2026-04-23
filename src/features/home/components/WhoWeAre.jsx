@@ -3,29 +3,77 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./WhoWeAre.module.css";
 
+const COUNT_DURATION = 1400;
+
 const stats = [
   {
     value: "90+",
-    label: "Projects that were shipped with care, reviewed end to end",
+    labelLines: [
+      "Projects shipped with care",
+      "and reviewed end to end",
+    ],
   },
   {
     value: "100%",
-    label: "Happy clients that quickly come back for new projects and ideas",
+    labelLines: [
+      "Happy clients that quickly come back",
+      "for new projects and ideas",
+    ],
+    compactLabel: true,
   },
   {
     value: "30+",
-    label: "Brands and startups that trusted us to shape their identity",
+    labelLines: [
+      "Brands and startups that trusted us",
+      "to shape their identity",
+    ],
   },
   {
     value: "120",
-    label: "Design concepts explored before landing on the perfect fit",
+    labelLines: [
+      "Design concepts explored before",
+      "landing on the perfect fit",
+    ],
   },
 ];
+
+const parsedStats = stats.map((item) => {
+  const numericValue = Number.parseInt(item.value, 10);
+  const suffix = item.value.replace(String(numericValue), "");
+
+  return {
+    ...item,
+    numericValue,
+    suffix,
+  };
+});
 
 function WhoWeAre() {
   const sectionRef = useRef(null);
   const imageWrapRef = useRef(null);
   const [imageWidth, setImageWidth] = useState(70);
+  const [isVisible, setIsVisible] = useState(false);
+  const [animatedValues, setAnimatedValues] = useState(() =>
+    parsedStats.map(() => 0)
+  );
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const updateImageWidth = () => {
@@ -52,8 +100,42 @@ function WhoWeAre() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isVisible) {
+      return;
+    }
+
+    let frameId = 0;
+    let startTime = 0;
+
+    const animateCounts = (timestamp) => {
+      if (!startTime) {
+        startTime = timestamp;
+      }
+
+      const progress = Math.min((timestamp - startTime) / COUNT_DURATION, 1);
+
+      setAnimatedValues(
+        parsedStats.map((item) => Math.round(item.numericValue * progress))
+      );
+
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(animateCounts);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(animateCounts);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [isVisible]);
+
   return (
-    <section className={styles.section} ref={sectionRef}>
+    <section
+      className={`${styles.section} ${isVisible ? styles.sectionVisible : ""}`}
+      ref={sectionRef}
+    >
       <div className={styles.intro}>
         <div className={styles.eyebrow}>
           <span className={styles.eyebrowDot} />
@@ -61,13 +143,20 @@ function WhoWeAre() {
         </div>
 
         <h2 className={styles.title}>
-          Agency of ideas
-          <br />
-          and impact
+          <span className={styles.revealLine} style={{ "--line-delay": "0.06s" }}>
+            <span className={styles.revealLineInner}>Agency of ideas</span>
+          </span>
+          <span className={styles.revealLine} style={{ "--line-delay": "0.1s" }}>
+            <span className={styles.revealLineInner}>and impact</span>
+          </span>
         </h2>
 
         <p className={styles.copy}>
-          We turn sharp strategy into brands and experiences people remember
+          <span className={styles.revealLine} style={{ "--line-delay": "0.14s" }}>
+            <span className={styles.revealLineInner}>
+              We turn sharp strategy into brands and experiences people remember
+            </span>
+          </span>
         </p>
       </div>
 
@@ -86,10 +175,31 @@ function WhoWeAre() {
       </div>
 
       <div className={styles.statsGrid}>
-        {stats.map((item) => (
-          <div className={styles.statCard} key={item.value}>
-            <strong className={styles.statValue}>{item.value}</strong>
-            <p className={styles.statLabel}>{item.label}</p>
+        {parsedStats.map((item, index) => (
+          <div
+            className={styles.statCard}
+            key={item.value}
+            style={{ "--line-delay": `${0.3 + index * 0.08}s` }}
+          >
+            <strong className={`${styles.statValue} ${styles.revealLine}`}>
+              <span className={styles.revealLineInner}>
+                {isVisible ? animatedValues[index] : 0}
+                {item.suffix}
+              </span>
+            </strong>
+            <p className={styles.statLabel}>
+              {item.labelLines.map((line, lineIndex) => (
+                <span
+                  className={`${styles.revealLine} ${
+                    item.compactLabel ? styles.revealLineNoWrap : ""
+                  }`}
+                  key={line}
+                  style={{ "--line-delay": `${0.38 + index * 0.08 + lineIndex * 0.06}s` }}
+                >
+                  <span className={styles.revealLineInner}>{line}</span>
+                </span>
+              ))}
+            </p>
           </div>
         ))}
       </div>

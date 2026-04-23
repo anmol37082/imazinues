@@ -1,96 +1,240 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./CreativeAgency.module.css";
+
+const LOOP_COPIES = 2;
+const AUTO_SCROLL_SPEED = 0.028;
+const DRAG_THRESHOLD = 8;
 
 const cards = [
   {
-    id: "brand-strategy",
-    title: "Covers",
-    subtitle: "We delivered over 250 editorial designs this year",
+    id: "digital-marketing",
+    title: "Digital Marketing",
+    subtitle:
+      "Strategic online marketing that grows your brand, leads, and sales.",
     image:
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(15,18,24,0.08) 0%, rgba(15,18,24,0.18) 35%, rgba(15,18,24,0.82) 100%)",
   },
   {
-    id: "content-systems",
-    title: "Campaigns",
-    subtitle: "Social launches and motion-led stories built to hold attention",
+    id: "social-media-management",
+    title: "Social Media Management",
+    subtitle:
+      "Growing your brand online with creative content and powerful engagement.",
     image:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(20,14,10,0.1) 0%, rgba(20,14,10,0.24) 34%, rgba(20,14,10,0.84) 100%)",
   },
   {
-    id: "digital-experiences",
-    title: "Portraits",
-    subtitle: "Identity-forward visual systems for modern editorial and brand work",
+    id: "lead-generation",
+    title: "Lead Generation",
+    subtitle: "Generating quality leads that convert into real customers.",
     image:
       "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(18,20,24,0.08) 0%, rgba(18,20,24,0.22) 34%, rgba(18,20,24,0.84) 100%)",
   },
   {
-    id: "foam-serum",
-    title: "Foam Serum",
-    subtitle: "Bubbly product visuals crafted for hero launches and ad stories.",
+    id: "seo",
+    title: "SEO",
+    subtitle:
+      "Improving search rankings to bring consistent organic traffic to your website.",
     image:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(17,20,26,0.08) 0%, rgba(17,20,26,0.18) 35%, rgba(17,20,26,0.82) 100%)",
   },
   {
-    id: "editorial-motion",
-    title: "Editorial",
-    subtitle: "Motion-led compositions built for reels, covers, and campaign edits.",
+    id: "website-revamp-development",
+    title: "Website Revamp & Development",
+    subtitle:
+      "Creating modern, fast, and user-friendly websites that represent your brand.",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(26,18,16,0.08) 0%, rgba(26,18,16,0.18) 35%, rgba(26,18,16,0.82) 100%)",
   },
   {
-    id: "brand-launches",
-    title: "Launches",
-    subtitle: "Product-first creative systems that stay sharp across every touchpoint.",
+    id: "brand-guidelines",
+    title: "Brand Guidelines",
+    subtitle:
+      "Building clear brand rules to keep your identity consistent everywhere.",
     image:
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(18,16,22,0.08) 0%, rgba(18,16,22,0.18) 35%, rgba(18,16,22,0.82) 100%)",
   },
   {
-    id: "social-frames",
-    title: "Social Frames",
-    subtitle: "Fast-moving content packages tuned for paid and organic campaigns.",
+    id: "print-design",
+    title: "Print Design",
+    subtitle:
+      "Designing impactful print materials that strengthen your brand presence.",
     image:
       "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(18,24,18,0.08) 0%, rgba(18,24,18,0.18) 35%, rgba(18,24,18,0.82) 100%)",
   },
   {
-    id: "identity-systems",
-    title: "Identity",
-    subtitle: "Distinct art direction with typography and image systems that scale.",
+    id: "indoor-branding",
+    title: "Indoor Branding",
+    subtitle:
+      "Transforming interior spaces with creative branding that attracts attention.",
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(20,18,24,0.08) 0%, rgba(20,18,24,0.18) 35%, rgba(20,18,24,0.82) 100%)",
   },
   {
-    id: "digital-stories",
-    title: "Stories",
-    subtitle: "Narrative-led digital pieces designed for product pages and socials.",
+    id: "outdoor-branding",
+    title: "Outdoor Branding",
+    subtitle:
+      "Creating bold outdoor branding that makes your business stand out.",
     image:
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
     overlay:
       "linear-gradient(180deg, rgba(14,18,24,0.08) 0%, rgba(14,18,24,0.18) 35%, rgba(14,18,24,0.82) 100%)",
   },
+  {
+    id: "ad-videos",
+    title: "Ad Videos",
+    subtitle:
+      "Producing engaging advertisement videos that highlight your brand story.",
+    image:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(17,20,26,0.08) 0%, rgba(17,20,26,0.18) 35%, rgba(17,20,26,0.82) 100%)",
+  },
+  {
+    id: "photo-video-shoot",
+    title: "Photo & Video Shoot",
+    subtitle:
+      "Capturing professional visuals that showcase your brand beautifully.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(26,18,16,0.08) 0%, rgba(26,18,16,0.18) 35%, rgba(26,18,16,0.82) 100%)",
+  },
+  {
+    id: "packaging-designing",
+    title: "Packaging Designing",
+    subtitle:
+      "Designing attractive packaging that enhances product appeal and brand value.",
+    image:
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+    overlay:
+      "linear-gradient(180deg, rgba(18,16,22,0.08) 0%, rgba(18,16,22,0.18) 35%, rgba(18,16,22,0.82) 100%)",
+  },
 ];
 
 function CreativeAgency() {
-  const [activeCardId, setActiveCardId] = useState("");
+  const [activeCardKey, setActiveCardKey] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
   const sliderRef = useRef(null);
-  const activeCard = cards.find((card) => card.id === activeCardId) ?? cards[0];
+  const sliderTrackRef = useRef(null);
+  const segmentWidthRef = useRef(0);
+  const offsetRef = useRef(0);
+  const dragStartXRef = useRef(0);
+  const dragStartOffsetRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const pointerDownRef = useRef(false);
+  const pressedCardKeyRef = useRef("");
+  const loopedCards = Array.from({ length: LOOP_COPIES }, (_, copyIndex) =>
+    cards.map((card, index) => ({
+      ...card,
+      loopKey: `${card.id}-${copyIndex}-${index}`,
+    }))
+  ).flat();
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting && entry.intersectionRatio >= 0.32);
+      },
+      { threshold: [0.32, 0.45] }
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const track = sliderTrackRef.current;
+    if (!track) return;
+
+    const updateTrackMetrics = () => {
+      segmentWidthRef.current = track.scrollWidth / LOOP_COPIES;
+      offsetRef.current =
+        segmentWidthRef.current > 0
+          ? offsetRef.current % segmentWidthRef.current
+          : 0;
+      track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+    };
+
+    updateTrackMetrics();
+    window.addEventListener("resize", updateTrackMetrics);
+
+    return () => {
+      window.removeEventListener("resize", updateTrackMetrics);
+    };
+  }, []);
+
+  useEffect(() => {
+    const track = sliderTrackRef.current;
+    if (!track) return;
+
+    let frameId = 0;
+    let previousTime = 0;
+
+    const step = (time) => {
+      if (!previousTime) {
+        previousTime = time;
+      }
+
+      const segmentWidth = segmentWidthRef.current;
+
+      if (
+        isVisible &&
+        !activeCardKey &&
+        !pointerDownRef.current &&
+        !isDraggingRef.current &&
+        segmentWidth > 0
+      ) {
+        const delta = time - previousTime;
+        offsetRef.current =
+          (offsetRef.current + delta * AUTO_SCROLL_SPEED) % segmentWidth;
+        track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+      }
+
+      previousTime = time;
+      frameId = window.requestAnimationFrame(step);
+    };
+
+    frameId = window.requestAnimationFrame(step);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [activeCardKey, isVisible]);
+
+  const applyOffset = (nextOffset) => {
+    const track = sliderTrackRef.current;
+    const segmentWidth = segmentWidthRef.current;
+    if (!track || segmentWidth <= 0) return;
+
+    offsetRef.current =
+      ((nextOffset % segmentWidth) + segmentWidth) % segmentWidth;
+    track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+  };
 
   const handleSliderNav = (direction) => {
     const slider = sliderRef.current;
@@ -99,22 +243,79 @@ function CreativeAgency() {
     const card = slider.querySelector(`.${styles.card}`);
     const gap = 12;
     const step = card ? card.clientWidth + gap : 292;
+    applyOffset(offsetRef.current + direction * step);
+  };
 
-    slider.scrollBy({
-      left: direction * step,
-      behavior: "smooth",
-    });
+  const handlePointerDown = (event) => {
+    pointerDownRef.current = true;
+    isDraggingRef.current = false;
+    dragStartXRef.current = event.clientX;
+    dragStartOffsetRef.current = offsetRef.current;
+    pressedCardKeyRef.current =
+      event.target.closest("[data-card-key]")?.getAttribute("data-card-key") ?? "";
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerMove = (event) => {
+    if (!pointerDownRef.current) return;
+    const deltaX = event.clientX - dragStartXRef.current;
+
+    if (!isDraggingRef.current && Math.abs(deltaX) < DRAG_THRESHOLD) {
+      return;
+    }
+
+    isDraggingRef.current = true;
+    applyOffset(dragStartOffsetRef.current - deltaX);
+  };
+
+  const handlePointerUp = (event) => {
+    const shouldToggleCard =
+      pointerDownRef.current && !isDraggingRef.current && pressedCardKeyRef.current;
+    const nextCardKey = shouldToggleCard ? pressedCardKeyRef.current : "";
+
+    pointerDownRef.current = false;
+    isDraggingRef.current = false;
+    pressedCardKeyRef.current = "";
+    if (event?.currentTarget?.hasPointerCapture?.(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+
+    if (nextCardKey) {
+      setActiveCardKey((currentKey) =>
+        currentKey === nextCardKey ? "" : nextCardKey
+      );
+    }
   };
 
   return (
-    <section className={styles.container}>
+    <section
+      className={`${styles.container} ${isVisible ? styles.sectionVisible : ""}`}
+      ref={sectionRef}
+    >
       <div className={styles.header}>
         <div className={styles.headerContent}>
+          <div className={styles.eyebrow}>
+            <span className={styles.eyebrowDot} />
+            <span>Creative agency</span>
+          </div>
+
           <h2 className={styles.title}>
-            Creative agency
-            <br />
-            focused on clarity
+            <span className={styles.revealLine} style={{ "--line-delay": "0s" }}>
+              <span className={styles.revealLineInner}>Creative agency</span>
+            </span>
+            <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
+              <span className={styles.revealLineInner}>focused on clarity</span>
+            </span>
           </h2>
+
+          <p className={styles.copy}>
+            <span className={styles.revealLine} style={{ "--line-delay": "0.16s" }}>
+              <span className={styles.revealLineInner}>
+                We shape brands, campaigns, and digital experiences people
+                remember.
+              </span>
+            </span>
+          </p>
         </div>
       </div>
 
@@ -182,71 +383,75 @@ function CreativeAgency() {
             </span>
           </button>
 
-          <div className={styles.slider} ref={sliderRef}>
-            {cards.map((card) => (
-              <article
-                className={`${styles.card} ${
-                  activeCardId === card.id ? styles.cardActive : ""
-                }`}
-                key={card.id}
-                onClick={() =>
-                  setActiveCardId((currentId) =>
-                    currentId === card.id ? "" : card.id
-                  )
-                }
-              >
-                <div className={styles.cardImageWrapper}>
-                  <div
-                    className={`${styles.cardMedia} ${
-                      activeCardId === card.id ? styles.cardMediaActive : ""
-                    }`}
-                    style={{
-                      backgroundImage: `${card.overlay}, url(${card.image})`,
-                    }}
-                  />
+          <div
+            className={styles.sliderViewport}
+            ref={sliderRef}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            onPointerLeave={handlePointerUp}
+          >
+            <div className={styles.sliderTrack} ref={sliderTrackRef}>
+              {loopedCards.map((card) => (
+                <article
+                  className={`${styles.card} ${
+                    activeCardKey === card.loopKey ? styles.cardActive : ""
+                  }`}
+                  data-card-key={card.loopKey}
+                  key={card.loopKey}
+                >
+                  <div className={styles.cardImageWrapper}>
+                    <div
+                      className={`${styles.cardMedia} ${
+                        activeCardKey === card.loopKey ? styles.cardMediaActive : ""
+                      }`}
+                      style={{
+                        backgroundImage: `${card.overlay}, url(${card.image})`,
+                      }}
+                    />
 
-                  <button
-                    className={`${styles.cardToggle} ${
-                      activeCardId === card.id ? styles.cardToggleActive : ""
-                    }`}
-                    type="button"
-                    aria-label={
-                      activeCardId === card.id
-                        ? `Close ${card.title} details`
-                        : `Open ${card.title} details`
-                    }
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      setActiveCardId((currentId) =>
-                        currentId === card.id ? "" : card.id
-                      );
-                    }}
-                  >
-                    <span className={`${styles.cardToggleLine} ${styles.cardToggleLine1}`} />
-                    <span className={`${styles.cardToggleLine} ${styles.cardToggleLine2}`} />
-                  </button>
+                    <button
+                      className={`${styles.cardToggle} ${
+                        activeCardKey === card.loopKey ? styles.cardToggleActive : ""
+                      }`}
+                      type="button"
+                      aria-label={
+                        activeCardKey === card.loopKey
+                          ? `Close ${card.title} details`
+                          : `Open ${card.title} details`
+                      }
+                    >
+                      <span className={`${styles.cardToggleLine} ${styles.cardToggleLine1}`} />
+                      <span className={`${styles.cardToggleLine} ${styles.cardToggleLine2}`} />
+                    </button>
 
-                  <div
-                    className={`${styles.cardOverlay} ${
-                      activeCardId === card.id ? styles.cardOverlayVisible : ""
-                    }`}
-                  />
+                    <div
+                      className={`${styles.cardOverlay} ${
+                        activeCardKey === card.loopKey ? styles.cardOverlayVisible : ""
+                      }`}
+                    />
 
-                  <div
-                    className={`${styles.cardContent} ${
-                      activeCardId === card.id ? styles.cardContentVisible : ""
-                    }`}
-                  >
-                    <h3 className={styles.cardTitle}>{card.title}</h3>
-                    <p className={styles.cardSubtitle}>{card.subtitle}</p>
+                    <div
+                      className={`${styles.cardContent} ${
+                        activeCardKey === card.loopKey ? styles.cardContentVisible : ""
+                      }`}
+                    >
+                      <h3 className={styles.cardTitle}>{card.title}</h3>
+                      <p className={styles.cardSubtitle}>{card.subtitle}</p>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
           </div>
 
           <p className={styles.sectionNote}>
-            Over 190 design projects created for top brands including
+            <span className={styles.revealLine} style={{ "--line-delay": "0.18s" }}>
+              <span className={styles.revealLineInner}>
+                Over 190 design projects created for top brands including
+              </span>
+            </span>
           </p>
         </div>
       </div>

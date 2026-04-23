@@ -1,6 +1,25 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import styles from './Hero.module.css';
 
 const Hero = () => {
+  const [isContentVisible, setIsContentVisible] = useState(false);
+  const revealTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    revealTimeoutRef.current = window.setTimeout(() => {
+      setIsContentVisible(true);
+      revealTimeoutRef.current = null;
+    }, 1000);
+
+    return () => {
+      if (revealTimeoutRef.current) {
+        window.clearTimeout(revealTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
@@ -17,13 +36,25 @@ const Hero = () => {
 
         <div className={styles.overlay} />
         
-        <div className={styles.content}>
+        <div
+          className={`${styles.content} ${
+            isContentVisible ? styles.contentVisible : ""
+          }`}
+        >
           <p className={styles.tagline}>
-            Connecting travellers with the world for 20 years.
+            <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
+              <span className={styles.revealLineInner}>
+                Connecting travellers with the world for 20 years.
+              </span>
+            </span>
           </p>
           <h1 className={styles.headline}>
-            Creative agency <br />
-            focused on clarity
+            <span className={styles.revealLine} style={{ "--line-delay": "0.16s" }}>
+              <span className={styles.revealLineInner}>Creative agency</span>
+            </span>
+            <span className={styles.revealLine} style={{ "--line-delay": "0.24s" }}>
+              <span className={styles.revealLineInner}>focused on clarity</span>
+            </span>
           </h1>
         </div>
       </div>
