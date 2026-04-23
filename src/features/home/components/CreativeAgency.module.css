@@ -491,9 +491,9 @@
   }
 
   .slider {
-    padding: 20px 16px;
-    scroll-padding-left: 16px;
-    scroll-padding-right: 16px;
+    padding: 20px 12px 20px 18px;
+    scroll-padding-left: 18px;
+    scroll-padding-right: 12px;
     overscroll-behavior-x: contain;
   }
 
@@ -545,8 +545,8 @@
   }
   
   .card {
-    width: calc(100% - 32px);
-    min-width: calc(100% - 32px);
+    width: calc(100% - 18px);
+    min-width: calc(100% - 18px);
     height: 330px;
   }
   
@@ -566,9 +566,9 @@
 
 @media (max-width: 480px) {
   .slider {
-    padding: 20px 16px;
+    padding: 20px 10px 20px 16px;
     scroll-padding-left: 16px;
-    scroll-padding-right: 16px;
+    scroll-padding-right: 10px;
     overscroll-behavior-x: contain;
   }
 
@@ -577,8 +577,8 @@
   }
 
   .card {
-    width: calc(100% - 32px);
-    min-width: calc(100% - 32px);
+    width: calc(100% - 14px);
+    min-width: calc(100% - 14px);
     height: 350px;
   }
   
