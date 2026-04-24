@@ -386,11 +386,35 @@ function CreativeAgency() {
           </div>
 
           <h2 className={styles.title}>
-            <span className={styles.revealLine} style={{ "--line-delay": "0s" }}>
+            <span
+              className={`${styles.revealLine} ${styles.headingLineDesktop}`}
+              style={{ "--line-delay": "0s" }}
+            >
               <span className={styles.revealLineInner}>Behind Every Big </span>
             </span>
-            <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
+            <span
+              className={`${styles.revealLine} ${styles.headingLineDesktop}`}
+              style={{ "--line-delay": "0.08s" }}
+            >
               <span className={styles.revealLineInner}>Success Is a Powerful Process</span>
+            </span>
+            <span
+              className={`${styles.revealLine} ${styles.headingLineMobile}`}
+              style={{ "--line-delay": "0s" }}
+            >
+              <span className={styles.revealLineInner}>Behind Every Big</span>
+            </span>
+            <span
+              className={`${styles.revealLine} ${styles.headingLineMobile}`}
+              style={{ "--line-delay": "0.08s" }}
+            >
+              <span className={styles.revealLineInner}>Success Is a Powerful</span>
+            </span>
+            <span
+              className={`${styles.revealLine} ${styles.headingLineMobile}`}
+              style={{ "--line-delay": "0.16s" }}
+            >
+              <span className={styles.revealLineInner}>Process</span>
             </span>
           </h2>
 

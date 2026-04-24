@@ -142,11 +142,35 @@ function WhoWeAre() {
         </div>
 
         <h2 className={styles.title}>
-          <span className={styles.revealLine} style={{ "--line-delay": "0.06s" }}>
+          <span
+            className={`${styles.revealLine} ${styles.headingLineDesktop}`}
+            style={{ "--line-delay": "0.06s" }}
+          >
             <span className={styles.revealLineInner}>We build brands with </span>
           </span>
-          <span className={styles.revealLine} style={{ "--line-delay": "0.1s" }}>
+          <span
+            className={`${styles.revealLine} ${styles.headingLineDesktop}`}
+            style={{ "--line-delay": "0.1s" }}
+          >
             <span className={styles.revealLineInner}>digital power.</span>
+          </span>
+          <span
+            className={`${styles.revealLine} ${styles.headingLineMobile}`}
+            style={{ "--line-delay": "0.06s" }}
+          >
+            <span className={styles.revealLineInner}>We build brands</span>
+          </span>
+          <span
+            className={`${styles.revealLine} ${styles.headingLineMobile}`}
+            style={{ "--line-delay": "0.1s" }}
+          >
+            <span className={styles.revealLineInner}>with digital</span>
+          </span>
+          <span
+            className={`${styles.revealLine} ${styles.headingLineMobile}`}
+            style={{ "--line-delay": "0.14s" }}
+          >
+            <span className={styles.revealLineInner}>power.</span>
           </span>
         </h2>
 
