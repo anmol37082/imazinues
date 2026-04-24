@@ -1,5 +1,6 @@
 import Hero from "../features/home/components/Hero.jsx";
 import CreativeAgency from "@/features/home/components/CreativeAgency.jsx";
+import CreativeContent from "@/features/home/components/CreativeContent.jsx";
 import WhoWeAre from "@/features/home/components/WhoWeAre.jsx";
 // import BottomBlur from "@/features/home/components/BottomBlur.jsx";
 import FeatureGrid from "@/features/home/components/FeatureGrid.jsx";
@@ -9,9 +10,11 @@ export default function Home() {
     <>
       <Hero />
       <CreativeAgency />
+     
       <WhoWeAre />
       <FeatureGrid />
       {/* <BottomBlur /> */}
+       <CreativeContent />
     </>
   );
 }
