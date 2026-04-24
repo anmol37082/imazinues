@@ -6,6 +6,8 @@ import styles from "./CreativeAgency.module.css";
 const LOOP_COPIES = 2;
 const AUTO_SCROLL_SPEED = 0.028;
 const DRAG_THRESHOLD = 8;
+const MOBILE_BREAKPOINT = 768;
+const MOBILE_AUTO_ADVANCE_MS = 3000;
 
 const cards = [
   {
@@ -132,6 +134,8 @@ const cards = [
 function CreativeAgency() {
   const [activeCardKey, setActiveCardKey] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+  const [isTrackAnimating, setIsTrackAnimating] = useState(false);
   const sectionRef = useRef(null);
   const sliderRef = useRef(null);
   const sliderTrackRef = useRef(null);
@@ -142,12 +146,26 @@ function CreativeAgency() {
   const isDraggingRef = useRef(false);
   const pointerDownRef = useRef(false);
   const pressedCardKeyRef = useRef("");
+  const mobileIndexRef = useRef(0);
   const loopedCards = Array.from({ length: LOOP_COPIES }, (_, copyIndex) =>
     cards.map((card, index) => ({
       ...card,
       loopKey: `${card.id}-${copyIndex}-${index}`,
     }))
   ).flat();
+
+  useEffect(() => {
+    const updateViewportMode = () => {
+      setIsMobileView(window.innerWidth <= MOBILE_BREAKPOINT);
+    };
+
+    updateViewportMode();
+    window.addEventListener("resize", updateViewportMode);
+
+    return () => {
+      window.removeEventListener("resize", updateViewportMode);
+    };
+  }, []);
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -173,10 +191,19 @@ function CreativeAgency() {
 
     const updateTrackMetrics = () => {
       segmentWidthRef.current = track.scrollWidth / LOOP_COPIES;
-      offsetRef.current =
-        segmentWidthRef.current > 0
-          ? offsetRef.current % segmentWidthRef.current
-          : 0;
+      if (segmentWidthRef.current <= 0) {
+        return;
+      }
+
+      if (isMobileView) {
+        const step = getSliderStep();
+        const normalizedIndex = mobileIndexRef.current % cards.length;
+        mobileIndexRef.current = normalizedIndex;
+        offsetRef.current = step > 0 ? normalizedIndex * step : 0;
+      } else {
+        offsetRef.current = offsetRef.current % segmentWidthRef.current;
+      }
+
       track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
     };
 
@@ -186,7 +213,7 @@ function CreativeAgency() {
     return () => {
       window.removeEventListener("resize", updateTrackMetrics);
     };
-  }, []);
+  }, [isMobileView]);
 
   useEffect(() => {
     const track = sliderTrackRef.current;
@@ -204,6 +231,7 @@ function CreativeAgency() {
 
       if (
         isVisible &&
+        !isMobileView &&
         !activeCardKey &&
         !pointerDownRef.current &&
         !isDraggingRef.current &&
@@ -224,7 +252,7 @@ function CreativeAgency() {
     return () => {
       window.cancelAnimationFrame(frameId);
     };
-  }, [activeCardKey, isVisible]);
+  }, [activeCardKey, isMobileView, isVisible]);
 
   const applyOffset = (nextOffset) => {
     const track = sliderTrackRef.current;
@@ -236,17 +264,53 @@ function CreativeAgency() {
     track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
   };
 
-  const handleSliderNav = (direction) => {
+  const getSliderStep = () => {
     const slider = sliderRef.current;
-    if (!slider) return;
+    if (!slider) return 0;
 
     const card = slider.querySelector(`.${styles.card}`);
-    const gap = 12;
-    const step = card ? card.clientWidth + gap : 292;
+    if (!card) return 0;
+
+    const track = sliderTrackRef.current;
+    const gap = track ? Number.parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || "0") : 0;
+    return card.clientWidth + gap;
+  };
+
+  const handleSliderNav = (direction, { animated = true } = {}) => {
+    const step = getSliderStep();
+    if (step <= 0) return;
+
+    if (isMobileView) {
+      setIsTrackAnimating(animated);
+      mobileIndexRef.current =
+        ((mobileIndexRef.current + direction) % cards.length + cards.length) % cards.length;
+      applyOffset(mobileIndexRef.current * step);
+      return;
+    }
+
     applyOffset(offsetRef.current + direction * step);
   };
 
+  useEffect(() => {
+    if (!isMobileView || !isVisible) {
+      return undefined;
+    }
+
+    const intervalId = window.setInterval(() => {
+      if (activeCardKey || pointerDownRef.current || isDraggingRef.current) {
+        return;
+      }
+
+      handleSliderNav(1, { animated: true });
+    }, MOBILE_AUTO_ADVANCE_MS);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [activeCardKey, isMobileView, isVisible]);
+
   const handlePointerDown = (event) => {
+    setIsTrackAnimating(false);
     pointerDownRef.current = true;
     isDraggingRef.current = false;
     dragStartXRef.current = event.clientX;
@@ -284,6 +348,17 @@ function CreativeAgency() {
       setActiveCardKey((currentKey) =>
         currentKey === nextCardKey ? "" : nextCardKey
       );
+    }
+
+    if (isMobileView) {
+      const step = getSliderStep();
+      if (step > 0) {
+        const snappedIndex =
+          ((Math.round(offsetRef.current / step) % cards.length) + cards.length) % cards.length;
+        mobileIndexRef.current = snappedIndex;
+        setIsTrackAnimating(true);
+        applyOffset(snappedIndex * step);
+      }
     }
   };
 
@@ -392,7 +467,12 @@ function CreativeAgency() {
             onPointerCancel={handlePointerUp}
             onPointerLeave={handlePointerUp}
           >
-            <div className={styles.sliderTrack} ref={sliderTrackRef}>
+            <div
+              className={`${styles.sliderTrack} ${
+                isTrackAnimating ? styles.sliderTrackAnimated : ""
+              }`}
+              ref={sliderTrackRef}
+            >
               {loopedCards.map((card) => (
                 <article
                   className={`${styles.card} ${

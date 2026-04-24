@@ -19,6 +19,7 @@ function Header() {
 
   const activeService =
     servicesData.find((service) => service.id === activeServiceId) || servicesData[0];
+  const hasExpandedNavState = Boolean(activeDropdown || previewDropdown || isMobileMenuOpen);
 
   useEffect(() => {
     if (!hoveredLabel) {
@@ -215,13 +216,11 @@ function Header() {
   return (
     <nav
       className={`${styles.navbar}${
-        activeDropdown || previewDropdown || isMobileMenuOpen
-          ? ` ${styles.navbarBlurActive}`
-          : ""
+        hasExpandedNavState ? ` ${styles.navbarBlurActive}` : ""
       }${
         isMobileMenuOpen ? ` ${styles.navbarMobileMenuOpen}` : ""
       }${
-        isCompact ? ` ${styles.navbarCompact}` : ""
+        isCompact && !hasExpandedNavState ? ` ${styles.navbarCompact}` : ""
       }`}
       onMouseLeave={() => {
         if (!isMobileMenuOpen) {

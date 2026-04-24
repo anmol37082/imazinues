@@ -4,8 +4,7 @@
   --feature-title: #111111;
   --feature-copy: #6b7280;
   --feature-shadow: 0 18px 40px rgba(31, 74, 135, 0.08);
-  background:
-    linear-gradient(180deg, #9ac9f8 0%, var(--feature-bg) 100%);
+  background: white;
   padding: 32px 20px 20px;
 }
 
@@ -64,7 +63,10 @@
   gap: 18px;
   padding: 22px 30px 22px 24px;
   overflow: hidden;
-  position: relative;  
+  position: relative;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .card1 {
@@ -131,6 +133,8 @@
   object-fit: contain;
   position: relative;
   z-index: 1;
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .content {
@@ -168,6 +172,17 @@
   color: #111111;
   font-size: 1.14rem;
   font-weight: 100;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 52px rgba(31, 74, 135, 0.14);
+  }
+
+  .card:hover .image {
+    transform: scale(1.06);
+  }
 }
 
 @media (max-width: 1080px) {
@@ -225,19 +240,21 @@
   }
 
   .gridMobile {
-    max-width: 1270px;
+    max-width: 520px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
   }
 
   .card {
     min-height: auto;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 22px 20px;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 18px 24px;
+    border-radius: 16px;
+    text-align: center;
   }
 
   .card1,
@@ -253,20 +270,20 @@
     min-width: 0;
     width: 100%;
     flex-basis: auto;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .imageStage {
-    min-height: 124px;
-    justify-content: flex-start;
+    min-height: 156px;
+    justify-content: center;
   }
 
   .image {
-    width: min(180px, 72%);
+    width: min(210px, 88%);
   }
 
   .content {
-    max-width: none;
+    max-width: 260px;
   }
 
   .title {
@@ -274,7 +291,14 @@
   }
 
   .cardTitle {
-    font-size: 2.1rem;
+    margin-bottom: 8px;
+    font-size: 1.9rem;
+    line-height: 1.08;
+  }
+
+  .cardDesc {
+    font-size: 1rem;
+    line-height: 1.35;
   }
 }
 
@@ -289,14 +313,22 @@
 
   .card {
     border-radius: 14px;
-    padding: 20px 18px;
+    padding: 16px 16px 22px;
+  }
+
+  .imageStage {
+    min-height: 142px;
+  }
+
+  .image {
+    width: min(205px, 92%);
   }
 
   .cardTitle {
-    font-size: 1.8rem;
+    font-size: 1.65rem;
   }
 
   .cardDesc {
-    font-size: 1rem;
+    font-size: 0.98rem;
   }
 }
