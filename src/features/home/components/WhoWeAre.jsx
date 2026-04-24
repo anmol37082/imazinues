@@ -7,32 +7,31 @@ const COUNT_DURATION = 1400;
 
 const stats = [
   {
-    value: "90+",
+    value: "100+",
     labelLines: [
-      "Projects shipped with care",
-      "and reviewed end to end",
+      "Projects Delivered",
+      "Turning ideas into impactful projects with creativity, strategy, and precision.",
     ],
   },
   {
-    value: "100%",
+    value: "99%",
     labelLines: [
-      "Happy clients that quickly come back",
-      "for new projects and ideas",
+      "Client Satisfaction",
+      "Built on trust, creativity, and consistent results that keep clients happy.",
     ],
-    compactLabel: true,
   },
   {
     value: "30+",
     labelLines: [
-      "Brands and startups that trusted us",
-      "to shape their identity",
+      "Clients Served",
+      "Empowering brands with smart strategy, bold creativity, and growth focus.",
     ],
   },
   {
-    value: "120",
+    value: "5L+",
     labelLines: [
-      "Design concepts explored before",
-      "landing on the perfect fit",
+      "Ads Spent",
+      "Smartly managed ad spend delivering reach, engagement, and quality leads.",
     ],
   },
 ];
@@ -144,17 +143,17 @@ function WhoWeAre() {
 
         <h2 className={styles.title}>
           <span className={styles.revealLine} style={{ "--line-delay": "0.06s" }}>
-            <span className={styles.revealLineInner}>Agency of ideas</span>
+            <span className={styles.revealLineInner}>We build brands with </span>
           </span>
           <span className={styles.revealLine} style={{ "--line-delay": "0.1s" }}>
-            <span className={styles.revealLineInner}>and impact</span>
+            <span className={styles.revealLineInner}>digital power.</span>
           </span>
         </h2>
 
         <p className={styles.copy}>
           <span className={styles.revealLine} style={{ "--line-delay": "0.14s" }}>
             <span className={styles.revealLineInner}>
-              We turn sharp strategy into brands and experiences people remember
+             Strategic creativity and data-driven marketing that turn attention into engagement and engagement into real business growth.
             </span>
           </span>
         </p>
@@ -196,7 +195,13 @@ function WhoWeAre() {
                   key={line}
                   style={{ "--line-delay": `${0.38 + index * 0.08 + lineIndex * 0.06}s` }}
                 >
-                  <span className={styles.revealLineInner}>{line}</span>
+                  <span
+                    className={`${styles.revealLineInner} ${
+                      lineIndex === 0 ? styles.statLabelHeading : ""
+                    }`}
+                  >
+                    {line}
+                  </span>
                 </span>
               ))}
             </p>

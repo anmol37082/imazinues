@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./CreativeAgency.module.css";
 
 const LOOP_COPIES = 2;
@@ -154,6 +154,54 @@ function CreativeAgency() {
     }))
   ).flat();
 
+  const applyOffset = useCallback((nextOffset) => {
+    const track = sliderTrackRef.current;
+    const segmentWidth = segmentWidthRef.current;
+    if (!track || segmentWidth <= 0) return;
+
+    offsetRef.current =
+      ((nextOffset % segmentWidth) + segmentWidth) % segmentWidth;
+    track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+  }, []);
+
+  const getSliderStep = useCallback(() => {
+    const slider = sliderRef.current;
+    if (!slider) return 0;
+
+    const card = slider.querySelector(`.${styles.card}`);
+    if (!card) return 0;
+
+    const track = sliderTrackRef.current;
+    const gap = track
+      ? Number.parseFloat(
+          window.getComputedStyle(track).columnGap ||
+            window.getComputedStyle(track).gap ||
+            "0"
+        )
+      : 0;
+
+    return card.clientWidth + gap;
+  }, []);
+
+  const handleSliderNav = useCallback(
+    (direction, { animated = true } = {}) => {
+      const step = getSliderStep();
+      if (step <= 0) return;
+
+      if (isMobileView) {
+        setIsTrackAnimating(animated);
+        mobileIndexRef.current =
+          ((mobileIndexRef.current + direction) % cards.length + cards.length) %
+          cards.length;
+        applyOffset(mobileIndexRef.current * step);
+        return;
+      }
+
+      applyOffset(offsetRef.current + direction * step);
+    },
+    [applyOffset, getSliderStep, isMobileView]
+  );
+
   useEffect(() => {
     const updateViewportMode = () => {
       setIsMobileView(window.innerWidth <= MOBILE_BREAKPOINT);
@@ -213,7 +261,7 @@ function CreativeAgency() {
     return () => {
       window.removeEventListener("resize", updateTrackMetrics);
     };
-  }, [isMobileView]);
+  }, [getSliderStep, isMobileView]);
 
   useEffect(() => {
     const track = sliderTrackRef.current;
@@ -254,43 +302,6 @@ function CreativeAgency() {
     };
   }, [activeCardKey, isMobileView, isVisible]);
 
-  const applyOffset = (nextOffset) => {
-    const track = sliderTrackRef.current;
-    const segmentWidth = segmentWidthRef.current;
-    if (!track || segmentWidth <= 0) return;
-
-    offsetRef.current =
-      ((nextOffset % segmentWidth) + segmentWidth) % segmentWidth;
-    track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
-  };
-
-  const getSliderStep = () => {
-    const slider = sliderRef.current;
-    if (!slider) return 0;
-
-    const card = slider.querySelector(`.${styles.card}`);
-    if (!card) return 0;
-
-    const track = sliderTrackRef.current;
-    const gap = track ? Number.parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || "0") : 0;
-    return card.clientWidth + gap;
-  };
-
-  const handleSliderNav = (direction, { animated = true } = {}) => {
-    const step = getSliderStep();
-    if (step <= 0) return;
-
-    if (isMobileView) {
-      setIsTrackAnimating(animated);
-      mobileIndexRef.current =
-        ((mobileIndexRef.current + direction) % cards.length + cards.length) % cards.length;
-      applyOffset(mobileIndexRef.current * step);
-      return;
-    }
-
-    applyOffset(offsetRef.current + direction * step);
-  };
-
   useEffect(() => {
     if (!isMobileView || !isVisible) {
       return undefined;
@@ -307,7 +318,7 @@ function CreativeAgency() {
     return () => {
       window.clearInterval(intervalId);
     };
-  }, [activeCardKey, isMobileView, isVisible]);
+  }, [activeCardKey, handleSliderNav, isMobileView, isVisible]);
 
   const handlePointerDown = (event) => {
     setIsTrackAnimating(false);
@@ -376,18 +387,17 @@ function CreativeAgency() {
 
           <h2 className={styles.title}>
             <span className={styles.revealLine} style={{ "--line-delay": "0s" }}>
-              <span className={styles.revealLineInner}>Creative agency</span>
+              <span className={styles.revealLineInner}>Behind Every Big </span>
             </span>
             <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
-              <span className={styles.revealLineInner}>focused on clarity</span>
+              <span className={styles.revealLineInner}>Success Is a Powerful Process</span>
             </span>
           </h2>
 
           <p className={styles.copy}>
             <span className={styles.revealLine} style={{ "--line-delay": "0.16s" }}>
               <span className={styles.revealLineInner}>
-                We shape brands, campaigns, and digital experiences people
-                remember.
+               We Believe in Process, It’s a Way to Succeed.
               </span>
             </span>
           </p>

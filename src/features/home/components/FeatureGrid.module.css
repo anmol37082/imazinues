@@ -8,6 +8,27 @@
   padding: 32px 20px 20px;
 }
 
+.revealLine {
+  display: block;
+  overflow: hidden;
+}
+
+.revealLineInner {
+  display: block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition:
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.55s ease;
+  transition-delay: var(--line-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.sectionVisible .revealLineInner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .intro {
   max-width: 860px;
   margin: 0 auto 38px;
@@ -91,6 +112,14 @@
 
 .card6 {
   min-height: 278px;
+}
+
+.card7 {
+  min-height: 252px;
+}
+
+.card8 {
+  min-height: 262px;
 }
 
 .card::after {
@@ -215,6 +244,14 @@
     min-height: 244px;
   }
 
+  .card7 {
+    min-height: 220px;
+  }
+
+  .card8 {
+    min-height: 232px;
+  }
+
   .gridDesktop,
   .column {
     gap: 16px;
@@ -248,7 +285,7 @@
   }
 
   .card {
-    min-height: auto;
+    min-height: unset;
     flex-direction: column;
     align-items: center;
     gap: 14px;
@@ -262,8 +299,10 @@
   .card3,
   .card4,
   .card5,
-  .card6 {
-    min-height: auto;
+  .card6,
+  .card7,
+  .card8 {
+    min-height: unset;
   }
 
   .imageWrap {
