@@ -38,6 +38,13 @@
   font-display: swap;
 }
 
+:root {
+  --subtitle-color: rgba(17, 17, 17, 0.86);
+  --subtitle-muted: #596273;
+  --subtitle-soft: #6f7786;
+  --subtitle-strong: #404957;
+}
+
 html {
   height: 100%;
 }

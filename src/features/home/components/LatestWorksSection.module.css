@@ -1,0 +1,263 @@
+.section {
+  padding: 34px 0 0;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.worksSection {
+  padding: 10px 0 0;
+}
+
+.worksIntro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #eff1f5;
+  color: var(--subtitle-color);
+  font-family: var(--font-bw);
+  font-size: 0.92rem;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.sectionTitle {
+  margin: 18px 0 12px;
+  color: #111111;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(2.2rem, 2.45vw, 3.15rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.sectionCopy {
+  max-width: 260px;
+  margin: 0;
+  color: var(--subtitle-muted);
+  font-family: var(--font-bw);
+  font-size: 1.08rem;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.worksAside {
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.teamRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.teamAvatars {
+  display: flex;
+  align-items: center;
+}
+
+.teamAvatar {
+  width: 38px;
+  height: 38px;
+  margin-left: -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d5dce8 0%, #f0f3f8 100%);
+  color: #1f2937;
+  font-family: var(--font-br-sonoma);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.teamAvatar:first-child {
+  margin-left: 0;
+}
+
+.teamLabel,
+.teamCount,
+.worksLink,
+.workTitle,
+.workTimeline {
+  font-family: var(--font-bw);
+  font-weight: 100;
+  letter-spacing: 0.01em;
+}
+
+.teamLabel {
+  color: var(--subtitle-muted);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.teamCount {
+  color: #111111;
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.worksLink {
+  color: #111111;
+  font-size: 1.08rem;
+  line-height: 1.2;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 12px;
+  margin-top: 140px;
+}
+
+.worksLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+  height: 2px;
+  background: #111111;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.workCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workArt {
+  min-height: 500px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  position: relative;
+}
+
+.workImage {
+  object-fit: cover;
+  filter: blur(0);
+  transform: scale(1);
+  transition:
+    filter 0.35s ease,
+    transform 0.45s ease;
+}
+
+.workArt:hover .workImage {
+  filter: blur(4px);
+  transform: scale(1.04);
+}
+
+.workMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 10px;
+}
+
+.workTitle,
+.workTimeline {
+  color: var(--subtitle-strong);
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 1080px) {
+  .worksIntro {
+    flex-direction: column;
+  }
+
+  .worksAside {
+    min-width: 0;
+    align-items: flex-start;
+  }
+
+  .worksLink {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 28px;
+  }
+
+  .container {
+    width: min(100%, calc(100% - 32px));
+  }
+
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .workArt {
+    min-height: 400px;
+  }
+
+  .sectionTitle {
+    font-size: 2.02rem;
+    line-height: 1.08;
+  }
+
+  .sectionCopy,
+  .workTitle,
+  .workTimeline,
+  .teamCount,
+  .worksLink {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .sectionTitle {
+    font-size: 1.76rem;
+  }
+
+  .teamRow,
+  .workMeta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .workArt {
+    min-height: 340px;
+  }
+}

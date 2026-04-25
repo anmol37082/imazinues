@@ -104,7 +104,7 @@
 .copy {
   max-width: 460px;
   margin: 0 auto;
-  color: rgba(17, 17, 17, 0.8);
+  color: var(--subtitle-color);
   font-family: var(--font-bw);
   font-size: 16px;
   font-weight: 100;
@@ -228,7 +228,7 @@
 
 .sectionNote {
   margin: 28px auto 0;
-  color: rgba(17, 17, 17, 0.82);
+  color: var(--subtitle-color);
   font-family: var(--font-bw);
   font-size: 18px;
   font-weight: 400;

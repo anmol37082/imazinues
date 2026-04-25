@@ -4,6 +4,9 @@ import CreativeContent from "@/features/home/components/CreativeContent.jsx";
 import WhoWeAre from "@/features/home/components/WhoWeAre.jsx";
 // import BottomBlur from "@/features/home/components/BottomBlur.jsx";
 import FeatureGrid from "@/features/home/components/FeatureGrid.jsx";
+import TestimonialShowcase from "@/features/home/components/TestimonialShowcase.jsx";
+import LatestWorksSection from "@/features/home/components/LatestWorksSection.jsx";
+import ResultsHighlightSection from "@/features/home/components/ResultsHighlightSection.jsx";
 
 export default function Home() {
   return (
@@ -14,7 +17,10 @@ export default function Home() {
       <WhoWeAre />
       <FeatureGrid />
       {/* <BottomBlur /> */}
-       <CreativeContent />
+      <CreativeContent />
+      <TestimonialShowcase />
+      <LatestWorksSection />
+      <ResultsHighlightSection />
     </>
   );
 }
