@@ -44,7 +44,8 @@ const Hero = () => {
           <p className={styles.tagline}>
             <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
               <span className={styles.revealLineInner}>
-                Strategy, design, and marketing that drive real growth.
+                Strategy, design, and marketing that drive
+                <span className={styles.mobileTaglineBreak}> real growth.</span>
               </span>
             </span>
           </p>

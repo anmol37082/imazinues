@@ -55,6 +55,18 @@ function WorkCard({ title, timeline, img }) {
           className={styles.workImage}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
+        <span className={styles.workHoverBadge} aria-hidden="true">
+          <svg viewBox="0 0 24 24" className={styles.workHoverIcon}>
+            <path
+              d="M8 16L16 8M9 8h7v7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
       </div>
       <div className={styles.workMeta}>
         <span className={styles.workTitle}>{title}</span>
@@ -86,7 +98,7 @@ export default function LatestWorksSection() {
                   ))}
                 </div>
 
-                <div>
+                <div className={styles.teamInfo}>
                   <div className={styles.teamLabel}>Core team</div>
                   <div className={styles.teamCount}>4 members</div>
                 </div>

@@ -27,22 +27,37 @@ function ClusterMark() {
   );
 }
 
+function RatingStars() {
+  return (
+    <div className={styles.stars} aria-label="5 star rating">
+      {Array.from({ length: 5 }).map((_, index) => (
+        <svg
+          key={index}
+          className={styles.starIcon}
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M12 2.75l2.83 5.73 6.32.92-4.57 4.46 1.08 6.29L12 17.17l-5.66 2.98 1.08-6.29L2.85 9.4l6.32-.92L12 2.75z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 export default function ResultsHighlightSection() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <section className={styles.resultsSection}>
           <div className={styles.resultsHeader}>
-            <div className={styles.stars} aria-label="5 star rating">
-              <span>* * * * *</span>
-            </div>
+            <RatingStars />
             <span className={styles.pill}>Award-winning agency</span>
             <h2 className={styles.resultsTitle}>
-              We&apos;ll help you figure
+              We&apos;ll help you
               <br />
-              out what your brand
+              figure out what your
               <br />
-              really needs
+              brand really needs
             </h2>
           </div>
 

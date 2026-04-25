@@ -3,6 +3,19 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./CreativeContent.module.css";
 
+function PointIcon() {
+  return (
+    <span className={styles.pointIcon} aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" className={styles.pointIconSvg}>
+        <path
+          d="M10 2.5L11.9 7.1L16.5 9L11.9 10.9L10 15.5L8.1 10.9L3.5 9L8.1 7.1L10 2.5Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
+}
+
 const contentRows = [
   {
     id: "generate",
@@ -15,9 +28,15 @@ const contentRows = [
       </>
     ),
     points: [
-      "Start with an idea, paste in an outline, or import existing content",
+      <>
+        Start with an idea, paste in an outline, or
+        <span className={styles.mobilePointBreak}> import existing content</span>
+      </>,
       "20+ AI models for highest-quality output",
-      "Import your brand or use one of our 100+ themes",
+      <>
+        Import your brand or use one of our 100+
+        <span className={styles.mobilePointBreak}> themes</span>
+      </>,
     ],
     cta: "Start for free",
     mediaSide: "left",
@@ -41,7 +60,10 @@ const contentRows = [
     badge: "Publish",
     title: "Move from concept to launch with content that is ready to perform.",
     points: [
-      "Package campaigns for ads, reels, websites, and presentations",
+      <>
+        Package campaigns for ads, reels, websites,
+        <span className={styles.mobilePointBreak}> and presentations</span>
+      </>,
       "Keep every output consistent with your brand direction",
       "Swap the blank panel with a final video when production is ready",
     ],
@@ -154,8 +176,8 @@ function CreativeContent() {
 
                 <ul className={styles.points}>
                   {row.points.map((point, pointIndex) => (
-                    <li key={point} className={styles.point}>
-                      <span className={styles.pointIcon} aria-hidden="true" />
+                    <li key={`${row.id}-${pointIndex}`} className={styles.point}>
+                      <PointIcon />
                       <span
                         className={styles.revealLine}
                         style={{

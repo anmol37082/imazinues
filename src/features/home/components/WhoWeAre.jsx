@@ -11,14 +11,20 @@ const stats = [
     value: "100+",
     labelLines: [
       "Projects Delivered",
-      "Turning ideas into impactful projects with creativity, strategy, and precision.",
+      <>
+        Turning ideas into impactful projects with
+        <span className={styles.mobileStatBreak}> creativity, strategy, and precision.</span>
+      </>,
     ],
   },
   {
     value: "99%",
     labelLines: [
       "Client Satisfaction",
-      "Built on trust, creativity, and consistent results that keep clients happy.",
+      <>
+        Built on trust, creativity, and consistent results
+        <span className={styles.mobileStatBreak}> that keep clients happy.</span>
+      </>,
     ],
   },
   {
@@ -187,7 +193,10 @@ function WhoWeAre() {
         <p className={styles.copy}>
           <span className={styles.revealLine} style={{ "--line-delay": "0.14s" }}>
             <span className={styles.revealLineInner}>
-             Strategic creativity and data-driven marketing that turn attention into engagement and engagement into real business growth.
+              Strategic creativity and data-driven
+              <span className={styles.mobileCopyBreak}> marketing that turn attention into engagement</span>
+              <span className={styles.mobileCopyBreak}> and engagement into real business</span>
+              <span className={styles.mobileCopyBreak}> growth.</span>
             </span>
           </span>
         </p>
@@ -226,12 +235,12 @@ function WhoWeAre() {
                   className={`${styles.revealLine} ${
                     item.compactLabel ? styles.revealLineNoWrap : ""
                   }`}
-                  key={line}
+                  key={`${item.value}-${lineIndex}`}
                   style={{ "--line-delay": `${0.38 + index * 0.08 + lineIndex * 0.06}s` }}
                 >
                   <span
                     className={`${styles.revealLineInner} ${
-                      lineIndex === 0 ? styles.statLabelHeading : ""
+                      lineIndex === 0 ? styles.statLabelHeading : styles.statLabelCopy
                     }`}
                   >
                     {line}
