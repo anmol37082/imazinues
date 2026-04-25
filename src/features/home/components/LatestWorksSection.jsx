@@ -89,26 +89,28 @@ export default function LatestWorksSection() {
                 Case studies that highlight our process and results.
               </p>
 
-              <div className={styles.teamRow}>
-                <div className={styles.teamAvatars} aria-hidden="true">
-                  {teamMembers.map((member) => (
-                    <span key={member} className={styles.teamAvatar}>
-                      {member}
-                    </span>
-                  ))}
+              <div className={styles.metaRow}>
+                <div className={styles.teamRow}>
+                  <div className={styles.teamAvatars} aria-hidden="true">
+                    {teamMembers.map((member) => (
+                      <span key={member} className={styles.teamAvatar}>
+                        {member}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className={styles.teamInfo}>
+                    <div className={styles.teamLabel}>Core team</div>
+                    <div className={styles.teamCount}>4 members</div>
+                  </div>
                 </div>
 
-                <div className={styles.teamInfo}>
-                  <div className={styles.teamLabel}>Core team</div>
-                  <div className={styles.teamCount}>4 members</div>
+                <div className={styles.worksAside}>
+                  <a href="#contact" className={styles.worksLink}>
+                    See all works
+                  </a>
                 </div>
               </div>
-            </div>
-
-            <div className={styles.worksAside}>
-              <a href="#contact" className={styles.worksLink}>
-                See all works
-              </a>
             </div>
           </div>
 
