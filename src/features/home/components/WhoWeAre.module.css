@@ -273,3 +273,9 @@
     white-space: normal;
   }
 }
+
+@media (max-width: 405px) {
+  .mobileCopyBreak {
+    display: inline;
+  }
+}

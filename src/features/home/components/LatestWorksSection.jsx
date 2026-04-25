@@ -84,32 +84,34 @@ export default function LatestWorksSection() {
           <div className={styles.worksIntro}>
             <div>
               <span className={styles.pill}>Works 2025</span>
-              <h2 className={styles.sectionTitle}>Latest works</h2>
+              <h2 className={styles.sectionTitle}>Fresh From Our Studio</h2>
               <p className={styles.sectionCopy}>
-                Case studies that highlight our process and results.
+                New ideas crafted with passion,
+                <br />
+                precision, and powerful results.
               </p>
+            </div>
 
-              <div className={styles.metaRow}>
-                <div className={styles.teamRow}>
-                  <div className={styles.teamAvatars} aria-hidden="true">
-                    {teamMembers.map((member) => (
-                      <span key={member} className={styles.teamAvatar}>
-                        {member}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className={styles.teamInfo}>
-                    <div className={styles.teamLabel}>Core team</div>
-                    <div className={styles.teamCount}>4 members</div>
-                  </div>
+            <div className={styles.metaRow}>
+              <div className={styles.teamRow}>
+                <div className={styles.teamAvatars} aria-hidden="true">
+                  {teamMembers.map((member) => (
+                    <span key={member} className={styles.teamAvatar}>
+                      {member}
+                    </span>
+                  ))}
                 </div>
 
-                <div className={styles.worksAside}>
-                  <a href="#contact" className={styles.worksLink}>
-                    See all works
-                  </a>
+                <div className={styles.teamInfo}>
+                  <div className={styles.teamLabel}>Core team</div>
+                  <div className={styles.teamCount}>4 members</div>
                 </div>
+              </div>
+
+              <div className={styles.worksAside}>
+                <a href="#contact" className={styles.worksLink}>
+                  See all works
+                </a>
               </div>
             </div>
           </div>

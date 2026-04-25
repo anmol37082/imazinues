@@ -63,7 +63,7 @@
 }
 
 .sectionCopy {
-  max-width: 260px;
+  max-width: 520px;
   margin: 0;
   color: var(--subtitle-muted);
   font-family: var(--font-br-sonoma);
@@ -75,7 +75,6 @@
 
 .metaRow {
   width: 100%;
-  margin-top: 24px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;

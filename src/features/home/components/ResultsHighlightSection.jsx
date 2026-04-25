@@ -53,11 +53,11 @@ export default function ResultsHighlightSection() {
             <RatingStars />
             <span className={styles.pill}>Award-winning agency</span>
             <h2 className={styles.resultsTitle}>
-              We&apos;ll help you
+              We help you discover
               <br />
-              figure out what your
+              what your brand truly
               <br />
-              brand really needs
+              needs to grow.
             </h2>
           </div>
 

@@ -44,17 +44,21 @@ const Hero = () => {
           <p className={styles.tagline}>
             <span className={styles.revealLine} style={{ "--line-delay": "0.08s" }}>
               <span className={styles.revealLineInner}>
-                Strategy, design, and marketing that drive
-                <span className={styles.mobileTaglineBreak}> real growth.</span>
+                Strategy, design, and marketing
+                <br />
+                that drive real growth.
               </span>
             </span>
           </p>
           <h1 className={styles.headline}>
             <span className={styles.revealLine} style={{ "--line-delay": "0.16s" }}>
-              <span className={styles.revealLineInner}>Creative agency</span>
+              <span className={styles.revealLineInner}>Creative</span>
             </span>
             <span className={styles.revealLine} style={{ "--line-delay": "0.24s" }}>
-              <span className={styles.revealLineInner}>focused on clarity</span>
+              <span className={styles.revealLineInner}>agency focused</span>
+            </span>
+            <span className={styles.revealLine} style={{ "--line-delay": "0.32s" }}>
+              <span className={styles.revealLineInner}>on clarity</span>
             </span>
           </h1>
         </div>

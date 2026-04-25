@@ -19,13 +19,13 @@ export default function TestimonialShowcase() {
             </span>
 
             <h2 className={styles.testimonialTitle}>
-              They took the time
+              Great brands start
               <br />
-              to truly dive into
+              with understanding
               <br />
-              our brand and its
+              the story behind
               <br />
-              story
+              them.
             </h2>
 
             <div className={styles.authorRow}>

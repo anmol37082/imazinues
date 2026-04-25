@@ -3,39 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./CreativeContent.module.css";
 
-function PointIcon() {
-  return (
-    <span className={styles.pointIcon} aria-hidden="true">
-      <svg viewBox="0 0 20 20" fill="none" className={styles.pointIconSvg}>
-        <path
-          d="M10 2.5L11.9 7.1L16.5 9L11.9 10.9L10 15.5L8.1 10.9L3.5 9L8.1 7.1L10 2.5Z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
-}
-
 const contentRows = [
   {
     id: "generate",
     badge: "Generate",
-    title: "Skip the blank page, create brilliance in a flash.",
-    mobileTitle: (
-      <>
-        Skip the blank page,
-        <span className={styles.mobileTitleBreak}> create brilliance in a flash.</span>
-      </>
-    ),
+    title: "Modern Lifestyle Jewellers",
     points: [
       <>
-        Start with an idea, paste in an outline, or
-        <span className={styles.mobilePointBreak}> import existing content</span>
-      </>,
-      "20+ AI models for highest-quality output",
-      <>
-        Import your brand or use one of our 100+
-        <span className={styles.mobilePointBreak}> themes</span>
+        From logo creation to full brand setup, Imazine Us built the brand from
+        zero to hero with social media profiles, brand photoshoot, product
+        shoot, and creative video production.
       </>,
     ],
     cta: "Start for free",
@@ -45,11 +22,9 @@ const contentRows = [
   {
     id: "optimize",
     badge: "Optimize",
-    title: "Refine every draft with sharper messaging and cleaner visuals.",
+    title: "Kiner Kailash Jewellers",
     points: [
-      "Rework copy, layouts, and hooks without rebuilding from scratch",
-      "Keep your team aligned with fast content iteration",
-      "Prepare each scene for production-ready delivery",
+      "Imazine Us managed social media growth with brand photoshoot, product shoot, video content, website development, SEO strategy, and Google Business profile management.",
     ],
     cta: "Explore workflow",
     mediaSide: "right",
@@ -58,14 +33,9 @@ const contentRows = [
   {
     id: "publish",
     badge: "Publish",
-    title: "Move from concept to launch with content that is ready to perform.",
+    title: "Glamour & Radiance",
     points: [
-      <>
-        Package campaigns for ads, reels, websites,
-        <span className={styles.mobilePointBreak}> and presentations</span>
-      </>,
-      "Keep every output consistent with your brand direction",
-      "Swap the blank panel with a final video when production is ready",
+      "From logo design to complete brand setup, packaging design, social media creation, and a powerful e-commerce website, Imazine Us built the brand identity and digital presence.",
     ],
     cta: "Plan your launch",
     mediaSide: "left",
@@ -109,31 +79,31 @@ function CreativeContent() {
             className={`${styles.revealLine} ${styles.headingLineDesktop}`}
             style={{ "--line-delay": "0s" }}
           >
-            <span className={styles.revealLineInner}>Creative content at the</span>
+            <span className={styles.revealLineInner}>Ideas that move at</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineDesktop}`}
             style={{ "--line-delay": "0.08s" }}
           >
-            <span className={styles.revealLineInner}>speed of light.</span>
+            <span className={styles.revealLineInner}>the speed of creativity.</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0s" }}
           >
-            <span className={styles.revealLineInner}>Creative content</span>
+            <span className={styles.revealLineInner}>Ideas that move</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0.08s" }}
           >
-            <span className={styles.revealLineInner}>at the speed</span>
+            <span className={styles.revealLineInner}>at the speed of</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0.16s" }}
           >
-            <span className={styles.revealLineInner}>of light.</span>
+            <span className={styles.revealLineInner}>creativity.</span>
           </span>
         </h2>
       </div>
@@ -145,7 +115,9 @@ function CreativeContent() {
           return (
             <article
               key={row.id}
-              className={`${styles.row} ${!mediaFirst ? styles.rowReverse : ""}`}
+              className={`${styles.row} ${!mediaFirst ? styles.rowReverse : ""} ${
+                row.id === "generate" ? styles.rowGenerate : ""
+              }`}
             >
               <div className={styles.mediaCard} aria-label={`${row.badge} preview video`}>
                 <video
@@ -177,7 +149,6 @@ function CreativeContent() {
                 <ul className={styles.points}>
                   {row.points.map((point, pointIndex) => (
                     <li key={`${row.id}-${pointIndex}`} className={styles.point}>
-                      <PointIcon />
                       <span
                         className={styles.revealLine}
                         style={{
