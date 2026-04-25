@@ -574,10 +574,6 @@
     padding: 0;
   }
 
-  .sliderViewport {
-    padding: 0 12px;
-  }
-
   .sliderTrack {
     gap: 12px;
     padding: 20px 0;
@@ -630,12 +626,6 @@
     right: 8px;
   }
   
-  .card {
-    width: calc(100vw - 24px);
-    min-width: calc(100vw - 24px);
-    height: 330px;
-  }
-  
   .floatingWidget {
     bottom: 20px;
     right: 20px;
@@ -681,10 +671,6 @@
     font-size: 16px;
   }
 
-  .sliderViewport {
-    padding: 0 10px;
-  }
-
   .sliderTrack {
     padding: 20px 0;
   }
@@ -693,12 +679,6 @@
     top: calc(50% - 24px);
   }
 
-  .card {
-    width: calc(100vw - 20px);
-    min-width: calc(100vw - 20px);
-    height: 350px;
-  }
-  
   .cardTitle {
     font-size: 2rem;
   }

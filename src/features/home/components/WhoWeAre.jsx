@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./WhoWeAre.module.css";
 
-const COUNT_DURATION = 1400;
+const COUNT_DURATION = 2400;
+const COUNT_START_THRESHOLD = 0.35;
 
 const stats = [
   {
@@ -52,6 +53,7 @@ function WhoWeAre() {
   const imageWrapRef = useRef(null);
   const [imageWidth, setImageWidth] = useState(70);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasCountStarted, setHasCountStarted] = useState(false);
   const [animatedValues, setAnimatedValues] = useState(() =>
     parsedStats.map(() => 0)
   );
@@ -62,9 +64,17 @@ function WhoWeAre() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        const inView = entry.isIntersecting;
+        setIsVisible(inView);
+
+        if (inView && entry.intersectionRatio >= COUNT_START_THRESHOLD) {
+          setHasCountStarted(true);
+        }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+      {
+        threshold: [0.12, COUNT_START_THRESHOLD],
+        rootMargin: "0px 0px -12% 0px",
+      }
     );
 
     observer.observe(node);
@@ -100,7 +110,7 @@ function WhoWeAre() {
   }, []);
 
   useEffect(() => {
-    if (!isVisible) {
+    if (!hasCountStarted) {
       return;
     }
 
@@ -128,7 +138,7 @@ function WhoWeAre() {
     return () => {
       window.cancelAnimationFrame(frameId);
     };
-  }, [isVisible]);
+  }, [hasCountStarted]);
 
   return (
     <section
@@ -206,7 +216,7 @@ function WhoWeAre() {
           >
             <strong className={`${styles.statValue} ${styles.revealLine}`}>
               <span className={styles.revealLineInner}>
-                {isVisible ? animatedValues[index] : 0}
+                {hasCountStarted ? animatedValues[index] : 0}
                 {item.suffix}
               </span>
             </strong>

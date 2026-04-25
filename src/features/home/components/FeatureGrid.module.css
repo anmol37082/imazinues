@@ -56,6 +56,10 @@
   letter-spacing: 0.01em;
 }
 
+.mobileSubtitleBreak {
+  display: inline;
+}
+
 .gridDesktop {
   max-width: 1270px;
   margin: 0 auto;
@@ -189,18 +193,6 @@
   font-weight: 100;
   line-height: 1.2;
   letter-spacing: 0.01em;
-}
-
-.card3 .cardTitle {
-  color: #111111;
-  font-size: clamp(2.15rem, 2.35vw, 3.05rem);
-  font-weight: 700;
-}
-
-.card3 .cardDesc {
-  color: #111111;
-  font-size: 1.14rem;
-  font-weight: 100;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -348,6 +340,10 @@
 
   .intro {
     margin-bottom: 24px;
+  }
+
+  .mobileSubtitleBreak {
+    display: block;
   }
 
   .card {

@@ -530,7 +530,18 @@ function Header() {
       )}
 
       {(activeDropdown || isMobileMenuOpen) && (
-        <div className={styles.navbarBackdrop} aria-hidden="true" />
+        <div
+          className={`${styles.navbarBackdrop}${
+            isMobileMenuOpen ? ` ${styles.navbarBackdropInteractive}` : ""
+          }`}
+          aria-hidden="true"
+          onClick={() => {
+            if (isMobileMenuOpen) {
+              setIsMobileMenuOpen(false);
+              setActiveMobileSection(null);
+            }
+          }}
+        />
       )}
     </nav>
   );

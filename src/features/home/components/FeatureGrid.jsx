@@ -66,11 +66,16 @@ export default function FeatureGrid() {
     const node = sectionRef.current;
     if (!node) return;
 
+    const isMobileView = window.innerWidth <= 768;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+      {
+        threshold: isMobileView ? 0.04 : 0.12,
+        rootMargin: isMobileView ? '0px 0px 8% 0px' : '0px 0px -6% 0px',
+      }
     );
 
     observer.observe(node);
@@ -120,7 +125,8 @@ export default function FeatureGrid() {
         <p className={styles.subtitle}>
           <span className={styles.revealLine} style={{ '--line-delay': '0.12s' }}>
             <span className={styles.revealLineInner}>
-              Where strategy, creativity, and technology create success.
+              Where strategy, creativity, and technology
+              <span className={styles.mobileSubtitleBreak}> create success.</span>
             </span>
           </span>
         </p>

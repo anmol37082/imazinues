@@ -160,11 +160,33 @@ function CreativeAgency() {
     const segmentWidth = segmentWidthRef.current;
     if (!track || segmentWidth <= 0) return;
 
-    offsetRef.current = wrap
-      ? ((nextOffset % segmentWidth) + segmentWidth) % segmentWidth
-      : nextOffset;
+    if (wrap) {
+      offsetRef.current = ((nextOffset % segmentWidth) + segmentWidth) % segmentWidth;
+    } else {
+      const slider = sliderRef.current;
+      const maxOffset = slider
+        ? Math.max(0, track.scrollWidth - slider.clientWidth)
+        : nextOffset;
+
+      offsetRef.current = Math.min(Math.max(nextOffset, 0), maxOffset);
+    }
+
+    offsetRef.current = Math.round(offsetRef.current);
+
     track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
   }, []);
+
+  const resetMobileLoopPosition = useCallback((nextIndex, step) => {
+    const track = sliderTrackRef.current;
+    if (!track || step <= 0) return;
+
+    mobileIndexRef.current = nextIndex;
+    setIsTrackAnimating(false);
+    track.style.transition = "none";
+    applyOffset(nextIndex * step, { wrap: false });
+    track.getBoundingClientRect();
+    track.style.transition = "";
+  }, [applyOffset]);
 
   const getSliderStep = useCallback(() => {
     const slider = sliderRef.current;
@@ -396,21 +418,18 @@ function CreativeAgency() {
 
     const timeoutId = window.setTimeout(() => {
       if (mobileIndexRef.current >= cards.length * 2) {
-        mobileIndexRef.current -= cards.length;
+        resetMobileLoopPosition(mobileIndexRef.current - cards.length, step);
       } else if (mobileIndexRef.current < cards.length) {
-        mobileIndexRef.current += cards.length;
+        resetMobileLoopPosition(mobileIndexRef.current + cards.length, step);
       } else {
         return;
       }
-
-      setIsTrackAnimating(false);
-      applyOffset(mobileIndexRef.current * step, { wrap: false });
     }, MOBILE_TRANSITION_MS);
 
     return () => {
       window.clearTimeout(timeoutId);
     };
-  }, [applyOffset, getSliderStep, isMobileView, isTrackAnimating]);
+  }, [getSliderStep, isMobileView, isTrackAnimating, resetMobileLoopPosition]);
 
   return (
     <section

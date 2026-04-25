@@ -8,6 +8,12 @@ const contentRows = [
     id: "generate",
     badge: "Generate",
     title: "Skip the blank page, create brilliance in a flash.",
+    mobileTitle: (
+      <>
+        Skip the blank page,
+        <span className={styles.mobileTitleBreak}> create brilliance in a flash.</span>
+      </>
+    ),
     points: [
       "Start with an idea, paste in an outline, or import existing content",
       "20+ AI models for highest-quality output",
@@ -53,11 +59,16 @@ function CreativeContent() {
     const node = sectionRef.current;
     if (!node) return;
 
+    const isMobileView = window.innerWidth <= 768;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      {
+        threshold: isMobileView ? 0.04 : 0.12,
+        rootMargin: isMobileView ? "0px 0px 6% 0px" : "0px 0px -8% 0px",
+      }
     );
 
     observer.observe(node);
@@ -135,7 +146,9 @@ function CreativeContent() {
                     className={styles.revealLine}
                     style={{ "--line-delay": `${0.06 + index * 0.04}s` }}
                   >
-                    <span className={styles.revealLineInner}>{row.title}</span>
+                    <span className={styles.revealLineInner}>
+                      {row.mobileTitle ?? row.title}
+                    </span>
                   </span>
                 </h3>
 

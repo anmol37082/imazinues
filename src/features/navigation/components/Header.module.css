@@ -700,6 +700,10 @@
   z-index: 10;
 }
 
+.navbarBackdropInteractive {
+  pointer-events: auto;
+}
+
 .mobileDrawer {
   display: none;
 }
