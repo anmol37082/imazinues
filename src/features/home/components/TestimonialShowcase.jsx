@@ -125,13 +125,13 @@ export default function TestimonialShowcase() {
       <div className={styles.container}>
         <div className={styles.intro}>
           <h2 className={styles.title}>
-            Creativity that doesn't just look
+            Creativity that doesn&apos;t just look
             <span className={styles.titleBreak}>good, it works.</span>
           </h2>
           <p className={styles.copy}>
-            For us, creativity is not only about design, it's about results. The real
+            For us, creativity is not only about design, it&apos;s about results. The real
             proof lies in the experiences and success stories shared by the brands
-            we've worked with.
+            we&apos;ve worked with.
           </p>
         </div>
 
