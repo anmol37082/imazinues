@@ -125,12 +125,13 @@ export default function TestimonialShowcase() {
       <div className={styles.container}>
         <div className={styles.intro}>
           <h2 className={styles.title}>
-            Proof that strong creative work
-            <span className={styles.titleBreak}> builds real brand momentum.</span>
+            Creativity that doesn't just look
+            <span className={styles.titleBreak}>good, it works.</span>
           </h2>
           <p className={styles.copy}>
-            Reviews from brands that trusted Imazine Us to shape their digital
-            presence with clarity, precision, and results.
+            For us, creativity is not only about design, it's about results. The real
+            proof lies in the experiences and success stories shared by the brands
+            we've worked with.
           </p>
         </div>
 

@@ -31,14 +31,20 @@ const stats = [
     value: "30+",
     labelLines: [
       "Clients Served",
-      "Empowering brands with smart strategy, bold creativity, and growth focus.",
+      <>
+        Empowering brands with smart strategy,<span className={styles.mobileStatBreak}> bold creativity,
+         and growth focus.</span>
+      </>,
     ],
   },
   {
     value: "5L+",
     labelLines: [
       "Ads Spent",
-      "Smartly managed ad spend delivering reach, engagement, and quality leads.",
+      <>
+      Smartly managed ad spend delivering reach, <span className={styles.mobileStatBreak}></span>
+       engagement, and quality leads.,
+      </>,
     ],
   },
 ];

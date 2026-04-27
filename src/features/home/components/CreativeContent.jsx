@@ -17,7 +17,8 @@ const contentRows = [
     ],
     cta: "Start for free",
     mediaSide: "left",
-    videoUrl: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    videoWebm: "/ceativecontent/GIFanimation1.webm",
+    videoMp4: "/ceativecontent/GIFanimation1.mp4",
   },
   {
     id: "optimize",
@@ -28,7 +29,7 @@ const contentRows = [
     ],
     cta: "Explore workflow",
     mediaSide: "right",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoMp4: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: "publish",
@@ -44,7 +45,7 @@ const contentRows = [
     ],
     cta: "Plan your launch",
     mediaSide: "left",
-    videoUrl: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    videoMp4: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
   },
 ];
 
@@ -133,7 +134,8 @@ function CreativeContent() {
                   playsInline
                   preload="metadata"
                 >
-                  <source src={row.videoUrl} type="video/mp4" />
+                  {row.videoWebm ? <source src={row.videoWebm} type="video/webm" /> : null}
+                  <source src={row.videoMp4} type="video/mp4" />
                 </video>
               </div>
 

@@ -10,12 +10,13 @@
 }
 
 .intro {
-  max-width: 980px;
+  max-width: 1320px;
   margin: 0 auto 42px;
   text-align: center;
 }
 
 .title {
+  max-width: 1320px;
   margin: 0;
   color: #111111;
   font-family: var(--font-br-sonoma);
