@@ -597,6 +597,12 @@ function CreativeAgency() {
                           ? `Close ${card.title} details`
                           : `Open ${card.title} details`
                       }
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setActiveCardKey((currentKey) =>
+                          currentKey === card.loopKey ? "" : card.loopKey
+                        );
+                      }}
                     >
                       <span className={`${styles.cardToggleLine} ${styles.cardToggleLine1}`} />
                       <span className={`${styles.cardToggleLine} ${styles.cardToggleLine2}`} />
