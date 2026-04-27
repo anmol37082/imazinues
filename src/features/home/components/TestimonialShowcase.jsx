@@ -74,7 +74,7 @@ export default function TestimonialShowcase() {
       const paddingRight = Number.parseFloat(carouselStyles.paddingRight || "0");
       const visibleWidth = carousel.clientWidth - paddingLeft - paddingRight;
       setStepSize(cardWidth + gap);
-      setCenterOffset(paddingLeft + (visibleWidth - cardWidth) / 2);
+      setCenterOffset((visibleWidth - cardWidth) / 2);
     };
 
     updateMeasurements();

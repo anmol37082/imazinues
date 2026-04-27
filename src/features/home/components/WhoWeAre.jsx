@@ -205,8 +205,7 @@ function WhoWeAre() {
             <span className={styles.revealLineInner}>
               Strategic creativity and data-driven
               <span className={styles.mobileCopyBreak}> marketing that turn attention into engagement</span>
-              <span className={styles.mobileCopyBreakXs}> and</span>
-              <span className={styles.mobileCopyBreak}> engagement into real business</span>
+              <span className={styles.mobileCopyInline}> and engagement into real business</span>
               <span className={styles.mobileCopyBreak}> growth.</span>
             </span>
           </span>
