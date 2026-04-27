@@ -374,8 +374,12 @@ function CreativeAgency() {
   };
 
   const handlePointerUp = (event) => {
+    const clickedToggle = event?.target?.closest?.(`.${styles.cardToggle}`);
     const shouldToggleCard =
-      pointerDownRef.current && !isDraggingRef.current && pressedCardKeyRef.current;
+      pointerDownRef.current &&
+      !isDraggingRef.current &&
+      pressedCardKeyRef.current &&
+      (!isMobileView || clickedToggle);
     const nextCardKey = shouldToggleCard ? pressedCardKeyRef.current : "";
 
     pointerDownRef.current = false;
