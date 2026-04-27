@@ -1,229 +1,292 @@
 .section {
-  padding: 28px 0 0;
+  padding: 44px 0 0;
   background: #ffffff;
-}
-
-.container {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
-}
-
-.testimonialCard {
-  min-height: 540px;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 78% 14%, rgba(188, 197, 214, 0.36), transparent 16%),
-    linear-gradient(180deg, #f6f7fb 0%, #f7f8fb 100%);
-  display: grid;
-  grid-template-columns: minmax(320px, 660px) 1fr;
   overflow: hidden;
 }
 
-.testimonialContent {
-  padding: 46px 42px 46px 44px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.container {
+  width: min(1320px, calc(100% - 40px));
+  margin: 0 auto;
 }
 
-.brandRow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: #202430;
-  font-family: var(--font-br-sonoma);
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1;
+.intro {
+  max-width: 980px;
+  margin: 0 auto 42px;
+  text-align: center;
 }
 
-.brandMark {
-  width: 28px;
-  height: 28px;
-  position: relative;
-  display: inline-block;
-}
-
-.brandMark span {
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #202430;
-}
-
-.brandMark span:nth-child(1) {
-  top: 1px;
-  left: 8px;
-}
-
-.brandMark span:nth-child(2) {
-  top: 8px;
-  left: 1px;
-}
-
-.brandMark span:nth-child(3) {
-  top: 8px;
-  right: 1px;
-}
-
-.brandMark span:nth-child(4) {
-  bottom: 1px;
-  left: 8px;
-}
-
-.testimonialTitle {
-  max-width: 620px;
-  margin: 70px 0 0;
+.title {
+  margin: 0;
   color: #111111;
   font-family: var(--font-br-sonoma);
-  font-size: clamp(2.35rem, 4.35vw, 4.24rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.titleBreak {
+  display: block;
+}
+
+.copy {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: var(--subtitle-color);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.carousel {
+  position: relative;
+  padding: 0 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.edgeFadeLeft,
+.edgeFadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 84px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.edgeFadeLeft {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.52) 38%, rgba(255, 255, 255, 0) 100%);
+}
+
+.edgeFadeRight {
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.52) 38%, rgba(255, 255, 255, 0) 100%);
+}
+
+.track {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  width: max-content;
+  will-change: transform;
+}
+
+.trackAnimated {
+  transition: transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trackStatic {
+  transition: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: min(100%, 620px);
+  min-height: 0;
+  padding: 32px 30px 28px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(232, 238, 252, 1) 30%, rgba(232, 238, 252, 0.3) 100%);
+  box-shadow: none;
+  transition: opacity 0.35s ease;
+}
+
+.cardPreview {
+  opacity: 1;
+}
+
+.cardHidden {
+  opacity: 1;
+}
+
+.cardActive {
+  opacity: 1;
+}
+
+.quote {
+  margin: 0;
+  color: #102d62;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(1.08rem, 1.42vw, 1.48rem);
+  font-weight: 500;
+  line-height: 1.35;
   letter-spacing: -0.02em;
 }
 
 .authorRow {
-  margin-top: auto;
+  margin-top: 38px;
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .authorAvatar {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #dbb1a8 0%, #efd6d0 100%);
-  color: #ffffff;
-  font-family: var(--font-br-sonoma);
-  font-size: 0.92rem;
+  background: linear-gradient(135deg, #9fd8ff 0%, #d9efff 100%);
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  color: #102d62;
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
   font-weight: 700;
+  box-shadow: 0 10px 24px rgba(71, 111, 177, 0.14);
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
 }
 
 .authorName {
-  display: block;
-  color: #3b4250;
+  color: #102d62;
   font-family: var(--font-br-sonoma);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .authorRole {
-  display: block;
-  margin-top: 3px;
-  color: var(--subtitle-soft);
-  font-family: var(--font-br-sonoma);
-  font-size: 0.92rem;
+  margin-top: 5px;
+  color: rgba(17, 17, 17, 0.62);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: 13.5px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
-.testimonialVisual {
-  position: relative;
+.controls {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
 }
 
-.testimonialVisual::before,
-.testimonialVisual::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(2px);
+.controlButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(114, 162, 228, 0.42);
+  background: rgba(255, 255, 255, 0.94);
+  color: #102d62;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
-.testimonialVisual::before {
-  inset: auto 15% -24% 24%;
-  background:
-    radial-gradient(circle at 30% 35%, rgba(250, 247, 255, 0.95), rgba(235, 195, 220, 0.78) 45%, rgba(131, 96, 131, 0.58) 74%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.34;
+.controlButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(37, 74, 137, 0.12);
+  background: #ffffff;
 }
 
-.testimonialVisual::after {
-  width: 140px;
-  height: 140px;
-  top: 24px;
-  left: 48%;
-  background:
-    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(211, 216, 226, 0.8) 55%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.48;
+.controlButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 @media (max-width: 1080px) {
-  .testimonialCard {
-    grid-template-columns: 1fr;
-    min-height: unset;
+  .track {
+    gap: 16px;
   }
 
-  .testimonialTitle {
-    max-width: 560px;
-    font-size: clamp(2.18rem, 5.35vw, 3.48rem);
+  .card {
+    width: min(100%, 540px);
+    min-height: 0;
+    padding: 28px 24px 24px;
+    border-radius: 14px;
   }
 
-  .testimonialVisual {
-    min-height: 190px;
+  .quote {
+    font-size: 1.18rem;
+  }
+
+  .authorName {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 18px;
+    padding: 28px 0 0;
   }
 
   .container {
     width: min(100%, calc(100% - 32px));
   }
 
-  .testimonialCard {
-    grid-template-columns: 1fr;
+  .intro {
+    margin-bottom: 28px;
   }
 
-  .testimonialVisual {
-    order: 1;
-    min-height: 300px;
-    background:
-      radial-gradient(circle at 28% 12%, rgba(224, 227, 235, 0.98) 0%, rgba(222, 225, 233, 0.84) 18%, rgba(255, 255, 255, 0) 19%),
-      radial-gradient(circle at 64% 42%, rgba(191, 170, 187, 0.9) 0%, rgba(170, 135, 164, 0.78) 24%, rgba(125, 136, 118, 0.3) 46%, rgba(255, 255, 255, 0) 58%),
-      radial-gradient(circle at 76% 78%, rgba(209, 219, 206, 0.95) 0%, rgba(181, 194, 181, 0.76) 18%, rgba(255, 255, 255, 0) 22%),
-      linear-gradient(180deg, #f7f8fb 0%, #f4f5f9 100%);
+  .carousel {
+    padding: 0 12px;
   }
 
-  .testimonialContent {
-    order: 2;
-    padding: 42px 22px 28px;
+  .track {
+    display: flex;
+    width: max-content;
   }
 
-  .testimonialTitle {
-    margin-top: 36px;
-    font-size: 1.95rem;
-    line-height: 1.08;
+  .card {
+    width: min(calc(100vw - 72px), 320px);
+    min-height: 260px;
+    padding: 22px 18px 18px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .testimonialVisual::before {
-    inset: 18% 17% -6% 14%;
-    border-radius: 36% 34% 42% 38% / 44% 38% 34% 40%;
-    background:
-      radial-gradient(circle at 28% 26%, rgba(247, 243, 248, 0.95) 0%, rgba(215, 188, 205, 0.72) 20%, rgba(146, 109, 137, 0.84) 58%, rgba(68, 74, 66, 0.56) 88%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.96;
-    filter: blur(0);
-    transform: rotate(-23deg);
-    box-shadow:
-      inset -18px -22px 32px rgba(82, 87, 77, 0.22),
-      inset 18px 18px 28px rgba(255, 255, 255, 0.28);
+  .edgeFadeLeft,
+  .edgeFadeRight {
+    width: 12px;
   }
 
-  .testimonialVisual::after {
-    width: 86px;
-    height: 86px;
-    top: 18px;
-    left: 18%;
-    background:
-      radial-gradient(circle at 36% 34%, rgba(255, 255, 255, 0.96) 0%, rgba(217, 219, 227, 0.88) 44%, rgba(255, 255, 255, 0) 72%);
-    opacity: 0.94;
-    filter: blur(0);
+  .quote {
+    font-size: 0.96rem;
+    line-height: 1.45;
+  }
+
+  .authorRow {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .authorAvatar {
+    width: 42px;
+    height: 42px;
+    font-size: 0.68rem;
+    border-width: 2px;
+  }
+
+  .authorName {
+    font-size: 0.82rem;
+  }
+
+  .authorRole {
+    font-size: 0.7rem;
+  }
+
+  .controlButton {
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -232,75 +295,36 @@
     width: calc(100% - 24px);
   }
 
-  .testimonialCard {
-    border-radius: 14px;
+  .title {
+    font-size: clamp(1.95rem, 9.2vw, 2.35rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
   }
 
-  .testimonialContent {
-    padding: 34px 14px 22px;
+  .titleBreak {
+    display: inline;
   }
 
-  .testimonialTitle {
-    margin-top: 28px;
-    font-size: 1.62rem;
-    letter-spacing: -0.03em;
+  .copy {
+    margin-top: 16px;
   }
 
-  .brandRow {
-    gap: 10px;
-    font-size: 0.98rem;
+  .card {
+    min-height: 248px;
+    padding: 20px 16px 16px;
+    border-radius: 12px;
   }
 
-  .brandMark {
-    width: 24px;
-    height: 24px;
+  .quote {
+    font-size: 0.9rem;
   }
 
-  .brandMark span {
-    width: 9px;
-    height: 9px;
+  .controls {
+    margin-top: 14px;
   }
 
-  .brandMark span:nth-child(1) {
-    top: 1px;
-    left: 7px;
-  }
-
-  .brandMark span:nth-child(2) {
-    top: 7px;
-    left: 1px;
-  }
-
-  .brandMark span:nth-child(3) {
-    top: 7px;
-    right: 1px;
-  }
-
-  .brandMark span:nth-child(4) {
-    bottom: 1px;
-    left: 7px;
-  }
-
-  .authorRow {
-    margin-top: 26px;
-    gap: 10px;
-  }
-
-  .authorAvatar {
-    width: 40px;
-    height: 40px;
-    font-size: 0.8rem;
-  }
-
-  .authorName {
-    font-size: 0.92rem;
-  }
-
-  .authorRole {
-    font-size: 0.84rem;
-  }
-
-  .testimonialVisual {
-    min-height: 250px;
+  .controlButton {
+    width: 34px;
+    height: 34px;
   }
 }

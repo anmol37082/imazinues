@@ -35,7 +35,12 @@ const contentRows = [
     badge: "Publish",
     title: "Glamour & Radiance",
     points: [
-      "From logo design to complete brand setup, packaging design, social media creation, and a powerful e-commerce website, Imazine Us built the brand identity and digital presence.",
+      <>
+        From logo design to complete brand setup, packaging design, social media
+        creation, and a powerful e-commerce website, Imazine Us built the brand
+        <br />
+        identity and digital presence.
+      </>,
     ],
     cta: "Plan your launch",
     mediaSide: "left",

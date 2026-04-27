@@ -57,12 +57,13 @@ const parsedStats = stats.map((item) => {
 function WhoWeAre() {
   const sectionRef = useRef(null);
   const imageWrapRef = useRef(null);
+  const wasCountZoneVisibleRef = useRef(false);
   const [imageWidth, setImageWidth] = useState(70);
   const [isVisible, setIsVisible] = useState(false);
-  const [hasCountStarted, setHasCountStarted] = useState(false);
   const [animatedValues, setAnimatedValues] = useState(() =>
     parsedStats.map(() => 0)
   );
+  const [countRunId, setCountRunId] = useState(0);
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -73,9 +74,18 @@ function WhoWeAre() {
         const inView = entry.isIntersecting;
         setIsVisible(inView);
 
-        if (inView && entry.intersectionRatio >= COUNT_START_THRESHOLD) {
-          setHasCountStarted(true);
+        const inCountZone = inView && entry.intersectionRatio >= COUNT_START_THRESHOLD;
+
+        if (inCountZone && !wasCountZoneVisibleRef.current) {
+          setAnimatedValues(parsedStats.map(() => 0));
+          setCountRunId((current) => current + 1);
         }
+
+        if (!inCountZone) {
+          setAnimatedValues(parsedStats.map(() => 0));
+        }
+
+        wasCountZoneVisibleRef.current = inCountZone;
       },
       {
         threshold: [0.12, COUNT_START_THRESHOLD],
@@ -116,7 +126,7 @@ function WhoWeAre() {
   }, []);
 
   useEffect(() => {
-    if (!hasCountStarted) {
+    if (!countRunId) {
       return;
     }
 
@@ -144,7 +154,7 @@ function WhoWeAre() {
     return () => {
       window.cancelAnimationFrame(frameId);
     };
-  }, [hasCountStarted]);
+  }, [countRunId]);
 
   return (
     <section
@@ -195,7 +205,8 @@ function WhoWeAre() {
             <span className={styles.revealLineInner}>
               Strategic creativity and data-driven
               <span className={styles.mobileCopyBreak}> marketing that turn attention into engagement</span>
-              <span className={styles.mobileCopyBreak}> and engagement into real business</span>
+              <span className={styles.mobileCopyBreakXs}> and</span>
+              <span className={styles.mobileCopyBreak}> engagement into real business</span>
               <span className={styles.mobileCopyBreak}> growth.</span>
             </span>
           </span>
@@ -221,27 +232,21 @@ function WhoWeAre() {
           <div
             className={styles.statCard}
             key={item.value}
-            style={{ "--line-delay": `${0.3 + index * 0.08}s` }}
           >
-            <strong className={`${styles.statValue} ${styles.revealLine}`}>
-              <span className={styles.revealLineInner}>
-                {hasCountStarted ? animatedValues[index] : 0}
-                {item.suffix}
-              </span>
+            <strong className={styles.statValue}>
+              {animatedValues[index]}
+              {item.suffix}
             </strong>
             <p className={styles.statLabel}>
               {item.labelLines.map((line, lineIndex) => (
                 <span
-                  className={`${styles.revealLine} ${
-                    item.compactLabel ? styles.revealLineNoWrap : ""
-                  }`}
+                  className={item.compactLabel ? styles.statLabelNoWrap : undefined}
                   key={`${item.value}-${lineIndex}`}
-                  style={{ "--line-delay": `${0.38 + index * 0.08 + lineIndex * 0.06}s` }}
                 >
                   <span
-                    className={`${styles.revealLineInner} ${
+                    className={
                       lineIndex === 0 ? styles.statLabelHeading : styles.statLabelCopy
-                    }`}
+                    }
                   >
                     {line}
                   </span>

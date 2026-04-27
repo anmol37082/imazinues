@@ -7,6 +7,7 @@ import FeatureGrid from "@/features/home/components/FeatureGrid.jsx";
 import TestimonialShowcase from "@/features/home/components/TestimonialShowcase.jsx";
 import LatestWorksSection from "@/features/home/components/LatestWorksSection.jsx";
 import ResultsHighlightSection from "@/features/home/components/ResultsHighlightSection.jsx";
+import Gallery from "@/features/home/components/Gallery.jsx";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <TestimonialShowcase />
       <LatestWorksSection />
       <ResultsHighlightSection />
+      <Gallery />
     </>
   );
 }

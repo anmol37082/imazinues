@@ -86,9 +86,9 @@ export default function LatestWorksSection() {
               <span className={styles.pill}>Works 2025</span>
               <h2 className={styles.sectionTitle}>Fresh From Our Studio</h2>
               <p className={styles.sectionCopy}>
-                New ideas crafted with passion,
+                New ideas crafted with passion, precision,
                 <br />
-                precision, and powerful results.
+                and powerful results.
               </p>
             </div>
 

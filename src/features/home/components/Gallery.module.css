@@ -1,0 +1,155 @@
+.section {
+  padding: 40px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.rowViewport {
+  overflow: hidden;
+}
+
+.rowTrack {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: galleryMarqueeLeft 34s linear infinite;
+  will-change: transform;
+}
+
+.rowReverse {
+  animation-name: galleryMarqueeRight;
+  animation-duration: 38s;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 360px;
+  color: #111111;
+}
+
+.cardVisual {
+  position: relative;
+  height: 270px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #141414;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.cardVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.18) 100%);
+}
+
+.cardMeta {
+  padding: 14px 2px 0;
+}
+
+.cardTitle {
+  margin: 0;
+  color: #111111;
+  font-family: var(--font-br-sonoma);
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.cardType {
+  margin: 6px 0 0;
+  color: rgba(17, 17, 17, 0.62);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@keyframes galleryMarqueeLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 9px), 0, 0);
+  }
+}
+
+@keyframes galleryMarqueeRight {
+  from {
+    transform: translate3d(calc(-50% - 9px), 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    gap: 22px;
+  }
+
+  .rowTrack {
+    gap: 16px;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  .cardVisual {
+    height: 228px;
+    border-radius: 10px;
+  }
+
+  .cardTitle {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 28px 0;
+  }
+
+  .container {
+    gap: 18px;
+  }
+
+  .rowTrack {
+    gap: 14px;
+    animation-duration: 28s;
+  }
+
+  .rowReverse {
+    animation-duration: 30s;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .cardVisual {
+    height: 190px;
+    border-radius: 9px;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardType {
+    font-size: 0.64rem;
+  }
+}
