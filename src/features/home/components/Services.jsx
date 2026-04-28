@@ -2,9 +2,9 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import styles from './FeatureGrid.module.css';
+import styles from './Services.module.css';
 
-const cardData = [
+export const serviceCardData = [
   {
     id: 1,
     title: 'Social Media Marketing (SMM)',
@@ -55,10 +55,10 @@ const cardData = [
   },
 ];
 
-const leftColumnCards = cardData.filter((_, index) => index % 2 === 0);
-const rightColumnCards = cardData.filter((_, index) => index % 2 === 1);
+const leftColumnCards = serviceCardData.filter((_, index) => index % 2 === 0);
+const rightColumnCards = serviceCardData.filter((_, index) => index % 2 === 1);
 
-export default function FeatureGrid() {
+export default function Services() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -143,7 +143,7 @@ export default function FeatureGrid() {
       </div>
 
       <div className={styles.gridMobile}>
-        {cardData.map(renderCard)}
+        {serviceCardData.map(renderCard)}
       </div>
     </section>
   );

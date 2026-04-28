@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "./TestimonialShowcase.module.css";
 
@@ -9,42 +10,92 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "Imazine Us gave our brand a sharper identity and a smoother digital experience. Everything now feels clearer, faster, and far more premium.",
-    name: "Ritika Sharma",
-    role: "Founder, Modern Lifestyle Jewellers",
-    initials: "RS",
+      "I’m really happy with the work that Imazine Us has done for my brand. Their team has handled many successful campaigns for us. I have been working with them for the past 3 years, and the journey is still continuing. They truly understand our brand and our customers’ needs, and always deliver creative and professional work. I highly recommend them for social media management, SEO, product photoshoots, and short video creation.",
+    name: "Mr. Anil Singh Thakur",
+    role: "Founder, Kiner Kailash Jewellers",
+    initials: "AT",
+    image: "/review/anilsinghthakur.webp",
   },
   {
     id: 2,
     quote:
-      "Their team turned scattered ideas into a system that actually performs. Our website, content, and campaigns finally feel aligned and purposeful.",
-    name: "Karan Mehta",
-    role: "Director, Kiner Kailash Jewellers",
-    initials: "KM",
+      "From logo creation and complete profile setup to website development, product photoshoots, video shoots, and running multiple successful campaigns, the team at Imazine Us has played a key role in building and strengthening our brand. Their creativity, professionalism, and clear understanding of brand needs helped us present our jewellery business more powerfully and professionally. Working with them has been a smooth and valuable experience, and I truly appreciate the dedication and effort their team puts into every project.",
+    name: "Mr. Bhadur Singh",
+    role: "Managing Director, Modern Lifestyle Jewellery",
+    initials: "BS",
+    image: "/review/bahadursingh.webp",
   },
   {
     id: 3,
     quote:
-      "From packaging to launch assets, the execution was consistent across every touchpoint. The brand now looks polished and ready to scale.",
-    name: "Aisha Kapoor",
-    role: "Brand Lead, Glamour & Radiance",
-    initials: "AK",
+      "Choosing Imazine Us for our social media management and ad campaigns has been a smart decision for Aarti Jewellers. Their team creates simple, creative, and eye-catching content that truly connects with our audience. The ad campaigns are well-planned and result-focused, helping our brand grow stronger online every day.",
+    name: "Mr. Rajat Singh",
+    role: "Managing Director, Aarti Jewellers",
+    initials: "RS",
+    image: "/review/rajatsinghthakur.webp",
   },
   {
     id: 4,
     quote:
-      "We needed creative direction with measurable business focus, and that is exactly what came through. The engagement uplift was visible almost immediately.",
-    name: "Dev Arora",
-    role: "Marketing Head, Retail Growth Studio",
-    initials: "DA",
+      "Building Glamour & Radiance into a strong and recognizable brand became much easier with the support of Imazine Us. Their team worked closely with us on every important aspect, from creating our brand logo and detailed brand guidelines to designing our e-commerce website, product packaging, and professional product shoots. They also managed our complete social media presence and advertising campaigns, helping us present the brand beautifully and reach the right audience online. What I appreciate most is their ability to combine creativity with strategy, ensuring that every element of our brand looks premium and communicates our vision clearly.",
+    name: "Mrs. Neha Bhatia",
+    role: "Founder, Glamour and Radiance",
+    initials: "NB",
+    image: "/review/neha.webp",
   },
   {
     id: 5,
     quote:
-      "The process was fast, structured, and genuinely collaborative. Instead of just good visuals, we ended up with a stronger brand presence overall.",
-    name: "Neha Batra",
-    role: "Co-founder, House of Craft",
-    initials: "NB",
+      "Partnering with Imazine Us for our digital growth has been a great decision for Vetraj Pet Hospital. From handling our social media management to planning and running effective ad campaigns, organizing professional shoots, and even managing our podcast content, their team has supported us at every step. They understand how to communicate our services with clarity and care, helping us connect better with pet owners. Their strategic approach and creative execution have truly added value to our brand.",
+    name: "Mr. Mohit Saini",
+    role: "Founder, Vetraj Pet Hospital",
+    initials: "MS",
+    image: "/review/mohitsaini.webp",
+  },
+  {
+    id: 6,
+    quote:
+      "For Savik Academy, building a strong and professional brand presence became possible with the support of Imazine Us. Their team helped us with brand guidelines, website development, and complete social media management, ensuring our academy is presented clearly and professionally online. They also managed ad campaigns, lead generation, and sales management, which helped us connect with the right audience and grow steadily. Their strategic thinking and consistent support have truly added value to our brand.",
+    name: "Mr. Kapil Saini",
+    role: "Founder, Savik Academy",
+    initials: "KS",
+    image: "/review/kapilsaini.webp",
+  },
+  {
+    id: 7,
+    quote:
+      "Working with Imazine Us for our social media management has been a great experience for our brand. Their team understands how to present jewellery creatively and engagingly, helping us connect better with our audience online. From planning content to maintaining a strong and consistent presence on social media, they have handled everything professionally and with great attention to detail. Their creative approach has helped our brand stand out and grow digitally.",
+    name: "Mrs. Binney Kaur",
+    role: "Founder, Binny’s Nail Bar",
+    initials: "BK",
+    image: "/review/binnykour.webp",
+  },
+  {
+    id: 8,
+    quote:
+      "For Farmers Pride India, working with Imazine Us has been a great experience. Their team handled our brand product video shoot and professional photoshoot with great creativity and attention to detail. They perfectly captured the quality and essence of our products, helping us present our brand in a more impactful and professional way. The visuals they created have added real value to how our brand connects with customers.",
+    name: "Mr. Sundeep Sharma",
+    role: "Co-Founder, Farmers Pride India",
+    initials: "SS",
+    image: "/review/Mr.SundeepSharma.webp",
+  },
+  {
+    id: 9,
+    quote:
+      "Collaborating with Imazine Us for our brand video shoot was a great decision for The Divora. Their team understood our vision clearly and transformed it into a powerful visual story that reflects our brand identity. From concept planning to final execution, everything was handled with creativity and professionalism. The final video not only enhanced our brand image but also helped us connect better with our audience.",
+    name: "Mr. Dupesh",
+    role: "Founder, The Divora",
+    initials: "MD",
+    image: "/review/mr.dupesh.webp",
+  },
+  {
+    id: 10,
+    quote:
+      "For Physics Wallah Panchkula, timely execution and quality branding were our top priorities, and Imazine Us delivered exactly that. From umbrella printing and auto hood branding to pole kiosks and other outdoor branding solutions, their team managed every task with precision and professionalism. What stood out the most was their commitment to on-time delivery without compromising on quality. Their reliable service and smooth coordination made the entire branding process efficient and hassle-free.",
+    name: "Mr. Ashish Shaghwal",
+    role: "Business Head, Physics Wallah Panchkula",
+    initials: "AS",
+    image: "/review/ashis.webp",
   },
 ];
 
@@ -323,7 +374,15 @@ export default function TestimonialShowcase() {
                   </div>
 
                   <div className={styles.authorRow}>
-                    <span className={styles.authorAvatar}>{item.initials}</span>
+                    <span className={styles.authorAvatar}>
+                      <Image
+                        src={item.image}
+                        alt={`${item.name} profile photo`}
+                        width={64}
+                        height={64}
+                        className={styles.authorAvatarImage}
+                      />
+                    </span>
                     <span className={styles.authorMeta}>
                       <strong className={styles.authorName}>{item.name}</strong>
                       <span className={styles.authorRole}>{item.role}</span>

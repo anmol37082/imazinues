@@ -1,4 +1,5 @@
 import Header from "@/features/navigation/components/Header";
+import Footer from "@/features/navigation/components/Footer";
 import "./globals.css";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

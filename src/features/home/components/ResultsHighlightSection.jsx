@@ -5,24 +5,34 @@ import styles from "./ResultsHighlightSection.module.css";
 const resultCards = [
   {
     id: 1,
-    badge: "UX & Web",
-    value: "+38% conversion in sales",
-    copy: "We design and build fast, accessible sites that convert with less friction.",
+    badge: "Brand Identity & Visual Storytelling",
+    value: "+3x stronger brand recognition",
+    copy: "We craft powerful brand identities, from logos and brand guidelines to visual language, ensuring your brand stands out clearly across every platform.",
   },
   {
     id: 2,
-    badge: "Fluid Branding",
-    value: "+3x more brand recall in tests",
-    copy: "Adaptive identity systems that scale across every touchpoint without losing clarity.",
+    badge: "Performance Ads & Lead Generation",
+    value: "+45% improvement in qualified leads",
+    copy: "With smart ad strategies, optimized campaigns, and data-driven targeting, we help businesses reach the right audience and convert attention into real growth.",
   },
 ];
 
 function ClusterMark() {
   return (
     <div className={styles.clusterMark} aria-hidden="true">
-      {Array.from({ length: 7 }).map((_, index) => (
-        <span key={index} className={styles.clusterDot} />
-      ))}
+      <svg viewBox="0 0 72 72" className={styles.clusterIcon}>
+        <circle cx="36" cy="36" r="12" className={styles.clusterCore} />
+        <circle cx="36" cy="14" r="4.5" className={styles.clusterOrb} />
+        <circle cx="54" cy="25" r="4.5" className={styles.clusterOrb} />
+        <circle cx="54" cy="47" r="4.5" className={styles.clusterOrb} />
+        <circle cx="36" cy="58" r="4.5" className={styles.clusterOrb} />
+        <circle cx="18" cy="47" r="4.5" className={styles.clusterOrb} />
+        <circle cx="18" cy="25" r="4.5" className={styles.clusterOrb} />
+        <path
+          d="M36 18v7M50 26l-5 4M50 46l-5-4M36 54v-7M22 46l5-4M22 26l5 4"
+          className={styles.clusterLines}
+        />
+      </svg>
     </div>
   );
 }

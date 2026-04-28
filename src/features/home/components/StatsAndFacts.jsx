@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./WhoWeAre.module.css";
+import styles from "./StatsAndFacts.module.css";
 
 const COUNT_DURATION = 2400;
 const COUNT_START_THRESHOLD = 0.35;
@@ -60,7 +60,7 @@ const parsedStats = stats.map((item) => {
   };
 });
 
-function WhoWeAre() {
+function StatsAndFacts() {
   const sectionRef = useRef(null);
   const imageWrapRef = useRef(null);
   const wasCountZoneVisibleRef = useRef(false);
@@ -265,4 +265,4 @@ function WhoWeAre() {
   );
 }
 
-export default WhoWeAre;
+export default StatsAndFacts;

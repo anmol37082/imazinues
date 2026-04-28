@@ -77,7 +77,7 @@
 }
 
 .resultCard {
-  min-height: 390px;
+  min-height: 430px;
   padding: 42px 34px 30px;
   border-radius: 14px;
   background: #f5f6fa;
@@ -127,36 +127,40 @@
 }
 
 .clusterMark {
-  width: 48px;
+  width: 64px;
   margin: 26px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 12px);
+  display: flex;
   justify-content: center;
-  gap: 3px;
+  align-items: center;
 }
 
-.clusterDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #202430;
+.clusterIcon {
+  width: 64px;
+  height: 64px;
+  overflow: visible;
 }
 
-.clusterDot:nth-child(2) {
-  transform: translateY(-7px);
+.clusterCore {
+  fill: #202430;
+  opacity: 0.16;
 }
 
-.clusterDot:nth-child(3) {
-  transform: translateY(-14px);
+.clusterOrb {
+  fill: #202430;
+  opacity: 0.95;
 }
 
-.clusterDot:nth-child(5) {
-  transform: translateY(-7px);
+.clusterLines {
+  fill: none;
+  stroke: #202430;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  opacity: 0.35;
 }
 
 .resultCopy {
   max-width: 292px;
-  margin: auto 0 0;
+  margin: 18px 0 0;
   color: var(--subtitle-color);
   font-size: 16px;
   line-height: 1.45;
@@ -176,7 +180,7 @@
   }
 
   .resultCard {
-    min-height: 330px;
+    min-height: 360px;
     padding: 30px 22px 24px;
   }
 

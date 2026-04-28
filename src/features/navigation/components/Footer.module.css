@@ -1,0 +1,256 @@
+.footer {
+  margin-top: 88px;
+  background: #020305;
+  color: #f5f5f5;
+}
+
+.shell {
+  width: min(100%, 100%);
+}
+
+.videoPanel {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background: #020305;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.64;
+  filter: saturate(1.05) brightness(0.62);
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 14%, rgba(108, 104, 255, 0.34), transparent 22%),
+    linear-gradient(180deg, rgba(2, 3, 5, 0.2) 0%, rgba(2, 3, 5, 0.72) 58%, #020305 100%);
+}
+
+.dataPanel {
+  width: min(1320px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 38px 0 30px;
+  display: grid;
+  grid-template-columns: 1.45fr repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.brandColumn,
+.column {
+  min-width: 0;
+}
+
+.logoFrame {
+  position: relative;
+  display: inline-flex;
+  padding: 1px;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.logoFrame::before {
+  content: "";
+  position: absolute;
+  inset: -22%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(255, 255, 255, 0) 285deg,
+    rgba(255, 255, 255, 0.18) 315deg,
+    rgba(255, 255, 255, 0.98) 334deg,
+    rgba(255, 255, 255, 0.22) 350deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
+  animation: logoSnakeSpin 4.4s linear infinite;
+}
+
+.logoFrameInner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 22px;
+  border-radius: 21px;
+  background: #020305;
+}
+
+.logo {
+  width: 232px;
+  height: auto;
+}
+
+.socialRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #ffffff;
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.socialLink svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.socialLink[aria-label="Pinterest"] svg {
+  width: 26px;
+  height: 26px;
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+  opacity: 0.88;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1f9eff;
+  box-shadow: 0 0 0 6px rgba(31, 158, 255, 0.12);
+}
+
+.columnTitle {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: var(--font-br-sonoma);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.linkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link,
+.linkStatic {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.45;
+  transition: color 0.22s ease;
+}
+
+.linkStatic {
+  cursor: default;
+}
+
+.link:hover,
+.linkStatic:hover {
+  color: #ffffff;
+}
+
+.bottomBar {
+  width: min(1320px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 18px 0 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.bottomNote,
+.bottomLinks a {
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.bottomLinks a:hover {
+  color: #ffffff;
+}
+
+@keyframes logoSnakeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1180px) {
+  .dataPanel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 64px;
+  }
+
+  .videoPanel {
+    min-height: 420px;
+  }
+
+  .dataPanel,
+  .bottomBar {
+    width: calc(100% - 28px);
+  }
+
+  .dataPanel {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 28px 0 26px;
+  }
+
+  .logo {
+    width: 198px;
+  }
+
+  .logoFrameInner {
+    padding: 16px 18px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0 24px;
+  }
+}

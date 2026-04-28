@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./CreativeContent.module.css";
+import styles from "./CasesDeliver.module.css";
 
 const contentRows = [
   {
@@ -50,7 +50,7 @@ const contentRows = [
   },
 ];
 
-function CreativeContent() {
+function CasesDeliver() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -181,4 +181,4 @@ function CreativeContent() {
   );
 }
 
-export default CreativeContent;
+export default CasesDeliver;
