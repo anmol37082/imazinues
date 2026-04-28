@@ -29,7 +29,8 @@ const contentRows = [
     ],
     cta: "Explore workflow",
     mediaSide: "right",
-    videoMp4: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoWebm: "/ceativecontent/GIFanimation2.webm",
+    videoMp4: "/ceativecontent/GIFanimation2.mp4",
   },
   {
     id: "publish",

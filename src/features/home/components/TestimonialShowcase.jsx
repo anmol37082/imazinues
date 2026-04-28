@@ -51,14 +51,33 @@ const testimonials = [
 const loopedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 const START_INDEX = testimonials.length;
 const END_INDEX = testimonials.length * 2 - 1;
+const MIN_LOOP_INDEX = 0;
+const MAX_LOOP_INDEX = loopedTestimonials.length - 1;
 
 export default function TestimonialShowcase() {
   const carouselRef = useRef(null);
   const trackRef = useRef(null);
+  const quoteRefs = useRef({});
   const [activeIndex, setActiveIndex] = useState(START_INDEX);
   const [isTransitionEnabled, setIsTransitionEnabled] = useState(true);
   const [stepSize, setStepSize] = useState(0);
   const [centerOffset, setCenterOffset] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
+  const [overflowingCards, setOverflowingCards] = useState({});
+  const [truncatedQuotes, setTruncatedQuotes] = useState({});
+  const isAutoplayPaused = Object.values(expandedCards).some(Boolean);
+
+  const moveToPrevious = () => {
+    setIsTransitionEnabled(true);
+    setExpandedCards({});
+    setActiveIndex((current) => (current <= MIN_LOOP_INDEX ? END_INDEX : current - 1));
+  };
+
+  const moveToNext = () => {
+    setIsTransitionEnabled(true);
+    setExpandedCards({});
+    setActiveIndex((current) => (current >= MAX_LOOP_INDEX ? START_INDEX : current + 1));
+  };
 
   useEffect(() => {
     const updateMeasurements = () => {
@@ -86,15 +105,92 @@ export default function TestimonialShowcase() {
   }, []);
 
   useEffect(() => {
+    const getTruncatedQuote = (node, text) => {
+      const computedStyles = window.getComputedStyle(node);
+      const lineHeight = Number.parseFloat(computedStyles.lineHeight || "0");
+      const clampHeight = lineHeight * 2.5;
+      const measureNode = node.cloneNode();
+
+      measureNode.style.position = "absolute";
+      measureNode.style.visibility = "hidden";
+      measureNode.style.pointerEvents = "none";
+      measureNode.style.zIndex = "-1";
+      measureNode.style.left = "-9999px";
+      measureNode.style.top = "0";
+      measureNode.style.width = `${node.clientWidth}px`;
+      measureNode.style.maxHeight = "none";
+      measureNode.style.overflow = "visible";
+      measureNode.style.whiteSpace = "normal";
+      document.body.appendChild(measureNode);
+
+      measureNode.textContent = text;
+      const hasOverflow = measureNode.scrollHeight > clampHeight + 1;
+
+      if (!hasOverflow) {
+        document.body.removeChild(measureNode);
+        return { hasOverflow: false, truncatedText: text };
+      }
+
+      let low = 0;
+      let high = text.length;
+      let bestFit = "";
+
+      while (low <= high) {
+        const mid = Math.floor((low + high) / 2);
+        const candidate = `${text.slice(0, mid).trimEnd()}...`;
+        measureNode.textContent = candidate;
+
+        if (measureNode.scrollHeight <= clampHeight + 1) {
+          bestFit = candidate;
+          low = mid + 1;
+        } else {
+          high = mid - 1;
+        }
+      }
+
+      document.body.removeChild(measureNode);
+
+      return {
+        hasOverflow: true,
+        truncatedText: bestFit || `${text.slice(0, 1)}...`,
+      };
+    };
+
+    const updateOverflowState = () => {
+      const nextOverflowingCards = {};
+      const nextTruncatedQuotes = {};
+
+      Object.entries(quoteRefs.current).forEach(([key, node]) => {
+        if (!node) return;
+        const fullText = testimonials[(Number.parseInt(key.split("-")[0], 10) || 1) - 1]?.quote ?? "";
+        const { hasOverflow, truncatedText } = getTruncatedQuote(node, fullText);
+        nextOverflowingCards[key] = hasOverflow;
+        nextTruncatedQuotes[key] = truncatedText;
+      });
+
+      setOverflowingCards(nextOverflowingCards);
+      setTruncatedQuotes(nextTruncatedQuotes);
+    };
+
+    updateOverflowState();
+    window.addEventListener("resize", updateOverflowState);
+
+    return () => {
+      window.removeEventListener("resize", updateOverflowState);
+    };
+  }, [expandedCards]);
+
+  useEffect(() => {
+    if (isAutoplayPaused) return undefined;
+
     const intervalId = window.setInterval(() => {
-      setIsTransitionEnabled(true);
-      setActiveIndex((current) => (current >= END_INDEX ? START_INDEX : current + 1));
+      moveToNext();
     }, AUTOPLAY_DELAY);
 
     return () => {
       window.clearInterval(intervalId);
     };
-  }, []);
+  }, [isAutoplayPaused]);
 
   const handleTransitionEnd = () => {
     if (activeIndex > END_INDEX) {
@@ -125,13 +221,38 @@ export default function TestimonialShowcase() {
       <div className={styles.container}>
         <div className={styles.intro}>
           <h2 className={styles.title}>
-            Creativity that doesn&apos;t just look
-            <span className={styles.titleBreak}>good, it works.</span>
+            <span className={styles.titleDesktop}>
+              Creativity that doesn&apos;t just look
+              <span className={styles.titleBreak}>good, it works.</span>
+            </span>
+            <span className={styles.titleMobile}>
+              <span className={styles.titleBreak}>Creativity</span>
+              <span className={styles.titleBreak}>that doesn&apos;t just</span>
+              <span className={styles.titleBreak}>look good, it</span>
+              <span className={styles.titleBreak}>works.</span>
+            </span>
           </h2>
           <p className={styles.copy}>
-            For us, creativity is not only about design, it&apos;s about results. The real
-            proof lies in the experiences and success stories shared by the brands
-            we&apos;ve worked with.
+            <span className={styles.copyDesktop}>
+              For us, creativity is not only about design, it&apos;s about results. The
+              real proof lies in the experiences and success stories shared by the
+              brands we&apos;ve worked with.
+            </span>
+            <span className={styles.copyMobile}>
+              <span className={styles.copyLine}>
+                For us, creativity is not only
+              </span>
+              <span className={styles.copyLine}>
+                about design, it&apos;s about results. The real proof
+              </span>
+              <span className={styles.copyLine}>
+                lies in the experiences and success
+              </span>
+              <span className={styles.copyLine}>
+                stories shared by the brands
+              </span>
+              <span className={styles.copyLine}>we&apos;ve worked with.</span>
+            </span>
           </p>
         </div>
 
@@ -169,7 +290,37 @@ export default function TestimonialShowcase() {
                   }`}
                   aria-hidden={!isActive}
                 >
-                  <p className={styles.quote}>{item.quote}</p>
+                  <div className={styles.quoteBlock}>
+                    <p
+                      ref={(node) => {
+                        if (node) {
+                          quoteRefs.current[`${item.id}-${index}`] = node;
+                        } else {
+                          delete quoteRefs.current[`${item.id}-${index}`];
+                        }
+                      }}
+                      className={styles.quote}
+                    >
+                      {expandedCards[`${item.id}-${index}`]
+                        ? item.quote
+                        : truncatedQuotes[`${item.id}-${index}`] ?? item.quote}
+                    </p>
+
+                    {overflowingCards[`${item.id}-${index}`] ? (
+                      <button
+                        type="button"
+                        className={styles.readMoreButton}
+                        onClick={() =>
+                          setExpandedCards((current) => ({
+                            ...current,
+                            [`${item.id}-${index}`]: !current[`${item.id}-${index}`],
+                          }))
+                        }
+                      >
+                        {expandedCards[`${item.id}-${index}`] ? "Read less" : "Read more"}
+                      </button>
+                    ) : null}
+                  </div>
 
                   <div className={styles.authorRow}>
                     <span className={styles.authorAvatar}>{item.initials}</span>
@@ -189,12 +340,7 @@ export default function TestimonialShowcase() {
             type="button"
             className={styles.controlButton}
             aria-label="Previous review"
-            onClick={() => {
-              setIsTransitionEnabled(true);
-              setActiveIndex((current) =>
-                current <= testimonials.length ? END_INDEX : current - 1
-              );
-            }}
+            onClick={moveToPrevious}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M14.5 5.5L8 12l6.5 6.5" />
@@ -205,12 +351,7 @@ export default function TestimonialShowcase() {
             type="button"
             className={styles.controlButton}
             aria-label="Next review"
-            onClick={() => {
-              setIsTransitionEnabled(true);
-              setActiveIndex((current) =>
-                current >= END_INDEX ? START_INDEX : current + 1
-              );
-            }}
+            onClick={moveToNext}
           >
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M9.5 5.5L16 12l-6.5 6.5" />
