@@ -1,35 +1,31 @@
 const servicesData = [
   {
     id: 1,
-    title: "Brand Strategy & Identity",
+    title: "Social Media Marketing (SMM)",
     description:
-      "Build a powerful brand that people remember and trust. We define your brand voice, visual identity, and positioning to create a consistent and impactful presence across all platforms, helping your business stand out in a competitive market.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      "Grow your brand on Facebook, Instagram & LinkedIn with creative content, targeted ads and strong community engagement.",
+    image: "/services/dighitalmarketing.png",
   },
   {
     id: 2,
-    title: "CRM & Marketing Automation",
+    title: "Search Engine Optimization (SEO)",
     description:
-      "Streamline your customer management with smart CRM systems and automated marketing tools. From tracking leads to sending personalized messages, we help you nurture relationships, save time, and convert prospects into loyal customers.",
-    image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80",
+      "Improve Google rankings with strategic keywords, on-page optimization, and technical SEO that drives organic traffic.",
+    image: "/services/seo.png",
   },
   {
     id: 3,
-    title: "Lead Generation",
+    title: "Google Ads & Campaigns",
     description:
-      "Grow your business with high-quality leads that actually convert. Using targeted campaigns, data-driven strategies, and optimized funnels, we attract the right audience and turn their interest into real business opportunities.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+      "Generate instant leads with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.",
+    image: "/services/googleadscompgains.png",
   },
   {
     id: 4,
-    title: "Website Development",
+    title: "Content Creation",
     description:
-      "Create a modern, responsive, and user-friendly website that represents your brand perfectly. Our websites are designed for performance, speed, and conversions, ensuring your online presence works like a powerful digital storefront.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+      "Tell your brand story through engaging blogs, videos, and creative visuals designed to inform, inspire and convert.",
+    image: "/services/contantcreations.png",
   },
 ];
 

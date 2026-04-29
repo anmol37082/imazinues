@@ -256,7 +256,6 @@
 
 .cardActive {
   transform: translateY(-6px);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
 }
 
 .cardImageWrapper {
@@ -270,6 +269,7 @@
 .cardMedia {
   position: absolute;
   inset: -1px;
+  background-color: #f4f4f4;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -280,6 +280,7 @@
 
 .cardMediaActive {
   transform: scale(1.05);
+  filter: blur(4px) brightness(0.82) saturate(0.92);
 }
 
 .cardOverlay {
@@ -292,7 +293,7 @@
 }
 
 .cardOverlayVisible {
-  opacity: 0.72;
+  opacity: 0;
 }
 
 .cardToggle {
@@ -447,7 +448,7 @@
 }
 
 .cardActive .cardOverlay {
-  opacity: 0.72;
+  opacity: 0;
 }
 
 .cardTitle {

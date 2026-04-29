@@ -38,15 +38,22 @@ const contentRows = [
     title: "Glamour & Radiance",
     points: [
       <>
-        From logo design to complete brand setup, packaging design, social media
-        creation, and a powerful e-commerce website, Imazine Us built the brand
-      
-        identity and digital presence.
+        <span className={styles.desktopPointBreak}>
+          From logo design to complete brand setup, packaging design, social
+        </span>
+        <span className={styles.desktopPointBreak}>
+          media creation, and a powerful e-commerce website, Imazine Us built
+          the
+        </span>
+        <span className={styles.desktopPointBreak}>
+          brand identity and digital presence.
+        </span>
       </>,
     ],
     cta: "Plan your launch",
     mediaSide: "left",
-    videoMp4: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    videoWebm: "/ceativecontent/GIFanimation3.webm",
+    videoMp4: "/ceativecontent/GIFanimation3.mp4",
   },
 ];
 

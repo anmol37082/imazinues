@@ -16,8 +16,8 @@ const cards = [
     title: "Digital Marketing",
     subtitle:
       "Strategic online marketing that grows your brand, leads, and sales.",
-    image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/digitalmarketing.jpg.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(15,18,24,0.08) 0%, rgba(15,18,24,0.18) 35%, rgba(15,18,24,0.82) 100%)",
   },
@@ -26,8 +26,8 @@ const cards = [
     title: "Social Media Management",
     subtitle:
       "Growing your brand online with creative content and powerful engagement.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/socialmediamanagement.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(20,14,10,0.1) 0%, rgba(20,14,10,0.24) 34%, rgba(20,14,10,0.84) 100%)",
   },
@@ -35,8 +35,8 @@ const cards = [
     id: "lead-generation",
     title: "Lead Generation",
     subtitle: "Generating quality leads that convert into real customers.",
-    image:
-      "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/leadgeneration.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(18,20,24,0.08) 0%, rgba(18,20,24,0.22) 34%, rgba(18,20,24,0.84) 100%)",
   },
@@ -45,8 +45,8 @@ const cards = [
     title: "SEO",
     subtitle:
       "Improving search rankings to bring consistent organic traffic to your website.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/SEO.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(17,20,26,0.08) 0%, rgba(17,20,26,0.18) 35%, rgba(17,20,26,0.82) 100%)",
   },
@@ -55,8 +55,8 @@ const cards = [
     title: "Website Revamp & Development",
     subtitle:
       "Creating modern, fast, and user-friendly websites that represent your brand.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/websiterevamapanddevlopment.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(26,18,16,0.08) 0%, rgba(26,18,16,0.18) 35%, rgba(26,18,16,0.82) 100%)",
   },
@@ -65,8 +65,8 @@ const cards = [
     title: "Brand Guidelines",
     subtitle:
       "Building clear brand rules to keep your identity consistent everywhere.",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/BrandGuidelines.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(18,16,22,0.08) 0%, rgba(18,16,22,0.18) 35%, rgba(18,16,22,0.82) 100%)",
   },
@@ -75,8 +75,8 @@ const cards = [
     title: "Print Design",
     subtitle:
       "Designing impactful print materials that strengthen your brand presence.",
-    image:
-      "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/printdesign.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(18,24,18,0.08) 0%, rgba(18,24,18,0.18) 35%, rgba(18,24,18,0.82) 100%)",
   },
@@ -85,8 +85,8 @@ const cards = [
     title: "Indoor Branding",
     subtitle:
       "Transforming interior spaces with creative branding that attracts attention.",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/indorbranding.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(20,18,24,0.08) 0%, rgba(20,18,24,0.18) 35%, rgba(20,18,24,0.82) 100%)",
   },
@@ -95,8 +95,8 @@ const cards = [
     title: "Outdoor Branding",
     subtitle:
       "Creating bold outdoor branding that makes your business stand out.",
-    image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/outdoorbrandingDesign.jpg.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(14,18,24,0.08) 0%, rgba(14,18,24,0.18) 35%, rgba(14,18,24,0.82) 100%)",
   },
@@ -105,8 +105,8 @@ const cards = [
     title: "Ad Videos",
     subtitle:
       "Producing engaging advertisement videos that highlight your brand story.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/advideo.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(17,20,26,0.08) 0%, rgba(17,20,26,0.18) 35%, rgba(17,20,26,0.82) 100%)",
   },
@@ -115,8 +115,8 @@ const cards = [
     title: "Photo & Video Shoot",
     subtitle:
       "Capturing professional visuals that showcase your brand beautifully.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/photovideoshoot.jpg.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(26,18,16,0.08) 0%, rgba(26,18,16,0.18) 35%, rgba(26,18,16,0.82) 100%)",
   },
@@ -125,8 +125,8 @@ const cards = [
     title: "Packaging Designing",
     subtitle:
       "Designing attractive packaging that enhances product appeal and brand value.",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+    image: "/creativeagency/packagingdesign.webp",
+    imagePosition: "center center",
     overlay:
       "linear-gradient(180deg, rgba(18,16,22,0.08) 0%, rgba(18,16,22,0.18) 35%, rgba(18,16,22,0.82) 100%)",
   },
@@ -583,7 +583,10 @@ function CreativeAgency() {
                         activeCardKey === card.loopKey ? styles.cardMediaActive : ""
                       }`}
                       style={{
-                        backgroundImage: `${card.overlay}, url(${card.image})`,
+                        backgroundImage: `url(${card.image})`,
+                        backgroundPosition: card.imagePosition ?? "center center",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "100% 100%",
                       }}
                     />
 
