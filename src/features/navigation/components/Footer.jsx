@@ -131,10 +131,8 @@ function Footer() {
             playsInline
             preload="metadata"
           >
-            <source src="/hero.webm" type="video/webm" />
+            <source src="/footervideo/footervideo.mp4" type="video/mp4" />
           </video>
-
-          <div className={styles.videoOverlay} />
         </section>
 
         <section className={styles.dataPanel}>

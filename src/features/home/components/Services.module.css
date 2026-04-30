@@ -65,7 +65,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 12px;
 }
 
 .gridMobile {
@@ -75,7 +75,7 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
 }
 
 .card {
@@ -86,7 +86,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 22px 30px 22px 24px;
+  padding: 0 30px 0 24px;
   overflow: hidden;
   position: relative;
   transition:
@@ -144,7 +144,7 @@
 
 .imageStage {
   width: 100%;
-  min-height: 160px;
+  min-height: 148px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,7 +176,7 @@
 }
 
 .cardTitle {
-  margin: 0 0 10px;
+  margin: 0;
   color: var(--feature-title);
   font-family: var(--font-br-sonoma);
   font-size: clamp(2rem, 2.2vw, 2.9rem);
@@ -208,45 +208,45 @@
 
 @media (max-width: 1080px) {
   .card {
-    min-height: 194px;
-    padding: 20px 24px;
+    min-height: 182px;
+    padding: 0 24px;
   }
 
   .card1 {
-    min-height: 238px;
-  }
-
-  .card2 {
-    min-height: 168px;
-  }
-
-  .card3 {
-    min-height: 206px;
-  }
-
-  .card4 {
     min-height: 222px;
   }
 
-  .card5 {
+  .card2 {
+    min-height: 156px;
+  }
+
+  .card3 {
     min-height: 192px;
   }
 
+  .card4 {
+    min-height: 206px;
+  }
+
+  .card5 {
+    min-height: 178px;
+  }
+
   .card6 {
-    min-height: 244px;
+    min-height: 228px;
   }
 
   .card7 {
-    min-height: 220px;
+    min-height: 204px;
   }
 
   .card8 {
-    min-height: 232px;
+    min-height: 216px;
   }
 
   .gridDesktop,
   .column {
-    gap: 16px;
+    gap: 12px;
   }
 
   .imageWrap {
@@ -273,7 +273,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
 
   .card {
@@ -281,7 +281,7 @@
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    padding: 18px 18px 24px;
+    padding: 0 18px;
     border-radius: 16px;
     text-align: center;
   }
@@ -305,7 +305,7 @@
   }
 
   .imageStage {
-    min-height: 156px;
+    min-height: 142px;
     justify-content: center;
   }
 
@@ -322,7 +322,7 @@
   }
 
   .cardTitle {
-    margin-bottom: 8px;
+    margin-bottom: 0;
     font-size: 1.9rem;
     line-height: 1.08;
   }
@@ -348,11 +348,11 @@
 
   .card {
     border-radius: 14px;
-    padding: 16px 16px 22px;
+    padding: 0 16px;
   }
 
   .imageStage {
-    min-height: 142px;
+    min-height: 130px;
   }
 
   .image {

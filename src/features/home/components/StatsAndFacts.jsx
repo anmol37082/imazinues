@@ -227,7 +227,7 @@ function StatsAndFacts() {
           className={styles.image}
           style={{
             backgroundImage:
-              "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.26) 100%), url(/images/resizebanner.png)",
+              "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.26) 100%), url(/images/resizebanner1.png)",
           }}
         />
       </div>

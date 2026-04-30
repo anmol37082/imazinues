@@ -20,17 +20,21 @@ const resultCards = [
 function ClusterMark() {
   return (
     <div className={styles.clusterMark} aria-hidden="true">
-      <svg viewBox="0 0 72 72" className={styles.clusterIcon}>
-        <circle cx="36" cy="36" r="12" className={styles.clusterCore} />
-        <circle cx="36" cy="14" r="4.5" className={styles.clusterOrb} />
-        <circle cx="54" cy="25" r="4.5" className={styles.clusterOrb} />
-        <circle cx="54" cy="47" r="4.5" className={styles.clusterOrb} />
-        <circle cx="36" cy="58" r="4.5" className={styles.clusterOrb} />
-        <circle cx="18" cy="47" r="4.5" className={styles.clusterOrb} />
-        <circle cx="18" cy="25" r="4.5" className={styles.clusterOrb} />
+      <svg viewBox="0 0 80 80" className={styles.clusterIcon}>
         <path
-          d="M36 18v7M50 26l-5 4M50 46l-5-4M36 54v-7M22 46l5-4M22 26l5 4"
-          className={styles.clusterLines}
+          d="M18 62h44"
+          className={styles.clusterBase}
+        />
+        <rect x="22" y="38" width="10" height="24" rx="4" className={styles.clusterBar} />
+        <rect x="36" y="28" width="10" height="34" rx="4" className={styles.clusterBar} />
+        <rect x="50" y="18" width="10" height="44" rx="4" className={styles.clusterBar} />
+        <path
+          d="M20 50l13-10 11 6 17-18"
+          className={styles.clusterTrend}
+        />
+        <path
+          d="M51 28h7v7"
+          className={styles.clusterArrow}
         />
       </svg>
     </div>

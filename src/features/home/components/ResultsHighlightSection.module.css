@@ -127,35 +127,46 @@
 }
 
 .clusterMark {
-  width: 64px;
-  margin: 26px auto 0;
+  width: 76px;
+  margin: 28px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .clusterIcon {
-  width: 64px;
-  height: 64px;
+  width: 76px;
+  height: 76px;
   overflow: visible;
 }
 
-.clusterCore {
+.clusterBase {
+  fill: none;
+  stroke: #202430;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  opacity: 0.22;
+}
+
+.clusterBar {
   fill: #202430;
   opacity: 0.16;
 }
 
-.clusterOrb {
-  fill: #202430;
-  opacity: 0.95;
-}
-
-.clusterLines {
+.clusterTrend {
   fill: none;
   stroke: #202430;
-  stroke-width: 1.8;
+  stroke-width: 4.2;
   stroke-linecap: round;
-  opacity: 0.35;
+  stroke-linejoin: round;
+}
+
+.clusterArrow {
+  fill: none;
+  stroke: #202430;
+  stroke-width: 4.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .resultCopy {
