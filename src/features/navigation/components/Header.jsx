@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import casesData from "@/features/navigation/data/casesData";
@@ -297,24 +298,45 @@ function Header() {
                     <div className={styles.cardContent}>
                       <h4>{item.title}</h4>
                       <p className={styles.cardTag}>{item.category}</p>
-                      <button className={styles.seeBtn} type="button">
-                        {renderAnimatedLabel("SEE WORK")}
-                        <svg
-                          aria-hidden="true"
-                          className={styles.btnIcon}
-                          fill="none"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g opacity="1">
-                            <circle cx="10.2004" cy="7.1999" fill="currentColor" r="1.8" />
-                            <circle cx="10.2004" cy="16.8" fill="currentColor" r="1.8" />
-                            <circle cx="14.9992" cy="12.0002" fill="currentColor" r="1.8" />
-                          </g>
-                        </svg>
-                      </button>
+                      {item.href ? (
+                        <Link className={styles.seeBtn} href={item.href}>
+                          {renderAnimatedLabel("SEE WORK")}
+                          <svg
+                            aria-hidden="true"
+                            className={styles.btnIcon}
+                            fill="none"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g opacity="1">
+                              <circle cx="10.2004" cy="7.1999" fill="currentColor" r="1.8" />
+                              <circle cx="10.2004" cy="16.8" fill="currentColor" r="1.8" />
+                              <circle cx="14.9992" cy="12.0002" fill="currentColor" r="1.8" />
+                            </g>
+                          </svg>
+                        </Link>
+                      ) : (
+                        <button className={styles.seeBtn} type="button">
+                          {renderAnimatedLabel("SEE WORK")}
+                          <svg
+                            aria-hidden="true"
+                            className={styles.btnIcon}
+                            fill="none"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g opacity="1">
+                              <circle cx="10.2004" cy="7.1999" fill="currentColor" r="1.8" />
+                              <circle cx="10.2004" cy="16.8" fill="currentColor" r="1.8" />
+                              <circle cx="14.9992" cy="12.0002" fill="currentColor" r="1.8" />
+                            </g>
+                          </svg>
+                        </button>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -444,22 +466,29 @@ function Header() {
               }`}
             >
               <div className={styles.mobileCasesPanel}>
-                {casesData.map((item) => (
-                  <div className={styles.mobileCaseItem} key={item.id}>
-                    <div className={styles.mobileCaseThumb}>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        sizes="100vw"
-                      />
+                {casesData.map((item) =>
+                  item.href ? (
+                    <Link className={styles.mobileCaseItem} href={item.href} key={item.id}>
+                      <div className={styles.mobileCaseThumb}>
+                        <Image src={item.image} alt={item.title} fill sizes="100vw" />
+                      </div>
+                      <div className={styles.mobileCaseCopy}>
+                        <strong>{item.title}</strong>
+                        <span>{item.category}</span>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className={styles.mobileCaseItem} key={item.id}>
+                      <div className={styles.mobileCaseThumb}>
+                        <Image src={item.image} alt={item.title} fill sizes="100vw" />
+                      </div>
+                      <div className={styles.mobileCaseCopy}>
+                        <strong>{item.title}</strong>
+                        <span>{item.category}</span>
+                      </div>
                     </div>
-                    <div className={styles.mobileCaseCopy}>
-                      <strong>{item.title}</strong>
-                      <span>{item.category}</span>
-                    </div>
-                  </div>
-                ))}
+                  )
+                )}
               </div>
               </div>
             </div>

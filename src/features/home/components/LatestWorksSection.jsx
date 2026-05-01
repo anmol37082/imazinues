@@ -1,19 +1,22 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./LatestWorksSection.module.css";
 
 const workCards = [
   {
     id: 1,
-    title: "Mass & Measure",
-    timeline: "4 weeks",
+    title: "Kiner Kailash Jewellers",
+    timeline: "2 weeks",
+    href: "/works/kiner-kailash-jewellers",
     img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: 2,
-    title: "Waterline",
+    title: "Modern Lifestyle Jewellers",
     timeline: "3 weeks",
+    href: "/works/modern-lifestyle-jewellers",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
   },
   {
@@ -44,7 +47,22 @@ const workCards = [
 
 const teamMembers = ["AK", "RM", "SK"];
 
-function WorkCard({ title, timeline, img }) {
+function WorkCard({ title, timeline, img, href }) {
+  const hoverBadge = (
+    <span className={styles.workHoverBadge} aria-hidden="true">
+      <svg viewBox="0 0 24 24" className={styles.workHoverIcon}>
+        <path
+          d="M8 16L16 8M9 8h7v7"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  );
+
   return (
     <article className={styles.workCard}>
       <div className={styles.workArt}>
@@ -55,18 +73,28 @@ function WorkCard({ title, timeline, img }) {
           className={styles.workImage}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <span className={styles.workHoverBadge} aria-hidden="true">
-          <svg viewBox="0 0 24 24" className={styles.workHoverIcon}>
-            <path
-              d="M8 16L16 8M9 8h7v7"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </span>
+        {href ? (
+          <Link
+            href={href}
+            className={styles.workHoverLink}
+            aria-label={`Open ${title} page`}
+          >
+            <span className={styles.workHoverBadge} aria-hidden="true">
+              <svg viewBox="0 0 24 24" className={styles.workHoverIcon}>
+                <path
+                  d="M8 16L16 8M9 8h7v7"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </Link>
+        ) : (
+          hoverBadge
+        )}
       </div>
       <div className={styles.workMeta}>
         <span className={styles.workTitle}>{title}</span>

@@ -3,6 +3,7 @@ const casesData = [
     id: 1,
     title: "Kiner Kailash Jewellers",
     category: "We craft strategies that get you seen, heard, and remembered.",
+    href: "/works/kiner-kailash-jewellers",
     image:
       "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80",
   },
@@ -10,6 +11,7 @@ const casesData = [
     id: 2,
     title: "Modern Lifestyle Jewellers",
     category: "We don't just market, we make brands unforgettable.",
+    href: "/works/modern-lifestyle-jewellers",
     image:
       "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80",
   },

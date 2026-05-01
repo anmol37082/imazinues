@@ -126,47 +126,18 @@
   letter-spacing: 0.01em;
 }
 
-.clusterMark {
-  width: 76px;
-  margin: 28px auto 0;
+.resultMark {
+  width: 64px;
+  margin: 24px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.clusterIcon {
-  width: 76px;
-  height: 76px;
-  overflow: visible;
-}
-
-.clusterBase {
-  fill: none;
-  stroke: #202430;
-  stroke-width: 3.2;
-  stroke-linecap: round;
-  opacity: 0.22;
-}
-
-.clusterBar {
-  fill: #202430;
-  opacity: 0.16;
-}
-
-.clusterTrend {
-  fill: none;
-  stroke: #202430;
-  stroke-width: 4.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.clusterArrow {
-  fill: none;
-  stroke: #202430;
-  stroke-width: 4.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.resultIcon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .resultCopy {

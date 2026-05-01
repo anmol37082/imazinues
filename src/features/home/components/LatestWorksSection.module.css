@@ -215,8 +215,21 @@
   transition:
     opacity 0.28s ease,
     transform 0.36s cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
   box-shadow: 0 22px 48px rgba(17, 17, 17, 0.14);
+}
+
+.workHoverLink {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 108px;
+  height: 108px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-decoration: none;
 }
 
 .workHoverIcon {

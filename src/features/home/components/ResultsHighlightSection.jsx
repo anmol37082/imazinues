@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import icon1 from "../../../assets/svg/icon1.svg";
+import icon2 from "../../../assets/svg/icon2.svg";
 import styles from "./ResultsHighlightSection.module.css";
 
 const resultCards = [
@@ -7,39 +10,17 @@ const resultCards = [
     id: 1,
     badge: "Brand Identity & Visual Storytelling",
     value: "+3x stronger brand recognition",
+    icon: icon1,
     copy: "We craft powerful brand identities, from logos and brand guidelines to visual language, ensuring your brand stands out clearly across every platform.",
   },
   {
     id: 2,
     badge: "Performance Ads & Lead Generation",
     value: "+45% improvement in qualified leads",
+    icon: icon2,
     copy: "With smart ad strategies, optimized campaigns, and data-driven targeting, we help businesses reach the right audience and convert attention into real growth.",
   },
 ];
-
-function ClusterMark() {
-  return (
-    <div className={styles.clusterMark} aria-hidden="true">
-      <svg viewBox="0 0 80 80" className={styles.clusterIcon}>
-        <path
-          d="M18 62h44"
-          className={styles.clusterBase}
-        />
-        <rect x="22" y="38" width="10" height="24" rx="4" className={styles.clusterBar} />
-        <rect x="36" y="28" width="10" height="34" rx="4" className={styles.clusterBar} />
-        <rect x="50" y="18" width="10" height="44" rx="4" className={styles.clusterBar} />
-        <path
-          d="M20 50l13-10 11 6 17-18"
-          className={styles.clusterTrend}
-        />
-        <path
-          d="M51 28h7v7"
-          className={styles.clusterArrow}
-        />
-      </svg>
-    </div>
-  );
-}
 
 function RatingStars() {
   return (
@@ -80,7 +61,16 @@ export default function ResultsHighlightSection() {
               <article key={card.id} className={styles.resultCard}>
                 <span className={styles.resultBadge}>{card.badge}</span>
                 <h3 className={styles.resultValue}>{card.value}</h3>
-                <ClusterMark />
+                <div className={styles.resultMark} aria-hidden="true">
+                  <Image
+                    src={card.icon}
+                    alt=""
+                    className={styles.resultIcon}
+                    width={64}
+                    height={64}
+                    unoptimized
+                  />
+                </div>
                 <p className={styles.resultCopy}>{card.copy}</p>
               </article>
             ))}

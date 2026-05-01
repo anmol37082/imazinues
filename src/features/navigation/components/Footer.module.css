@@ -10,7 +10,7 @@
 
 .videoPanel {
   position: relative;
-  min-height: 520px;
+  min-height: 640px;
   overflow: hidden;
   background: #020305;
 }
@@ -187,7 +187,7 @@
   }
 
   .videoPanel {
-    min-height: 420px;
+    min-height: 520px;
   }
 
   .dataPanel,

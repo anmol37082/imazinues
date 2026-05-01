@@ -131,7 +131,7 @@ function Footer() {
             playsInline
             preload="metadata"
           >
-            <source src="/footervideo/footervideo.mp4" type="video/mp4" />
+            <source src="/footervideo/footervideo1.mp4"type="video/mp4" />
           </video>
         </section>
 
