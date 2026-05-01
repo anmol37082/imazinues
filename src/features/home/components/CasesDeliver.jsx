@@ -17,8 +17,10 @@ const contentRows = [
     ],
     cta: "Start for free",
     mediaSide: "left",
-    videoWebm: "/ceativecontent/GIFanimation1.webm",
-    videoMp4: "/ceativecontent/GIFanimation1.mp4",
+
+     videoWebm: "/ceativecontent/GIFanimation2.webm",
+    videoMp4: "/ceativecontent/GIFanimation2.mp4",
+  
   },
   {
     id: "optimize",
@@ -29,8 +31,10 @@ const contentRows = [
     ],
     cta: "Explore workflow",
     mediaSide: "right",
-    videoWebm: "/ceativecontent/GIFanimation2.webm",
-    videoMp4: "/ceativecontent/GIFanimation2.mp4",
+   
+
+      videoWebm: "/ceativecontent/GIFanimation1.webm",
+    videoMp4: "/ceativecontent/GIFanimation1.mp4",
   },
   {
     id: "publish",
