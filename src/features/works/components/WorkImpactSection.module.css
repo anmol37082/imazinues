@@ -77,6 +77,22 @@
   gap: 32px;
 }
 
+.paragraphGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resultTitle {
+  margin: 0;
+  color: rgba(17, 17, 17, 0.46);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.45rem, 2.35vw, 2.45rem);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
 .copy {
   margin: 0;
   font-size: clamp(1.35rem, 2.1vw, 2.4rem);
@@ -120,6 +136,10 @@
 
   .paragraphs {
     gap: 24px;
+  }
+
+  .resultTitle {
+    font-size: clamp(1.2rem, 5vw, 1.75rem);
   }
 
   .copy {

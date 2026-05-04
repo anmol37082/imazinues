@@ -17,7 +17,7 @@ const workCards = [
     title: "Modern Lifestyle Jewellers",
     timeline: "3 weeks",
     href: "/works/modern-lifestyle-jewellers",
-    img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    img: "/modernlifestyle/banner2.webp",
   },
   {
     id: 3,

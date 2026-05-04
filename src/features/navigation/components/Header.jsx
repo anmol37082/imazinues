@@ -229,23 +229,23 @@ function Header() {
         }
       }}
     >
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo} aria-label="Go to home page">
         <Image
-          src="/Imazine Us New Logo white.png"
+          src="/ImazineUsNewLogo.png"
           alt="Imazine Us"
-          width={320}
-          height={96}
+          width={280}
+          height={84}
           priority
           className={styles.logoImage}
         />
         <Image
           src="/Imazine Us New Logo.png"
           alt="Imazine Us"
-          width={320}
-          height={96}
+          width={280}
+          height={84}
           className={`${styles.logoImage} ${styles.logoImageAlt}`}
         />
-      </div>
+      </Link>
 
       <ul className={styles.menu}>
         <li

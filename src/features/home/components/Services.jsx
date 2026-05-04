@@ -21,7 +21,7 @@ export const serviceCardData = [
     id: 3,
     title: 'Google Ads & Campaigns',
     desc: 'Generate instant leads with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.',
-    img: '/services/3image.webp',
+    img: '/services/img3.webp',
   },
   {
     id: 4,

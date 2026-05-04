@@ -6,39 +6,43 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
+const modernLifestyleBigBanner1 = "/modernlifestyle/bigbanner1.webp";
+const modernLifestyleBigBanner2 = "/modernlifestyle/bigbanner2.webp";
+const modernLifestyleBanner1 = "/modernlifestyle/banner1.webp";
+const modernLifestyleBanner2 = "/modernlifestyle/banner2.webp";
+const modernLifestyleBanner3 = "/modernlifestyle/banner3.webp";
+
 const modernGalleryProps = {
-  firstBannerImage:
-    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-  firstBannerAlt: "Modern jewellery display with soft editorial lighting",
+  firstBannerImage: modernLifestyleBigBanner1,
+  firstBannerAlt: "Modern lifestyle big banner one",
   firstRow: [
     {
-      src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
-      alt: "Minimal gold jewellery close-up",
+      src: modernLifestyleBanner1,
+      alt: "Modern lifestyle banner one",
     },
     {
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-      alt: "Elegant jewellery pieces on a soft background",
+      src: modernLifestyleBanner2,
+      alt: "Modern lifestyle banner two",
     },
   ],
-  secondBannerImage:
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80",
-  secondBannerAlt: "Luxury jewellery store interior",
+  secondBannerImage: modernLifestyleBigBanner2,
+  secondBannerAlt: "Modern lifestyle big banner two",
   cards: [
     {
-      src: "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1200&q=80",
-      alt: "Gold ring on a neutral backdrop",
+      src: modernLifestyleBanner3,
+      alt: "Modern lifestyle banner three",
     },
     {
-      src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
-      alt: "Jewellery detail with editorial crop",
+      src: modernLifestyleBanner1,
+      alt: "Modern lifestyle banner one repeat",
     },
     {
-      src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
-      alt: "Premium jewellery collection display",
+      src: modernLifestyleBanner2,
+      alt: "Modern lifestyle banner two repeat",
     },
     {
-      src: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&q=80",
-      alt: "Soft lit fashion jewellery close-up",
+      src: modernLifestyleBanner3,
+      alt: "Modern lifestyle banner three repeat",
     },
   ],
 };
@@ -61,23 +65,19 @@ export default function ModernLifestyleJewellersPage() {
         ]}
       />
       <WorkCaseStudyShowcase
-        leftImage="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=80"
-        leftAlt="Modern jewellery close-up"
-        rightImage="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1400&q=80"
-        rightAlt="Modern lifestyle jewellery display"
+        leftImage={modernLifestyleBanner2}
+        leftAlt="Modern lifestyle big banner one"
+        rightImage={modernLifestyleBigBanner2}
+        rightAlt="Modern lifestyle big banner two"
       />
       <WorkStudyDetailsSection
-        overview="Modern Lifestyle Jewellers was structured around a cleaner storytelling flow so customers could explore categories, compare collections, and understand the brand without visual clutter."
-        challenge="The main challenge was to simplify the experience while still keeping it premium, making the interface feel elegant, informative, and easy to navigate on every screen."
+        overview="Complete brand transformation from logo creation to full brand setup. The project included designing a modern brand identity, setting up professional social media profiles, conducting a brand photoshoot, product shoot, and producing creative model-based video content to present the jewellery in a premium lifestyle format."
+        challenge="The main challenge was to convert a traditional jewellery business into a modern lifestyle brand while maintaining its heritage value. The brand needed a fresh visual identity, premium content, and a strong digital presence to connect with today’s audience."
       />
       <WorkGalleryShowcase {...modernGalleryProps} />
       <WorkImpactSection
-        paragraphs={[
-          "After working with the website analytics and conducting some research, it became clear which problems needed to be addressed in order to improve the conversion rate of the landing page.",
-          "The updated architecture allowed us to connect every piece to the brand new navigation system.",
-          "After A/B testing the mockups, the general direction was approved, and the visuals were added quickly.",
-          "The updated website set a new standard for product conversion and minimized the number of support requests.",
-        ]}
+        impactParagraph="A consistent and premium brand presence was created through modern logo design, professional photography, product visuals, and cinematic video production, helping the brand stand out visually across digital platforms."
+        resultParagraph="The project successfully established a strong modern brand identity and digital presence, positioning Modern Lifestyle Jewellers as a premium jewellery brand with a contemporary lifestyle appeal."
       />
       <WorkMoreProjectsSection />
       <WorkFooter imageSrc={modernFooterImage} imageAlt="Modern Lifestyle Jewellers editorial portrait" />

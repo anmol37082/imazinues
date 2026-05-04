@@ -12,8 +12,7 @@ const casesData = [
     title: "Modern Lifestyle Jewellers",
     category: "We don't just market, we make brands unforgettable.",
     href: "/works/modern-lifestyle-jewellers",
-    image:
-      "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80",
+    image: "/modernlifestyle/banner2.webp",
   },
   {
     id: 3,

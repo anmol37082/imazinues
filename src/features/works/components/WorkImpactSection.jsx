@@ -4,8 +4,13 @@ export default function WorkImpactSection({
   prompt = "Want to learn more?",
   cta = "Let's chat!",
   heading = "Impact",
+  impactParagraph,
+  resultTitle = "Result",
+  resultParagraph,
   paragraphs = [],
 }) {
+  const hasStructuredContent = Boolean(impactParagraph || resultParagraph);
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -21,11 +26,23 @@ export default function WorkImpactSection({
             <div className={styles.copyBlock}>
               <h2 className={styles.heading}>{heading}</h2>
               <div className={styles.paragraphs}>
-                {paragraphs.map((paragraph) => (
-                  <p className={styles.copy} key={paragraph}>
-                    {paragraph}
-                  </p>
-                ))}
+                {hasStructuredContent ? (
+                  <>
+                    {impactParagraph ? <p className={styles.copy}>{impactParagraph}</p> : null}
+                    {resultParagraph ? (
+                      <div className={styles.paragraphGroup}>
+                        <h3 className={styles.resultTitle}>{resultTitle}</h3>
+                        <p className={styles.copy}>{resultParagraph}</p>
+                      </div>
+                    ) : null}
+                  </>
+                ) : (
+                  paragraphs.map((paragraph) => (
+                    <p className={styles.copy} key={paragraph}>
+                      {paragraph}
+                    </p>
+                  ))
+                )}
               </div>
             </div>
           </div>
