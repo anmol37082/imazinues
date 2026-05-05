@@ -1129,7 +1129,7 @@
 
   .logoImage {
     height: 36px;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   .menu {
@@ -1168,7 +1168,7 @@
 
   .logoImage {
     height: 31px;
-    transform: scale(0.88);
+    transform: scale(0.92);
   }
 
   .menu {
@@ -1225,7 +1225,7 @@
 
   .logoImage {
     height: 26px;
-    transform: scale(0.86);
+    transform: scale(0.92);
   }
 
   .menu {
@@ -1625,7 +1625,7 @@
 
   .logoImage {
     height: 22px;
-    transform: scale(0.84);
+    transform: scale(0.9);
     max-width: 100%;
   }
 

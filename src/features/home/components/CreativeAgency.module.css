@@ -42,7 +42,7 @@
 /* Header Styles */
 .header {
   padding: 80px 24px 0;
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -80,7 +80,7 @@
 
 .title {
   margin: 34px 0 20px;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.5rem, 5vw, 5.15rem);
   font-weight: 700;
   line-height: 1.1;
   color: #111111;
@@ -102,7 +102,7 @@
 }
 
 .copy {
-  max-width: 460px;
+  max-width: 620px;
   margin: 0 auto;
   color: var(--subtitle-color);
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
