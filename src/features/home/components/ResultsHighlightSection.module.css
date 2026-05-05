@@ -4,7 +4,7 @@
 }
 
 .container {
-  width: min(1240px, calc(100% - 40px));
+  width: min(1040px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .resultsHeader {
-  max-width: 1120px;
+  max-width: 980px;
   margin: 0 auto 32px;
   display: flex;
   flex-direction: column;
@@ -60,11 +60,11 @@
 }
 
 .resultsTitle {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 18px 0 0;
   color: #111111;
   font-family: var(--font-br-sonoma);
-  font-size: clamp(2.5rem, 5vw, 5.15rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -77,7 +77,7 @@
 }
 
 .resultCard {
-  min-height: 470px;
+  min-height: 430px;
   padding: 42px 34px 30px;
   border-radius: 14px;
   background: #f5f6fa;
@@ -116,11 +116,11 @@
 }
 
 .resultValue {
-  max-width: 380px;
+  max-width: 340px;
   margin: 32px 0 0;
   color: #202430;
   font-family: var(--font-br-sonoma);
-  font-size: clamp(2rem, 2.2vw, 3.25rem);
+  font-size: clamp(2rem, 2.2vw, 2.9rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -141,7 +141,7 @@
 }
 
 .resultCopy {
-  max-width: 320px;
+  max-width: 292px;
   margin: 18px 0 0;
   color: var(--subtitle-color);
   font-size: 16px;
