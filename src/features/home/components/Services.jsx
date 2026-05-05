@@ -9,49 +9,49 @@ export const serviceCardData = [
     id: 1,
     title: 'Social Media Marketing (SMM)',
     desc: 'Grow your brand on Facebook, Instagram & LinkedIn with creative content, targeted ads and strong community engagement.',
-    img: '/services/1image.webp',
+    img: '/services/ICON-CARDS-1.webp',
   },
   {
     id: 2,
     title: 'Search Engine Optimization (SEO)',
     desc: 'Improve Google rankings with strategic keywords, on-page optimization, and technical SEO that drives organic traffic.',
-    img: '/services/2image.webp',
+    img: '/services/ICON-CARDS-2.webp',
   },
   {
     id: 3,
     title: 'Google Ads & Campaigns',
     desc: 'Generate instant leads with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.',
-    img: '/services/img3.webp',
+    img: '/services/ICON-CARDS-3.webp',
   },
   {
     id: 4,
     title: 'Content Creation',
     desc: 'Tell your brand story through engaging blogs, videos, and creative visuals designed to inform, inspire and convert.',
-    img: '/services/4image.webp',
+    img: '/services/ICON-CARDS-4.webp',
   },
   {
     id: 5,
     title: 'Website Revamp & Development',
     desc: 'Build modern, fast, and responsive websites that enhance user experience and strengthen your brand identity.',
-    img: '/services/5image.webp',
+    img: '/services/ICON-CARDS-5.webp',
   },
   {
     id: 6,
     title: 'Brand Guidelines',
     desc: 'Create clear brand guidelines that keep your logo, colors, fonts, and messaging consistent everywhere.',
-    img: '/services/6image.webp',
+    img: '/services/ICON-CARDS-6.webp',
   },
   {
     id: 7,
     title: 'Print Design',
     desc: 'Design impactful brochures, flyers, and print materials that communicate your brand message professionally.',
-    img: '/services/7image.webp',
+    img: '/services/ICON-CARDS-7.webp',
   },
   {
     id: 8,
     title: 'Product Photography & Videography',
     desc: 'Showcase your products with professional photography and cinematic videos that highlight quality and attract buyers.',
-    img: '/services/8image.webp',
+    img: '/services/ICON-CARDS-8.webp',
   },
 ];
 
@@ -89,6 +89,7 @@ export default function Services() {
     <article
       key={card.id}
       className={`${styles.card} ${styles[`card${card.id}`]}`}
+      style={{ '--card-delay': `${0.18 + (card.id - 1) * 0.12}s` }}
     >
       <div className={styles.imageWrap}>
         <div className={styles.imageStage}>
@@ -134,16 +135,16 @@ export default function Services() {
 
       <div className={styles.gridDesktop}>
         <div className={styles.column}>
-          {leftColumnCards.map(renderCard)}
+          {leftColumnCards.map((card) => renderCard(card))}
         </div>
 
         <div className={styles.column}>
-          {rightColumnCards.map(renderCard)}
+          {rightColumnCards.map((card) => renderCard(card))}
         </div>
       </div>
 
       <div className={styles.gridMobile}>
-        {serviceCardData.map(renderCard)}
+        {serviceCardData.map((card) => renderCard(card))}
       </div>
     </section>
   );

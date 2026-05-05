@@ -118,7 +118,9 @@
 .imageWrap {
   width: 70%;
   margin: 56px auto 0;
-  transition: width 0.3s ease-out;
+  transition: transform 0.12s linear;
+  transform-origin: center top;
+  will-change: transform;
   max-width: 100%;
 }
 

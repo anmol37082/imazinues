@@ -77,7 +77,7 @@ const testimonials = [
     name: "Mr. Sundeep Sharma",
     role: "Co-Founder, Farmers Pride India",
     initials: "SS",
-    image: "/review/Mr.SundeepSharma.webp",
+    image: "/review/Mr.SundeepSharma1.webp",
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ const testimonials = [
     name: "Mr. Dupesh",
     role: "Founder, The Divora",
     initials: "MD",
-    image: "/review/mr.dupesh.webp",
+    image: "/review/mr.dupesh1.webp",
   },
   {
     id: 10,

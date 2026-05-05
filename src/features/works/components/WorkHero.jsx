@@ -16,9 +16,22 @@ export default function WorkHero({
 
           <div className={styles.details} aria-label="Project details">
             {details.map((item) => (
-              <div className={styles.detail} key={item.label}>
+              <div
+                className={`${styles.detail}${Array.isArray(item.value) ? ` ${styles.detailWide}` : ""}`}
+                key={item.label}
+              >
                 <span className={styles.detailLabel}>{item.label}</span>
-                <span className={styles.detailValue}>{item.value}</span>
+                {Array.isArray(item.value) ? (
+                  <span className={styles.detailValueList}>
+                    {item.value.map((line) => (
+                      <span className={styles.detailValueLine} key={line}>
+                        {line}
+                      </span>
+                    ))}
+                  </span>
+                ) : (
+                  <span className={styles.detailValue}>{item.value}</span>
+                )}
               </div>
             ))}
           </div>

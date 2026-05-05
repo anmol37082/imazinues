@@ -26,7 +26,8 @@
 
 .title {
   margin: 0;
-  font-size: clamp(1.45rem, 2.1vw, 2.5rem);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.28rem, 1.9vw, 2.15rem);
   line-height: 1;
   letter-spacing: -0.06em;
   font-weight: 400;
@@ -45,6 +46,13 @@
   background: #ffffff;
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08);
   outline: none;
+}
+
+.cardLink {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
 }
 
 .mediaWrap {
@@ -76,7 +84,8 @@
 
 .projectTitle {
   margin: 0;
-  font-size: clamp(1.2rem, 1.8vw, 2rem);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.08rem, 1.6vw, 1.7rem);
   line-height: 1;
   letter-spacing: -0.05em;
   font-weight: 400;
@@ -86,9 +95,10 @@
   margin: 0;
   color: rgba(17, 17, 17, 0.52);
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
-  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
   line-height: 1.3;
   letter-spacing: -0.02em;
+  font-weight: 400;
 }
 
 .card:hover .mediaWrap,
@@ -164,10 +174,10 @@
   }
 
   .projectTitle {
-    font-size: 1rem;
+    font-size: 0.92rem;
   }
 
   .projectMeta {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }

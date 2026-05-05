@@ -63,8 +63,9 @@ const parsedStats = stats.map((item) => {
 function StatsAndFacts() {
   const sectionRef = useRef(null);
   const imageWrapRef = useRef(null);
+  const imageFrameRef = useRef(null);
   const wasCountZoneVisibleRef = useRef(false);
-  const [imageWidth, setImageWidth] = useState(70);
+  const [imageScale, setImageScale] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
   const [animatedValues, setAnimatedValues] = useState(() =>
     parsedStats.map(() => 0)
@@ -113,21 +114,36 @@ function StatsAndFacts() {
 
       const rect = imageWrap.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      const start = viewportHeight * 0.88;
+      const start = viewportHeight * 1.12;
       const end = -viewportHeight * 0.55;
       const rawProgress = (start - rect.top) / (start - end);
       const progress = Math.min(1, Math.max(0, rawProgress));
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
 
-      setImageWidth(70 + progress * 30);
+      setImageScale(1 + easedProgress * 0.4285714286);
     };
 
-    updateImageWidth();
-    window.addEventListener("scroll", updateImageWidth, { passive: true });
-    window.addEventListener("resize", updateImageWidth);
+    const requestUpdateImageWidth = () => {
+      if (imageFrameRef.current) {
+        window.cancelAnimationFrame(imageFrameRef.current);
+      }
+
+      imageFrameRef.current = window.requestAnimationFrame(() => {
+        updateImageWidth();
+        imageFrameRef.current = null;
+      });
+    };
+
+    requestUpdateImageWidth();
+    window.addEventListener("scroll", requestUpdateImageWidth, { passive: true });
+    window.addEventListener("resize", requestUpdateImageWidth);
 
     return () => {
-      window.removeEventListener("scroll", updateImageWidth);
-      window.removeEventListener("resize", updateImageWidth);
+      if (imageFrameRef.current) {
+        window.cancelAnimationFrame(imageFrameRef.current);
+      }
+      window.removeEventListener("scroll", requestUpdateImageWidth);
+      window.removeEventListener("resize", requestUpdateImageWidth);
     };
   }, []);
 
@@ -221,13 +237,13 @@ function StatsAndFacts() {
       <div
         className={styles.imageWrap}
         ref={imageWrapRef}
-        style={{ width: `${imageWidth}%` }}
+        style={{ transform: `translate3d(0, 0, 0) scaleX(${imageScale})` }}
       >
         <div
           className={styles.image}
           style={{
             backgroundImage:
-              "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.26) 100%), url(/images/resizebanner1.png)",
+              "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.26) 100%), url(/images/resizebanner3.png)",
           }}
         />
       </div>

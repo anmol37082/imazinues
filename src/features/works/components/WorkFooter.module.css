@@ -15,9 +15,9 @@
   padding: 0 24px;
   pointer-events: none;
   color: #111111;
-  font-size: clamp(4.8rem, 10vw, 12rem);
-  line-height: 0.85;
-  letter-spacing: -0.08em;
+  font-size: clamp(3.6rem, 7vw, 8.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -76,8 +76,9 @@
 
 .copy {
   margin: 0;
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   max-width: 28ch;
-  font-size: clamp(1.1rem, 1.6vw, 1.55rem);
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
   line-height: 1.12;
   letter-spacing: -0.05em;
   font-weight: 400;
@@ -163,7 +164,7 @@
 
 @media (max-width: 1080px) {
   .backgroundHeading {
-    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-size: clamp(3rem, 7vw, 6rem);
     padding: 0 16px;
   }
 
@@ -192,7 +193,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding-bottom: 56px;
+    padding-bottom: 80px;
   }
 
   .backgroundHeading {
@@ -210,8 +211,9 @@
   }
 
   .copy {
-    max-width: 100%;
-    font-size: clamp(1rem, 4vw, 1.35rem);
+    max-width: 22ch;
+    font-size: clamp(0.88rem, 3.6vw, 1.05rem);
+    line-height: 1.22;
   }
 
   .email,

@@ -5,35 +5,45 @@ const casesData = [
     category: "We craft strategies that get you seen, heard, and remembered.",
     href: "/works/kiner-kailash-jewellers",
     image:
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80",
+      "/casestudies/kinnerkailashjawellers.PNG",
   },
   {
     id: 2,
     title: "Modern Lifestyle Jewellers",
     category: "We don't just market, we make brands unforgettable.",
     href: "/works/modern-lifestyle-jewellers",
-    image: "/modernlifestyle/banner2.webp",
+    image: "/casestudies/modernlifestyle.PNG",
   },
   {
     id: 3,
     title: "Glamour and Radiance",
-    category: "From Strategy to Story, We Make Everything Count.",
+    category: "A premium skincare brand built from scratch with complete digital presence.",
+    href: "/works/glamour-and-radiance",
     image:
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
+      "/casestudies/glamourandradiance.PNG",
   },
   {
     id: 4,
     title: "Vetraj Pet Hospital",
-    category: "Content that connects, campaigns that convert.",
-    image:
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
+    category: "Marketing, branding, and offline promotions for a stronger pet owner reach.",
+    href: "/works/vetraj-pet-hospital",
+    image: "/casestudies/vetrajpethospital.PNG",
   },
- {
+  {
     id: 5,
-    title: "The Divora",
-    category: "From search engines to social feeds. ",
+    title: "Pandit Ji De Pranthe",
+    category: "From kitchen to camera, we crafted a launch story that made every bite look irresistible.",
+    href: "/works/pandit-ji-de-pranthe",
     image:
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
+      "/casestudies/panditjidepranthe.PNG",
+  },
+  {
+    id: 6,
+    title: "Binny's Nail Bar",
+    category: "Turning beauty trends into viral campaigns, events, and influencer buzz.",
+    href: "/works/binnys-nail-bar",
+    image:
+      "/casestudies/BinnyNailBar.PNG",
   },
 
 ];

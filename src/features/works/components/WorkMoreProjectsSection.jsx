@@ -1,9 +1,41 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./WorkMoreProjectsSection.module.css";
 
-function ProjectCard({ image, alt, title, meta }) {
-  return (
-    <article className={styles.card} tabIndex={0}>
+const latestWorkProjects = [
+  {
+    href: "/works/kiner-kailash-jewellers",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    alt: "Kiner Kailash Jewellers",
+    title: "Kiner Kailash Jewellers",
+    meta: "Branding  Website  Mobile app",
+  },
+  {
+    href: "/works/modern-lifestyle-jewellers",
+    image: "/modernlifestyle/banner2.webp",
+    alt: "Modern Lifestyle Jewellers",
+    title: "Modern Lifestyle Jewellers",
+    meta: "Brand website  Product design",
+  },
+  {
+    href: "/works/glamour-and-radiance",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+    alt: "Glamour and Radiance",
+    title: "Glamour and Radiance",
+    meta: "Shopify  Branding  Content production",
+  },
+  {
+    href: "/works/vetraj-pet-hospital",
+    image: "/creativeagency/outdoorbrandingDesign.jpg.webp",
+    alt: "Vetraj Pet Hospital",
+    title: "Vetraj Pet Hospital",
+    meta: "Branding  Ads  Offline promotions",
+  },
+];
+
+function ProjectCard({ href, image, alt, title, meta }) {
+  const CardInner = (
+    <>
       <div className={styles.mediaWrap}>
         <Image
           className={styles.media}
@@ -18,29 +50,31 @@ function ProjectCard({ image, alt, title, meta }) {
         <h3 className={styles.projectTitle}>{title}</h3>
         <p className={styles.projectMeta}>{meta}</p>
       </div>
+    </>
+  );
+
+  return (
+    <article className={styles.card} tabIndex={0}>
+      {href ? (
+        <Link className={styles.cardLink} href={href} aria-label={`Open ${title} project`}>
+          {CardInner}
+        </Link>
+      ) : (
+        CardInner
+      )}
     </article>
   );
 }
 
 export default function WorkMoreProjectsSection({
   title = "More projects",
-  projects = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1774110252880-4136084a83fc?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaWdwYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-      alt: "Luxury watch display in a store window",
-      title: "Ophelos",
-      meta: "Branding  Website  Mobile app",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1687463221023-02f259da7d77?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaWdwYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=3000",
-      alt: "Purple and blue abstract project cover",
-      title: "Flat Metrics",
-      meta: "Analytics Playbook  2023",
-    },
-  ],
+  currentProjectHref,
+  projects,
 }) {
+  const visibleProjects = (projects || latestWorkProjects)
+    .filter((project) => project.href !== currentProjectHref)
+    .slice(0, 2);
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -50,9 +84,10 @@ export default function WorkMoreProjectsSection({
           </div>
 
           <div className={styles.rightPane}>
-            {projects.map((project) => (
+            {visibleProjects.map((project) => (
               <ProjectCard
-                key={project.alt}
+                key={project.href || project.alt}
+                href={project.href}
                 image={project.image}
                 alt={project.alt}
                 title={project.title}

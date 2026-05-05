@@ -55,13 +55,22 @@ export default function ModernLifestyleJewellersPage() {
     <>
       <WorkHero
         title="Modern Lifestyle Jewellers"
-        description="A modern storefront experience designed to present collections with a premium, editorial feel."
+        description="Legacy jewellery reimagined with brand identity, luxury shoots, and cinematic videos for a modern look."
         details={[
           { label: "Company", value: "Modern Lifestyle Jewellers" },
-          { label: "Expertise", value: "Brand website" },
-          { label: "Segment", value: "Jewellery" },
-          { label: "Year", value: "2024" },
-          { label: "Role", value: "Product designer" },
+          { label: "Segment", value: "Jewellers" },
+          { label: "Year", value: "2025" },
+          { label: "Role", value: "Brand Development & Visual Content Production" },
+          {
+            label: "Expertise",
+            value: [
+              "Brand Identity Design",
+              "Social Media Setup",
+              "Product Photography",
+              "Model-Based Jewellery Shoots",
+              "Creative Video Production",
+            ],
+          },
         ]}
       />
       <WorkCaseStudyShowcase
@@ -71,6 +80,20 @@ export default function ModernLifestyleJewellersPage() {
         rightAlt="Modern lifestyle big banner two"
       />
       <WorkStudyDetailsSection
+        researchTitle="Research Methods"
+        researchItems={[
+          "Jewellery Industry Research",
+          "Competitor Analysis",
+          "Customer Preference Study",
+          "Visual Branding Research",
+        ]}
+        ideationTitle="Ideation"
+        ideationItems={[
+          "Brand Identity Concepts",
+          "Campaign Visual Planning",
+          "Lifestyle Content Strategy",
+          "Jewellery Presentation Concepts",
+        ]}
         overview="Complete brand transformation from logo creation to full brand setup. The project included designing a modern brand identity, setting up professional social media profiles, conducting a brand photoshoot, product shoot, and producing creative model-based video content to present the jewellery in a premium lifestyle format."
         challenge="The main challenge was to convert a traditional jewellery business into a modern lifestyle brand while maintaining its heritage value. The brand needed a fresh visual identity, premium content, and a strong digital presence to connect with today’s audience."
       />
@@ -79,7 +102,7 @@ export default function ModernLifestyleJewellersPage() {
         impactParagraph="A consistent and premium brand presence was created through modern logo design, professional photography, product visuals, and cinematic video production, helping the brand stand out visually across digital platforms."
         resultParagraph="The project successfully established a strong modern brand identity and digital presence, positioning Modern Lifestyle Jewellers as a premium jewellery brand with a contemporary lifestyle appeal."
       />
-      <WorkMoreProjectsSection />
+      <WorkMoreProjectsSection currentProjectHref="/works/modern-lifestyle-jewellers" />
       <WorkFooter imageSrc={modernFooterImage} imageAlt="Modern Lifestyle Jewellers editorial portrait" />
     </>
   );

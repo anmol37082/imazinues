@@ -115,7 +115,7 @@ const footerCaseStudyOrder = {
   "Kiner Kailash Jewellers": 1,
   "Glamour and Radiance": 2,
   "Vetraj Pet Hospital": 3,
-  "The Divora": 4,
+  "Pandit Ji De Pranthe": 4,
 };
 
 function Footer() {

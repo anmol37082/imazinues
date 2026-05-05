@@ -2,10 +2,10 @@ import Image from "next/image";
 import styles from "./WorkFooter.module.css";
 
 export default function WorkFooter({
-  backgroundText = "let's create something together",
+  backgroundText = "Let’s turn vision into reality.",
   imageSrc = "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=60&w=2400",
   imageAlt = "Portrait on a colorful background",
-  title = "Freelance projects, collaborations and full-time opportunities. Let's get acquainted",
+  title = "Branding, campaigns, digital growth, and creative production. Let’s build something powerful.",
   email = "megamegacube@gmail.com",
   actionLabel = "Book a call",
 }) {

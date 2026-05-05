@@ -51,13 +51,23 @@ export default function KinerKailashJewellersPage() {
     <>
       <WorkHero
         title="Kiner Kailash Jewellers"
-        description="A refined digital presence for a jewellery brand focused on trust, luxury, and clear product storytelling."
+        description="Website, SEO, social media, ad campaigns, and premium jewellery shoots to build a strong digital presence."
         details={[
           { label: "Company", value: "Kiner Kailash Jewellers" },
-          { label: "Expertise", value: "Web design" },
-          { label: "Segment", value: "Luxury retail" },
+          { label: "Segment", value: "Jewellers" },
           { label: "Year", value: "2024" },
-          { label: "Role", value: "Web designer" },
+          { label: "Role", value: "Website Design, Digital Marketing & Brand Promotion" },
+          {
+            label: "Expertise",
+            value: [
+              "Website Design",
+              "Social Media Management",
+              "Ad Campaign Strategy",
+              "SEO Optimization",
+              "Product Photography",
+              "Jewellery Video Production",
+            ],
+          },
         ]}
       />
       <WorkCaseStudyShowcase
@@ -67,19 +77,29 @@ export default function KinerKailashJewellersPage() {
         rightAlt="Kiner Kailash luxury jewellery display"
       />
       <WorkStudyDetailsSection
-        overview="Kiner Kailash Jewellers needed a clearer digital structure that could present collections with more trust, stronger product discovery, and a premium feel across the shopping journey."
-        challenge="The existing experience needed to be reorganized so customers could find answers faster, understand product value earlier, and move through the site with less friction."
+        researchTitle="Research Methods"
+        researchItems={[
+          "Jewellery Market Research",
+          "Competitor Benchmarking",
+          "Audience Behavior Analysis",
+          "SEO Keyword Research",
+        ]}
+        ideationTitle="Ideation"
+        ideationItems={[
+          "Campaign Concepts",
+          "Content Strategy",
+          "Jewellery Product Visual Planning",
+          "Brand Promotion Strategy",
+        ]}
+        overview="For Kiner Kailash Jewellers, Imazine Us executed a complete digital growth strategy, including website design, social media management, ad campaigns, SEO, product photo shoots, product videos, model-based concept videos, and theme-based brand videos. The goal was to create a strong online presence with premium visual content that reflects the brand's legacy, craftsmanship, and trust in the jewellery market."
+        challenge="The key challenge was to bring a traditional jewellery brand into the digital space while maintaining its credibility and heritage. The brand required a modern website, consistent social media presence, high-quality product visuals, and performance-driven advertising to attract new customers and increase online engagement."
       />
       <WorkGalleryShowcase {...kinerGalleryProps} />
       <WorkImpactSection
-        paragraphs={[
-          "After working with the website analytics and conducting some research, it became clear which problems needed to be addressed in order to improve the conversion rate of the landing page.",
-          "The updated architecture allowed us to connect every piece to the brand new navigation system.",
-          "After A/B testing the mockups, the general direction was approved, and the visuals were added quickly.",
-          "The updated website set a new standard for product conversion and minimized the number of support requests.",
-        ]}
+        impactParagraph="Through professional product photography, cinematic model shoots, creative concept videos, and theme-based brand content, a strong and premium visual identity was created. Along with a professionally designed website, social media strategy, targeted ad campaigns, and SEO optimization, the brand achieved higher visibility and stronger audience engagement across digital platforms."
+        resultParagraph="The project successfully built a powerful digital presence for Kiner Kailash Jewellers, improving brand visibility, increasing online inquiries, and positioning the brand as a trusted and modern jewellery destination in the digital space."
       />
-      <WorkMoreProjectsSection />
+      <WorkMoreProjectsSection currentProjectHref="/works/kiner-kailash-jewellers" />
       <WorkFooter imageSrc={kinerFooterImage} imageAlt="Kiner Kailash Jewellers luxury portrait" />
     </>
   );
