@@ -60,6 +60,10 @@
   display: inline;
 }
 
+.mobileDescBreak {
+  display: none;
+}
+
 .gridDesktop {
   max-width: 1270px;
   margin: 0 auto;
@@ -297,8 +301,8 @@
     min-height: unset;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    padding: 0 18px;
+    gap: 8px;
+    padding: 4px 18px 18px;
     border-radius: 16px;
     text-align: center;
   }
@@ -322,7 +326,7 @@
   }
 
   .imageStage {
-    min-height: 142px;
+    min-height: 120px;
     justify-content: center;
   }
 
@@ -331,21 +335,30 @@
   }
 
   .content {
-    max-width: 260px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: -4px;
   }
 
   .title {
-    margin-bottom: 16px;
+    margin: 24px 0 14px;
+    font-size: clamp(1.8rem, 8.6vw, 2.3rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+
+  .mobileDescBreak {
+    display: block;
   }
 
   .cardTitle {
     margin-bottom: 0;
-    font-size: 1.9rem;
-    line-height: 1.08;
+    font-size: clamp(1.45rem, 6.8vw, 1.85rem);
+    line-height: 1.1;
   }
 
   .cardDesc {
-    font-size: 16px;
+    font-size: clamp(0.95rem, 3.8vw, 1rem);
     line-height: 1.45;
   }
 }
@@ -385,11 +398,11 @@
 
   .card {
     border-radius: 14px;
-    padding: 0 16px;
+    padding: 4px 14px 16px;
   }
 
   .imageStage {
-    min-height: 130px;
+    min-height: 112px;
   }
 
   .image {
@@ -401,6 +414,10 @@
   }
 
   .cardDesc {
-    font-size: 16px;
+    font-size: clamp(0.95rem, 3.9vw, 1rem);
+  }
+
+  .content {
+    margin-top: -6px;
   }
 }

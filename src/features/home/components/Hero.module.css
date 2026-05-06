@@ -81,7 +81,8 @@
   line-height: 1.35;
   margin: 14px 0 1rem 0;
   opacity: 0.9;
-  letter-spacing: normal;
+  letter-spacing: 0.01em;
+  word-spacing: normal;
   text-transform: none;
 }
 
@@ -127,5 +128,11 @@
   
   .overlay {
     background: rgba(0, 0, 0, 0.4); /* simpler overlay on mobile */
+  }
+
+  .headline {
+    font-size: clamp(1.95rem, 9.2vw, 2.35rem);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
   }
 }

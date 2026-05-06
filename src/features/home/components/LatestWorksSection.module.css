@@ -311,8 +311,10 @@
   }
 
   .sectionTitle {
-    font-size: 2.02rem;
-    line-height: 1.08;
+    margin: 28px 0 18px;
+    font-size: clamp(1.95rem, 9.2vw, 2.35rem);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
   }
 
   .sectionCopy,
@@ -331,7 +333,10 @@
   }
 
   .sectionTitle {
-    font-size: 1.76rem;
+    margin: 28px 0 18px;
+    font-size: clamp(1.95rem, 9.2vw, 2.35rem);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
   }
 
   .workMeta {

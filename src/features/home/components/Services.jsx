@@ -14,43 +14,93 @@ export const serviceCardData = [
   {
     id: 2,
     title: 'Search Engine Optimization (SEO)',
-    desc: 'Improve Google rankings with strategic keywords, on-page optimization, and technical SEO that drives organic traffic.',
+    desc: (
+      <>
+        Improve Google rankings
+        <br className={styles.mobileDescBreak} />
+        with strategic keywords, on-page optimization, and technical SEO that drives organic traffic.
+      </>
+    ),
     img: '/services/ICON-CARDS-2.webp',
   },
   {
     id: 3,
     title: 'Google Ads & Campaigns',
-    desc: 'Generate instant leads with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.',
+    desc: (
+      <>
+        Generate instant leads
+        <br className={styles.mobileDescBreak} />
+        with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.
+      </>
+    ),
     img: '/services/ICON-CARDS-3.webp',
   },
   {
     id: 4,
     title: 'Content Creation',
-    desc: 'Tell your brand story through engaging blogs, videos, and creative visuals designed to inform, inspire and convert.',
+    desc: (
+      <>
+        Tell your brand story
+        <br className={styles.mobileDescBreak} />
+        through engaging blogs, videos, and creative visuals designed
+        and
+        <br className={styles.mobileDescBreak} />
+        to inform, inspire and convert.
+      </>
+    ),
     img: '/services/ICON-CARDS-4.webp',
   },
   {
     id: 5,
     title: 'Website Revamp & Development',
-    desc: 'Build modern, fast, and responsive websites that enhance user experience and strengthen your brand identity.',
+    desc: (
+      <>
+        Build modern
+        <br className={styles.mobileDescBreak} />
+        fast and responsive websites that enhance user experience and strengthen your brand
+        <br className={styles.mobileDescBreak} />
+        identity.
+      </>
+    ),
     img: '/services/ICON-CARDS-5.webp',
   },
   {
     id: 6,
     title: 'Brand Guidelines',
-    desc: 'Create clear brand guidelines that keep your logo, colors, fonts, and messaging consistent everywhere.',
+    desc: (
+      <>
+        Create clear brand
+        <br className={styles.mobileDescBreak} />
+        guidelines that keep your logo, colors, fonts, and messaging consistent everywhere.
+      </>
+    ),
     img: '/services/ICON-CARDS-6.webp',
   },
   {
     id: 7,
     title: 'Print Design',
-    desc: 'Design impactful brochures, flyers, and print materials that communicate your brand message professionally.',
+    desc: (
+      <>
+        Design
+        <br className={styles.mobileDescBreak} /> impactful
+
+        brochures, flyers, and print materials that communicate
+        <br className={styles.mobileDescBreak} />
+        your brand message <br className={styles.mobileDescBreak} /> professionally.
+      </>
+    ),
     img: '/services/ICON-CARDS-7.webp',
   },
   {
     id: 8,
     title: 'Product Photography & Videography',
-    desc: 'Showcase your products with professional photography and cinematic videos that highlight quality and attract buyers.',
+    desc: (
+      <>
+        Showcase your product
+        <br className={styles.mobileDescBreak} />
+        with professional photography and cinematic videos that highlight quality and attract buyers.
+      </>
+    ),
     img: '/services/ICON-CARDS-8.webp',
   },
 ];

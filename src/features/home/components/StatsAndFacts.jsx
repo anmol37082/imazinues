@@ -108,9 +108,16 @@ function StatsAndFacts() {
   }, []);
 
   useEffect(() => {
-    const updateImageWidth = () => {
+    const mediaQuery = window.matchMedia("(min-width: 769px)");
+
+    const applyImageScale = () => {
       const imageWrap = imageWrapRef.current;
       if (!imageWrap) return;
+
+      if (!mediaQuery.matches) {
+        setImageScale(1);
+        return;
+      }
 
       const rect = imageWrap.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
@@ -124,17 +131,32 @@ function StatsAndFacts() {
     };
 
     const requestUpdateImageWidth = () => {
+      if (!mediaQuery.matches) {
+        setImageScale(1);
+        return;
+      }
+
       if (imageFrameRef.current) {
         window.cancelAnimationFrame(imageFrameRef.current);
       }
 
       imageFrameRef.current = window.requestAnimationFrame(() => {
-        updateImageWidth();
+        applyImageScale();
         imageFrameRef.current = null;
       });
     };
 
     requestUpdateImageWidth();
+
+    const handleMediaChange = () => {
+      if (imageFrameRef.current) {
+        window.cancelAnimationFrame(imageFrameRef.current);
+        imageFrameRef.current = null;
+      }
+      requestUpdateImageWidth();
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
     window.addEventListener("scroll", requestUpdateImageWidth, { passive: true });
     window.addEventListener("resize", requestUpdateImageWidth);
 
@@ -142,6 +164,7 @@ function StatsAndFacts() {
       if (imageFrameRef.current) {
         window.cancelAnimationFrame(imageFrameRef.current);
       }
+      mediaQuery.removeEventListener("change", handleMediaChange);
       window.removeEventListener("scroll", requestUpdateImageWidth);
       window.removeEventListener("resize", requestUpdateImageWidth);
     };
@@ -206,26 +229,29 @@ function StatsAndFacts() {
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0.06s" }}
           >
-            <span className={styles.revealLineInner}>We build brands</span>
+            <span className={styles.revealLineInner}>We</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0.1s" }}
           >
-            <span className={styles.revealLineInner}>with digital</span>
+            <span className={styles.revealLineInner}>build brands with</span>
           </span>
           <span
             className={`${styles.revealLine} ${styles.headingLineMobile}`}
             style={{ "--line-delay": "0.14s" }}
           >
-            <span className={styles.revealLineInner}>power.</span>
+            <span className={styles.revealLineInner}>digital power.</span>
           </span>
         </h2>
 
         <p className={styles.copy}>
           <span className={styles.revealLine} style={{ "--line-delay": "0.14s" }}>
             <span className={styles.revealLineInner}>
-              Strategic creativity and data-driven
+              <span className={styles.mobileCopyNoWrap}>
+                Strategic creativity and data-driven
+              </span>
+              <br className={styles.mobileLineBreak} />
               <span className={styles.mobileCopyBreak}> marketing that turn attention into engagement</span>
               <span className={styles.mobileCopyInline}> and engagement into real business</span>
               <span className={styles.mobileCopyBreak}> growth.</span>

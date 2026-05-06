@@ -6,11 +6,15 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
-const modernLifestyleBigBanner1 = "/modernlifestyle/bigbanner1.webp";
-const modernLifestyleBigBanner2 = "/modernlifestyle/bigbanner2.webp";
-const modernLifestyleBanner1 = "/modernlifestyle/banner1.webp";
-const modernLifestyleBanner2 = "/modernlifestyle/banner2.webp";
+const modernLifestyleBigBanner1 = "/modernlifestyle/mainbanner1.webp";
+const modernLifestyleBigBanner2 = "/modernlifestyle/mainbanner2.webp";
+const modernLifestyleBanner1 = "/modernlifestyle/gallery1.webp";
+const modernLifestyleBanner2 = "/modernlifestyle/gallery2.webp";
 const modernLifestyleBanner3 = "/modernlifestyle/banner3.webp";
+const modernLifestyleVideo1 = "/modernlifestyle/designcase1.mov";
+const modernLifestyleVideo1Fallback = "/modernlifestyle/designcase1.mp4";
+const modernLifestyleVideo2 = "/modernlifestyle/designcase2.mov";
+const modernLifestyleVideo2Fallback = "/modernlifestyle/designcase2.mp4";
 
 const modernGalleryProps = {
   firstBannerImage: modernLifestyleBigBanner1,
@@ -76,8 +80,12 @@ export default function ModernLifestyleJewellersPage() {
       <WorkCaseStudyShowcase
         leftImage={modernLifestyleBanner2}
         leftAlt="Modern lifestyle big banner one"
+        leftVideo={modernLifestyleVideo1}
+        leftVideoFallback={modernLifestyleVideo1Fallback}
         rightImage={modernLifestyleBigBanner2}
         rightAlt="Modern lifestyle big banner two"
+        rightVideo={modernLifestyleVideo2}
+        rightVideoFallback={modernLifestyleVideo2Fallback}
       />
       <WorkStudyDetailsSection
         researchTitle="Research Methods"

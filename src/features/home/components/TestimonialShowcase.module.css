@@ -279,6 +279,12 @@
     padding: 28px 0 0;
   }
 
+  .title {
+    font-size: clamp(1.95rem, 9.2vw, 2.35rem);
+    line-height: 0.94;
+    letter-spacing: -0.035em;
+  }
+
   .container {
     width: min(100%, calc(100% - 32px));
   }
@@ -349,7 +355,7 @@
 
   .title {
     font-size: clamp(1.95rem, 9.2vw, 2.35rem);
-    line-height: 0.98;
+    line-height: 0.94;
     letter-spacing: -0.035em;
   }
 

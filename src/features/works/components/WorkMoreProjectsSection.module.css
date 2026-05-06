@@ -1,7 +1,7 @@
 .section {
   background: #ffffff;
   color: #111111;
-  font-family: var(--font-br-sonoma);
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   border-top: 1px solid rgba(17, 17, 17, 0.08);
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   margin-bottom: 100px;
