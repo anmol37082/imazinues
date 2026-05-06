@@ -83,9 +83,9 @@ export const serviceCardData = [
       <>
         Design
         <br className={styles.mobileDescBreak} /> impactful
-
-        brochures, flyers, and print materials that communicate
-        <br className={styles.mobileDescBreak} />
+        
+        brochures, flyers, and print <br className={styles.mobileDescBreak} /> materials that communicate
+        
         your brand message <br className={styles.mobileDescBreak} /> professionally.
       </>
     ),
@@ -98,9 +98,9 @@ export const serviceCardData = [
       <>
         Showcase your product
         <br className={styles.mobileDescBreak} />
-        with professional photography and cinematic videos that highlight quality and attract buyers.
+        with professional photography and cinematic videos that highlight quality and   <br className={styles.mobileDescBreak} /> attract buyers.
       </>
-    ),
+    ), 
     img: '/services/ICON-CARDS-8.webp',
   },
 ];
@@ -169,7 +169,9 @@ export default function Services() {
         <h2 className={styles.title}>
           <span className={styles.revealLine} style={{ '--line-delay': '0.06s' }}>
             <span className={styles.revealLineInner}>
-              Our services deliver valuable results.
+              <span className={styles.mobileTitleNoWrap}>Our services</span>
+              <br className={styles.mobileTitleBreak} />
+              deliver valuable results.
             </span>
           </span>
         </h2>
