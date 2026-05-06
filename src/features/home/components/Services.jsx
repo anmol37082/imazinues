@@ -33,7 +33,7 @@ export const serviceCardData = [
       <>
         Generate instant leads
         <br className={styles.mobileDescBreak} />
-        with high-performance Google Ads campaigns optimized for clicks, conversions, and better ROI.
+        with high-performance Google Ads campaigns optimized for clicks, conversions, and <br className={styles.mobileDescBreak} /> better ROI.
       </>
     ),
     img: '/services/ICON-CARDS-3.webp',
