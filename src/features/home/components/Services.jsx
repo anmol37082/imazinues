@@ -86,7 +86,7 @@ export const serviceCardData = [
         
         brochures, flyers, and print <br className={styles.mobileDescBreak} /> materials that communicate
         
-        your brand message <br className={styles.mobileDescBreak} /> professionally.
+        your brand <br className={styles.mobileDescBreak} /> message  professionally.
       </>
     ),
     img: '/services/ICON-CARDS-7.webp',
