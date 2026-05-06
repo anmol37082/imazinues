@@ -35,8 +35,32 @@
   text-align: center;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.08);
+  color: rgba(17, 17, 17, 0.92);
+  font-family: var(--font-call-button);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.eyebrowDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #111111;
+  flex: 0 0 auto;
+}
+
 .title {
-  margin: 0 0 20px;
+  margin: 28px 0 20px;
   color: #111111;
   font-family: var(--font-br-sonoma);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -285,6 +309,12 @@
     margin-bottom: 30px;
   }
 
+  .eyebrow {
+    font-size: 0.92rem;
+    padding: 9px 16px;
+    gap: 10px;
+  }
+
   .gridDesktop {
     display: none;
   }
@@ -372,10 +402,10 @@
     animation-duration: 0.01ms !important;
   }
 
-.card {
-  opacity: 1;
-  transform: none;
-}
+  .card {
+    opacity: 1;
+    transform: none;
+  }
 
   .revealLineInner {
     transform: none;
@@ -389,7 +419,13 @@
   }
 
   .intro {
-    margin-bottom: 24px;
+    margin-bottom: 0px;
+  }
+
+  .eyebrow {
+    font-size: 0.88rem;
+    padding: 8px 14px;
+    gap: 8px;
   }
 
   .mobileSubtitleBreak {

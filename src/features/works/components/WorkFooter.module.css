@@ -17,7 +17,7 @@
   color: #111111;
   font-size: clamp(3.6rem, 7vw, 8.4rem);
   line-height: 0.9;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.01em;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -80,7 +80,7 @@
   max-width: 28ch;
   font-size: clamp(1rem, 1.45vw, 1.35rem);
   line-height: 1.12;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.01em;
   font-weight: 400;
 }
 
@@ -103,7 +103,7 @@
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   font-size: 0.85rem;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
 }
 
 .email {

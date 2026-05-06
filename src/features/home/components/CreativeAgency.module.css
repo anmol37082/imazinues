@@ -222,10 +222,6 @@
   will-change: transform;
 }
 
-.sliderTrackAnimated {
-  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 .sectionNote {
   margin: 28px auto 0;
   color: var(--subtitle-color);

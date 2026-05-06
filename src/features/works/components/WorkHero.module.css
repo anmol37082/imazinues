@@ -44,7 +44,7 @@
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   font-size: clamp(3.3rem, 6.1vw, 6.9rem);
   line-height: 0.96;
-  letter-spacing: -0.065em;
+  letter-spacing: 0.01em;
   font-weight: 400;
 }
 
@@ -76,7 +76,7 @@
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   font-size: clamp(1.08rem, 1.6vw, 1.62rem);
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
   font-weight: 500;
 }
 
@@ -85,7 +85,7 @@
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   font-size: clamp(1.08rem, 1.6vw, 1.62rem);
   line-height: 1.26;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
   font-weight: 500;
 }
 
@@ -103,7 +103,7 @@
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
   font-size: clamp(1.08rem, 1.6vw, 1.62rem);
   line-height: 1.26;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
   font-weight: 500;
   width: 100%;
 }

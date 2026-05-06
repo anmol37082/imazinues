@@ -115,7 +115,7 @@ export default function LatestWorksSection() {
         <section className={styles.worksSection}>
           <div className={styles.worksIntro}>
             <div>
-              <span className={styles.pill}>Works 2025</span>
+              <span className={styles.pill}>Works 2026</span>
               <h2 className={styles.sectionTitle}>Fresh From Our Studio</h2>
               <p className={styles.sectionCopy}>
                 New ideas crafted with passion, precision,
@@ -136,7 +136,7 @@ export default function LatestWorksSection() {
 
                 <div className={styles.teamInfo}>
                   <div className={styles.teamLabel}>Core team</div>
-                  <div className={styles.teamCount}>4 members</div>
+                  <div className={styles.teamCount}>10 members</div>
                 </div>
               </div>
 

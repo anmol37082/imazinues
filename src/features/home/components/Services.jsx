@@ -8,7 +8,10 @@ export const serviceCardData = [
   {
     id: 1,
     title: 'Social Media Marketing (SMM)',
-    desc: 'Grow your brand on Facebook, Instagram & LinkedIn with creative content, targeted ads and strong community engagement.',
+    desc: (<>
+    Grow your brand on Facebook, Instagram &  <br className={styles.mobileDescBreak} /> LinkedIn with creative content, targeted ads and  <br className={styles.mobileDescBreak} /> strong community engagement.
+    </>
+    ), 
     img: '/services/ICON-CARDS-1.webp',
   },
   {
@@ -164,6 +167,10 @@ export default function Services() {
       ref={sectionRef}
     >
       <div className={styles.intro}>
+        <div className={styles.eyebrow}>
+          <span className={styles.eyebrowDot} />
+          <span>Services</span>
+        </div>
         <h2 className={styles.title}>
           <span className={styles.revealLine} style={{ '--line-delay': '0.06s' }}>
             <span className={styles.revealLineInner}>
