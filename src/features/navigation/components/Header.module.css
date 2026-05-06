@@ -1614,19 +1614,29 @@
 
   .logo {
     justify-self: start;
-    width: min(156px, calc(100vw - 88px));
-    max-width: calc(100vw - 88px);
+    width: min(176px, calc(100vw - 76px));
+    max-width: calc(100vw - 76px);
     min-width: 0;
-    flex-basis: min(156px, calc(100vw - 88px));
+    flex-basis: min(176px, calc(100vw - 76px));
     height: 34px;
-    margin-left: 0;
-    overflow: hidden;
+    margin-left: 6px;
+    overflow: visible;
   }
 
   .logoImage {
     height: 22px;
-    transform: scale(0.84);
+    transform: scale(0.84) translateX(4px);
     max-width: 100%;
+  }
+
+  .logoImageAlt {
+    height: 42px;
+    transform: translateY(-50%) translateX(4px);
+  }
+
+  .navbarBlurActive .logoImageAlt {
+    height: 42px;
+    transform: translateY(-50%) translateX(4px) scale(1.18);
   }
 
   .right {

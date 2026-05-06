@@ -42,10 +42,8 @@ export const serviceCardData = [
       <>
         Tell your brand story
         <br className={styles.mobileDescBreak} />
-        through engaging blogs, videos, and creative visuals designed
-        and
-        <br className={styles.mobileDescBreak} />
-        to inform, inspire and convert.
+        through engaging blogs, videos, and creative <br className={styles.mobileDescBreak} /> visuals designed
+        and to inform, inspire <br className={styles.mobileDescBreak} /> and convert.
       </>
     ),
     img: '/services/ICON-CARDS-4.webp',
