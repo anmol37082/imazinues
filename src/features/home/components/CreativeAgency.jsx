@@ -470,7 +470,7 @@ function CreativeAgency() {
                         backgroundImage: `url(${card.image})`,
                         backgroundPosition: card.imagePosition ?? "center center",
                         backgroundRepeat: "no-repeat",
-                        backgroundSize: "100% 100%",
+                        backgroundSize: "cover",
                       }}
                     />
 
