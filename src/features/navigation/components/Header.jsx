@@ -169,8 +169,8 @@ function Header() {
     </span>
   );
 
-  const renderSplitNavLabel = (label) => (
-    <span aria-label={label} className={styles.navSplitAlt}>
+  const renderSplitNavLabelContent = (label) => (
+    <>
       {label.split("").map((char, index) => {
         const isEven = index % 2 === 1;
         const content = char === " " ? "\u00A0" : char;
@@ -187,6 +187,12 @@ function Header() {
           </span>
         );
       })}
+    </>
+  );
+
+  const renderSplitNavLabel = (label) => (
+    <span aria-label={label} className={styles.navSplitAlt}>
+      {renderSplitNavLabelContent(label)}
     </span>
   );
 
@@ -401,7 +407,9 @@ function Header() {
           {renderSplitNavLabel("ABOUT US")}
         </li>
         <li onMouseEnter={closeDesktopDropdowns}>
-          {renderSplitNavLabel("CONTACT")}
+          <Link href="/contact-us" className={styles.navSplitAlt}>
+            {renderSplitNavLabelContent("CONTACT")}
+          </Link>
         </li>
       </ul>
 
@@ -530,10 +538,10 @@ function Header() {
               </button>
             </div>
             <div className={styles.mobileNavEntry}>
-              <button className={styles.mobileNavButton} type="button">
+              <Link className={styles.mobileNavButton} href="/contact-us">
                 <span>CONTACT</span>
                 <span className={styles.mobileNavCaretPlaceholder} aria-hidden="true" />
-              </button>
+              </Link>
             </div>
           </div>
 

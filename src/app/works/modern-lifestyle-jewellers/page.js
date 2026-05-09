@@ -10,8 +10,11 @@ const modernLifestyleBigBanner1 = "/modernlifestyle/mainbanner1.webp";
 const modernLifestyleBigBanner2 = "/modernlifestyle/mainbanner2.webp";
 const modernLifestyleBanner1 = "/modernlifestyle/gallery1.webp";
 const modernLifestyleBanner2 = "/modernlifestyle/gallery2.webp";
-const modernLifestyleBanner3 = "/modernlifestyle/banner3.webp";
+const modernLifestyleBanner3 = "/modernlifestyle/gallery3.webp";
+const modernLifestyleBanner4 = "/modernlifestyle/gallery4.webp";
+const modernLifestyleBanner5 = "/modernlifestyle/gallery5.webp";
 const modernLifestyleVideo1 = "/modernlifestyle/designcase1.mov";
+const modernLifestyleVideo2Webm = "/modernlifestyle/galleryv1.webm";
 const modernLifestyleVideo1Fallback = "/modernlifestyle/designcase1.mp4";
 const modernLifestyleVideo2 = "/modernlifestyle/designcase2.mov";
 const modernLifestyleVideo2Fallback = "/modernlifestyle/designcase2.mp4";
@@ -37,15 +40,15 @@ const modernGalleryProps = {
       alt: "Modern lifestyle banner three",
     },
     {
-      src: modernLifestyleBanner1,
+      src: modernLifestyleBanner4,
       alt: "Modern lifestyle banner one repeat",
     },
     {
-      src: modernLifestyleBanner2,
+      src: modernLifestyleBanner5,
       alt: "Modern lifestyle banner two repeat",
     },
     {
-      src: modernLifestyleBanner3,
+      src: modernLifestyleVideo2Webm,
       alt: "Modern lifestyle banner three repeat",
     },
   ],

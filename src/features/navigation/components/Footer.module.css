@@ -4,6 +4,10 @@
   color: #f5f5f5;
 }
 
+.footerContactPage {
+  margin-top: 0;
+}
+
 .shell {
   width: min(100%, 100%);
 }

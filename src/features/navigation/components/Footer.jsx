@@ -1,7 +1,10 @@
 "use client";
 
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Manrope } from "next/font/google";
 import { serviceCardData } from "@/features/home/components/Services";
 import casesData from "@/features/navigation/data/casesData";
@@ -119,8 +122,18 @@ const footerCaseStudyOrder = {
 };
 
 function Footer() {
+  const pathname = usePathname();
+  const isContactPage =
+    pathname === "/contact-us" ||
+    pathname === "/contact" ||
+    pathname?.startsWith("/contact-us/");
+
   return (
-    <footer className={`${styles.footer} ${footerSans.className}`}>
+    <footer
+      className={`${styles.footer} ${footerSans.className}${
+        isContactPage ? ` ${styles.footerContactPage}` : ""
+      }`}
+    >
       <div className={styles.shell}>
         <section className={styles.videoPanel}>
           <video
