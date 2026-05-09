@@ -10,7 +10,7 @@ const workCards = [
     title: "Kiner Kailash Jewellers",
     timeline: "2 weeks",
     href: "/works/kiner-kailash-jewellers",
-    img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    img: "/kinerkailash/KKJ_1.webp",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const workCards = [
     title: "Glamour and Radiance",
     timeline: "5 weeks",
     href: "/works/glamour-and-radiance",
-    img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+    img: "/glamourandradiance/G&R-021.webp",
   },
   {
     id: 4,

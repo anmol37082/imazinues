@@ -6,43 +6,48 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
-const kinerBanner1 = "/casestudies/kinnerkailashjawellers.PNG";
-const kinerBanner2 = "/creativeagency/packagingdesign.webp";
-const kinerBanner3 = "/creativeagency/indorbranding.webp";
-const kinerBanner4 = "/creativeagency/socialmediamanagement.webp";
-const kinerBanner5 = "/creativeagency/printdesign.webp";
+const kinerBanner1 = "/kinerkailash/bigbnner1.webp";
+const kinerBanner2 = "/kinerkailash/bigbnner2.webp";
+const kinerBanner3 = "/kinerkailash/KKJ_1.webp";
+const kinerBanner4 = "/kinerkailash/KKJ_2.webp";
+const kinerBanner5 = "/kinerkailash/KKJ_3.webp";
+const kinerBanner6 = "/kinerkailash/KKJ_4.webp";
+const kinerBanner7 = "/kinerkailash/KKJ_5.webp";
+const kinerBanner8 = "/kinerkailash/KKJ_6.webp";
+const kinerBanner9 = "/kinerkailash/KKJ_7.webp";
+const kinerBanner10 = "/kinerkailash/KKJ_8.webp";
 
 const kinerGalleryProps = {
   firstBannerImage: kinerBanner1,
-  firstBannerAlt: "Kiner Kailash Jewellers brand visual one",
+  firstBannerAlt: "Kiner Kailash Jewellers product visual one",
   firstRow: [
     {
-      src: kinerBanner2,
-      alt: "Kiner Kailash Jewellers website and packaging visual",
+      src: kinerBanner5,
+      alt: "Kiner Kailash Jewellers product visual two",
     },
     {
-      src: kinerBanner3,
-      alt: "Kiner Kailash Jewellers brand visual two",
+      src: kinerBanner6,
+      alt: "Kiner Kailash Jewellers product visual three",
     },
   ],
-  secondBannerImage: kinerBanner4,
-  secondBannerAlt: "Kiner Kailash Jewellers social media visual",
+  secondBannerImage: kinerBanner2,
+  secondBannerAlt: "Kiner Kailash Jewellers product visual four",
   cards: [
     {
-      src: kinerBanner5,
-      alt: "Kiner Kailash Jewellers print design visual",
+      src: kinerBanner7,
+      alt: "Kiner Kailash Jewellers product visual five",
     },
     {
-      src: kinerBanner1,
-      alt: "Kiner Kailash Jewellers brand visual one repeat",
+      src: kinerBanner8,
+      alt: "Kiner Kailash Jewellers product visual six",
     },
     {
-      src: kinerBanner2,
-      alt: "Kiner Kailash Jewellers website and packaging visual repeat",
+      src: kinerBanner9,
+      alt: "Kiner Kailash Jewellers product visual seven",
     },
     {
-      src: kinerBanner3,
-      alt: "Kiner Kailash Jewellers brand visual two repeat",
+      src: kinerBanner10,
+      alt: "Kiner Kailash Jewellers product visual eight",
     },
   ],
 };
@@ -74,9 +79,9 @@ export default function KinerKailashJewellersPage() {
         ]}
       />
       <WorkCaseStudyShowcase
-        leftImage={kinerBanner1}
+        leftImage={kinerBanner3}
         leftAlt="Kiner Kailash Jewellers brand visual one"
-        rightImage={kinerBanner2}
+        rightImage={kinerBanner4}
         rightAlt="Kiner Kailash Jewellers brand visual two"
       />
       <WorkStudyDetailsSection

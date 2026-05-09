@@ -5,7 +5,7 @@ import styles from "./WorkMoreProjectsSection.module.css";
 const latestWorkProjects = [
   {
     href: "/works/kiner-kailash-jewellers",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    image: "/kinerkailash/KKJ_1.webp",
     alt: "Kiner Kailash Jewellers",
     title: "Kiner Kailash Jewellers",
     meta: "Branding  Website  Mobile app",
@@ -19,7 +19,7 @@ const latestWorkProjects = [
   },
   {
     href: "/works/glamour-and-radiance",
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+    image: "/glamourandradiance/G&R-021.webp",
     alt: "Glamour and Radiance",
     title: "Glamour and Radiance",
     meta: "Shopify  Branding  Content production",
