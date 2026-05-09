@@ -42,6 +42,7 @@ function ProjectCard({ href, image, alt, title, meta }) {
           src={image}
           alt={alt}
           fill
+          quality={92}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>

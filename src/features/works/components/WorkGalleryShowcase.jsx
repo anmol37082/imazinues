@@ -70,6 +70,7 @@ export default function WorkGalleryShowcase({
         src={src}
         alt={alt}
         fill
+        quality={92}
         priority={priority}
         sizes={sizes}
       />

@@ -62,7 +62,7 @@
 }
 
 .media {
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .content {

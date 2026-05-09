@@ -200,12 +200,17 @@
 
 @media (max-width: 768px) {
   .faqSection {
-    padding: 72px 0 24px;
+    padding: 42px 0 24px;
   }
 
   .faqIntro {
     margin-bottom: 28px;
-    text-align: left;
+    text-align: center;
+  }
+
+  .faqSubtext {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .faqGrid {

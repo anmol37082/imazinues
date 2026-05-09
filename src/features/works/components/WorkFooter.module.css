@@ -71,7 +71,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .copy {

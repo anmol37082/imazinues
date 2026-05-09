@@ -190,6 +190,10 @@
     margin-top: 64px;
   }
 
+  .footerContactPage {
+    margin-top: 0;
+  }
+
   .videoPanel {
     min-height: 520px;
   }

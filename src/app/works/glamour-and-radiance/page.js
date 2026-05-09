@@ -5,27 +5,30 @@ import WorkGalleryShowcase from "@/features/works/components/WorkGalleryShowcase
 import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
-
-const glamourBanner1 = "/creativeagency/packagingdesign.webp";
-const glamourBanner2 = "/creativeagency/photovideoshoot.jpg.webp";
-const glamourBanner3 = "/creativeagency/BrandGuidelines.webp";
-const glamourBanner4 = "/creativeagency/socialmediamanagement.webp";
-const glamourBanner5 = "/creativeagency/advideo.webp";
-
+const glamourBanner1 = "/glamourandradiance/G&R-11.webp";
+const glamourBanner2 = "/glamourandradiance/G&R-02.webp";
+const bigglamourBanner1 = "/glamourandradiance/G&R-04.webp";
+const glamourBanner3 = "/glamourandradiance/G&R-44.webp";
+const glamourBanner4 = "/glamourandradiance/G&R-03.webp";
+const bigglamourBanner2 = "/glamourandradiance/G&R-06.webp";
+const glamourBanner5 = "/glamourandradiance/G&R-07.webp";
+const glamourBanner6 = "/glamourandradiance/G&R-08.webp";
+const glamourVideo1 = "/glamourandradiance/G&R%209.mp4";
+const glamourVideo2 = "/glamourandradiance/G&R-10.mp4";
 const glamourGalleryProps = {
-  firstBannerImage: glamourBanner1,
+  firstBannerImage: bigglamourBanner1,
   firstBannerAlt: "Glamour and Radiance skincare hero banner one",
   firstRow: [
     {
-      src: glamourBanner2,
+      src: glamourBanner3,
       alt: "Glamour and Radiance skincare product display one",
     },
     {
-      src: glamourBanner3,
+      src: glamourBanner4,
       alt: "Glamour and Radiance skincare product display two",
     },
   ],
-  secondBannerImage: glamourBanner4,
+  secondBannerImage: bigglamourBanner2,
   secondBannerAlt: "Glamour and Radiance skincare hero banner two",
   cards: [
     {
@@ -33,21 +36,22 @@ const glamourGalleryProps = {
       alt: "Glamour and Radiance model based brand visual",
     },
     {
-      src: glamourBanner1,
-      alt: "Glamour and Radiance skincare hero banner one repeat",
+      src: glamourBanner6,
+      alt: "Glamour and Radiance skincare hero banner two repeat",
+    },
+   
+    {
+      src: glamourVideo1,
+      alt: "Glamour and Radiance concept video one",
     },
     {
-      src: glamourBanner2,
-      alt: "Glamour and Radiance skincare product display one repeat",
-    },
-    {
-      src: glamourBanner3,
-      alt: "Glamour and Radiance skincare product display two repeat",
+      src: glamourVideo2,
+      alt: "Glamour and Radiance concept video two",
     },
   ],
 };
 
-const glamourFooterImage = glamourBanner5;
+
 
 export default function GlamourAndRadiancePage() {
   return (
@@ -77,7 +81,7 @@ export default function GlamourAndRadiancePage() {
       <WorkCaseStudyShowcase
         leftImage={glamourBanner1}
         leftAlt="Glamour and Radiance skincare concept visual one"
-        rightImage={glamourBanner4}
+        rightImage={glamourBanner2}
         rightAlt="Glamour and Radiance skincare concept visual two"
       />
       <WorkStudyDetailsSection
@@ -105,8 +109,7 @@ export default function GlamourAndRadiancePage() {
       />
       <WorkMoreProjectsSection currentProjectHref="/works/glamour-and-radiance" />
       <WorkFooter
-        imageSrc={glamourFooterImage}
-        imageAlt="Glamour and Radiance premium skincare editorial portrait"
+       
       />
     </>
   );

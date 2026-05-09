@@ -26,6 +26,7 @@ export default function WorkFooter({
                 src={imageSrc}
                 alt={imageAlt}
                 fill
+                quality={92}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
