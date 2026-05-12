@@ -34,6 +34,7 @@ export default function ServicesPage() {
       <ServiceCreativeProcessSection />
       <ServiceMakingOfSection />
       <ServiceAutoplayTriptych />
+      
       <ServiceInnovationSection />
       <ServiceAutoPlayVideoAlt />
       <ServiceQuoteSection />
