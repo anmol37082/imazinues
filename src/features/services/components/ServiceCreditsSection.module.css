@@ -5,7 +5,7 @@
 }
 
 .inner {
-  width: min(1600px, calc(100% - 48px));
+  width: min(1800px, calc(100% - 32px));
   margin: 0 auto;
   padding: 88px 0 112px;
   padding-left: clamp(40px, 5vw, 112px);
@@ -159,3 +159,28 @@
     gap: 18px;
   }
 }
+
+@media (min-width: 1600px) {
+  .inner {
+    width: min(100%, calc(100% - 24px));
+    padding-left: clamp(32px, 4vw, 88px);
+  }
+
+  .title {
+    font-size: clamp(4.4rem, 5.8vw, 7.2rem);
+  }
+
+  .subtitle {
+    max-width: 1080px;
+    font-size: clamp(1.2rem, 1.1vw, 1.5rem);
+  }
+
+  .grid {
+    gap: clamp(80px, 8vw, 220px);
+  }
+
+  .groupTitle {
+    font-size: clamp(2.1rem, 2.6vw, 3.4rem);
+  }
+}
+

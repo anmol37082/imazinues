@@ -5,7 +5,7 @@
 }
 
 .inner {
-  width: min(1520px, calc(100% - 48px));
+  width: min(1760px, calc(100% - 32px));
   margin: 0 auto;
   padding: 120px 0 112px;
   display: grid;
@@ -25,7 +25,7 @@
 
 .quote {
   margin: 0;
-  max-width: 980px;
+  max-width: 1120px;
   color: #2b1e18;
   font-family: var(--font-br-sonoma);
   font-size: clamp(2rem, 3.6vw, 4.2rem);
@@ -77,3 +77,20 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 1600px) {
+  .inner {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .quote {
+    max-width: 1280px;
+    font-size: clamp(2.2rem, 3.2vw, 4.8rem);
+  }
+
+  .source {
+    margin-top: 84px;
+    font-size: clamp(1.1rem, 1.1vw, 1.45rem);
+  }
+}
+

@@ -17,7 +17,7 @@
 
 .frame {
   position: relative;
-  width: min(100%, calc(100% - 48px));
+  width: min(100%, calc(100% - 32px));
   margin: 0 auto;
   height: min(100vh, 980px);
   min-height: 560px;
@@ -46,3 +46,12 @@
     width: calc(100% - 32px);
   }
 }
+
+@media (min-width: 1600px) {
+  .frame {
+    width: min(100%, calc(100% - 24px));
+    height: min(88vh, 1180px);
+    min-height: 680px;
+  }
+}
+

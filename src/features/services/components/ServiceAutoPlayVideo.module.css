@@ -16,7 +16,7 @@
 }
 
 .shell {
-  width: min(980px, calc(100% - 48px));
+  width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@
 
 .mediaWrap {
   position: relative;
-  width: min(920px, 100%);
+  width: min(1120px, 100%);
   margin: 0 auto;
   overflow: hidden;
   background: transparent;
@@ -53,3 +53,14 @@
     width: 100%;
   }
 }
+
+@media (min-width: 1600px) {
+  .shell {
+    width: min(1400px, calc(100% - 24px));
+  }
+
+  .mediaWrap {
+    width: min(1320px, 100%);
+  }
+}
+
