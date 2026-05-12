@@ -19,7 +19,7 @@ const footerSans = Manrope({
 
 const primaryLinks = [
   { label: "Book A Call", href: "/" },
-  { label: "About Us", href: "/" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact", href: "/" },
   { label: "Home", href: "/" }, 
 ];
@@ -127,11 +127,18 @@ function Footer() {
     pathname === "/contact-us" ||
     pathname === "/contact" ||
     pathname?.startsWith("/contact-us/");
+  const isAboutPage =
+    pathname === "/about-us" ||
+    pathname === "/about" ||
+    pathname?.startsWith("/about-us/");
+  const isServicesPage =
+    pathname === "/services" ||
+    pathname?.startsWith("/services/");
 
   return (
     <footer
       className={`${styles.footer} ${footerSans.className}${
-        isContactPage ? ` ${styles.footerContactPage}` : ""
+        isContactPage || isAboutPage || isServicesPage ? ` ${styles.footerContactPage}` : ""
       }`}
     >
       <div className={styles.shell}>

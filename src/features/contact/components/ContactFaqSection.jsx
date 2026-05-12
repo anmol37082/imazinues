@@ -57,7 +57,7 @@ function ContactFaqSection() {
             <div className={styles.portraitWrap}>
               <Image
                 className={styles.portrait}
-                src="/review/neha.webp"
+                src="/contact/vishantkumar.webp"
                 alt="Customer support representative"
                 fill
                 sizes="(max-width: 1024px) 100vw, 54vw"

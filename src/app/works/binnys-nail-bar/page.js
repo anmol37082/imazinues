@@ -6,48 +6,54 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
-const binnysBanner1 = "/review/binnykour.webp";
-const binnysBanner2 = "/creativeagency/indorbranding.webp";
-const binnysBanner3 = "/creativeagency/packagingdesign.webp";
-const binnysBanner4 = "/creativeagency/socialmediamanagement.webp";
-const binnysBanner5 = "/creativeagency/printdesign.webp";
-
+const binnysBanner1 = "/binnynail,sbar/WorkCaseStudyShowcase1.webp";
+const binnysBanner2 = "/binnynail,sbar/WorkCaseStudyShowcase2.webp";
+const binnysBanner3 = "/binnynail,sbar/WorkGalleryShowcase1.webp";
+const binnysBanner4 = "/binnynail,sbar/WorkGalleryShowcase2.webp";
+const binnysBanner5 = "/binnynail,sbar/WorkGalleryShowcase3.webp";
+const binnysBanner6 = "/binnynail,sbar/WorkGalleryShowcase4.webp";
+const binnysBanner7 = "/binnynail,sbar/WorkGalleryShowcase5.webp";
+const binnysBanner8 = "/binnynail,sbar/WorkGalleryShowcase6.webp";
+const binnysBanner9 = "/binnynail,sbar/WorkGalleryShowcase7.webp";
+const binnysBanner10 = "/binnynail,sbar/WorkGalleryShowcase8.webm";
+const binnysBanner10Fallback = "/binnynail,sbar/WorkGalleryShowcasefallback10.mp4";
 const binnysGalleryProps = {
-  firstBannerImage: binnysBanner1,
+  firstBannerImage: binnysBanner3,
   firstBannerAlt: "Binny's Nail Bar premium brand visual one",
   firstRow: [
     {
-      src: binnysBanner2,
+      src: binnysBanner4,
       alt: "Binny's Nail Bar interior branding visual",
     },
     {
-      src: binnysBanner3,
-      alt: "Binny's Nail Bar packaging visual",
+      src: binnysBanner5,
+      alt: "Binny's Nail Bar campaign visual one",
     },
   ],
-  secondBannerImage: binnysBanner4,
+  secondBannerImage: binnysBanner6,
   secondBannerAlt: "Binny's Nail Bar premium brand visual two",
   cards: [
     {
-      src: binnysBanner5,
-      alt: "Binny's Nail Bar print design visual",
+      src: binnysBanner7,
+      alt: "Binny's Nail Bar campaign visual two",
     },
     {
-      src: binnysBanner1,
-      alt: "Binny's Nail Bar premium brand visual one repeat",
+      src: binnysBanner8,
+      alt: "Binny's Nail Bar campaign visual three",
     },
     {
-      src: binnysBanner2,
-      alt: "Binny's Nail Bar interior branding visual repeat",
+      src: binnysBanner9,
+      alt: "Binny's Nail Bar campaign visual four",
     },
     {
-      src: binnysBanner3,
-      alt: "Binny's Nail Bar packaging visual repeat",
+      src: binnysBanner10,
+      fallbackSrc: binnysBanner10Fallback,
+      alt: "Binny's Nail Bar campaign visual five",
     },
   ],
 };
 
-const binnysFooterImage = binnysBanner5;
+
 
 export default function BinnysNailBarPage() {
   return (
@@ -76,7 +82,7 @@ export default function BinnysNailBarPage() {
       <WorkCaseStudyShowcase
         leftImage={binnysBanner1}
         leftAlt="Binny's Nail Bar salon branding visual one"
-        rightImage={binnysBanner3}
+        rightImage={binnysBanner2}
         rightAlt="Binny's Nail Bar salon branding visual two"
       />
       <WorkStudyDetailsSection
@@ -104,7 +110,7 @@ export default function BinnysNailBarPage() {
         resultParagraph="The project successfully strengthened the digital presence of Binny's Nail Bar, increased customer engagement across its branches, and positioned the brand as a trendy and highly active beauty destination in the nail and beauty industry."
       />
       <WorkMoreProjectsSection currentProjectHref="/works/binnys-nail-bar" />
-      <WorkFooter imageSrc={binnysFooterImage} imageAlt="Binny's Nail Bar editorial portrait" />
+      
     </>
   );
 }

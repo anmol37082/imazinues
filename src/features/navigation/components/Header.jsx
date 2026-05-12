@@ -364,16 +364,29 @@ function Header() {
             <div className={`${styles.dropdown} ${styles.servicesDropdown}`}>
               <div className={styles.servicesList}>
                 {servicesData.map((service) => (
-                  <button
-                    key={service.id}
-                    className={`${styles.serviceItem}${
-                      activeService.id === service.id ? ` ${styles.active}` : ""
-                    }`}
-                    onMouseEnter={() => setActiveServiceId(service.id)}
-                    type="button"
-                  >
-                    {renderSplitNavLabel(service.title)}
-                  </button>
+                  service.href ? (
+                    <Link
+                      key={service.id}
+                      className={`${styles.serviceItem}${
+                        activeService.id === service.id ? ` ${styles.active}` : ""
+                      }`}
+                      href={service.href}
+                      onMouseEnter={() => setActiveServiceId(service.id)}
+                    >
+                      {renderSplitNavLabel(service.title)}
+                    </Link>
+                  ) : (
+                    <button
+                      key={service.id}
+                      className={`${styles.serviceItem}${
+                        activeService.id === service.id ? ` ${styles.active}` : ""
+                      }`}
+                      onMouseEnter={() => setActiveServiceId(service.id)}
+                      type="button"
+                    >
+                      {renderSplitNavLabel(service.title)}
+                    </button>
+                  )
                 ))}
 
                 <button className={styles.servicesCta} type="button">
@@ -404,7 +417,9 @@ function Header() {
           )}
         </li>
         <li onMouseEnter={closeDesktopDropdowns}>
-          {renderSplitNavLabel("ABOUT US")}
+          <Link href="/about-us" className={styles.navSplitAlt}>
+            {renderSplitNavLabelContent("ABOUT US")}
+          </Link>
         </li>
         <li onMouseEnter={closeDesktopDropdowns}>
           <Link href="/contact-us" className={styles.navSplitAlt}>
@@ -522,20 +537,27 @@ function Header() {
               }`}
             >
               <div className={styles.mobileServicesPanel}>
-                {servicesData.map((service) => (
-                  <div className={styles.mobileServiceItem} key={service.id}>
-                    <strong>{service.title}</strong>
-                    <span>{service.description}</span>
-                  </div>
-                ))}
+                {servicesData.map((service) =>
+                  service.href ? (
+                    <Link className={styles.mobileServiceItem} href={service.href} key={service.id}>
+                      <strong>{service.title}</strong>
+                      <span>{service.description}</span>
+                    </Link>
+                  ) : (
+                    <div className={styles.mobileServiceItem} key={service.id}>
+                      <strong>{service.title}</strong>
+                      <span>{service.description}</span>
+                    </div>
+                  )
+                )}
               </div>
               </div>
             </div>
             <div className={styles.mobileNavEntry}>
-              <button className={styles.mobileNavButton} type="button">
+              <Link className={styles.mobileNavButton} href="/about-us">
                 <span>ABOUT US</span>
                 <span className={styles.mobileNavCaretPlaceholder} aria-hidden="true" />
-              </button>
+              </Link>
             </div>
             <div className={styles.mobileNavEntry}>
               <Link className={styles.mobileNavButton} href="/contact-us">

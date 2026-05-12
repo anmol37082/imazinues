@@ -6,43 +6,49 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
-const panditBanner1 =
-  "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=1400&q=80";
-const panditBanner2 = "/creativeagency/packagingdesign.webp";
-const panditBanner3 = "/creativeagency/indorbranding.webp";
-const panditBanner4 = "/creativeagency/socialmediamanagement.webp";
-const panditBanner5 = "/creativeagency/printdesign.webp";
+const panditBanner1 = "/panditjidepranthe/WorkCaseStudyShowcase1.webp";
+const panditBanner2 = "/panditjidepranthe/WorkCaseStudyShowcase2.webp";
+const panditBanner3 = "/panditjidepranthe/WorkGalleryShowcase1.webm";
+const panditBanner3fallback = "/panditjidepranthe/WorkGalleryShowcase1.mp4";
+const panditBanner4 = "/panditjidepranthe/WorkGalleryShowcase2.webp";
+const panditBanner5 = "/panditjidepranthe/WorkGalleryShowcase3.webp";
+const panditBanner6 = "/panditjidepranthe/WorkGalleryShowcase4.webp";
+const panditBanner7 = "/panditjidepranthe/WorkGalleryShowcase5.webp";
+const panditBanner8 = "/panditjidepranthe/WorkGalleryShowcase6.webp";
+const panditBanner9 = "/panditjidepranthe/WorkGalleryShowcase7.webp";
+const panditBanner10 = "/panditjidepranthe/WorkGalleryShowcase8.webp";
 
 const panditGalleryProps = {
-  firstBannerImage: panditBanner1,
+  firstBannerImage: panditBanner3,
+  firstBannerFallback: panditBanner3fallback,
   firstBannerAlt: "Pandit Ji De Pranthe food brand visual one",
   firstRow: [
     {
-      src: panditBanner2,
+      src: panditBanner4,
       alt: "Pandit Ji De Pranthe packaging visual",
     },
     {
-      src: panditBanner3,
+      src: panditBanner5,
       alt: "Pandit Ji De Pranthe interior branding visual",
     },
   ],
-  secondBannerImage: panditBanner4,
+  secondBannerImage: panditBanner6,
   secondBannerAlt: "Pandit Ji De Pranthe food brand visual two",
   cards: [
     {
-      src: panditBanner5,
+      src: panditBanner7,
       alt: "Pandit Ji De Pranthe print design visual",
     },
     {
-      src: panditBanner1,
+      src: panditBanner8,
       alt: "Pandit Ji De Pranthe food brand visual one repeat",
     },
     {
-      src: panditBanner2,
+      src: panditBanner9,
       alt: "Pandit Ji De Pranthe packaging visual repeat",
     },
     {
-      src: panditBanner3,
+      src: panditBanner10,
       alt: "Pandit Ji De Pranthe interior branding visual repeat",
     },
   ],
@@ -77,7 +83,7 @@ export default function PanditJiDePranthePage() {
       <WorkCaseStudyShowcase
         leftImage={panditBanner1}
         leftAlt="Pandit Ji De Pranthe food visual one"
-        rightImage={panditBanner4}
+        rightImage={panditBanner2}
         rightAlt="Pandit Ji De Pranthe food visual two"
       />
       <WorkStudyDetailsSection

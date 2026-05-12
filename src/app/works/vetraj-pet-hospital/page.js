@@ -6,42 +6,47 @@ import WorkImpactSection from "@/features/works/components/WorkImpactSection";
 import WorkMoreProjectsSection from "@/features/works/components/WorkMoreProjectsSection";
 import WorkFooter from "@/features/works/components/WorkFooter";
 
-const vetrajBanner1 = "/creativeagency/outdoorbrandingDesign.jpg.webp";
-const vetrajBanner2 = "/creativeagency/advideo.webp";
-const vetrajBanner3 = "/creativeagency/digitalmarketing.jpg.webp";
-const vetrajBanner4 = "/creativeagency/printdesign.webp";
-const vetrajBanner5 = "/creativeagency/socialmediamanagement.webp";
+const vetrajBanner1 = "/vetrajpethospital/WorkCaseStudyShowcase1.webp";
+const vetrajBanner2 = "/vetrajpethospital/WorkCaseStudyShowcase2.webp";
+const vetrajBanner3 = "/vetrajpethospital/WorkGalleryShowcase1.webp";
+const vetrajBanner4 = "/vetrajpethospital/WorkGalleryShowcase2.webp";
+const vetrajBanner5 = "/vetrajpethospital/WorkGalleryShowcase3.webp";
+const vetrajBanner6 = "/vetrajpethospital/WorkGalleryShowcase4.webp";
+const vetrajBanner7 = "/vetrajpethospital/WorkGalleryShowcase5.webp";
+const vetrajBanner8 = "/vetrajpethospital/WorkGalleryShowcase6.webp";
+const vetrajBanner9 = "/vetrajpethospital/WorkGalleryShowcase7.webp";
+const vetrajBanner10 = "/vetrajpethospital/WorkGalleryShowcase8.webp";
 
 const vetrajGalleryProps = {
-  firstBannerImage: vetrajBanner1,
+  firstBannerImage: vetrajBanner3,
   firstBannerAlt: "Vetraj Pet Hospital banner one",
   firstRow: [
     {
-      src: vetrajBanner2,
+      src: vetrajBanner4,
       alt: "Vetraj Pet Hospital promotional visual one",
     },
     {
-      src: vetrajBanner3,
+      src: vetrajBanner5,
       alt: "Vetraj Pet Hospital promotional visual two",
     },
   ],
-  secondBannerImage: vetrajBanner4,
+  secondBannerImage: vetrajBanner6,
   secondBannerAlt: "Vetraj Pet Hospital banner two",
   cards: [
     {
-      src: vetrajBanner5,
+      src: vetrajBanner7,
       alt: "Vetraj Pet Hospital model-based promotional visual",
     },
     {
-      src: vetrajBanner1,
+      src: vetrajBanner8,
       alt: "Vetraj Pet Hospital banner one repeat",
     },
     {
-      src: vetrajBanner2,
+      src: vetrajBanner9,
       alt: "Vetraj Pet Hospital promotional visual one repeat",
     },
     {
-      src: vetrajBanner3,
+      src: vetrajBanner10,
       alt: "Vetraj Pet Hospital promotional visual two repeat",
     },
   ],
@@ -75,7 +80,7 @@ export default function VetrajPetHospitalPage() {
       <WorkCaseStudyShowcase
         leftImage={vetrajBanner1}
         leftAlt="Vetraj Pet Hospital promotional visual one"
-        rightImage={vetrajBanner4}
+        rightImage={vetrajBanner2}
         rightAlt="Vetraj Pet Hospital promotional visual two"
       />
       <WorkStudyDetailsSection

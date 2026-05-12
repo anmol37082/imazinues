@@ -1,0 +1,161 @@
+.section {
+  background: #fbf8f2;
+  color: #2b1e18;
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+}
+
+.inner {
+  width: min(1600px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 88px 0 112px;
+  padding-left: clamp(40px, 5vw, 112px);
+}
+
+.heading {
+  margin: 0 0 18px;
+  color: #2b1e18;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 28px;
+  color: #2b1e18;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(4rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.subtitle {
+  margin: 0 0 70px;
+  color: #2b1e18;
+  font-size: clamp(1.15rem, 1.35vw, 1.45rem);
+  line-height: 1.55;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(72px, 10vw, 180px);
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.groupTitle {
+  margin: 0;
+  color: #2b1e18;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemLabel {
+  margin: 0;
+  color: #2b1e18;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.names {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  color: #2b1e18;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 1080px) {
+  .inner {
+    width: min(100%, calc(100% - 32px));
+    padding: 72px 0 92px;
+    padding-left: clamp(32px, 4vw, 72px);
+  }
+
+  .grid {
+    gap: 56px;
+  }
+
+  .column {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    width: calc(100% - 24px);
+    padding: 64px 0 72px;
+    padding-left: clamp(18px, 3vw, 40px);
+  }
+
+  .title {
+    margin-bottom: 36px;
+    font-size: clamp(3rem, 12vw, 4.6rem);
+  }
+
+  .subtitle {
+    margin-bottom: 44px;
+    font-size: 1.05rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .column {
+    gap: 34px;
+  }
+
+  .group {
+    gap: 14px;
+  }
+
+  .groupTitle {
+    font-size: clamp(1.7rem, 7vw, 2.5rem);
+  }
+
+  .items {
+    gap: 18px;
+  }
+}

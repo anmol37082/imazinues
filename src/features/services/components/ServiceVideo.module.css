@@ -1,0 +1,92 @@
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 92px 0 56px;
+  background: #fbf8f2;
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.shell {
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.frame {
+  background: transparent;
+}
+
+.mediaWrap {
+  position: relative;
+  width: min(920px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  background: transparent;
+  aspect-ratio: 16 / 7.8;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.03);
+  filter: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.clickLayer {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  pointer-events: auto;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.playIcon {
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid rgba(255, 255, 255, 0.96);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0 36px;
+  }
+
+  .shell {
+    width: calc(100% - 20px);
+  }
+
+  .mediaWrap {
+    width: 100%;
+  }
+
+  .playIcon {
+    margin-left: 7px;
+    border-top-width: 18px;
+    border-bottom-width: 18px;
+    border-left-width: 30px;
+  }
+}

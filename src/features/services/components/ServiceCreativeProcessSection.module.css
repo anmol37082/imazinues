@@ -1,0 +1,136 @@
+.section {
+  background: #fbf8f2;
+  color: #2b1e18;
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+}
+
+.inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 92px 24px 96px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+
+.videoColumn {
+  min-width: 0;
+}
+
+.videoFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.28;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
+  background: #fbf8f2;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.copyColumn {
+  padding-left: clamp(72px, 8vw, 148px);
+  padding-top: 0;
+}
+
+.eyebrow {
+  margin: 34px 0 34px;
+  color: rgba(43, 30, 24, 0.92);
+  font-family: var(--font-br-sonoma);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.title {
+  margin: 0;
+  max-width: 92%;
+  color: #2b1e18;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(1.85rem, 3.35vw, 3.4rem);
+  line-height: 0.95;
+  font-weight: 700;
+  letter-spacing: 0;
+  transform: translateX(clamp(-28px, -3vw, -8px));
+}
+
+.description {
+  margin: 112px 0 0;
+  max-width: 30ch;
+  color: rgba(43, 30, 24, 0.96);
+  font-size: clamp(1.08rem, 1.3vw, 1.4rem);
+  line-height: 1.58;
+  letter-spacing: 0.01em;
+  transform: translate3d(clamp(18px, 3vw, 56px), clamp(-28px, -2vw, -12px), 0);
+}
+
+@media (max-width: 1080px) {
+  .inner {
+    width: 100%;
+    padding: 72px 20px 72px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .videoFrame {
+    aspect-ratio: 16 / 11.5;
+  }
+
+  .copyColumn {
+    padding-left: clamp(32px, 4vw, 72px);
+    padding-top: 0;
+  }
+
+  .description {
+    margin-top: 58px;
+    max-width: 36ch;
+    transform: translate3d(clamp(10px, 2vw, 24px), -10px, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 56px 0 56px 0;
+  }
+
+  .videoFrame {
+    aspect-ratio: 16 / 12.5;
+    border-radius: 0;
+  }
+
+  .eyebrow {
+    margin: 26px 0 22px;
+    font-size: 0.9rem;
+  }
+
+  .title {
+    max-width: 92%;
+    font-size: clamp(1.7rem, 6.6vw, 2.4rem);
+    transform: translateX(clamp(-18px, -2vw, -6px));
+  }
+
+  .description {
+    margin-top: 32px;
+    max-width: 92%;
+    font-size: 1.02rem;
+    line-height: 1.52;
+    transform: none;
+  }
+}
+
+
+

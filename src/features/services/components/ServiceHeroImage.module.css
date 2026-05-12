@@ -1,0 +1,40 @@
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: clip;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  height: min(100vh, 980px);
+  min-height: 560px;
+  overflow: hidden;
+  background: #fbf8f2;
+}
+
+.image {
+  object-fit: cover;
+  transform: translate3d(0, 0, 0) scale(1.18);
+  transform-origin: center center;
+  transition: transform 0.12s linear;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .frame {
+    height: 82vh;
+    min-height: 500px;
+  }
+}

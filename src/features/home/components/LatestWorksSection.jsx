@@ -31,21 +31,21 @@ const workCards = [
     title: "Vetraj Pet Hospital",
     timeline: "2 weeks",
     href: "/works/vetraj-pet-hospital",
-    img: "/creativeagency/outdoorbrandingDesign.jpg.webp",
+    img: "/vetrajpethospital/WorkCaseStudyShowcase1.webp",
   },
   {
     id: 5,
     title: "Pandit Ji De Pranthe",
     timeline: "6 weeks",
     href: "/works/pandit-ji-de-pranthe",
-    img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    img: "/panditjidepranthe/WorkCaseStudyShowcase1.webp",
   },
   {
     id: 6,
     title: "Binny's Nail Bar",
     timeline: "4 weeks",
     href: "/works/binnys-nail-bar",
-    img: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+    img: "/binnynail,sbar/WorkCaseStudyShowcase1.webp",
   },
 ];
 

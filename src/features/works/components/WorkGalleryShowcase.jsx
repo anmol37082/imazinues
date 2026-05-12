@@ -47,7 +47,7 @@ export default function WorkGalleryShowcase({
     },
   ],
 }) {
-  const renderMedia = (src, alt, { priority = false, sizes } = {}) => {
+  const renderMedia = (src, alt, { priority = false, sizes, fallbackSrc } = {}) => {
     if (isVideoSource(src)) {
       return (
         <video
@@ -60,6 +60,7 @@ export default function WorkGalleryShowcase({
           aria-label={alt}
         >
           <source src={src} type={getVideoType(src)} />
+          {fallbackSrc ? <source src={fallbackSrc} type="video/mp4" /> : null}
         </video>
       );
     }
@@ -108,6 +109,7 @@ export default function WorkGalleryShowcase({
             <div className={styles.card} key={item.alt}>
               {renderMedia(item.src, item.alt, {
                 sizes: "(max-width: 768px) 100vw, 50vw",
+                fallbackSrc: item.fallbackSrc,
               })}
             </div>
           ))}

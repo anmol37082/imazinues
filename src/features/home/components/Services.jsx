@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Services.module.css';
@@ -11,8 +12,9 @@ export const serviceCardData = [
     desc: (<>
     Grow your brand on Facebook, <br className={styles.mobileDescBreak} /> Instagram &   LinkedIn with creative content,<br className={styles.mobileDescBreak} /> targeted ads and  strong community  <br className={styles.mobileDescBreak} /> engagement.
     </>
-    ), 
+    ),
     img: '/services/ICON-CARDS-1.webp',
+    href: '/services/SocialMediaMarketing',
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ export const serviceCardData = [
       </>
     ),
     img: '/services/ICON-CARDS-2.webp',
+    href: '/services/SearchEngineOptimization',
   },
   {
     id: 3,
@@ -37,6 +40,7 @@ export const serviceCardData = [
       </>
     ),
     img: '/services/ICON-CARDS-3.webp',
+    href: '/services/GoogleAdsCampaigns',
   },
   {
     id: 4,
@@ -48,8 +52,9 @@ export const serviceCardData = [
         through engaging blogs, videos, and creative <br className={styles.mobileDescBreak} /> visuals designed
         and to inform, inspire <br className={styles.mobileDescBreak} /> and convert.
       </>
-    ),
+    ), 
     img: '/services/ICON-CARDS-4.webp',
+    href: '/services/ContentCreation',
   },
   {
     id: 5,
@@ -64,6 +69,7 @@ export const serviceCardData = [
       </>
     ),
     img: '/services/ICON-CARDS-5.webp',
+    href: '/services/WebsiteRevampDevelopment',
   },
   {
     id: 6,
@@ -76,6 +82,7 @@ export const serviceCardData = [
       </>
     ),
     img: '/services/ICON-CARDS-6.webp',
+    href: '/services/BrandGuidelines',
   },
   {
     id: 7,
@@ -91,6 +98,7 @@ export const serviceCardData = [
       </>
     ),
     img: '/services/ICON-CARDS-7.webp',
+    href: '/services/PrintDesign',
   },
   {
     id: 8,
@@ -103,6 +111,7 @@ export const serviceCardData = [
       </>
     ), 
     img: '/services/ICON-CARDS-8.webp',
+    href: '/services/ProductPhotographyVideography',
   },
 ];
 
@@ -139,7 +148,9 @@ export default function Services() {
   const renderCard = (card) => (
     <article
       key={card.id}
-      className={`${styles.card} ${styles[`card${card.id}`]}`}
+      className={`${styles.card} ${styles[`card${card.id}`]}${
+        card.href ? ` ${styles.cardLinked}` : ""
+      }`}
       style={{ '--card-delay': `${0.18 + (card.id - 1) * 0.12}s` }}
     >
       <div className={styles.imageWrap}>
@@ -158,6 +169,16 @@ export default function Services() {
         <h3 className={styles.cardTitle}>{card.title}</h3>
         <p className={styles.cardDesc}>{card.desc}</p>
       </div>
+
+      {card.href ? (
+        <Link
+          href={card.href}
+          className={styles.cardLink}
+          aria-label={card.title}
+        >
+          <span className={styles.srOnly}>{card.title}</span>
+        </Link>
+      ) : null}
     </article>
   );
 
