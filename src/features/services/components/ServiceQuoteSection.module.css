@@ -25,7 +25,7 @@
 
 .quote {
   margin: 0;
-  max-width: 1120px;
+  max-width: 860px;
   color: #2b1e18;
   font-family: var(--font-br-sonoma);
   font-size: clamp(2rem, 3.6vw, 4.2rem);
@@ -50,14 +50,14 @@
   }
 
   .quote {
-    max-width: 100%;
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
   .inner {
     width: calc(100% - 24px);
-    padding: 72px 0 64px;
+    padding: 72px 0 64px 24px;
     grid-template-columns: 1fr;
   }
 
@@ -84,7 +84,7 @@
   }
 
   .quote {
-    max-width: 1280px;
+    max-width: 980px;
     font-size: clamp(2.2rem, 3.2vw, 4.8rem);
   }
 

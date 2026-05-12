@@ -49,6 +49,11 @@ export default function ServiceHeroImage({
 
     if (!frameNode || !sectionNode) return undefined;
 
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      frameNode.style.transform = "none";
+      return undefined;
+    }
+
     const updateTarget = () => {
       const rect = sectionNode.getBoundingClientRect();
       const viewportHeight = window.innerHeight || 0;

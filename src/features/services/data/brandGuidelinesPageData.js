@@ -21,7 +21,7 @@ const brandGuidelinesPageData = {
     ],
   },
   heroImage: {
-    src: "/services/ICON-CARDS-6.webp",
+    src: "/creativeagency/BrandGuidelines.webp",
     alt: "Brand guidelines service visual",
   },
   video: {

@@ -146,8 +146,8 @@
     padding: 56px 0 48px;
   }
 
-  .grid {
-    transform: none;
+  .copy {
+    padding-left: 24px;
   }
 
   .visuals {

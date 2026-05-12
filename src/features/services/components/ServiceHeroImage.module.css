@@ -17,7 +17,7 @@
 
 .frame {
   position: relative;
-  width: min(100%, calc(100% - 32px));
+  width: 100%;
   margin: 0 auto;
   height: min(100vh, 980px);
   min-height: 560px;
@@ -34,22 +34,33 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    transform: none;
+  }
+
   .frame {
-    width: calc(100% - 24px);
-    height: 82vh;
-    min-height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10.5;
+    min-height: 0;
+    transform: none;
+  }
+
+  .image {
+    transform: none;
+    transition: none;
   }
 }
 
 @media (max-width: 1080px) {
   .frame {
-    width: calc(100% - 32px);
+    width: 100%;
   }
 }
 
 @media (min-width: 1600px) {
   .frame {
-    width: min(100%, calc(100% - 24px));
+    width: 100%;
     height: min(88vh, 1180px);
     min-height: 680px;
   }

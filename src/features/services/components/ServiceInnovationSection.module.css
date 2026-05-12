@@ -118,10 +118,19 @@
     padding: 72px 0 56px;
   }
 
+  .grid {
+    gap: 28px;
+  }
+
   .frame {
     margin-left: 0;
     aspect-ratio: 16 / 11.2;
     border-radius: 0 8px 8px 0;
+  }
+
+  .copyColumn {
+    padding-left: 24px;
+    padding-right: 12px;
   }
 
   .eyebrow {
@@ -130,14 +139,14 @@
   }
 
   .title {
-    max-width: 92%;
+    max-width: 100%;
     font-size: clamp(1.7rem, 6.6vw, 2.4rem);
     transform: translateX(clamp(-18px, -2vw, -6px));
   }
 
   .description {
     margin-top: 34px;
-    max-width: 92%;
+    max-width: 100%;
     font-size: 1.02rem;
     line-height: 1.52;
     transform: none;

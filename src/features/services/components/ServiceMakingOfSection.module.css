@@ -99,7 +99,12 @@
 
 @media (max-width: 768px) {
   .inner {
-    padding: 72px 0 56px;
+    width: calc(100% - 24px);
+    padding: 72px 0 56px 24px;
+  }
+
+  .grid {
+    gap: 28px;
   }
 
   .eyebrow {

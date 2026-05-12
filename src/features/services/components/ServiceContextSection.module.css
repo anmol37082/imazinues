@@ -140,13 +140,13 @@
     padding: 12px 0 48px;
   }
 
+  .copy {
+    padding-left: 24px;
+  }
+
   .visuals {
     min-height: 420px;
     padding-left: 18px;
-  }
-
-  .grid {
-    transform: none;
   }
 
   .topImageWrap {

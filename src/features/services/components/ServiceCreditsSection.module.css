@@ -125,7 +125,7 @@
   .inner {
     width: calc(100% - 24px);
     padding: 64px 0 72px;
-    padding-left: clamp(18px, 3vw, 40px);
+    padding-left: 24px;
   }
 
   .title {

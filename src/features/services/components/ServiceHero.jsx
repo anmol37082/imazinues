@@ -16,8 +16,6 @@ const defaultServiceColumns = [
 ];
 
 export default function ServiceHero({
-  eyebrow = "AR",
-  breadcrumb = " / MAI LAN - PUMPER",
   title = "MAI LAN - PUMPER",
   description = "Interactive music video imagined, directed, edited, designed and developed with TOOSOON for the French artist Mai Lan in collaboration with PANAMÃ†RA.",
   serviceColumns = defaultServiceColumns,
@@ -25,17 +23,6 @@ export default function ServiceHero({
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <div className={styles.topRow}>
-          <div className={styles.topLeft}>
-            <span className={styles.brand}>{eyebrow}</span>
-            <span className={styles.breadcrumb}>{breadcrumb}</span>
-          </div>
-          <div className={styles.topRight} aria-label="Quick navigation">
-            <span>INDEX</span>
-            <span>ABOUT</span>
-          </div>
-        </div>
-
         <div className={styles.copy}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.description}>{description}</p>
