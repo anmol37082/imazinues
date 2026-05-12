@@ -17,7 +17,8 @@
 
 .frame {
   position: relative;
-  width: 100%;
+  width: min(100%, calc(100% - 48px));
+  margin: 0 auto;
   height: min(100vh, 980px);
   min-height: 560px;
   overflow: hidden;
@@ -34,7 +35,14 @@
 
 @media (max-width: 768px) {
   .frame {
+    width: calc(100% - 24px);
     height: 82vh;
     min-height: 500px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .frame {
+    width: calc(100% - 32px);
   }
 }

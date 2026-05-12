@@ -8,7 +8,7 @@ import ServiceInnovationSection from "@/features/services/components/ServiceInno
 import ServiceAutoplayTriptych from "@/features/services/components/ServiceAutoplayTriptych";
 import ServiceQuoteSection from "@/features/services/components/ServiceQuoteSection";
 import ServiceCreditsSection from "@/features/services/components/ServiceCreditsSection";
-import styles from "../../../app/services/page.module.css";
+import styles from "./ServiceDetailPage.module.css";
 
 export default function ServiceDetailPage({ data }) {
   const {

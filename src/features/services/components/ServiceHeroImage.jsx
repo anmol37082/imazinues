@@ -114,7 +114,7 @@ export default function ServiceHeroImage({
           alt={alt}
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) calc(100vw - 24px), (max-width: 1080px) calc(100vw - 32px), calc(100vw - 48px)"
           className={styles.image}
         />
       </div>
