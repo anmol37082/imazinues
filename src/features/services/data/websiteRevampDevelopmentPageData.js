@@ -30,6 +30,30 @@ const websiteRevampDevelopmentPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Website development showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation1.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Website development scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Website development autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Website development alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Website development alternate scroll video",
+  },
   context: {
     label: "STRUCTURE",
     title: "CLEANER FLOW FOR VISITORS AND SEARCH ENGINES",
@@ -53,6 +77,16 @@ const websiteRevampDevelopmentPageData = {
     topAlt: "Website UX visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Website UX visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "DESIGN AND DEVELOPMENT MOVING TOGETHER",
+    description:
+      "Wireframes, UI, and implementation stay connected so the final website feels coherent from the start.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Website development creative process video",
   },
   makingOf: {
     eyebrow: "DEVELOPMENT",

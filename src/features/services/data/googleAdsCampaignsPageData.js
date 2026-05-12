@@ -30,6 +30,30 @@ const googleAdsCampaignsPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Google Ads showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation3.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation3.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Google Ads scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Google Ads autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Google Ads alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Google Ads alternate scroll video",
+  },
   context: {
     label: "CAMPAIGN SETUP",
     title: "BUILT TO REACH PEOPLE READY TO TAKE ACTION",
@@ -53,6 +77,16 @@ const googleAdsCampaignsPageData = {
     topAlt: "Ad messaging visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Ad messaging visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "ADS BUILT AROUND CONVERSION VISUALS",
+    description:
+      "We use motion and image variants to support different stages of the campaign funnel and keep testing simple.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Google Ads creative process video",
   },
   makingOf: {
     eyebrow: "OPTIMIZATION",

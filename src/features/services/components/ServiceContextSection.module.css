@@ -186,33 +186,37 @@
 
 @media (min-width: 1600px) {
   .inner {
-    width: min(100%, calc(100% - 24px));
+    width: min(100%, calc(100% - 16px));
   }
 
   .grid {
-    gap: clamp(64px, 5vw, 124px);
+    gap: clamp(32px, 3vw, 72px);
   }
 
   .copy {
-    padding-left: clamp(96px, 9vw, 180px);
+    padding-left: clamp(72px, 7vw, 140px);
   }
 
   .title {
-    font-size: clamp(2.1rem, 2.8vw, 4.2rem);
+    max-width: 82%;
+    font-size: clamp(2.5rem, 3.2vw, 4.8rem);
   }
 
   .text {
-    max-width: 36ch;
-    margin-top: 100px;
-    margin-left: clamp(64px, 7vw, 140px);
+    max-width: 40ch;
+    margin-top: 112px;
+    margin-left: clamp(52px, 5vw, 112px);
   }
 
   .topImageWrap {
-    width: min(100%, 460px);
+    top: 18px;
+    left: clamp(44px, 5vw, 108px);
+    width: min(100%, 560px);
   }
 
   .bottomImageWrap {
-    width: min(100%, 360px);
+    top: 48%;
+    width: min(100%, 420px);
   }
 }
 

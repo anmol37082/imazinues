@@ -16,7 +16,7 @@
 }
 
 .shell {
-  width: min(1200px, calc(100% - 32px));
+  width: min(1040px, calc(100% - 28px));
   margin: 0 auto;
 }
 
@@ -26,11 +26,11 @@
 
 .mediaWrap {
   position: relative;
-  width: min(1120px, 100%);
+  width: min(980px, 100%);
   margin: 0 auto;
   overflow: hidden;
   background: transparent;
-  aspect-ratio: 16 / 7.8;
+  aspect-ratio: 16 / 6.8;
 }
 
 .video {
@@ -76,7 +76,7 @@
   }
 
   .shell {
-    width: calc(100% - 20px);
+    width: calc(100% - 18px);
   }
 
   .mediaWrap {
@@ -93,11 +93,11 @@
 
 @media (min-width: 1600px) {
   .shell {
-    width: min(1400px, calc(100% - 24px));
+    width: min(1240px, calc(100% - 24px));
   }
 
   .mediaWrap {
-    width: min(1320px, 100%);
+    width: min(1120px, 100%);
   }
 }
 

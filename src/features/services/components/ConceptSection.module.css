@@ -190,29 +190,32 @@
 
 @media (min-width: 1600px) {
   .inner {
-    width: min(100%, calc(100% - 24px));
+    width: min(100%, calc(100% - 16px));
   }
 
   .copy {
-    padding-left: clamp(96px, 10vw, 200px);
+    padding-left: clamp(72px, 8vw, 160px);
   }
 
   .title {
-    font-size: clamp(2.1rem, 2.8vw, 4.2rem);
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 3.2vw, 4.8rem);
   }
 
   .text {
-    max-width: 36ch;
-    margin-top: 100px;
-    margin-left: clamp(72px, 8vw, 150px);
+    max-width: 40ch;
+    margin-top: 112px;
+    margin-left: clamp(56px, 6vw, 120px);
   }
 
   .topImageWrap {
-    width: min(100%, 460px);
+    right: clamp(32px, 4vw, 80px);
+    width: min(100%, 560px);
   }
 
   .bottomImageWrap {
-    width: min(100%, 360px);
+    top: 50%;
+    width: min(100%, 420px);
   }
 }
 

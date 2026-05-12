@@ -30,6 +30,30 @@ const productPhotographyVideographyPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Product photography showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation3.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation3.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Product photography scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Product photography autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Product photography alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Product photography alternate scroll video",
+  },
   context: {
     label: "SHOOT",
     title: "VISUALS THAT SHOW THE PRODUCT AT ITS BEST",
@@ -53,6 +77,16 @@ const productPhotographyVideographyPageData = {
     topAlt: "Product detail visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Product detail visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "SHOOTING VISUALS THAT SELL THE PRODUCT",
+    description:
+      "The shoot planning and post-production are tied together so the final output works in ads and product pages.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Product photography creative process video",
   },
   makingOf: {
     eyebrow: "POST",

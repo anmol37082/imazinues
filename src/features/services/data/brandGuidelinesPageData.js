@@ -30,6 +30,30 @@ const brandGuidelinesPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Brand guidelines showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation2.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation2.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Brand guidelines scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Brand guidelines autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Brand guidelines alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Brand guidelines alternate scroll video",
+  },
   context: {
     label: "SYSTEM",
     title: "A CLEAR RULEBOOK FOR EVERY BRAND TOUCHPOINT",
@@ -53,6 +77,16 @@ const brandGuidelinesPageData = {
     topAlt: "Brand identity visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Brand identity visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "GUIDELINES DESIGNED FOR REAL USAGE",
+    description:
+      "We turn the brand system into something teams can actually apply across social, web, and print.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Brand guidelines creative process video",
   },
   makingOf: {
     eyebrow: "GUIDE",

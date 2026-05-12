@@ -30,6 +30,30 @@ const printDesignPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Print design showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation1.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Print design scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Print design autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Print design alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Print design alternate scroll video",
+  },
   context: {
     label: "LAYOUT",
     title: "PRINT PIECES BUILT FOR IMPACT AND READABILITY",
@@ -53,6 +77,16 @@ const printDesignPageData = {
     topAlt: "Print material visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Print material visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "LAYOUTS BUILT FOR PRINT OUTPUT",
+    description:
+      "We prepare print assets with production in mind so the final result stays crisp and easy to distribute.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Print design creative process video",
   },
   makingOf: {
     eyebrow: "OUTPUT",

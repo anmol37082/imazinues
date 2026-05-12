@@ -30,6 +30,30 @@ const searchEngineOptimizationPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "SEO showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation1.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "SEO scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "SEO autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "SEO alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "SEO alternate scroll video",
+  },
   context: {
     label: "AUDIT",
     title: "START WITH THE WEBSITE SEARCH ENGINE NEEDS",
@@ -53,6 +77,16 @@ const searchEngineOptimizationPageData = {
     topAlt: "SEO content visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "SEO content visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "SEARCH-FIRST CONTENT WITH VIDEO SUPPORT",
+    description:
+      "We shape SEO content with support visuals and motion assets so the page feels richer and more helpful.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "SEO creative process video",
   },
   makingOf: {
     eyebrow: "ROADMAP",

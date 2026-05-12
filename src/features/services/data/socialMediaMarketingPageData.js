@@ -30,6 +30,30 @@ const socialMediaMarketingPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Social media marketing showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation2.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation2.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Social media marketing scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Social media marketing autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Social media marketing alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Social media marketing alternate scroll video",
+  },
   context: {
     label: "STRATEGY",
     title: "BUILT FOR DAILY CONTENT AND LONG-TERM GROWTH",
@@ -53,6 +77,16 @@ const socialMediaMarketingPageData = {
     topAlt: "Content direction visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Content direction visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "FUN AND SURREAL SOCIAL CONTENT",
+    description:
+      "We combine short-form motion, design, and platform-native editing to build content that feels dynamic and shareable.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Social media marketing creative process video",
   },
   makingOf: {
     eyebrow: "CAMPAIGN BUILD",

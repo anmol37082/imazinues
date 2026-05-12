@@ -1,8 +1,13 @@
 import ServiceHero from "@/features/services/components/ServiceHero";
 import ServiceHeroImage from "@/features/services/components/ServiceHeroImage";
 import ServiceVideo from "@/features/services/components/ServiceVideo";
+import ServiceScrollVideo from "@/features/services/components/ServiceScrollVideo";
+import ServiceAutoPlayVideo from "@/features/services/components/ServiceAutoPlayVideo";
+import ServiceAutoPlayVideoAlt from "@/features/services/components/ServiceAutoPlayVideoAlt";
+import ServiceScrollVideoAlt from "@/features/services/components/ServiceScrollVideoAlt";
 import ServiceContextSection from "@/features/services/components/ServiceContextSection";
 import ConceptSection from "@/features/services/components/ConceptSection";
+import ServiceCreativeProcessSection from "@/features/services/components/ServiceCreativeProcessSection";
 import ServiceMakingOfSection from "@/features/services/components/ServiceMakingOfSection";
 import ServiceInnovationSection from "@/features/services/components/ServiceInnovationSection";
 import ServiceAutoplayTriptych from "@/features/services/components/ServiceAutoplayTriptych";
@@ -16,11 +21,16 @@ export default function ServiceDetailPage({ data }) {
     heroImage,
     video,
     context,
+    scrollVideo,
     concept,
+    autoPlayVideo,
+    creativeProcess,
     makingOf,
     innovation,
+    autoPlayVideoAlt,
     triptych,
     quote,
+    scrollVideoAlt,
     credits,
   } = data;
 
@@ -30,11 +40,16 @@ export default function ServiceDetailPage({ data }) {
       <ServiceHeroImage {...heroImage} />
       <ServiceVideo {...video} />
       <ServiceContextSection {...context} />
+      <ServiceScrollVideo {...scrollVideo} />
       <ConceptSection {...concept} />
+      <ServiceAutoPlayVideo {...autoPlayVideo} />
+      <ServiceCreativeProcessSection {...creativeProcess} />
       <ServiceMakingOfSection {...makingOf} />
-      <ServiceInnovationSection {...innovation} />
       <ServiceAutoplayTriptych {...triptych} />
+      <ServiceInnovationSection {...innovation} />
+      <ServiceAutoPlayVideoAlt {...autoPlayVideoAlt} />
       <ServiceQuoteSection {...quote} />
+      <ServiceScrollVideoAlt {...scrollVideoAlt} />
       <ServiceCreditsSection {...credits} />
     </main>
   );

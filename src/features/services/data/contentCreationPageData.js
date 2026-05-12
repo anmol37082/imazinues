@@ -30,6 +30,30 @@ const contentCreationPageData = {
     poster: "/creativeagency/advideo.webp",
     alt: "Content creation showcase video",
   },
+  scrollVideo: {
+    src: "/ceativecontent/GIFanimation2.webm",
+    fallbackSrc: "/ceativecontent/GIFanimation2.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Content creation scroll video",
+  },
+  autoPlayVideo: {
+    src: "/modernlifestyle/galleryv1.webm",
+    fallbackSrc: "/modernlifestyle/designcase1.mp4",
+    poster: "/modernlifestyle/mainbanner1.webp",
+    alt: "Content creation autoplay video",
+  },
+  autoPlayVideoAlt: {
+    src: "/modernlifestyle/designcase2.mp4",
+    fallbackSrc: null,
+    poster: "/modernlifestyle/banner2.webp",
+    alt: "Content creation alternate autoplay video",
+  },
+  scrollVideoAlt: {
+    src: "/glamourandradiance/G&R-10.mp4",
+    fallbackSrc: null,
+    poster: "/glamourandradiance/G&R-02.webp",
+    alt: "Content creation alternate scroll video",
+  },
   context: {
     label: "PLANNING",
     title: "CONTENT BUILT AROUND THE BRAND VOICE",
@@ -53,6 +77,16 @@ const contentCreationPageData = {
     topAlt: "Content story visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
     bottomAlt: "Content story visual two",
+  },
+  creativeProcess: {
+    eyebrow: "CREATIVE PROCESS",
+    title: "CONTENT BUILT TO WORK ACROSS FORMATS",
+    description:
+      "We edit the same idea for multiple outputs so the brand can keep publishing without starting from zero.",
+    src: "/footervideo/footervideo.mp4",
+    fallbackSrc: "/footervideo/footervideo1.mp4",
+    poster: "/creativeagency/advideo.webp",
+    alt: "Content creation creative process video",
   },
   makingOf: {
     eyebrow: "PRODUCTION",
