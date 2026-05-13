@@ -29,7 +29,7 @@
 .card {
   position: relative;
   overflow: hidden;
-  min-height: 620px;
+  aspect-ratio: 1.18 / 1;
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
 }
 
@@ -52,10 +52,6 @@
   .grid {
     grid-template-columns: 1fr;
   }
-
-  .card {
-    min-height: 520px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -73,9 +69,5 @@
 
   .grid {
     gap: 6px;
-  }
-
-  .card {
-    min-height: 380px;
   }
 }

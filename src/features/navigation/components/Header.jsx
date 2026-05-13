@@ -8,9 +8,10 @@ import servicesData from "@/features/navigation/data/servicesData";
 import styles from "./Header.module.css";
 
 function Header() {
+  const visibleServices = servicesData.slice(0, 4);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [previewDropdown, setPreviewDropdown] = useState(null);
-  const [activeServiceId, setActiveServiceId] = useState(servicesData[0].id);
+  const [activeServiceId, setActiveServiceId] = useState(visibleServices[0].id);
   const [showAllCases, setShowAllCases] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [hoveredLabel, setHoveredLabel] = useState("");
@@ -19,7 +20,7 @@ function Header() {
   const dropdownOpenTimeoutRef = useRef(null);
 
   const activeService =
-    servicesData.find((service) => service.id === activeServiceId) || servicesData[0];
+    visibleServices.find((service) => service.id === activeServiceId) || visibleServices[0];
   const hasExpandedNavState = Boolean(activeDropdown || previewDropdown || isMobileMenuOpen);
 
   useEffect(() => {
@@ -363,7 +364,7 @@ function Header() {
           {activeDropdown === "services" && (
             <div className={`${styles.dropdown} ${styles.servicesDropdown}`}>
               <div className={styles.servicesList}>
-                {servicesData.map((service) => (
+                {visibleServices.map((service) => (
                   service.href ? (
                     <Link
                       key={service.id}
@@ -537,7 +538,7 @@ function Header() {
               }`}
             >
               <div className={styles.mobileServicesPanel}>
-                {servicesData.map((service) =>
+                {visibleServices.map((service) =>
                   service.href ? (
                     <Link className={styles.mobileServiceItem} href={service.href} key={service.id}>
                       <strong>{service.title}</strong>
