@@ -124,11 +124,6 @@ const contentCreationPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "The brand finally had a steady stream of content that looked connected and felt easier to manage.",
-    source: "Content workflow note",
-  },
   credits: {
     heading: "CREDITS",
     title: "Content Creation Team",
@@ -195,3 +190,4 @@ const contentCreationPageData = {
 };
 
 export default contentCreationPageData;
+

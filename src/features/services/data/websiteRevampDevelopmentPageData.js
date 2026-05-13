@@ -124,11 +124,6 @@ const websiteRevampDevelopmentPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "The new website felt much clearer, and users could find the important sections without getting lost.",
-    source: "Website revamp note",
-  },
   credits: {
     heading: "CREDITS",
     title: "Website Development Team",
@@ -195,3 +190,4 @@ const websiteRevampDevelopmentPageData = {
 };
 
 export default websiteRevampDevelopmentPageData;
+

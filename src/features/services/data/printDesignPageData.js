@@ -124,11 +124,6 @@ const printDesignPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "The printed pieces looked premium and made the brand feel more real in the room.",
-    source: "Print project note",
-  },
   credits: {
     heading: "CREDITS",
     title: "Print Design Team",
@@ -195,3 +190,4 @@ const printDesignPageData = {
 };
 
 export default printDesignPageData;
+

@@ -124,11 +124,6 @@ const productPhotographyVideographyPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "The product visuals helped the brand look more premium and made the catalog easier to trust.",
-    source: "Visual production note",
-  },
   credits: {
     heading: "CREDITS",
     title: "Photo & Video Team",
@@ -195,3 +190,4 @@ const productPhotographyVideographyPageData = {
 };
 
 export default productPhotographyVideographyPageData;
+

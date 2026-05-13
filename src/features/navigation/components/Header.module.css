@@ -861,6 +861,10 @@
   gap: 36px;
   padding: 40px 48px;
   background: var(--nav-surface);
+  max-height: calc(100dvh - 88px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 
 /* Updated Service Item with same hover animation as nav links */

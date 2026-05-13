@@ -126,11 +126,6 @@ const socialMediaMarketingPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "The brand started looking more consistent across every platform, and the new content system made it easier to post regularly and keep the audience engaged.",
-    source: "Client feedback",
-  },
   credits: {
     heading: "CREDITS",
     title: "SOCIAL MEDIA MANAGEMENT TEAM",
@@ -199,3 +194,4 @@ const socialMediaMarketingPageData = {
 };
 
 export default socialMediaMarketingPageData;
+

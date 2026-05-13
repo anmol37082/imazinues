@@ -8,11 +8,13 @@ import servicesData from "@/features/navigation/data/servicesData";
 import styles from "./Header.module.css";
 
 function Header() {
-  const visibleServices = servicesData.slice(0, 4);
+  const allServices = servicesData;
+  const visibleServices = allServices.slice(0, 4);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [previewDropdown, setPreviewDropdown] = useState(null);
   const [activeServiceId, setActiveServiceId] = useState(visibleServices[0].id);
   const [showAllCases, setShowAllCases] = useState(false);
+  const [showAllServices, setShowAllServices] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [hoveredLabel, setHoveredLabel] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,7 +22,7 @@ function Header() {
   const dropdownOpenTimeoutRef = useRef(null);
 
   const activeService =
-    visibleServices.find((service) => service.id === activeServiceId) || visibleServices[0];
+    allServices.find((service) => service.id === activeServiceId) || visibleServices[0];
   const hasExpandedNavState = Boolean(activeDropdown || previewDropdown || isMobileMenuOpen);
 
   useEffect(() => {
@@ -219,6 +221,11 @@ function Header() {
     setActiveDropdown(null);
     setPreviewDropdown(null);
     setShowAllCases(false);
+    setShowAllServices(false);
+  };
+
+  const handleServiceSelect = () => {
+    closeDesktopDropdowns();
   };
 
   return (
@@ -364,7 +371,7 @@ function Header() {
           {activeDropdown === "services" && (
             <div className={`${styles.dropdown} ${styles.servicesDropdown}`}>
               <div className={styles.servicesList}>
-                {visibleServices.map((service) => (
+                {(showAllServices ? allServices : visibleServices).map((service) => (
                   service.href ? (
                     <Link
                       key={service.id}
@@ -373,6 +380,7 @@ function Header() {
                       }`}
                       href={service.href}
                       onMouseEnter={() => setActiveServiceId(service.id)}
+                      onClick={handleServiceSelect}
                     >
                       {renderSplitNavLabel(service.title)}
                     </Link>
@@ -383,6 +391,7 @@ function Header() {
                         activeService.id === service.id ? ` ${styles.active}` : ""
                       }`}
                       onMouseEnter={() => setActiveServiceId(service.id)}
+                      onClick={handleServiceSelect}
                       type="button"
                     >
                       {renderSplitNavLabel(service.title)}
@@ -390,8 +399,13 @@ function Header() {
                   )
                 ))}
 
-                <button className={styles.servicesCta} type="button">
-                  EXPLORE ALL SERVICES
+                <button
+                  aria-expanded={showAllServices}
+                  className={styles.servicesCta}
+                  onClick={() => setShowAllServices((prev) => !prev)}
+                  type="button"
+                >
+                  {showAllServices ? "SHOW LESS SERVICES" : "EXPLORE ALL SERVICES"}
                 </button>
               </div>
 

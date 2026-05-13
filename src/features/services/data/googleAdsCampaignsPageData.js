@@ -4,19 +4,19 @@ const googleAdsCampaignsPageData = {
     breadcrumb: " / GOOGLE ADS & CAMPAIGNS",
     title: "GOOGLE ADS & CAMPAIGNS",
     description:
-      "We build search and remarketing campaigns that focus on qualified clicks, conversion tracking, and efficient spend.",
+      "We create high-performance ad campaigns that focus on the right audience, measurable conversions, and smart budget utilization to generate real business results.",
     serviceColumns: [
       {
-        label: "Focus",
-        items: ["Search ads", "Remarketing", "Conversion tracking"],
+        label: "FOCUS",
+        items: ["Search ads", "Remarketing campaigns", "Conversion tracking"],
       },
       {
-        label: "Targets",
+        label: "TARGETS",
         items: ["Leads", "Sales", "Phone calls"],
       },
       {
-        label: "Tools",
-        items: ["Keywords", "Ad copy", "Landing pages"],
+        label: "TOOLS",
+        items: ["Keyword strategy", "Ad copywriting", "Landing page optimization"],
       },
     ],
   },
@@ -56,11 +56,11 @@ const googleAdsCampaignsPageData = {
   },
   context: {
     label: "CAMPAIGN SETUP",
-    title: "BUILT TO REACH PEOPLE READY TO TAKE ACTION",
+    title: "Built to capture high-intent searches",
     overview:
-      "We define the campaign structure, audience intent, and bidding logic before launch so the account starts with a clean foundation.",
+      "Before launching any campaign, we carefully plan the campaign structure, keyword groups, audience intent, and bidding strategy so the account starts with a strong and organized foundation.",
     details:
-      "That keeps the spend focused on users with buying intent while giving us enough data to improve performance steadily.",
+      "This ensures the ad spend reaches people who are actively searching for your product or service while giving enough data to improve campaign performance continuously.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Ads campaign visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const googleAdsCampaignsPageData = {
   },
   concept: {
     label: "MESSAGING",
-    title: "ADS THAT MATCH SEARCH INTENT",
+    title: "Ads that speak the same language as your customer",
     overview:
-      "The offer, headline, and landing page work together so the user gets the same message from click to conversion.",
+      "The headline, offer, and landing page are aligned with the user’s search intent so the journey from click to conversion feels smooth and relevant.",
     details:
-      "That alignment helps improve quality score, reduce wasted spend, and keep the campaign easy to optimize.",
+      "This alignment improves quality score, reduces wasted ad spend, and increases the chances of converting visitors into leads or customers.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Ad messaging visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const googleAdsCampaignsPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "ADS BUILT AROUND CONVERSION VISUALS",
+    title: "Ads designed to turn clicks into customers",
     description:
-      "We use motion and image variants to support different stages of the campaign funnel and keep testing simple.",
+      "We design ad creatives using compelling visuals, strong hooks, and clear messaging so the ads stand out and attract the right audience. Multiple ad variations are tested to understand what drives the best engagement and conversions.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const googleAdsCampaignsPageData = {
   },
   makingOf: {
     eyebrow: "OPTIMIZATION",
-    title: "TESTING, TRACKING AND IMPROVEMENT",
+    title: "Testing, tracking and performance improvement",
     description:
-      "We regularly refine keywords, negatives, ad copy, and budget allocation so the account keeps adapting to performance data.",
+      "Campaigns are continuously monitored and optimized by refining keywords, adding negative keywords, improving ad copy, and adjusting budgets based on performance data. This ongoing optimization helps increase ROI and keeps the campaign performing efficiently.",
   },
   innovation: {
     eyebrow: "RETARGETING",
-    title: "STAY IN FRONT OF INTERESTED USERS",
+    title: "Bring back visitors who almost converted",
     description:
-      "Remarketing keeps the brand visible to people who already engaged, which is often where the strongest conversions happen.",
+      "Remarketing campaigns help your brand stay visible to users who have already visited your website or interacted with your content. Since these users are already familiar with your brand, retargeting often results in stronger engagement and higher conversion rates.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Remarketing visual",
   },
@@ -123,11 +123,6 @@ const googleAdsCampaignsPageData = {
         alt: "Ads triptych visual three",
       },
     ],
-  },
-  quote: {
-    quote:
-      "The ads started pulling in better leads once the campaign structure and landing page message matched the intent.",
-    source: "Campaign feedback",
   },
   credits: {
     heading: "CREDITS",
@@ -195,3 +190,4 @@ const googleAdsCampaignsPageData = {
 };
 
 export default googleAdsCampaignsPageData;
+

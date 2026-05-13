@@ -124,11 +124,6 @@ const brandGuidelinesPageData = {
       },
     ],
   },
-  quote: {
-    quote:
-      "Once the guidelines were in place, the brand looked more polished and consistent across everything.",
-    source: "Brand system note",
-  },
   credits: {
     heading: "CREDITS",
     title: "Brand Guidelines Team",
@@ -195,3 +190,4 @@ const brandGuidelinesPageData = {
 };
 
 export default brandGuidelinesPageData;
+

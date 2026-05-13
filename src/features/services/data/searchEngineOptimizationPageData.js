@@ -4,19 +4,19 @@ const searchEngineOptimizationPageData = {
     breadcrumb: " / SEARCH ENGINE OPTIMIZATION",
     title: "SEARCH ENGINE OPTIMIZATION",
     description:
-      "We improve visibility with keyword strategy, technical fixes, content optimization, and a clear SEO roadmap that supports long-term organic growth.",
+      "We improve search visibility through keyword research, technical improvements, content optimization, and a structured SEO roadmap designed for sustainable organic growth.",
     serviceColumns: [
       {
-        label: "Focus",
-        items: ["Keyword research", "Technical SEO", "Content SEO"],
+        label: "FOCUS",
+        items: ["Keyword Research", "Technical SEO", "On-Page SEO", "Off-Page SEO", "Content SEO", "Local SEO"],
       },
       {
-        label: "Channels",
-        items: ["Google search", "Local search", "Product pages"],
+        label: "CHANNELS",
+        items: ["Google Search", "Local Search", "Service Pages", "Product Pages", "Blogs"],
       },
       {
-        label: "Goals",
-        items: ["Traffic", "Rankings", "Leads"],
+        label: "GOALS",
+        items: ["Traffic Growth", "Higher Rankings", "Qualified Leads"],
       },
     ],
   },
@@ -56,11 +56,11 @@ const searchEngineOptimizationPageData = {
   },
   context: {
     label: "AUDIT",
-    title: "START WITH THE WEBSITE SEARCH ENGINE NEEDS",
+    title: "Start with the website search needs",
     overview:
-      "We review site structure, content gaps, indexability, and analytics before creating a clear optimization plan.",
+      "We begin by reviewing the website structure, technical health, indexing status, and existing content to understand how search engines see the site.",
     details:
-      "The work is organized around measurable targets so each update supports better discoverability, stronger relevance, and more qualified visitors.",
+      "This audit highlights content gaps, technical issues, and ranking opportunities that shape the optimization roadmap. Each improvement is aligned with measurable SEO targets to increase discoverability and attract more qualified visitors.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "SEO audit visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const searchEngineOptimizationPageData = {
   },
   concept: {
     label: "CONTENT",
-    title: "PAGES THAT ANSWER REAL SEARCH INTENT",
+    title: "Pages that match real search intent",
     overview:
-      "Each page is shaped around what users actually search for, not just what the brand wants to say.",
+      "SEO content is designed around what users are already searching for.",
     details:
-      "That keeps the content useful, easy to scan, and built to compete for valuable search terms.",
+      "Each page answers specific queries and provides clear, structured information that search engines can easily understand. This keeps the content useful, relevant, and optimized for competitive keywords.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "SEO content visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,25 +80,25 @@ const searchEngineOptimizationPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "SEARCH-FIRST CONTENT WITH VIDEO SUPPORT",
+    title: "Search-focused content with visual support",
     description:
-      "We shape SEO content with support visuals and motion assets so the page feels richer and more helpful.",
+      "We combine optimized written content with supporting visuals and media elements. This approach improves readability, engagement, and overall page experience while strengthening SEO performance.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
     alt: "SEO creative process video",
   },
   makingOf: {
-    eyebrow: "ROADMAP",
-    title: "FROM FIXES TO ONGOING OPTIMIZATION",
+    eyebrow: "SEO ROADMAP",
+    title: "From fixes to continuous growth",
     description:
-      "We combine on-page improvements, internal linking, and technical clean-up with regular monitoring so the strategy keeps improving over time.",
+      "SEO is an ongoing process. We combine on-page improvements, content updates, internal linking strategies, and technical optimizations while continuously monitoring search performance. The roadmap evolves with search trends and algorithm updates.",
   },
   innovation: {
-    eyebrow: "TECH SEO",
-    title: "STRUCTURE, SPEED AND INDEXING",
+    eyebrow: "tech seo",
+    title: "RESULTS",
     description:
-      "A strong SEO setup depends on crawlability, performance, metadata, and site architecture that search engines can understand quickly.",
+      "After optimization, websites become easier to find and better aligned with what users are already searching for. The outcome is stronger visibility, more organic traffic, and higher quality leads.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Technical SEO visual",
   },
@@ -123,11 +123,6 @@ const searchEngineOptimizationPageData = {
         alt: "SEO triptych visual three",
       },
     ],
-  },
-  quote: {
-    quote:
-      "The site became easier to find, and the content started matching the searches our audience was already making.",
-    source: "SEO project note",
   },
   credits: {
     heading: "CREDITS",
