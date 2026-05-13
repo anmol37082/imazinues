@@ -100,19 +100,27 @@ export default function ServiceCreditsSection({
   subtitle = "Strategy, design, development, content, and growth execution handled by the Imazine Us team.",
   columns = [defaultLeftGroups, defaultRightGroups],
 }) {
+  const flattenedGroups = columns
+    .flatMap((columnGroups, columnIndex) =>
+      columnGroups.map((group, rowIndex) => ({
+        ...group,
+        __columnIndex: columnIndex,
+        __rowIndex: rowIndex,
+      }))
+    )
+    .sort((a, b) => a.__rowIndex - b.__rowIndex || a.__columnIndex - b.__columnIndex);
+
   return (
     <section className={styles.section} aria-label="Credits section">
       <GoldenGlowEffect className={styles.inner}>
         <p className={styles.heading}>{heading}</p>
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={`${styles.title} noSplitText`}>{title}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
 
         <div className={styles.grid}>
-          {columns.map((columnGroups, index) => (
-            <div className={styles.column} key={`credits-column-${index}`}>
-              {columnGroups.map((group) => renderGroup(group))}
-            </div>
-          ))}
+          {flattenedGroups.map((group) =>
+            renderGroup(group)
+          )}
         </div>
       </GoldenGlowEffect>
     </section>

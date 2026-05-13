@@ -28,7 +28,8 @@
   max-width: 860px;
   color: #2b1e18;
   font-family: var(--font-br-sonoma);
-  font-size: clamp(2rem, 3.6vw, 4.2rem);
+  font-size: clamp(2rem, 2.2vw, 2.9rem);
+  font-weight: 700;
   line-height: 1.18;
   letter-spacing: 0;
 }
@@ -85,7 +86,7 @@
 
   .quote {
     max-width: 980px;
-    font-size: clamp(2.2rem, 3.2vw, 4.8rem);
+    font-size: clamp(2rem, 2.2vw, 2.9rem);
   }
 
   .source {

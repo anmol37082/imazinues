@@ -19,8 +19,8 @@
 .frame {
   width: 100%;
   margin: 0 auto;
-  height: min(100vh, 980px);
-  min-height: 560px;
+  height: min(118vh, 1180px);
+  min-height: 740px;
   overflow: hidden;
   background: #fbf8f2;
 }
@@ -41,7 +41,7 @@
 
   .frame {
     width: 100%;
-    height: 82vh;
-    min-height: 500px;
+    height: 96vh;
+    min-height: 660px;
   }
 }

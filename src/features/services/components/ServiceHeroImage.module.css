@@ -19,8 +19,8 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  height: min(100vh, 980px);
-  min-height: 560px;
+  height: min(118vh, 1180px);
+  min-height: 740px;
   overflow: hidden;
   background: #fbf8f2;
 }
@@ -61,8 +61,8 @@
 @media (min-width: 1600px) {
   .frame {
     width: 100%;
-    height: min(88vh, 1180px);
-    min-height: 680px;
+    height: min(106vh, 1320px);
+    min-height: 820px;
   }
 }
 

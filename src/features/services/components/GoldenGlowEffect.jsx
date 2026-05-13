@@ -7,9 +7,14 @@ const CHAR_TAGS = new Set(["H1", "H2", "H3", "H4", "H5", "H6"]);
 const WORD_TAGS = new Set(["P", "LI", "BLOCKQUOTE", "A"]);
 const CHAR_CLASS_HINTS = ["title", "heading", "groupTitle", "itemLabel", "mark"];
 const WORD_CLASS_HINTS = ["label", "eyebrow", "description", "subtitle", "source", "name"];
+const PLAIN_CLASS_HINTS = ["noSplit", "plainText"];
 
 function resolveMode(elementType, className = "") {
   const tag = typeof elementType === "string" ? elementType.toUpperCase() : "";
+
+  if (className && PLAIN_CLASS_HINTS.some((hint) => className.includes(hint))) {
+    return "plain";
+  }
 
   if (CHAR_TAGS.has(tag)) return "chars";
   if (WORD_TAGS.has(tag)) return "words";
@@ -55,29 +60,41 @@ function splitWords(text, keyPrefix) {
 }
 
 function splitChars(text, keyPrefix) {
-  let unitIndex = 0;
+  const parts = text.split(/(\s+)/);
+  const nodes = [];
+  let charIndex = 0;
 
-  return Array.from(text).map((char, index) => {
-    if (char === " ") {
-      return (
-        <span className={`${styles.char} ${styles.space}`} key={`${keyPrefix}-space-${index}`}>
-          {char}
+  parts.forEach((part, index) => {
+    if (part === "") return;
+
+    if (/^\s+$/.test(part)) {
+      nodes.push(
+        <span className={styles.space} key={`${keyPrefix}-space-${index}`} aria-hidden="true">
+          {part}
         </span>
       );
+      return;
     }
 
-    const node = (
+    const chars = Array.from(part).map((char, charOffset) => (
       <span
         className={styles.char}
-        key={`${keyPrefix}-char-${index}`}
-        style={{ "--glow-index": unitIndex }}
+        key={`${keyPrefix}-char-${index}-${charOffset}`}
+        style={{ "--glow-index": charIndex + charOffset }}
       >
         {char}
       </span>
+    ));
+
+    nodes.push(
+      <span className={styles.wordChunk} key={`${keyPrefix}-word-${index}`}>
+        {chars}
+      </span>
     );
-    unitIndex += 1;
-    return node;
+    charIndex += part.length;
   });
+
+  return nodes;
 }
 
 function transformChildren(children, parentMode = "words", path = "0") {
@@ -86,6 +103,9 @@ function transformChildren(children, parentMode = "words", path = "0") {
 
     if (typeof child === "string" || typeof child === "number") {
       const text = String(child);
+      if (parentMode === "plain") {
+        return text;
+      }
       return parentMode === "chars" ? splitChars(text, childPath) : splitWords(text, childPath);
     }
 

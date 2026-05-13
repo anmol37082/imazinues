@@ -4,19 +4,23 @@ const socialMediaMarketingPageData = {
     breadcrumb: " / SOCIAL MEDIA MARKETING",
     title: "SOCIAL MEDIA MARKETING",
     description:
-      "We grow brands with strategy-led content, platform-specific storytelling, paid campaigns, and community management that keeps the brand visible and consistent.",
+      "From content strategy to paid campaigns and community engagement, every action is designed to move your brand forward. Our shoots are designed to create high-impact content that performs on social media.",
     serviceColumns: [
       {
-        label: "Platforms",
-        items: ["Instagram", "Facebook", "LinkedIn"],
+        label: "PLATFORMS",
+        items: ["Instagram", "Facebook", "LinkedIn", "YouTube", "Pinterest"],
       },
       {
-        label: "Focus",
-        items: ["Content strategy", "Paid ads", "Community growth"],
+        label: "FOCUS",
+        items: ["Content Strategy", "Paid Advertising", "Brand Storytelling", "Community Growth"],
       },
       {
-        label: "Formats",
-        items: ["Reels", "Carousels", "Stories"],
+        label: "FORMATS",
+        items: ["Reels", "Carousels", "Stories", "UGC (User Generated Content)"],
+      },
+      {
+        label: "SHOOTS",
+        items: ["Product Shoots", "Model Shoots", "UGC Videos", "Brand Story Videos"],
       },
     ],
   },
@@ -56,11 +60,10 @@ const socialMediaMarketingPageData = {
   },
   context: {
     label: "STRATEGY",
-    title: "BUILT FOR DAILY CONTENT AND LONG-TERM GROWTH",
-    overview:
-      "We start by defining the brand voice, audience segments, and content pillars so every post supports a clear marketing goal.",
+    title: "Every strong brand starts with a clear strategy.",
+    overview: "Built for consistency, designed for growth",
     details:
-      "From monthly planning and performance tracking to creative direction and community replies, the workflow stays focused on reach, engagement, and conversions.",
+      "We define your brand voice, target audience, and content pillars so every post serves a purpose, whether it's awareness, engagement, or sales. From content planning to performance tracking, everything is aligned with long-term brand growth.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Social media strategy visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +71,10 @@ const socialMediaMarketingPageData = {
   },
   concept: {
     label: "CONTENT DIRECTION",
-    title: "POSTS THAT STOP THE SCROLL",
+    title: "Content that stops the scroll",
     overview:
-      "Each creative is designed with a clear hook, a strong visual hierarchy, and a message that can land quickly on mobile feeds.",
-    details:
-      "We balance brand consistency with platform-native formats, so the content feels polished, approachable, and easy to consume across channels.",
+      "In today’s fast-moving social feeds, attention matters. At Imazine Us we create content with strong hooks, premium visuals, and a mobile-first approach so every post grabs attention while staying true to your brand identity.",
+    details: "The focus is always on clarity, creativity, and impact.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Content direction visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,25 +82,25 @@ const socialMediaMarketingPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "FUN AND SURREAL SOCIAL CONTENT",
+    title: "Ideas That Move, Visuals That Speak",
     description:
-      "We combine short-form motion, design, and platform-native editing to build content that feels dynamic and shareable.",
+      "Our process blends modern design, short-form video storytelling, trend-driven editing, and AI-assisted visuals. The result is content that feels fresh, dynamic, and highly shareable across social platforms. Every idea is crafted to make your brand stand out.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
     alt: "Social media marketing creative process video",
   },
   makingOf: {
-    eyebrow: "CAMPAIGN BUILD",
-    title: "FROM CALENDAR TO COMMUNITY",
+    eyebrow: "CAMPAIGN EXECUTION",
+    title: "Turning content into consistent growth",
     description:
-      "We plan the content calendar, prepare campaign assets, schedule publishing, and keep a close eye on audience feedback so the brand stays active and responsive.",
+      "We manage the complete social media workflow, from monthly content planning and creative production to scheduling and audience interaction, ensuring your brand stays active, consistent, and visible online. This helps turn content into real engagement and growth.",
   },
   innovation: {
-    eyebrow: "PAID GROWTH",
-    title: "ADS, RETARGETING AND ANALYTICS",
+    eyebrow: "PAID SOCIAL GROWTH",
+    title: "Turning attention into customers",
     description:
-      "Paid social is used to amplify the best content, test messaging, and retarget interested users while tracking the metrics that matter most.",
+      "Organic reach builds your brand presence, while paid ads boost growth faster. At Imazine Us, we design smart campaigns with strong creatives, the right audience targeting, and continuous optimization to deliver maximum visibility and real results.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Paid growth visual",
   },
@@ -131,8 +133,8 @@ const socialMediaMarketingPageData = {
   },
   credits: {
     heading: "CREDITS",
-    title: "Social Media Marketing Team",
-    subtitle: "Planning, content, design, execution, and reporting handled by Imazine Us.",
+    title: "SOCIAL MEDIA MANAGEMENT TEAM",
+    subtitle: "Handled completely by Imazine Us",
     columns: [
       [
         {
@@ -140,24 +142,11 @@ const socialMediaMarketingPageData = {
           items: [
             {
               label: "POSTS",
-              names: ["Feed posts", "Stories", "Reels"],
+              names: ["Feed Posts", "Stories", "Reels", "Carousels", "Videos"],
             },
             {
               label: "COPY",
-              names: ["Captions", "Hooks", "CTAs"],
-            },
-          ],
-        },
-        {
-          title: "MANAGEMENT",
-          items: [
-            {
-              label: "CALENDAR",
-              names: ["Planning", "Scheduling", "Deadlines"],
-            },
-            {
-              label: "COMMUNITY",
-              names: ["Replies", "DMs", "Engagement"],
+              names: ["Hooks", "Captions", "CTAs", "Ad Copy", "Hashtags"],
             },
           ],
         },
@@ -168,24 +157,39 @@ const socialMediaMarketingPageData = {
           items: [
             {
               label: "REACH",
-              names: ["Impressions", "Growth", "Shares"],
+              names: ["Impressions", "Audience Growth", "Shares"],
             },
             {
               label: "ENGAGEMENT",
-              names: ["Likes", "Comments", "Saves"],
+              names: ["Likes", "Comments", "Saves", "Profile Visits"],
             },
           ],
         },
+        {
+          title: "MANAGEMENT",
+          items: [
+            {
+              label: "CALENDAR",
+              names: ["Monthly Planning", "Scheduling", "Deadlines"],
+            },
+            {
+              label: "COMMUNITY",
+              names: ["Replies", "DM Handling", "Audience Engagement", "Comment Moderation"],
+            },
+          ],
+        },
+      ],
+      [
         {
           title: "OPTIMIZATION",
           items: [
             {
               label: "TESTING",
-              names: ["Formats", "Timing", "Creative"],
+              names: ["A/B Testing", "Creative Improvements", "Timing Analysis", "Trend Adaptation"],
             },
             {
               label: "REPORTS",
-              names: ["Weekly notes", "Insights", "Next actions"],
+              names: ["Weekly Updates", "Performance Insights", "Growth Analysis", "Next Month Strategy"],
             },
           ],
         },

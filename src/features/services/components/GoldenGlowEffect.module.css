@@ -4,7 +4,8 @@
 }
 
 .char,
-.word {
+.word,
+.wordChunk {
   display: inline-block;
   opacity: 0.15;
   color: #d4af37;
@@ -28,7 +29,13 @@
   transition-delay: calc(var(--glow-index, 0) * 18ms);
 }
 
+.wordChunk {
+  white-space: nowrap;
+}
+
 .space {
+  display: inline-block;
+  width: 0.18em;
   opacity: 1;
   transform: none;
   color: inherit;
@@ -36,7 +43,8 @@
 }
 
 .visible .char,
-.visible .word {
+.visible .word,
+.visible .wordChunk {
   opacity: 1;
   color: inherit;
   transform: translateY(0);
@@ -45,8 +53,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .char,
-  .word {
+.char,
+.word,
+.wordChunk {
     opacity: 1;
     color: inherit;
     transform: none;
