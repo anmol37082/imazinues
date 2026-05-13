@@ -13,7 +13,7 @@
 .banner {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 2 / 1.08;
+  aspect-ratio: 1241 / 670;
   margin-bottom: 16px;
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
 }
@@ -34,7 +34,7 @@
 .card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1.15 / 1;
+  aspect-ratio: 307 / 320;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
