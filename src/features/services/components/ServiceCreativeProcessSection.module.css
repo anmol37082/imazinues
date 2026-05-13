@@ -104,11 +104,12 @@
 
 @media (max-width: 768px) {
   .inner {
-    padding: 56px 0 56px 0;
+    width: calc(100% - 24px);
+    padding: 56px 0 56px 24px;
   }
 
   .copyColumn {
-    padding-left: 24px;
+    padding-left: 0;
     padding-right: 12px;
   }
 
@@ -125,7 +126,7 @@
   .title {
     max-width: 92%;
     font-size: clamp(1.7rem, 6.6vw, 2.4rem);
-    transform: translateX(clamp(-18px, -2vw, -6px));
+    transform: none;
   }
 
   .description {

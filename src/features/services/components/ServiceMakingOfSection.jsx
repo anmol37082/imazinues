@@ -1,3 +1,4 @@
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceMakingOfSection.module.css";
 
 export default function ServiceMakingOfSection({
@@ -7,7 +8,7 @@ export default function ServiceMakingOfSection({
 }) {
   return (
     <section className={styles.section} aria-label="Making of">
-      <div className={styles.inner}>
+      <GoldenGlowEffect className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.copyLeft}>
             <p className={styles.eyebrow}>{eyebrow}</p>
@@ -17,7 +18,7 @@ export default function ServiceMakingOfSection({
             <p className={styles.description}>{description}</p>
           </div>
         </div>
-      </div>
+      </GoldenGlowEffect>
     </section>
   );
 }

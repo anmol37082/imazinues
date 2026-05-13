@@ -133,6 +133,64 @@ const brandGuidelinesPageData = {
     heading: "CREDITS",
     title: "Brand Guidelines Team",
     subtitle: "Identity systems, usage rules, and rollout support handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "IDENTITY",
+          items: [
+            {
+              label: "LOGO",
+              names: ["Master logo", "Alternate lockups", "Clear space"],
+            },
+            {
+              label: "TYPE",
+              names: ["Primary font", "Secondary font", "Hierarchy"],
+            },
+          ],
+        },
+        {
+          title: "SYSTEM",
+          items: [
+            {
+              label: "COLOR",
+              names: ["Core palette", "Accent tones", "Contrast rules"],
+            },
+            {
+              label: "LAYOUT",
+              names: ["Grid rules", "Spacing", "Templates"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "ROLLOUT",
+          items: [
+            {
+              label: "ASSETS",
+              names: ["Brand deck", "Social kit", "Guideline PDF"],
+            },
+            {
+              label: "HANDOFF",
+              names: ["Team training", "File delivery", "Usage notes"],
+            },
+          ],
+        },
+        {
+          title: "MAINTENANCE",
+          items: [
+            {
+              label: "UPDATES",
+              names: ["Version control", "Asset refresh", "Consistency checks"],
+            },
+            {
+              label: "SUPPORT",
+              names: ["Brand QA", "Rollout help", "Ongoing review"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

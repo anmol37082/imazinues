@@ -133,6 +133,64 @@ const productPhotographyVideographyPageData = {
     heading: "CREDITS",
     title: "Photo & Video Team",
     subtitle: "Shoot planning, lighting, editing, and deliverables handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "SHOOT",
+          items: [
+            {
+              label: "LIGHTING",
+              names: ["Setup", "Mood", "Exposure"],
+            },
+            {
+              label: "STYLING",
+              names: ["Props", "Background", "Composition"],
+            },
+          ],
+        },
+        {
+          title: "CAPTURE",
+          items: [
+            {
+              label: "PHOTO",
+              names: ["Product frames", "Detail shots", "Campaign stills"],
+            },
+            {
+              label: "VIDEO",
+              names: ["Motion shots", "Cutaways", "Loops"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "POST",
+          items: [
+            {
+              label: "EDITING",
+              names: ["Color", "Retouch", "Trim"],
+            },
+            {
+              label: "EXPORTS",
+              names: ["Web", "Social", "Marketplace"],
+            },
+          ],
+        },
+        {
+          title: "DELIVERABLES",
+          items: [
+            {
+              label: "USE CASES",
+              names: ["E-commerce", "Ads", "Organic content"],
+            },
+            {
+              label: "FINAL SET",
+              names: ["Selected picks", "Approved edits", "Delivery pack"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

@@ -133,6 +133,64 @@ const socialMediaMarketingPageData = {
     heading: "CREDITS",
     title: "Social Media Marketing Team",
     subtitle: "Planning, content, design, execution, and reporting handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "CONTENT",
+          items: [
+            {
+              label: "POSTS",
+              names: ["Feed posts", "Stories", "Reels"],
+            },
+            {
+              label: "COPY",
+              names: ["Captions", "Hooks", "CTAs"],
+            },
+          ],
+        },
+        {
+          title: "MANAGEMENT",
+          items: [
+            {
+              label: "CALENDAR",
+              names: ["Planning", "Scheduling", "Deadlines"],
+            },
+            {
+              label: "COMMUNITY",
+              names: ["Replies", "DMs", "Engagement"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "PERFORMANCE",
+          items: [
+            {
+              label: "REACH",
+              names: ["Impressions", "Growth", "Shares"],
+            },
+            {
+              label: "ENGAGEMENT",
+              names: ["Likes", "Comments", "Saves"],
+            },
+          ],
+        },
+        {
+          title: "OPTIMIZATION",
+          items: [
+            {
+              label: "TESTING",
+              names: ["Formats", "Timing", "Creative"],
+            },
+            {
+              label: "REPORTS",
+              names: ["Weekly notes", "Insights", "Next actions"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

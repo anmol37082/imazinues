@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceContextSection.module.css";
 
 export default function ServiceContextSection({
@@ -77,14 +78,14 @@ export default function ServiceContextSection({
             </div>
           </div>
 
-          <div className={styles.copy}>
+          <GoldenGlowEffect className={styles.copy}>
             <p className={styles.label}>{label}</p>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.text}>
               <p>{overview}</p>
               <p>{details}</p>
             </div>
-          </div>
+          </GoldenGlowEffect>
         </div>
       </div>
     </section>

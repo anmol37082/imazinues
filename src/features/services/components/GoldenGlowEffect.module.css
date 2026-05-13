@@ -1,0 +1,57 @@
+.root {
+  position: relative;
+  isolation: isolate;
+}
+
+.char,
+.word {
+  display: inline-block;
+  opacity: 0.15;
+  color: #d4af37;
+  transform: translateY(28px);
+  transform-origin: center bottom;
+  will-change: transform, opacity, color, text-shadow;
+  transition:
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    text-shadow 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.char {
+  transition-delay: calc(var(--glow-index, 0) * 24ms);
+}
+
+.word {
+  transform: translateY(18px);
+  transition-delay: calc(var(--glow-index, 0) * 18ms);
+}
+
+.space {
+  opacity: 1;
+  transform: none;
+  color: inherit;
+  transition: none;
+}
+
+.visible .char,
+.visible .word {
+  opacity: 1;
+  color: inherit;
+  transform: translateY(0);
+  text-shadow: none;
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .char,
+  .word {
+    opacity: 1;
+    color: inherit;
+    transform: none;
+    text-shadow: none;
+    filter: none;
+    transition: none;
+  }
+}

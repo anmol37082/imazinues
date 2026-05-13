@@ -6,7 +6,6 @@ import styles from "./ServiceVideo.module.css";
 export default function ServiceVideo({
   src = "/ceativecontent/GIFanimation2.webm",
   fallbackSrc = "/ceativecontent/GIFanimation2.mp4",
-  poster = "/creativeagency/advideo.webp",
   alt = "Services showcase video",
 }) {
   const sectionRef = useRef(null);
@@ -74,7 +73,6 @@ export default function ServiceVideo({
               muted
               playsInline
               preload="metadata"
-              poster={poster}
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
             >

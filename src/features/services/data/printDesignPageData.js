@@ -133,6 +133,64 @@ const printDesignPageData = {
     heading: "CREDITS",
     title: "Print Design Team",
     subtitle: "Layout, production files, brand consistency, and final polish handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "COLLATERAL",
+          items: [
+            {
+              label: "PRINT",
+              names: ["Brochures", "Flyers", "Posters"],
+            },
+            {
+              label: "PACKAGING",
+              names: ["Labels", "Inserts", "Boxes"],
+            },
+          ],
+        },
+        {
+          title: "PREPRESS",
+          items: [
+            {
+              label: "FILES",
+              names: ["Bleed", "Crop marks", "Export setup"],
+            },
+            {
+              label: "COLOR",
+              names: ["Proofs", "CMYK", "Spot checks"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "PRODUCTION",
+          items: [
+            {
+              label: "OUTPUT",
+              names: ["Vendor files", "Size versions", "Print-ready PDFs"],
+            },
+            {
+              label: "DELIVERY",
+              names: ["Press handoff", "Timeline", "QA"],
+            },
+          ],
+        },
+        {
+          title: "FINALIZING",
+          items: [
+            {
+              label: "REVIEW",
+              names: ["Accuracy", "Alignment", "Brand fit"],
+            },
+            {
+              label: "POLISH",
+              names: ["Retouching", "Cleanup", "Approval"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

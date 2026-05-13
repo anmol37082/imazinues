@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ConceptSection.module.css";
 
 export default function ConceptSection({
@@ -56,14 +57,14 @@ export default function ConceptSection({
     <section ref={sectionRef} className={styles.section} aria-label="Project concept">
       <div className={styles.inner}>
         <div className={styles.grid}>
-          <div className={styles.copy}>
+          <GoldenGlowEffect className={styles.copy}>
             <p className={styles.label}>{label}</p>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.text}>
               <p>{overview}</p>
               <p>{details}</p>
             </div>
-          </div>
+          </GoldenGlowEffect>
 
           <div className={styles.visuals}>
             <div className={styles.topImageWrap}>

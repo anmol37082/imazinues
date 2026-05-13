@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceInnovationSection.module.css";
 
 export default function ServiceInnovationSection({
@@ -121,11 +122,11 @@ export default function ServiceInnovationSection({
             </div>
           </div>
 
-          <div className={styles.copyColumn}>
+          <GoldenGlowEffect className={styles.copyColumn}>
             <p className={styles.eyebrow}>{eyebrow}</p>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.description}>{description}</p>
-          </div>
+          </GoldenGlowEffect>
         </div>
       </div>
     </section>

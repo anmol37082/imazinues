@@ -133,6 +133,64 @@ const websiteRevampDevelopmentPageData = {
     heading: "CREDITS",
     title: "Website Development Team",
     subtitle: "UX, UI, development, testing, and launch support handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "UX",
+          items: [
+            {
+              label: "FLOW",
+              names: ["User journeys", "Navigation", "Structure"],
+            },
+            {
+              label: "WIREFRAMES",
+              names: ["Layouts", "Templates", "Prototypes"],
+            },
+          ],
+        },
+        {
+          title: "UI",
+          items: [
+            {
+              label: "COMPONENTS",
+              names: ["Buttons", "Forms", "Cards"],
+            },
+            {
+              label: "VISUALS",
+              names: ["Spacing", "Typography", "Color"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "BUILD",
+          items: [
+            {
+              label: "FRONTEND",
+              names: ["Components", "Responsive layouts", "Interactions"],
+            },
+            {
+              label: "TESTING",
+              names: ["QA", "Bug fixes", "Cross-device checks"],
+            },
+          ],
+        },
+        {
+          title: "LAUNCH",
+          items: [
+            {
+              label: "HANDOFF",
+              names: ["Deployment", "SEO setup", "Tracking"],
+            },
+            {
+              label: "SUPPORT",
+              names: ["Updates", "Monitoring", "Post-launch help"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

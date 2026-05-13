@@ -1,3 +1,4 @@
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceQuoteSection.module.css";
 
 export default function ServiceQuoteSection({
@@ -6,13 +7,13 @@ export default function ServiceQuoteSection({
 }) {
   return (
     <section className={styles.section} aria-label="Quote section">
-      <div className={styles.inner}>
+      <GoldenGlowEffect className={styles.inner}>
         <div className={styles.mark} aria-hidden="true">
-          “
+          {"“"}
         </div>
         <blockquote className={styles.quote}>{quote}</blockquote>
         <p className={styles.source}>{source}</p>
-      </div>
+      </GoldenGlowEffect>
     </section>
   );
 }

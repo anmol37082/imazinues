@@ -133,6 +133,64 @@ const contentCreationPageData = {
     heading: "CREDITS",
     title: "Content Creation Team",
     subtitle: "Ideas, copy, visuals, editing, and publishing handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "CONTENT",
+          items: [
+            {
+              label: "FORMATS",
+              names: ["Blogs", "Reels", "Carousels"],
+            },
+            {
+              label: "VOICE",
+              names: ["Tone guide", "Captions", "Hooks"],
+            },
+          ],
+        },
+        {
+          title: "PLANNING",
+          items: [
+            {
+              label: "CALENDAR",
+              names: ["Monthly plan", "Topics", "Deadlines"],
+            },
+            {
+              label: "STORY",
+              names: ["Campaign ideas", "Themes", "Narratives"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "DISTRIBUTION",
+          items: [
+            {
+              label: "SOCIAL",
+              names: ["Instagram", "LinkedIn", "Short-form"],
+            },
+            {
+              label: "PUBLISHING",
+              names: ["Scheduling", "Posting", "Cross-posting"],
+            },
+          ],
+        },
+        {
+          title: "MEASUREMENT",
+          items: [
+            {
+              label: "REVIEW",
+              names: ["Engagement", "Reach", "Clicks"],
+            },
+            {
+              label: "OPTIMIZE",
+              names: ["Refinement", "Iteration", "Content QA"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

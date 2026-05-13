@@ -133,6 +133,64 @@ const googleAdsCampaignsPageData = {
     heading: "CREDITS",
     title: "Google Ads Team",
     subtitle: "Targeting, copy, conversion tracking, and optimization handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "RESEARCH",
+          items: [
+            {
+              label: "KEYWORDS",
+              names: ["Search terms", "Match types", "Negative lists"],
+            },
+            {
+              label: "AUDIENCE",
+              names: ["Segments", "Intent groups", "Remarketing"],
+            },
+          ],
+        },
+        {
+          title: "CAMPAIGNS",
+          items: [
+            {
+              label: "STRUCTURE",
+              names: ["Search", "Display", "Retargeting"],
+            },
+            {
+              label: "ADS",
+              names: ["Copy", "Extensions", "Creatives"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "OPTIMIZATION",
+          items: [
+            {
+              label: "BIDS",
+              names: ["Budget control", "CPA", "ROAS"],
+            },
+            {
+              label: "TESTING",
+              names: ["A/B tests", "Landing pages", "Ad variants"],
+            },
+          ],
+        },
+        {
+          title: "REPORTING",
+          items: [
+            {
+              label: "TRACKING",
+              names: ["Conversions", "Attribution", "Events"],
+            },
+            {
+              label: "INSIGHTS",
+              names: ["Weekly review", "Performance notes", "Next steps"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

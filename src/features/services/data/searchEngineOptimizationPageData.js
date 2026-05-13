@@ -133,6 +133,64 @@ const searchEngineOptimizationPageData = {
     heading: "CREDITS",
     title: "SEO Team",
     subtitle: "Audits, optimization, technical fixes, and reporting handled by Imazine Us.",
+    columns: [
+      [
+        {
+          title: "AUDIT",
+          items: [
+            {
+              label: "TECHNICAL",
+              names: ["Indexing", "Speed", "Structure"],
+            },
+            {
+              label: "CONTENT",
+              names: ["Headers", "Meta", "Internal links"],
+            },
+          ],
+        },
+        {
+          title: "CONTENT",
+          items: [
+            {
+              label: "INTENT",
+              names: ["Search goals", "Topics", "Priorities"],
+            },
+            {
+              label: "PAGES",
+              names: ["Landing pages", "Service pages", "Blog posts"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "GROWTH",
+          items: [
+            {
+              label: "LINKS",
+              names: ["Internal linking", "Authority", "Structure"],
+            },
+            {
+              label: "TRACKING",
+              names: ["Analytics", "Events", "Dashboards"],
+            },
+          ],
+        },
+        {
+          title: "REPORTING",
+          items: [
+            {
+              label: "REVIEW",
+              names: ["Traffic", "Rankings", "Conversions"],
+            },
+            {
+              label: "NEXT STEPS",
+              names: ["Iteration", "Tests", "Roadmap"],
+            },
+          ],
+        },
+      ],
+    ],
   },
 };
 

@@ -1,6 +1,7 @@
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceCreditsSection.module.css";
 
-const leftGroups = [
+const defaultLeftGroups = [
   {
     title: "STRATEGY",
     items: [
@@ -42,7 +43,7 @@ const leftGroups = [
   },
 ];
 
-const rightGroups = [
+const defaultRightGroups = [
   {
     title: "PERFORMANCE",
     items: [
@@ -97,23 +98,23 @@ export default function ServiceCreditsSection({
   heading = "CREDITS",
   title = "Imazine Us Service Team",
   subtitle = "Strategy, design, development, content, and growth execution handled by the Imazine Us team.",
+  columns = [defaultLeftGroups, defaultRightGroups],
 }) {
   return (
     <section className={styles.section} aria-label="Credits section">
-      <div className={styles.inner}>
+      <GoldenGlowEffect className={styles.inner}>
         <p className={styles.heading}>{heading}</p>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
 
         <div className={styles.grid}>
-          <div className={styles.column}>
-            {leftGroups.map((group) => renderGroup(group))}
-          </div>
-          <div className={styles.column}>
-            {rightGroups.map((group) => renderGroup(group))}
-          </div>
+          {columns.map((columnGroups, index) => (
+            <div className={styles.column} key={`credits-column-${index}`}>
+              {columnGroups.map((group) => renderGroup(group))}
+            </div>
+          ))}
         </div>
-      </div>
+      </GoldenGlowEffect>
     </section>
   );
 }

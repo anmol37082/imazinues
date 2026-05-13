@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
+import GoldenGlowEffect from "./GoldenGlowEffect";
 import styles from "./ServiceCreativeProcessSection.module.css";
 
 export default function ServiceCreativeProcessSection({
@@ -13,8 +14,6 @@ export default function ServiceCreativeProcessSection({
   alt = "Creative process video",
 }) {
   const sectionRef = useRef(null);
-  const frameRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <section ref={sectionRef} className={styles.section} aria-label="Creative process">
@@ -37,11 +36,11 @@ export default function ServiceCreativeProcessSection({
             </div>
           </div>
 
-          <div className={styles.copyColumn}>
+          <GoldenGlowEffect className={styles.copyColumn}>
             <p className={styles.eyebrow}>{eyebrow}</p>
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.description}>{description}</p>
-          </div>
+          </GoldenGlowEffect>
         </div>
       </div>
     </section>
