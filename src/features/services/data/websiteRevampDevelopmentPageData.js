@@ -4,19 +4,19 @@ const websiteRevampDevelopmentPageData = {
     breadcrumb: " / WEBSITE REVAMP & DEVELOPMENT",
     title: "WEBSITE REVAMP & DEVELOPMENT",
     description:
-      "We redesign and rebuild websites to feel modern, load fast, and guide users through a clearer path to action.",
+      "We redesign and rebuild websites so they feel modern, load faster, and guide visitors toward clear actions and real results.",
     serviceColumns: [
       {
-        label: "Focus",
+        label: "FOCUS",
         items: ["UX", "Performance", "Responsive design"],
       },
       {
-        label: "Build",
+        label: "BUILD",
         items: ["Landing pages", "Corporate sites", "Portfolio sites"],
       },
       {
-        label: "Outcome",
-        items: ["Better UX", "Stronger brand", "More inquiries"],
+        label: "OUTCOME",
+        items: ["Better UX", "Stronger brand presence", "More inquiries"],
       },
     ],
   },
@@ -56,23 +56,23 @@ const websiteRevampDevelopmentPageData = {
   },
   context: {
     label: "STRUCTURE",
-    title: "CLEANER FLOW FOR VISITORS AND SEARCH ENGINES",
+    title: "A website flow that guides users naturally",
     overview:
-      "We map the user journey, content structure, and page hierarchy before moving into UI and development.",
+      "A clear structure helps visitors understand where to go and what to do next.",
     details:
-      "That helps the new website feel easier to use while giving the brand a more professional digital presence.",
+      "Before design begins, we map the user journey, page hierarchy, and content structure. This ensures the website feels intuitive for visitors while also creating a cleaner structure that search engines can easily understand.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Website structure visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
     leftBottomAlt: "Website structure visual two",
   },
   concept: {
-    label: "UI/UX",
-    title: "DESIGN THAT BALANCES LOOK AND CLARITY",
+    label: "UI / UX",
+    title: "Design that looks beautiful and works effortlessly",
     overview:
-      "The website should feel polished, but it also needs to be simple enough for users to navigate without friction.",
+      "Great design is not just about visuals, it is about clarity and ease of use.",
     details:
-      "We design with that balance in mind, so the interface stays beautiful and easy to understand.",
+      "A website should feel visually refined while remaining simple to navigate. We balance aesthetics and usability so visitors can move through the site without friction.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Website UX visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const websiteRevampDevelopmentPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "DESIGN AND DEVELOPMENT MOVING TOGETHER",
+    title: "Where design thinking meets development",
     description:
-      "Wireframes, UI, and implementation stay connected so the final website feels coherent from the start.",
+      "Ideas move from wireframe to real interface through a structured creative process. Wireframes, UI design, and development move together throughout the process. This keeps the final website consistent, polished, and aligned with the original vision.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const websiteRevampDevelopmentPageData = {
   },
   makingOf: {
     eyebrow: "DEVELOPMENT",
-    title: "BUILT FOR SPEED, RESPONSIVENESS AND SCALE",
+    title: "Built for speed, stability, and future growth",
     description:
-      "The build phase focuses on clean implementation, responsive behavior, and code that can grow with the business.",
+      "A strong technical foundation ensures the website performs smoothly for years. Our development process focuses on clean builds, responsive layouts, and scalable structures. This ensures the website performs seamlessly across devices and can grow with the business.",
   },
   innovation: {
     eyebrow: "PERFORMANCE",
-    title: "FASTER PAGES WITH BETTER EXPERIENCE",
+    title: "Faster websites create better experiences",
     description:
-      "A fast site improves engagement, reduces bounce, and supports SEO while making the overall brand feel more premium.",
+      "Speed plays a major role in how users interact with a website. Fast-loading pages improve engagement, reduce bounce rates, and support SEO performance. A faster site also makes the brand feel more professional and trustworthy.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Performance visual",
   },
@@ -127,7 +127,7 @@ const websiteRevampDevelopmentPageData = {
   credits: {
     heading: "CREDITS",
     title: "Website Development Team",
-    subtitle: "UX, UI, development, testing, and launch support handled by Imazine Us.",
+    subtitle: "UX, UI, development, testing, and launch supported by ImazineUs.",
     columns: [
       [
         {
@@ -144,21 +144,6 @@ const websiteRevampDevelopmentPageData = {
           ],
         },
         {
-          title: "UI",
-          items: [
-            {
-              label: "COMPONENTS",
-              names: ["Buttons", "Forms", "Cards"],
-            },
-            {
-              label: "VISUALS",
-              names: ["Spacing", "Typography", "Color"],
-            },
-          ],
-        },
-      ],
-      [
-        {
           title: "BUILD",
           items: [
             {
@@ -168,6 +153,21 @@ const websiteRevampDevelopmentPageData = {
             {
               label: "TESTING",
               names: ["QA", "Bug fixes", "Cross-device checks"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "UI",
+          items: [
+            {
+              label: "COMPONENTS",
+              names: ["Buttons", "Forms", "Cards"],
+            },
+            {
+              label: "VISUALS",
+              names: ["Spacing", "Typography", "Color"],
             },
           ],
         },

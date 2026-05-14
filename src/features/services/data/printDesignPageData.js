@@ -4,19 +4,19 @@ const printDesignPageData = {
     breadcrumb: " / PRINT DESIGN",
     title: "PRINT DESIGN",
     description:
-      "We design brochures, flyers, posters, and print collateral that make the brand feel tangible and memorable.",
+      "We design brochures, flyers, posters, catalogues, and print collateral that turn brand ideas into physical experiences people can see, hold, and remember.",
     serviceColumns: [
       {
-        label: "Materials",
-        items: ["Brochures", "Flyers", "Posters"],
+        label: "MATERIALS",
+        items: ["Brochures", "Flyers", "Posters", "Catalogues", "Leaflets"],
       },
       {
-        label: "Use Case",
-        items: ["Events", "Retail", "Promotions"],
+        label: "USE CASE",
+        items: ["Events", "Retail", "Promotions", "Exhibitions"],
       },
       {
-        label: "Goal",
-        items: ["Attention", "Clarity", "Action"],
+        label: "GOAL",
+        items: ["Attention", "Clarity", "Action", "Brand Recall"],
       },
     ],
   },
@@ -56,11 +56,11 @@ const printDesignPageData = {
   },
   context: {
     label: "LAYOUT",
-    title: "PRINT PIECES BUILT FOR IMPACT AND READABILITY",
+    title: "Print designs that capture attention in seconds",
     overview:
-      "We structure print layouts so the message is easy to scan while still feeling premium and on-brand.",
+      "We structure layouts so the message stays clear, readable, and visually strong while still feeling premium and aligned with the brand identity.",
     details:
-      "The goal is to make the final asset useful in the real world, whether it is in-hand, on a counter, or on a wall.",
+      "That balance helps the printed piece work effectively, whether it is displayed at an event, placed in a store, or handed directly to customers.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Print layout visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const printDesignPageData = {
   },
   concept: {
     label: "MATERIAL",
-    title: "DESIGNS THAT HOLD UP IN PRINT",
+    title: "Designs that look as good on paper as on screen",
     overview:
-      "Colors, spacing, and hierarchy are checked carefully so the output looks sharp once produced.",
+      "Colours, spacing, typography, and visual hierarchy are refined carefully so the final print output stays crisp and professional.",
     details:
-      "That keeps the final printed piece clean, professional, and aligned with the brand identity.",
+      "We also consider paper types, finishes, and printing methods so the final product feels premium and durable.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Print material visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const printDesignPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "LAYOUTS BUILT FOR PRINT OUTPUT",
+    title: "Print designs built with production in mind",
     description:
-      "We prepare print assets with production in mind so the final result stays crisp and easy to distribute.",
+      "Every layout is created while considering printing requirements, formats, and real-world usability. This approach keeps the final design practical, polished, and ready for production without quality loss.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const printDesignPageData = {
   },
   makingOf: {
     eyebrow: "OUTPUT",
-    title: "READY FOR PRINT, DISTRIBUTION AND DISPLAY",
+    title: "Ready for print, distribution, and display",
     description:
-      "We prepare the files, refine the layout, and check the technical details so production stays smooth.",
+      "We prepare production-ready files, finalize layouts, and review technical specifications so the printing process stays smooth and efficient. The result is a print asset that looks sharp, professional, and effective in physical environments.",
   },
   innovation: {
     eyebrow: "VISUAL",
-    title: "PAPER CAN CARRY THE BRAND STORY TOO",
+    title: "When paper becomes part of the brand experience",
     description:
-      "Print materials extend the brand into physical spaces and give customers a more tactile experience.",
+      "Print materials extend the brand beyond screens into real-world touchpoints. From brochures and posters to event collateral, every design strengthens brand recall and builds a stronger connection with the audience.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Print visual",
   },
@@ -127,7 +127,8 @@ const printDesignPageData = {
   credits: {
     heading: "CREDITS",
     title: "Print Design Team",
-    subtitle: "Layout, production files, brand consistency, and final polish handled by Imazine Us.",
+    subtitle:
+      "Layout development, print preparation, brand consistency, and final production support are handled by Imazine Us.",
     columns: [
       [
         {
@@ -135,29 +136,14 @@ const printDesignPageData = {
           items: [
             {
               label: "PRINT",
-              names: ["Brochures", "Flyers", "Posters"],
+              names: ["Brochures", "Flyers", "Posters", "Catalogues"],
             },
             {
               label: "PACKAGING",
-              names: ["Labels", "Inserts", "Boxes"],
+              names: ["Labels", "Product inserts", "Boxes"],
             },
           ],
         },
-        {
-          title: "PREPRESS",
-          items: [
-            {
-              label: "FILES",
-              names: ["Bleed", "Crop marks", "Export setup"],
-            },
-            {
-              label: "COLOR",
-              names: ["Proofs", "CMYK", "Spot checks"],
-            },
-          ],
-        },
-      ],
-      [
         {
           title: "PRODUCTION",
           items: [
@@ -167,7 +153,22 @@ const printDesignPageData = {
             },
             {
               label: "DELIVERY",
-              names: ["Press handoff", "Timeline", "QA"],
+              names: ["Press handoff", "Timeline coordination", "Quality check"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "PREPRESS",
+          items: [
+            {
+              label: "FILES",
+              names: ["Bleed", "Crop marks", "Export setup"],
+            },
+            {
+              label: "COLOR",
+              names: ["Proofing", "CMYK optimization", "Spot checks"],
             },
           ],
         },
@@ -180,7 +181,7 @@ const printDesignPageData = {
             },
             {
               label: "POLISH",
-              names: ["Retouching", "Cleanup", "Approval"],
+              names: ["Retouching", "Cleanup", "Final approval"],
             },
           ],
         },

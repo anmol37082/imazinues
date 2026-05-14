@@ -4,18 +4,18 @@ const brandGuidelinesPageData = {
     breadcrumb: " / BRAND GUIDELINES",
     title: "BRAND GUIDELINES",
     description:
-      "We create clear brand rules for logos, colors, typography, and tone so every team member keeps the identity consistent.",
+      "We create clear brand rules for logos, colors, typography, and tone so every team member keeps the identity consistent across every platform and campaign.",
     serviceColumns: [
       {
-        label: "Elements",
+        label: "ELEMENTS",
         items: ["Logo", "Colors", "Typography"],
       },
       {
-        label: "Usage",
+        label: "USAGE",
         items: ["Digital", "Print", "Marketing"],
       },
       {
-        label: "Benefit",
+        label: "BENEFIT",
         items: ["Consistency", "Recognition", "Trust"],
       },
     ],
@@ -56,11 +56,11 @@ const brandGuidelinesPageData = {
   },
   context: {
     label: "SYSTEM",
-    title: "A CLEAR RULEBOOK FOR EVERY BRAND TOUCHPOINT",
+    title: "The foundation that keeps your brand consistent",
     overview:
-      "We define how the brand behaves visually and verbally so every asset feels consistent across teams.",
+      "A strong brand is not just about design, it is about clarity and structure.",
     details:
-      "That makes it easier to scale content, keep quality high, and protect the identity as the brand grows.",
+      "We define how the brand behaves visually and verbally so every asset feels aligned across teams. This system helps teams create faster while protecting the identity as the brand grows.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Brand system visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const brandGuidelinesPageData = {
   },
   concept: {
     label: "IDENTITY",
-    title: "BRAND RULES THAT ARE EASY TO USE",
+    title: "Clear rules that turn design into a recognizable brand",
     overview:
-      "The guide should feel practical, not overcomplicated, so the team actually uses it.",
+      "Consistency builds recognition, and recognition builds trust.",
     details:
-      "We keep it clear and organized with examples that make implementation straightforward.",
+      "The guide is designed to stay simple, practical, and easy to follow. Clear examples and structured layouts make implementation faster for every team member.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Brand identity visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const brandGuidelinesPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "GUIDELINES DESIGNED FOR REAL USAGE",
+    title: "From brand thinking to real-world application",
     description:
-      "We turn the brand system into something teams can actually apply across social, web, and print.",
+      "A brand becomes powerful when its rules are easy to apply everywhere. We transform the brand strategy into visual systems that teams can use daily. This makes it easier to maintain consistency across social media, websites, and marketing assets.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const brandGuidelinesPageData = {
   },
   makingOf: {
     eyebrow: "GUIDE",
-    title: "BUILT TO KEEP EVERYONE ALIGNED",
+    title: "One brand guide for every design decision",
     description:
-      "From internal teams to external partners, the same guidelines help keep design and messaging consistent everywhere.",
+      "A clear reference system helps teams stay aligned even as the brand scales. From internal teams to external partners, the same guidelines guide every asset. This ensures every visual and message reflects the same brand identity.",
   },
   innovation: {
     eyebrow: "CONSISTENCY",
-    title: "A BRAND THAT FEELS THE SAME ANYWHERE",
+    title: "When every touchpoint looks and feels like one brand",
     description:
-      "The system makes social, print, packaging, and website output feel like part of one brand, not separate pieces.",
+      "Consistency is what turns design into identity. This system keeps social media, packaging, websites, and marketing materials visually connected. The result is a brand that feels unified wherever people experience it.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Brand consistency visual",
   },
@@ -127,7 +127,7 @@ const brandGuidelinesPageData = {
   credits: {
     heading: "CREDITS",
     title: "Brand Guidelines Team",
-    subtitle: "Identity systems, usage rules, and rollout support handled by Imazine Us.",
+    subtitle: "Identity systems, brand frameworks, and rollout support handled by Imazine Us.",
     columns: [
       [
         {
@@ -144,21 +144,6 @@ const brandGuidelinesPageData = {
           ],
         },
         {
-          title: "SYSTEM",
-          items: [
-            {
-              label: "COLOR",
-              names: ["Core palette", "Accent tones", "Contrast rules"],
-            },
-            {
-              label: "LAYOUT",
-              names: ["Grid rules", "Spacing", "Templates"],
-            },
-          ],
-        },
-      ],
-      [
-        {
           title: "ROLLOUT",
           items: [
             {
@@ -168,6 +153,21 @@ const brandGuidelinesPageData = {
             {
               label: "HANDOFF",
               names: ["Team training", "File delivery", "Usage notes"],
+            },
+          ],
+        },
+      ],
+      [
+        {
+          title: "SYSTEM",
+          items: [
+            {
+              label: "COLOR",
+              names: ["Core palette", "Accent tones", "Contrast rules"],
+            },
+            {
+              label: "LAYOUT",
+              names: ["Grid rules", "Spacing", "Templates"],
             },
           ],
         },

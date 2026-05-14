@@ -4,18 +4,18 @@ const productPhotographyVideographyPageData = {
     breadcrumb: " / PRODUCT PHOTOGRAPHY & VIDEOGRAPHY",
     title: "PRODUCT PHOTOGRAPHY & VIDEOGRAPHY",
     description:
-      "We create product visuals and motion assets that show detail, quality, and brand personality in a premium way.",
+      "We create premium product visuals and motion content that highlight detail, quality, and brand personality in a way that attracts attention and builds trust.",
     serviceColumns: [
       {
-        label: "Outputs",
+        label: "OUTPUTS",
         items: ["Product photos", "Short videos", "Model content"],
       },
       {
-        label: "Use",
+        label: "USE",
         items: ["E-commerce", "Social media", "Ads"],
       },
       {
-        label: "Value",
+        label: "VALUE",
         items: ["Trust", "Attention", "Sales"],
       },
     ],
@@ -56,11 +56,11 @@ const productPhotographyVideographyPageData = {
   },
   context: {
     label: "SHOOT",
-    title: "VISUALS THAT SHOW THE PRODUCT AT ITS BEST",
+    title: "Where Lighting, Angles, and Story Come Together",
     overview:
-      "We plan the shoot around the product story, lighting, framing, and final use case before we start capturing.",
+      "Every shoot is planned around the product story, lighting setup, framing, and final platform use before the camera starts rolling.",
     details:
-      "That makes the content more useful across e-commerce, social media, and paid campaigns.",
+      "This preparation helps create content that works perfectly across e-commerce listings, social media feeds, and ad campaigns.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Product shoot visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const productPhotographyVideographyPageData = {
   },
   concept: {
     label: "DETAIL",
-    title: "CINEMATIC CONTENT THAT STILL FEELS CLEAR",
+    title: "Beautiful visuals with clear product story",
     overview:
-      "The visuals need to look beautiful, but they also need to explain the product quickly and honestly.",
+      "Great product visuals should feel cinematic but still explain the product instantly.",
     details:
-      "We keep that balance so the content feels premium without losing clarity or conversion value.",
+      "We balance aesthetic appeal with clarity so customers can quickly understand quality, texture, and value.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Product detail visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const productPhotographyVideographyPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "SHOOTING VISUALS THAT SELL THE PRODUCT",
+    title: "Designed to Capture Attention and Drive Sales",
     description:
-      "The shoot planning and post-production are tied together so the final output works in ads and product pages.",
+      "From concept planning to post-production, every step is aligned with how the content will perform in ads, product pages, and social media. This approach keeps the visuals premium while maintaining strong conversion value.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const productPhotographyVideographyPageData = {
   },
   makingOf: {
     eyebrow: "POST",
-    title: "EDITED FOR ADS, LISTINGS AND SOCIAL USE",
+    title: "Polished Edits That Make Every Frame Count",
     description:
-      "The final content is prepared in useful formats so the brand can deploy it across multiple platforms right away.",
+      "After the shoot, visuals are refined through color grading, retouching, and motion editing so they feel polished and brand-ready. The final assets are exported in formats optimized for websites, marketplaces, ads, and social platforms.",
   },
   innovation: {
     eyebrow: "STORYTELLING",
-    title: "SHOW MORE THAN JUST THE PRODUCT",
+    title: "Because Every Product Has a Story to Tell",
     description:
-      "Strong product visuals communicate quality, context, and lifestyle in one frame, which helps the brand connect faster.",
+      "Strong product visuals communicate lifestyle, context, and brand emotion in a single frame. This helps customers connect faster and imagine the product in their everyday life.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Product storytelling visual",
   },
@@ -127,7 +127,8 @@ const productPhotographyVideographyPageData = {
   credits: {
     heading: "CREDITS",
     title: "Photo & Video Team",
-    subtitle: "Shoot planning, lighting, editing, and deliverables handled by Imazine Us.",
+    subtitle:
+      "Shoot planning, lighting setup, creative direction, editing, and final deliverables handled by Imazine Us.",
     columns: [
       [
         {
@@ -152,7 +153,7 @@ const productPhotographyVideographyPageData = {
             },
             {
               label: "VIDEO",
-              names: ["Motion shots", "Cutaways", "Loops"],
+              names: ["Motion shots", "Cutaways", "Loop videos"],
             },
           ],
         },
@@ -163,7 +164,7 @@ const productPhotographyVideographyPageData = {
           items: [
             {
               label: "EDITING",
-              names: ["Color", "Retouch", "Trim"],
+              names: ["Color grading", "Retouching", "Motion trim"],
             },
             {
               label: "EXPORTS",
@@ -176,11 +177,11 @@ const productPhotographyVideographyPageData = {
           items: [
             {
               label: "USE CASES",
-              names: ["E-commerce", "Ads", "Organic content"],
+              names: ["E-commerce", "Advertisements", "Organic content"],
             },
             {
               label: "FINAL SET",
-              names: ["Selected picks", "Approved edits", "Delivery pack"],
+              names: ["Selected picks", "Approved edits", "Delivery package"],
             },
           ],
         },
