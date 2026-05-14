@@ -1306,6 +1306,29 @@
     margin: 0;
   }
 
+  .navbarMobileMenuOpen .logo {
+    width: min(290px, calc(100vw - 48px));
+    max-width: calc(100vw - 48px);
+    flex-basis: min(290px, calc(100vw - 48px));
+    height: 78px;
+    margin-left: 16px;
+  }
+
+  .navbarMobileMenuOpen .logoImage {
+    height: 50px;
+    transform: scale(1) translateX(4px);
+  }
+
+  .navbarMobileMenuOpen .logoImageAlt {
+    height: 90px;
+    transform: translateY(-50%) translateX(4px);
+  }
+
+  .navbarBlurActive.navbarMobileMenuOpen .logoImageAlt {
+    height: 90px;
+    transform: translateY(-50%) translateX(4px) scale(1.32);
+  }
+
   .navbarCompact {
     top: 0;
     margin: 0;
@@ -1622,29 +1645,29 @@
 
   .logo {
     justify-self: start;
-    width: min(176px, calc(100vw - 76px));
-    max-width: calc(100vw - 76px);
+    width: min(210px, calc(100vw - 70px));
+    max-width: calc(100vw - 70px);
     min-width: 0;
-    flex-basis: min(176px, calc(100vw - 76px));
-    height: 34px;
+    flex-basis: min(210px, calc(100vw - 70px));
+    height: 48px;
     margin-left: 32px;
     overflow: visible;
   }
 
   .logoImage {
-    height: 20px;
-    transform: scale(0.8) translateX(4px);
+    height: 28px;
+    transform: scale(0.88) translateX(4px);
     max-width: 100%;
   }
 
   .logoImageAlt {
-    height: 42px;
+    height: 58px;
     transform: translateY(-50%) translateX(4px);
   }
 
   .navbarBlurActive .logoImageAlt {
-    height: 42px;
-    transform: translateY(-50%) translateX(4px) scale(1.18);
+    height: 58px;
+    transform: translateY(-50%) translateX(4px) scale(1.2);
   }
 
   .right {
