@@ -228,6 +228,12 @@ function Header() {
     closeDesktopDropdowns();
   };
 
+  const closeMobileDrawer = () => {
+    setIsMobileMenuOpen(false);
+    setActiveMobileSection(null);
+    closeDesktopDropdowns();
+  };
+
   return (
     <nav
       className={`${styles.navbar}${
@@ -552,9 +558,14 @@ function Header() {
               }`}
             >
               <div className={styles.mobileServicesPanel}>
-                {visibleServices.map((service) =>
+                {allServices.map((service) =>
                   service.href ? (
-                    <Link className={styles.mobileServiceItem} href={service.href} key={service.id}>
+                    <Link
+                      className={styles.mobileServiceItem}
+                      href={service.href}
+                      key={service.id}
+                      onClick={closeMobileDrawer}
+                    >
                       <strong>{service.title}</strong>
                       <span>{service.description}</span>
                     </Link>

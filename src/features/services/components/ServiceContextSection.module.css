@@ -115,7 +115,7 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 48px;
-    transform: translateX(clamp(14px, 2vw, 24px));
+    transform: none;
   }
 
   .visuals {

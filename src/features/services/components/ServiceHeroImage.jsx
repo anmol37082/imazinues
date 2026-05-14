@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./ServiceHeroImage.module.css";
 
@@ -9,98 +9,77 @@ export default function ServiceHeroImage({
   alt = "Services hero visual",
 }) {
   const frameRef = useRef(null);
-  const sectionRef = useRef(null);
-  const currentShiftRef = useRef(0);
-  const targetShiftRef = useRef(0);
-  const currentScaleRef = useRef(1.18);
-  const targetScaleRef = useRef(1.18);
-  const rafRef = useRef(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const sectionNode = sectionRef.current;
-    if (!sectionNode) return undefined;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.12,
-      }
-    );
-
-    observer.observe(sectionNode);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const mediaRef = useRef(null);
 
   useEffect(() => {
     const frameNode = frameRef.current;
-    const sectionNode = sectionRef.current;
+    const mediaNode = mediaRef.current;
 
-    if (!frameNode || !sectionNode) return undefined;
+    if (!frameNode || !mediaNode) return undefined;
 
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      frameNode.style.transform = "none";
-      return undefined;
-    }
+    const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+    let rafId = 0;
+    let currentShift = 0;
+    let targetShift = 0;
+    let currentScale = 1.18;
+    let targetScale = 1.18;
 
     const updateTarget = () => {
-      const rect = sectionNode.getBoundingClientRect();
+      if (isMobile()) {
+        targetShift = 0;
+        targetScale = 1;
+        return;
+      }
+
+      const rect = frameNode.getBoundingClientRect();
       const viewportHeight = window.innerHeight || 0;
-      const sectionMidpoint = rect.top + rect.height / 2;
       const viewportMidpoint = viewportHeight / 2;
-      const distanceFromCenter = sectionMidpoint - viewportMidpoint;
-      const maxShift = 240;
+      const frameMidpoint = rect.top + rect.height / 2;
+      const distanceFromCenter = frameMidpoint - viewportMidpoint;
       const scrollProgress = Math.max(
         0,
         Math.min(1, (viewportHeight - rect.top) / (viewportHeight + rect.height * 0.25))
       );
 
-      targetShiftRef.current = Math.max(
-        -maxShift,
-        Math.min(maxShift, -distanceFromCenter * 0.14)
-      );
-      targetScaleRef.current = 1.18 - scrollProgress * 0.18;
+      targetShift = Math.max(-220, Math.min(220, -distanceFromCenter * 0.14));
+      targetScale = 1.18 - scrollProgress * 0.18;
     };
 
     const tick = () => {
-      const nextShift =
-        currentShiftRef.current + (targetShiftRef.current - currentShiftRef.current) * 0.12;
-      currentShiftRef.current = nextShift;
-      const nextScale =
-        currentScaleRef.current + (targetScaleRef.current - currentScaleRef.current) * 0.12;
-      currentScaleRef.current = nextScale;
+      const mobile = isMobile();
 
-      frameNode.style.transform = `translate3d(0, ${nextShift}px, 0) scale(${nextScale})`;
-      rafRef.current = window.requestAnimationFrame(tick);
+      if (mobile) {
+        frameNode.style.transform = "none";
+        mediaNode.style.transform = "none";
+        rafId = window.requestAnimationFrame(tick);
+        return;
+      }
+
+      currentShift += (targetShift - currentShift) * 0.12;
+      currentScale += (targetScale - currentScale) * 0.12;
+
+      frameNode.style.transform = "translate3d(0, 0, 0)";
+      mediaNode.style.transform = `translate3d(0, ${currentShift}px, 0) scale(${currentScale})`;
+      rafId = window.requestAnimationFrame(tick);
     };
 
-    const onScroll = () => {
-      updateTarget();
-    };
-
+    const onScroll = () => updateTarget();
     const onResize = () => {
       updateTarget();
+      if (isMobile()) {
+        frameNode.style.transform = "none";
+        mediaNode.style.transform = "none";
+      }
     };
 
     updateTarget();
-    rafRef.current = window.requestAnimationFrame(tick);
+    rafId = window.requestAnimationFrame(tick);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
 
     return () => {
-      if (rafRef.current) {
-        window.cancelAnimationFrame(rafRef.current);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
       }
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
@@ -108,20 +87,18 @@ export default function ServiceHeroImage({
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`${styles.section} ${isVisible ? styles.visible : ""}`}
-      aria-label="Services hero image"
-    >
+    <section className={styles.section} aria-label="Services hero image">
       <div ref={frameRef} className={styles.frame}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          priority
-          sizes="(max-width: 768px) calc(100vw - 24px), (max-width: 1080px) calc(100vw - 32px), calc(100vw - 48px)"
-          className={styles.image}
-        />
+        <div ref={mediaRef} className={styles.media}>
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            priority
+            sizes="(max-width: 768px) calc(100vw - 24px), (max-width: 1080px) calc(100vw - 32px), calc(100vw - 48px)"
+            className={styles.image}
+          />
+        </div>
       </div>
     </section>
   );

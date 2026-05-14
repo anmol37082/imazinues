@@ -3,16 +3,6 @@
   margin: 0;
   padding: 0;
   overflow: clip;
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .frame {
@@ -25,12 +15,15 @@
   background: #fbf8f2;
 }
 
+.media {
+  position: absolute;
+  inset: 0;
+  transform: none;
+  transform-origin: center center;
+}
+
 .image {
   object-fit: cover;
-  transform: translate3d(0, 0, 0) scale(1.18);
-  transform-origin: center center;
-  transition: transform 0.12s linear;
-  will-change: transform;
 }
 
 @media (max-width: 768px) {
@@ -40,15 +33,9 @@
 
   .frame {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10.5;
-    min-height: 0;
+    height: clamp(520px, 68vh, 780px);
+    min-height: 520px;
     transform: none;
-  }
-
-  .image {
-    transform: none;
-    transition: none;
   }
 }
 
