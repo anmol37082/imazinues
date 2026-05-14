@@ -4,19 +4,19 @@ const contentCreationPageData = {
     breadcrumb: " / CONTENT CREATION",
     title: "CONTENT CREATION",
     description:
-      "We create blogs, visuals, videos, and social content that help brands communicate clearly and stay consistent across channels.",
+      "We create blogs, visuals, videos, and social media content that help brands communicate clearly and stay consistent across platforms. Every piece of content is designed to support the brand voice and connect with the right audience.",
     serviceColumns: [
       {
-        label: "Formats",
+        label: "FORMATS",
         items: ["Blogs", "Reels", "Carousels"],
       },
       {
-        label: "Purpose",
+        label: "PURPOSE",
         items: ["Inform", "Engage", "Convert"],
       },
       {
-        label: "Output",
-        items: ["Monthly content", "Campaign assets", "Brand storytelling"],
+        label: "OUTPUT",
+        items: ["Monthly Content", "Campaign Assets", "Brand Storytelling"],
       },
     ],
   },
@@ -56,11 +56,11 @@ const contentCreationPageData = {
   },
   context: {
     label: "PLANNING",
-    title: "CONTENT BUILT AROUND THE BRAND VOICE",
+    title: "Good content starts with clear thinking.",
     overview:
-      "We define pillars, tone, and visual direction first so the content stays recognizable across all formats.",
+      "Content is built around the brand voice. We define pillars, tone, and visual direction first so every piece of content stays recognizable and aligned with the brand identity.",
     details:
-      "That planning makes publishing easier and keeps the output aligned with brand goals instead of feeling random or disconnected.",
+      "This planning makes publishing easier and keeps the output aligned with brand goals instead of feeling random or disconnected.",
     leftTopImage: "/modernlifestyle/banner1.webp",
     leftTopAlt: "Content planning visual one",
     leftBottomImage: "/modernlifestyle/banner2.webp",
@@ -68,11 +68,11 @@ const contentCreationPageData = {
   },
   concept: {
     label: "STORY",
-    title: "ASSETS THAT FEEL COHESIVE EVERYWHERE",
+    title: "Because people remember stories, not just posts.",
     overview:
-      "We shape each asset so it works inside the wider campaign, not as a one-off post.",
+      "We create assets that feel cohesive everywhere. Each piece of content is designed to fit within a wider campaign rather than existing as a one-off post.",
     details:
-      "That keeps the visuals strong, the messaging clear, and the overall brand presence more memorable.",
+      "This approach keeps the visuals strong, messaging clear, and the overall brand presence more memorable.",
     topImage: "/modernlifestyle/banner3.webp",
     topAlt: "Content story visual one",
     bottomImage: "/modernlifestyle/mainbanner1.webp",
@@ -80,9 +80,9 @@ const contentCreationPageData = {
   },
   creativeProcess: {
     eyebrow: "CREATIVE PROCESS",
-    title: "CONTENT BUILT TO WORK ACROSS FORMATS",
+    title: "One strong idea. Multiple creative outputs.",
     description:
-      "We edit the same idea for multiple outputs so the brand can keep publishing without starting from zero.",
+      "Content is built to work across formats. A single idea is adapted and edited into multiple formats so the brand can continue publishing without constantly starting from scratch.",
     src: "/footervideo/footervideo.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
@@ -90,15 +90,15 @@ const contentCreationPageData = {
   },
   makingOf: {
     eyebrow: "PRODUCTION",
-    title: "FROM IDEAS TO READY-TO-POST ASSETS",
+    title: "From raw ideas to ready-to-publish content.",
     description:
-      "We organize production, edit the outputs, and package them for platform-specific use so the team can post with less friction.",
+      "From ideas to ready-to-post assets. We organize production, edit the outputs, and package everything according to platform requirements so publishing becomes simple and efficient.",
   },
   innovation: {
     eyebrow: "MULTI-FORMAT",
-    title: "ONE IDEA, MANY CONTENT VERSIONS",
+    title: "One idea. Many ways to tell it.",
     description:
-      "A single concept can become a reel, a graphic carousel, a blog, and a story sequence when it is planned properly.",
+      "One idea can turn into many content versions. A well-planned concept can become a reel, a carousel, a blog, and a story sequence while maintaining the same core message.",
     src: "/modernlifestyle/mainbanner1.webp",
     alt: "Multi-format content visual",
   },
@@ -127,7 +127,8 @@ const contentCreationPageData = {
   credits: {
     heading: "CREDITS",
     title: "Content Creation Team",
-    subtitle: "Ideas, copy, visuals, editing, and publishing handled by Imazine Us.",
+    subtitle:
+      "Behind every great brand story is a strong creative team. Ideas, copy, visuals, editing, and publishing handled by ImazineUs.",
     columns: [
       [
         {
@@ -139,7 +140,7 @@ const contentCreationPageData = {
             },
             {
               label: "VOICE",
-              names: ["Tone guide", "Captions", "Hooks"],
+              names: ["Tone Guide", "Captions", "Hooks"],
             },
           ],
         },
@@ -148,11 +149,11 @@ const contentCreationPageData = {
           items: [
             {
               label: "CALENDAR",
-              names: ["Monthly plan", "Topics", "Deadlines"],
+              names: ["Monthly Plan", "Topics", "Deadlines"],
             },
             {
               label: "STORY",
-              names: ["Campaign ideas", "Themes", "Narratives"],
+              names: ["Campaign Ideas", "Themes", "Narratives"],
             },
           ],
         },
@@ -163,11 +164,11 @@ const contentCreationPageData = {
           items: [
             {
               label: "SOCIAL",
-              names: ["Instagram", "LinkedIn", "Short-form"],
+              names: ["Instagram", "LinkedIn", "Short-Form Content"],
             },
             {
               label: "PUBLISHING",
-              names: ["Scheduling", "Posting", "Cross-posting"],
+              names: ["Scheduling", "Posting", "Cross-Posting"],
             },
           ],
         },

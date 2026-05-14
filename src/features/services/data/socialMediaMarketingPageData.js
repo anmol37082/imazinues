@@ -25,7 +25,7 @@ const socialMediaMarketingPageData = {
     ],
   },
   heroImage: {
-    src: "/services/ICON-CARDS-1.webp",
+    src: "/services/smm/example.png",
     alt: "Social media marketing service visual",
   },
   video: {
@@ -35,7 +35,7 @@ const socialMediaMarketingPageData = {
     alt: "Social media marketing showcase video",
   },
   scrollVideo: {
-    src: "/ceativecontent/GIFanimation2.webm",
+    src: "/services/smm/socialmediavideo1.mp4",
     fallbackSrc: "/ceativecontent/GIFanimation2.mp4",
     poster: "/creativeagency/advideo.webp",
     alt: "Social media marketing scroll video",
@@ -64,9 +64,9 @@ const socialMediaMarketingPageData = {
     overview: "Built for consistency, designed for growth",
     details:
       "We define your brand voice, target audience, and content pillars so every post serves a purpose, whether it's awareness, engagement, or sales. From content planning to performance tracking, everything is aligned with long-term brand growth.",
-    leftTopImage: "/modernlifestyle/banner1.webp",
+    leftTopImage: "/services/smm/stetrgy1.png",
     leftTopAlt: "Social media strategy visual one",
-    leftBottomImage: "/modernlifestyle/banner2.webp",
+    leftBottomImage: "/services/smm/stetrgy3.png",
     leftBottomAlt: "Social media strategy visual two",
   },
   concept: {
@@ -85,7 +85,7 @@ const socialMediaMarketingPageData = {
     title: "Ideas That Move, Visuals That Speak",
     description:
       "Our process blends modern design, short-form video storytelling, trend-driven editing, and AI-assisted visuals. The result is content that feels fresh, dynamic, and highly shareable across social platforms. Every idea is crafted to make your brand stand out.",
-    src: "/footervideo/footervideo.mp4",
+    src: "/services/smm/creaativeprocess.mp4",
     fallbackSrc: "/footervideo/footervideo1.mp4",
     poster: "/creativeagency/advideo.webp",
     alt: "Social media marketing creative process video",

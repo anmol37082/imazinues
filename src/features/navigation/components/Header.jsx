@@ -319,7 +319,11 @@ function Header() {
                       <h4>{item.title}</h4>
                       <p className={styles.cardTag}>{item.category}</p>
                       {item.href ? (
-                        <Link className={styles.seeBtn} href={item.href}>
+                        <Link
+                          className={styles.seeBtn}
+                          href={item.href}
+                          onClick={closeDesktopDropdowns}
+                        >
                           {renderAnimatedLabel("SEE WORK")}
                           <svg
                             aria-hidden="true"
@@ -512,7 +516,12 @@ function Header() {
               <div className={styles.mobileCasesPanel}>
                 {casesData.map((item) =>
                   item.href ? (
-                    <Link className={styles.mobileCaseItem} href={item.href} key={item.id}>
+                    <Link
+                      className={styles.mobileCaseItem}
+                      href={item.href}
+                      key={item.id}
+                      onClick={closeMobileDrawer}
+                    >
                       <div className={styles.mobileCaseThumb}>
                         <Image src={item.image} alt={item.title} fill sizes="100vw" />
                       </div>
