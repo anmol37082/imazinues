@@ -3,8 +3,8 @@ import Footer from "@/features/navigation/components/Footer";
 import "./globals.css";
 
 export const metadata = {
-  title: "Best Digital Marketing Institute In Chandigarh | Panchkula | Mohali",
-  description: "Looking for digital marketing institute nearby? Join Imazine Us Academy - the best digital marketing institute in Chandigarh, Panchkula and Mohali today",
+  title: "Best advertising Agency In Chandigarh | Panchkula | Mohali",
+  description: "We are a leading advertising agency in Chandigarh,zirkpur, Panchkula, and Mohali, offering innovative marketing solutions to help businesses grow and succeed. Our team of experts specializes in creating impactful campaigns that drive results. Contact us today to elevate your brand and reach your target audience effectively.",
 };
 
 export default function RootLayout({ children }) {
