@@ -1,5 +1,5 @@
-import ContactTopSection from "@/features/contact/components/ContactTopSection";
-import ContactFaqSection from "@/features/contact/components/ContactFaqSection";
+import ContactHero from "@/features/contact/components/ContactHero";
+import ContactInfo from "@/features/contact/components/ContactInfo";
 
 export const metadata = {
   title: "Contact Us | Imazine Us",
@@ -9,8 +9,8 @@ export const metadata = {
 export default function ContactUsPage() {
   return (
     <>
-      <ContactTopSection />
-      <ContactFaqSection />
+      <ContactHero />
+      <ContactInfo />
     </>
   );
 }

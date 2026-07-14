@@ -1,0 +1,65 @@
+/* BlogAuthor.module.css */
+.authorSection {
+  padding: 30px 24px 30px 0px; 
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px;
+  background: #f8fafc;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.imageWrapper {
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0b6bcb;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.date {
+  font-family: inherit;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+}

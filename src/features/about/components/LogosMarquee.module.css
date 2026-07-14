@@ -1,0 +1,71 @@
+/* ===== LOGOS MARQUEE SECTION ===== */
+.logosSection {
+  text-align: center;
+  padding: 40px 48px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.logosSection p {
+  font-size: clamp(1.18rem, 1.45vw, 1.52rem);
+  color: #888888;
+  margin-bottom: 28px;
+  font-weight: 500;
+  font-family: Actief Grotesque, Arial, Helvetica, sans-serif;
+}
+
+.trackWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logosTrack {
+  display: flex;
+  gap: 80px;
+  animation: scrollLogos 20s linear infinite;
+  width: max-content;
+}
+
+.logosTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logoItem {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #888888;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logoItem:hover {
+  opacity: 1;
+  color: #111111;
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .logosSection {
+    padding: 32px 20px;
+  }
+
+  .logosTrack {
+    gap: 48px;
+  }
+
+  .logoItem {
+    font-size: 1.1rem;
+  }
+}

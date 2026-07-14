@@ -124,19 +124,18 @@
 }
 
 .imageWrap {
-  width: 70%;
+  width: 40%;
   margin: 56px auto 0;
-  transition: transform 0.12s linear;
-  transform-origin: center top;
-  will-change: transform;
+  will-change: width;
   max-width: 100%;
 }
+
 
 .image {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: clamp(260px, 42vw, 560px);
+  height: clamp(260px, 45vw, 600px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,9 +214,12 @@
   }
 
   .imageWrap {
-    transform: none !important;
+    width: 70% !important;
     transition: none;
+    /* prevent any scroll scaling from distorting the image */
+    will-change: auto;
   }
+
 
   .title {
     max-width: 100%;

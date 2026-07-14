@@ -1,0 +1,31 @@
+/* ===== FULL SCREEN BANNER ===== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.bannerImage {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .banner {
+    height: 60vh;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 50vh;
+    min-height: 300px;
+  }
+}

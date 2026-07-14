@@ -1,0 +1,67 @@
+.relatedBlogs {
+  padding: 80px 20px;
+  background: #f8fafc;
+  font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading span {
+  font-family: inherit;
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #0b6bcb;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  font-family: inherit;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.heading p {
+  font-family: inherit;
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 10px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .relatedBlogs {
+    padding: 60px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading p {
+    font-size: 15px;
+  }
+}

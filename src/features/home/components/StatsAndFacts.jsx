@@ -65,8 +65,10 @@ function StatsAndFacts() {
   const imageWrapRef = useRef(null);
   const imageFrameRef = useRef(null);
   const wasCountZoneVisibleRef = useRef(false);
-  const [imageScale, setImageScale] = useState(1);
+  const [imageWidth, setImageWidth] = useState(40);
+
   const [isVisible, setIsVisible] = useState(false);
+
   const [animatedValues, setAnimatedValues] = useState(() =>
     parsedStats.map(() => 0)
   );
@@ -107,66 +109,66 @@ function StatsAndFacts() {
     };
   }, []);
 
+  // --- Smooth scroll-linked image width (lerp-based rAF loop) ---
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 769px)");
 
-    const applyImageScale = () => {
-      const imageWrap = imageWrapRef.current;
-      if (!imageWrap) return;
+    // current + target are tracked outside React state so the rAF loop
+    // can read/write every frame without extra re-renders per frame.
+    const currentWidthRef = { current: 40 };
+    const targetWidthRef = { current: 40 };
+    const LERP_FACTOR = 0.12; // lower = smoother/slower catch-up, higher = snappier
 
-      if (!mediaQuery.matches) {
-        setImageScale(1);
-        return;
-      }
+    const computeTargetWidth = () => {
+      const node = sectionRef.current;
+      if (!node || !mediaQuery.matches) return 40;
 
-      const rect = imageWrap.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const start = viewportHeight * 1.12;
-      const end = -viewportHeight * 0.55;
-      const rawProgress = (start - rect.top) / (start - end);
-      const progress = Math.min(1, Math.max(0, rawProgress));
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const rect = node.getBoundingClientRect();
+      const sectionHeight = node.offsetHeight;
+      const windowHeight = window.innerHeight;
 
-      setImageScale(1 + easedProgress * 0.4285714286);
+      const scrolledInSection = -rect.top + windowHeight * 0.3;
+      const totalScrollable = sectionHeight - windowHeight * 0.5;
+      const progress = Math.max(0, Math.min(1, scrolledInSection / totalScrollable));
+
+      return 40 + progress * 60;
     };
 
-    const requestUpdateImageWidth = () => {
-      if (!mediaQuery.matches) {
-        setImageScale(1);
-        return;
+    const tick = () => {
+      targetWidthRef.current = computeTargetWidth();
+
+      const diff = targetWidthRef.current - currentWidthRef.current;
+
+      // snap when close enough so it doesn't animate forever on a micro-tail
+      if (Math.abs(diff) < 0.05) {
+        currentWidthRef.current = targetWidthRef.current;
+      } else {
+        currentWidthRef.current += diff * LERP_FACTOR;
       }
 
-      if (imageFrameRef.current) {
-        window.cancelAnimationFrame(imageFrameRef.current);
-      }
-
-      imageFrameRef.current = window.requestAnimationFrame(() => {
-        applyImageScale();
-        imageFrameRef.current = null;
-      });
+      setImageWidth(currentWidthRef.current);
+      imageFrameRef.current = window.requestAnimationFrame(tick);
     };
-
-    requestUpdateImageWidth();
 
     const handleMediaChange = () => {
-      if (imageFrameRef.current) {
-        window.cancelAnimationFrame(imageFrameRef.current);
-        imageFrameRef.current = null;
+      if (!mediaQuery.matches) {
+        currentWidthRef.current = 40;
+        targetWidthRef.current = 40;
+        setImageWidth(40);
       }
-      requestUpdateImageWidth();
     };
 
     mediaQuery.addEventListener("change", handleMediaChange);
-    window.addEventListener("scroll", requestUpdateImageWidth, { passive: true });
-    window.addEventListener("resize", requestUpdateImageWidth);
+    // Runs continuously (not just on the scroll event) — this continuous
+    // lerp is what removes the jitter between scroll events.
+    imageFrameRef.current = window.requestAnimationFrame(tick);
 
     return () => {
       if (imageFrameRef.current) {
         window.cancelAnimationFrame(imageFrameRef.current);
+        imageFrameRef.current = null;
       }
       mediaQuery.removeEventListener("change", handleMediaChange);
-      window.removeEventListener("scroll", requestUpdateImageWidth);
-      window.removeEventListener("resize", requestUpdateImageWidth);
     };
   }, []);
 
@@ -263,13 +265,14 @@ function StatsAndFacts() {
       <div
         className={styles.imageWrap}
         ref={imageWrapRef}
-        style={{ transform: `translate3d(0, 0, 0) scaleX(${imageScale})` }}
+        style={{ width: `${imageWidth}%` }}
       >
+
         <div
           className={styles.image}
           style={{
             backgroundImage:
-              "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.26) 100%), url(/images/resizebanner3.png)",
+              "url(/images/mainbanner.webp)",
           }}
         />
       </div>
