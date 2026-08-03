@@ -13,13 +13,13 @@ export default function RelatedBlogs({ currentSlug }) {
     <section className={styles.relatedBlogs}>
       <div className="container">
         <div className={styles.heading}>
-          <span>More Articles</span>
+          <span>More Web Reads</span>
 
-          <h2>You May Also Like</h2>
+          <h2>More Web Design and Build Articles</h2>
 
           <p>
-            Discover more expert articles on digital marketing, SEO,
-            web development, and business growth.
+            Explore more posts on UI systems, layout decisions, performance,
+            and the craft behind modern websites.
           </p>
         </div>
 

@@ -1,6 +1,8 @@
 .faq {
-  padding: 0px 24px;
-  background: #ffffff;
+  padding: 24px 24px 88px;
+  background:
+    radial-gradient(circle at top, rgba(11, 107, 203, 0.06), transparent 30%),
+    #ffffff;
   font-family: "Actief Grotesque", Arial, Helvetica, sans-serif;
 }
 
@@ -11,40 +13,41 @@
 
 .heading {
   text-align: center;
-  margin-bottom: 28px;
+  max-width: 860px;
+  margin: 0 auto 36px;
 }
 
 .badge {
   font-family: inherit;
   display: inline-block;
-  padding: 6px 16px;
+  padding: 10px 18px;
   border-radius: 50px;
-  background: #eaf4ff;
-  color: #0b6bcb;
-  font-size: 13px;
+  background: rgba(17, 17, 17, 0.08);
+  color: rgba(17, 17, 17, 0.9);
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .heading h2 {
-  font-family: inherit;
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: #0f172a;
-  margin-bottom: 12px;
-  line-height: 1.2;
+  font-family: var(--font-br-sonoma);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #111111;
+  margin-bottom: 14px;
+  line-height: 1.08;
 }
 
 .heading p {
   font-family: inherit;
   font-size: 17px;
-  font-weight: 400;
-  color: #64748b;
-  line-height: 1.7;
-  max-width: 560px;
+  font-weight: 500;
+  color: var(--subtitle-color);
+  line-height: 1.55;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -55,6 +58,12 @@
 }
 
 .item {
+  display: block;
+  appearance: none;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
   border-bottom: 1px solid #e2e8f0;
   padding: 28px 0;
   cursor: pointer;
@@ -62,11 +71,11 @@
 }
 
 .item:hover {
-  border-bottom-color: #bfdbfe;
+  border-bottom-color: rgba(11, 107, 203, 0.28);
 }
 
 .itemOpen {
-  border-bottom-color: #bfdbfe;
+  border-bottom-color: rgba(11, 107, 203, 0.34);
 }
 
 .itemInner {
@@ -90,12 +99,12 @@
 }
 
 .itemContent h3 {
-  font-family: inherit;
+  font-family: var(--font-br-sonoma);
   font-size: 19px;
-  font-weight: 500;
-  color: #0f172a;
+  font-weight: 700;
+  color: #111111;
   margin-bottom: 0;
-  line-height: 1.4;
+  line-height: 1.35;
   transition: color 0.3s ease;
 }
 
@@ -108,7 +117,7 @@
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
-  color: #64748b;
+  color: var(--subtitle-color);
   line-height: 1.7;
   margin: 0;
   max-height: 0;
@@ -129,7 +138,7 @@
   height: 24px;
   border-radius: 50%;
   background: #f1f5f9;
-  color: #64748b;
+  color: #111111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +157,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .faq {
-    padding: 60px 16px;
+    padding: 52px 16px 72px;
   }
 
   .itemInner {
@@ -166,11 +175,15 @@
   .heading p {
     font-size: 15px;
   }
+
+  .heading h2 {
+    font-size: clamp(1.95rem, 8.4vw, 2.6rem);
+  }
 }
 
 @media (max-width: 480px) {
   .heading {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .item {

@@ -7,14 +7,13 @@ export default function BlogGrid() {
     <section className={styles.blogGrid}>
       <div className="container">
         <div className={styles.heading}>
-          <span>Latest Articles</span>
+          <span>Blog Library</span>
 
-          <h2>Explore Our Latest Insights</h2>
+          <h2>Latest Blog Guides, Tips & Ideas</h2>
 
           <p>
-            Stay updated with the latest trends, expert strategies, and
-            practical tips in digital marketing, SEO, web development, and
-            online business growth.
+            Explore the latest blog posts across SEO, content, social media,
+            branding, and practical growth strategies for modern businesses.
           </p>
         </div>
 

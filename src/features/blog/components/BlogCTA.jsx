@@ -10,18 +10,18 @@ export default function BlogCTA() {
         <div className={styles.accentLine} />
 
         <div className={styles.content}>
-          <span className={styles.badge}>Let&apos;s Grow Together</span>
+          <span className={styles.badge}>Web Build Support</span>
 
-          <h2>Ready to Grow Your Business Online?</h2>
+          <h2>Need a Website That Looks Sharp and Loads Fast?</h2>
 
           <p>
-            Whether you need SEO, Google Ads, Social Media Marketing, or a
-            professional website, our team is here to help your business reach
-            the next level.
+            From UI polish and responsive layouts to performance and clean
+            structure, we help shape websites that feel modern and convert
+            better.
           </p>
 
           <Link href="/contact" className={styles.button}>
-            Get Free Consultation
+            Talk to Us
           </Link>
         </div>
       </div>

@@ -4,8 +4,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./CreativeAgency.module.css";
 
 const LOOP_COPIES = 3;
-const AUTO_SCROLL_SPEED = 0.028;
 const DRAG_THRESHOLD = 8;
+const STEP_HOLD_MS = 3000; // content ko center card pe kitni der dikhana hai
+const STEP_TRANSITION_MS = 650; // CSS transition duration se match honi chahiye
 
 const cards = [
   {
@@ -132,6 +133,7 @@ const cards = [
 function CreativeAgency() {
   const [activeCardKey, setActiveCardKey] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [autoplayResetKey, setAutoplayResetKey] = useState(0);
   const sectionRef = useRef(null);
   const sliderRef = useRef(null);
   const sliderTrackRef = useRef(null);
@@ -189,14 +191,64 @@ function CreativeAgency() {
     return card.clientWidth + gap;
   }, []);
 
+  // Slider viewport ke exact center ke sabse paas wala card dhoondta hai
+  const getCenterCardKey = useCallback(() => {
+    const slider = sliderRef.current;
+    if (!slider) return "";
+
+    const sliderRect = slider.getBoundingClientRect();
+    const centerX = sliderRect.left + sliderRect.width / 2;
+    const cardEls = slider.querySelectorAll(`.${styles.card}`);
+
+    let closestKey = "";
+    let closestDistance = Infinity;
+
+    cardEls.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const cardCenterX = rect.left + rect.width / 2;
+      const distance = Math.abs(cardCenterX - centerX);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestKey = el.getAttribute("data-card-key") || "";
+      }
+    });
+
+    return closestKey;
+  }, []);
+
+  const showCenterContent = useCallback(() => {
+    const key = getCenterCardKey();
+    if (key) {
+      setActiveCardKey(key);
+    }
+  }, [getCenterCardKey]);
+
+  // Drag chodne ke baad sabse paas wale card pe cleanly snap kar deta hai
+  const snapToNearestOffset = useCallback(() => {
+    const step = getSliderStep();
+    if (step <= 0) return;
+    const nearest = Math.round(offsetRef.current / step) * step;
+    applyOffset(nearest);
+  }, [applyOffset, getSliderStep]);
+
+  const restartAutoplay = useCallback(() => {
+    setAutoplayResetKey((key) => key + 1);
+  }, []);
+
   const handleSliderNav = useCallback(
     (direction) => {
       const step = getSliderStep();
       if (step <= 0) return;
 
       applyOffset(offsetRef.current + direction * step);
+      restartAutoplay();
+
+      window.setTimeout(() => {
+        showCenterContent();
+      }, STEP_TRANSITION_MS);
     },
-    [applyOffset, getSliderStep]
+    [applyOffset, getSliderStep, restartAutoplay, showCenterContent]
   );
 
   useEffect(() => {
@@ -222,14 +274,17 @@ function CreativeAgency() {
     if (!track) return;
 
     const updateTrackMetrics = () => {
+      track.classList.add(styles.sliderTrackInstant);
       segmentWidthRef.current = track.scrollWidth / LOOP_COPIES;
-      if (segmentWidthRef.current <= 0) {
-        return;
+
+      if (segmentWidthRef.current > 0) {
+        offsetRef.current = offsetRef.current % segmentWidthRef.current;
+        track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
       }
 
-      offsetRef.current = offsetRef.current % segmentWidthRef.current;
-
-      track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+      window.requestAnimationFrame(() => {
+        track.classList.remove(styles.sliderTrackInstant);
+      });
     };
 
     updateTrackMetrics();
@@ -240,43 +295,44 @@ function CreativeAgency() {
     };
   }, []);
 
+  // Auto step-swipe: center card ka content dikhta hai, 3 sec hold, phir next card pe swipe
   useEffect(() => {
-    const track = sliderTrackRef.current;
-    if (!track) return;
+    if (!isVisible) return undefined;
 
-    let frameId = 0;
-    let previousTime = 0;
+    let cancelled = false;
+    let timeoutId;
 
-    const step = (time) => {
-      if (!previousTime) {
-        previousTime = time;
+    const advance = () => {
+      if (cancelled) return;
+
+      if (pointerDownRef.current || isDraggingRef.current) {
+        timeoutId = window.setTimeout(advance, 400);
+        return;
       }
 
-      const segmentWidth = segmentWidthRef.current;
-
-      if (
-        isVisible &&
-        !activeCardKey &&
-        !pointerDownRef.current &&
-        !isDraggingRef.current &&
-        segmentWidth > 0
-      ) {
-        const delta = time - previousTime;
-        offsetRef.current =
-          (offsetRef.current + delta * AUTO_SCROLL_SPEED) % segmentWidth;
-        track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
+      const step = getSliderStep();
+      if (step > 0) {
+        applyOffset(offsetRef.current + step);
       }
 
-      previousTime = time;
-      frameId = window.requestAnimationFrame(step);
+      timeoutId = window.setTimeout(() => {
+        if (cancelled) return;
+        showCenterContent();
+        timeoutId = window.setTimeout(advance, STEP_HOLD_MS);
+      }, STEP_TRANSITION_MS);
     };
 
-    frameId = window.requestAnimationFrame(step);
+    timeoutId = window.setTimeout(() => {
+      if (cancelled) return;
+      showCenterContent();
+      timeoutId = window.setTimeout(advance, STEP_HOLD_MS);
+    }, 0);
 
     return () => {
-      window.cancelAnimationFrame(frameId);
+      cancelled = true;
+      window.clearTimeout(timeoutId);
     };
-  }, [activeCardKey, isVisible]);
+  }, [isVisible, autoplayResetKey, getSliderStep, applyOffset, showCenterContent]);
 
   const handlePointerDown = (event) => {
     pointerDownRef.current = true;
@@ -296,11 +352,16 @@ function CreativeAgency() {
       return;
     }
 
+    if (!isDraggingRef.current) {
+      sliderTrackRef.current?.classList.add(styles.sliderTrackInstant);
+    }
+
     isDraggingRef.current = true;
     applyOffset(dragStartOffsetRef.current - deltaX);
   };
 
   const handlePointerUp = (event) => {
+    const wasDragging = isDraggingRef.current;
     const shouldToggleCard =
       pointerDownRef.current &&
       !isDraggingRef.current &&
@@ -314,10 +375,21 @@ function CreativeAgency() {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
 
+    if (wasDragging) {
+      sliderTrackRef.current?.classList.remove(styles.sliderTrackInstant);
+      snapToNearestOffset();
+      restartAutoplay();
+      window.setTimeout(() => {
+        showCenterContent();
+      }, STEP_TRANSITION_MS);
+      return;
+    }
+
     if (nextCardKey) {
       setActiveCardKey((currentKey) =>
         currentKey === nextCardKey ? "" : nextCardKey
       );
+      restartAutoplay();
     }
   };
 
@@ -489,6 +561,7 @@ function CreativeAgency() {
                         setActiveCardKey((currentKey) =>
                           currentKey === card.loopKey ? "" : card.loopKey
                         );
+                        restartAutoplay();
                       }}
                     >
                       <span className={`${styles.cardToggleLine} ${styles.cardToggleLine1}`} />

@@ -8,7 +8,7 @@ import TestimonialShowcase from "@/features/home/components/TestimonialShowcase.
 import LatestWorksSection from "@/features/home/components/LatestWorksSection.jsx";
 import ResultsHighlightSection from "@/features/home/components/ResultsHighlightSection.jsx";
 import Gallery from "@/features/home/components/Gallery.jsx";
-
+import ReelsShowcase from "@/features/home/components/VideoShowcase.jsx";
 export default function Home() {
   return (
     <>
@@ -19,10 +19,12 @@ export default function Home() {
       <Services />
       {/* <BottomBlur /> */}
       <CasesDeliver />
-      <TestimonialShowcase />
+     
       <LatestWorksSection />
       <ResultsHighlightSection />
       <Gallery />
+      <ReelsShowcase />
+      <TestimonialShowcase />
     </>
   );
 }

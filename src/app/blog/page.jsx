@@ -15,7 +15,11 @@ export default function BlogPage() {
       <BlogHero />
       <BlogGrid />
       <BlogCTA />
-      <BlogFAQ />
+      <BlogFAQ
+        title="Blog FAQs"
+        subtitle="Answers to common questions about reading, using, and sharing our blog content."
+        badge="FAQs"
+      />
     </main>
   );
 }

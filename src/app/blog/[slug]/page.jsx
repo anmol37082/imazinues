@@ -4,10 +4,7 @@ import { blogs } from "@/features/blog/data/blogs";
 
 import BlogBanner from "@/features/blog/components/BlogBanner";
 import BlogContent from "@/features/blog/components/BlogContent";
-        // 🆕
-import BlogAuthor from "@/features/blog/components/BlogAuthor";       // 🆕
-import BlogFAQ from "@/features/blog/components/BlogFAQ";             // 🆕
-      // 🆕
+import BlogFAQ from "@/features/blog/components/BlogFAQ";
 import RelatedBlogs from "@/features/blog/components/RelatedBlogs";
 import BlogCTA from "@/features/blog/components/BlogCTA";
 
@@ -52,27 +49,14 @@ export default async function BlogDetailsPage({ params }) {
 
   return (
     <main>
-      {/* 1. Hero Banner */}
       <BlogBanner blog={blog} />
-
-      {/* 2. Article Content */}
       <BlogContent content={blog.content} />
 
-     
+      <RelatedBlogs currentSlug={blog.slug} />
+      <BlogCTA />
 
-      {/* 4. Author Bio 🆕 */}
-      {blog.author && (
-        <BlogAuthor 
-          author={blog.author}
-          authorImage={blog.authorImage}
-          authorBio={blog.authorBio}
-          date={blog.date}
-        />
-      )}
-
-      {/* 5. FAQ */}
       {blog.faq && blog.faq.length > 0 && (
-        <BlogFAQ 
+        <BlogFAQ
           faqs={blog.faq}
           title={`Questions About ${blog.category}`}
           subtitle={`Common questions about ${blog.title.toLowerCase()}.`}
@@ -80,15 +64,6 @@ export default async function BlogDetailsPage({ params }) {
           firstOpen={false}
         />
       )}
-
-      {/* 6. Share Buttons 🆕 */}
-    
-
-      {/* 7. Related Posts */}
-      <RelatedBlogs currentSlug={blog.slug} />
-
-      {/* 8. CTA */}
-      <BlogCTA />
     </main>
   );
 }
