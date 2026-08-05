@@ -376,7 +376,13 @@ function Header() {
             scheduleDropdownOpen("services");
           }}
         >
-          <span className={styles.servicesTrigger}>{renderSplitNavLabel("SERVICES +")}</span>
+          <Link
+            href="/services"
+            className={styles.servicesTrigger}
+            onClick={closeDesktopDropdowns}
+          >
+            {renderSplitNavLabel("SERVICES +")}
+          </Link>
 
           {activeDropdown === "services" && (
             <div className={`${styles.dropdown} ${styles.servicesDropdown}`}>

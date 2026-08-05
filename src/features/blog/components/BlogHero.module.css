@@ -6,7 +6,7 @@
 .banner {
   position: relative;
   width: 100%;
-  height: clamp(320px, 48vw, 720px);
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   margin: 0;
 }

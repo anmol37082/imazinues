@@ -1,4 +1,7 @@
+import locationPages from "./googleAdsCampaignsPageLocation";
+
 const googleAdsCampaignsPageData = {
+  serviceSlug: "google-ads-campaigns",
   hero: {
     eyebrow: "ADS",
     breadcrumb: " / GOOGLE ADS & CAMPAIGNS",
@@ -54,6 +57,11 @@ const googleAdsCampaignsPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Google Ads alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Delhi NCR", "Mohali", "Ludhiana"],
+  },
+  locationPages,
   context: {
     label: "CAMPAIGN SETUP",
     title: "Built to capture high-intent searches",

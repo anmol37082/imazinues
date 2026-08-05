@@ -11,11 +11,13 @@ import ServiceCreativeProcessSection from "@/features/services/components/Servic
 import ServiceMakingOfSection from "@/features/services/components/ServiceMakingOfSection";
 import ServiceInnovationSection from "@/features/services/components/ServiceInnovationSection";
 import ServiceAutoplayTriptych from "@/features/services/components/ServiceAutoplayTriptych";
+import ServiceLocationSection from "@/features/services/components/ServiceLocationSection";
 import ServiceCreditsSection from "@/features/services/components/ServiceCreditsSection";
 import styles from "./ServiceDetailPage.module.css";
 
 export default function ServiceDetailPage({ data }) {
   const {
+    serviceSlug,
     hero,
     heroImage,
     video,
@@ -29,6 +31,7 @@ export default function ServiceDetailPage({ data }) {
     autoPlayVideoAlt,
     triptych,
     scrollVideoAlt,
+    locationSection,
     credits,
   } = data;
 
@@ -47,6 +50,10 @@ export default function ServiceDetailPage({ data }) {
       <ServiceInnovationSection {...innovation} />
       <ServiceAutoPlayVideoAlt {...autoPlayVideoAlt} />
       <ServiceScrollVideoAlt {...scrollVideoAlt} />
+      <ServiceLocationSection
+        {...(locationSection ?? {})}
+        serviceSlug={serviceSlug}
+      />
       <ServiceCreditsSection {...credits} />
     </main>
   );

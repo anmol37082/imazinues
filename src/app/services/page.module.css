@@ -1,0 +1,31 @@
+.page {
+  background:
+    radial-gradient(circle at top, rgba(143, 194, 246, 0.22), transparent 42%),
+    linear-gradient(180deg, #f6f8fb 0%, #ffffff 42%, #ffffff 100%);
+}
+
+.hero {
+  padding: 0 0 28px;
+}
+
+.heroMedia {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e9edf2;
+  box-shadow: 0 24px 60px rgba(31, 74, 135, 0.08);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 0 20px;
+  }
+}

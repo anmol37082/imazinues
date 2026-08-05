@@ -12,16 +12,15 @@ export default function BlogCTA() {
         <div className={styles.content}>
           <span className={styles.badge}>Web Build Support</span>
 
-          <h2>Need a Website That Looks Sharp and Loads Fast?</h2>
+          <h2>Your Success Is Our Next Project
+Together, We&apos;ll Build a Brand That Gets Noticed.</h2>
 
           <p>
-            From UI polish and responsive layouts to performance and clean
-            structure, we help shape websites that feel modern and convert
-            better.
+           From startups to established businesses, we create digital solutions that deliver real results, not just promises.
           </p>
 
           <Link href="/contact" className={styles.button}>
-            Talk to Us
+          Start Your Journey
           </Link>
         </div>
       </div>

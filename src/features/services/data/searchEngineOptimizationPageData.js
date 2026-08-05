@@ -1,4 +1,7 @@
+import locationPages from "./searchEngineOptimizationPageLocation";
+
 const searchEngineOptimizationPageData = {
+  serviceSlug: "search-engine-optimization",
   hero: {
     eyebrow: "SEO",
     breadcrumb: " / SEARCH ENGINE OPTIMIZATION",
@@ -54,6 +57,11 @@ const searchEngineOptimizationPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "SEO alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Delhi NCR"],
+  },
+  locationPages,
   context: {
     label: "AUDIT",
     title: "Start with the website search needs",

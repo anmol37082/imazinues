@@ -1,4 +1,7 @@
+import locationPages from "./websiteRevampDevelopmentPageLocation";
+
 const websiteRevampDevelopmentPageData = {
+  serviceSlug: "website-revamp-development",
   hero: {
     eyebrow: "WEB",
     breadcrumb: " / WEBSITE REVAMP & DEVELOPMENT",
@@ -54,6 +57,11 @@ const websiteRevampDevelopmentPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Website development alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Zirakpur", "Remote"],
+  },
+  locationPages,
   context: {
     label: "STRUCTURE",
     title: "A website flow that guides users naturally",
@@ -190,4 +198,3 @@ const websiteRevampDevelopmentPageData = {
 };
 
 export default websiteRevampDevelopmentPageData;
-

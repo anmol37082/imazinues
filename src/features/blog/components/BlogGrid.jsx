@@ -7,13 +7,13 @@ export default function BlogGrid() {
     <section className={styles.blogGrid}>
       <div className="container">
         <div className={styles.heading}>
-          <span>Blog Library</span>
+          <span>Resource Library
+</span>
 
-          <h2>Latest Blog Guides, Tips & Ideas</h2>
+          <h2>Everything You Need to Grow Online.</h2>
 
           <p>
-            Explore the latest blog posts across SEO, content, social media,
-            branding, and practical growth strategies for modern businesses.
+           Browse our collection of marketing resources, branding guides, SEO tips, and business growth strategies, all in one place.
           </p>
         </div>
 

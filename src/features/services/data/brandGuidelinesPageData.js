@@ -1,4 +1,7 @@
+import locationPages from "./brandGuidelinesPageLocation";
+
 const brandGuidelinesPageData = {
+  serviceSlug: "brand-guidelines",
   hero: {
     eyebrow: "BRAND",
     breadcrumb: " / BRAND GUIDELINES",
@@ -54,6 +57,11 @@ const brandGuidelinesPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Brand guidelines alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Remote"],
+  },
+  locationPages,
   context: {
     label: "SYSTEM",
     title: "The foundation that keeps your brand consistent",
@@ -190,4 +198,3 @@ const brandGuidelinesPageData = {
 };
 
 export default brandGuidelinesPageData;
-

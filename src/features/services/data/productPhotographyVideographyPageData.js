@@ -1,4 +1,7 @@
+import locationPages from "./productPhotographyVideographyPageLocation";
+
 const productPhotographyVideographyPageData = {
+  serviceSlug: "product-photography-videography",
   hero: {
     eyebrow: "PHOTO",
     breadcrumb: " / PRODUCT PHOTOGRAPHY & VIDEOGRAPHY",
@@ -54,6 +57,11 @@ const productPhotographyVideographyPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Product photography alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Ludhiana"],
+  },
+  locationPages,
   context: {
     label: "SHOOT",
     title: "Where Lighting, Angles, and Story Come Together",

@@ -27,9 +27,7 @@ export default function BlogCard({
           className={styles.image}
         />
 
-        <span className={styles.categoryBadge}>
-          {category}
-        </span>
+        <span className={styles.categoryBadge}>{category}</span>
       </Link>
 
       <div className={styles.content}>
@@ -42,14 +40,10 @@ export default function BlogCard({
         </div>
 
         <h3 className={styles.title}>
-          <Link href={`/blog/${slug}`}>
-            {title}
-          </Link>
+          <Link href={`/blog/${slug}`}>{title}</Link>
         </h3>
 
-        <p className={styles.description}>
-          {description}
-        </p>
+        <p className={styles.description}>{description}</p>
 
         <Link
           href={`/blog/${slug}`}
@@ -57,9 +51,7 @@ export default function BlogCard({
           aria-label={`Read more about ${title}`}
         >
           Read More
-          <span className={styles.arrow}>
-            →
-          </span>
+          <span className={styles.arrow}>&rarr;</span>
         </Link>
       </div>
     </article>

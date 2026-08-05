@@ -17,7 +17,7 @@ export default function BlogPage() {
       <BlogCTA />
       <BlogFAQ
         title="Blog FAQs"
-        subtitle="Answers to common questions about reading, using, and sharing our blog content."
+        subtitle="Answers to common questions about Imazine Us blogs, topics, and expertise."
         badge="FAQs"
       />
     </main>

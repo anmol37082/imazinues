@@ -1,4 +1,7 @@
+import locationPages from "./contentCreationPageLocation";
+
 const contentCreationPageData = {
+  serviceSlug: "content-creation",
   hero: {
     eyebrow: "CONTENT",
     breadcrumb: " / CONTENT CREATION",
@@ -54,6 +57,11 @@ const contentCreationPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Content creation alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Tricity"],
+  },
+  locationPages,
   context: {
     label: "PLANNING",
     title: "Good content starts with clear thinking.",

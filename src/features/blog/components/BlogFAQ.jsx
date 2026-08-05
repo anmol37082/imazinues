@@ -5,24 +5,29 @@ import styles from "./BlogFAQ.module.css";
 
 const defaultFaqs = [
   {
-    question: "What kind of web work do you cover?",
+    question: "Do your blogs include practical marketing tips?",
     answer:
-      "We focus on website design, frontend development, responsive layouts, performance cleanup, and overall UI polish.",
+      "Yes. Every article includes actionable tips, best practices, and real-world strategies that readers can apply to their businesses.",
   },
   {
-    question: "How do you improve a website's design quality?",
+    question: "Who writes the blogs at Imazine Us?",
     answer:
-      "We refine spacing, typography, hierarchy, interaction states, and page rhythm so the site feels more intentional and easier to use.",
+      "Our blogs are created by experienced digital marketers, SEO specialists, content strategists, designers, and industry professionals.",
   },
   {
-    question: "How do you make sites load faster?",
+    question: "Do you cover the latest digital marketing trends?",
     answer:
-      "We reduce unnecessary assets, improve image handling, clean up layout shifts, and tighten the code path where possible.",
+      "Yes. We regularly publish blogs covering the latest Google updates, AI tools, social media trends, SEO techniques, and marketing innovations.",
   },
   {
-    question: "Do you work with existing websites?",
+    question: "Are your blogs suitable for beginners?",
     answer:
-      "Yes. We can audit the current layout and update individual sections or rebuild the full landing page direction.",
+      "Absolutely. Our blogs are written for beginners, business owners, entrepreneurs, students, and marketing professionals looking to improve their digital knowledge.",
+  },
+  {
+    question: "What kind of blogs does Imazine Us publish?",
+    answer:
+      "We publish informative blogs on digital marketing, SEO, website development, branding, social media marketing, graphic design, content marketing, AI tools, business growth strategies, and the latest industry trends.",
   },
 ];
 

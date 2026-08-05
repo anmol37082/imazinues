@@ -1,4 +1,7 @@
+import locationPages from "./printDesignPageLocation";
+
 const printDesignPageData = {
+  serviceSlug: "print-design",
   hero: {
     eyebrow: "PRINT",
     breadcrumb: " / PRINT DESIGN",
@@ -54,6 +57,11 @@ const printDesignPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Print design alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Baddi"],
+  },
+  locationPages,
   context: {
     label: "LAYOUT",
     title: "Print designs that capture attention in seconds",
@@ -191,4 +199,3 @@ const printDesignPageData = {
 };
 
 export default printDesignPageData;
-

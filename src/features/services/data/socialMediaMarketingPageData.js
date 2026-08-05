@@ -1,4 +1,7 @@
+import locationPages from "./socialMediaMarketingPageLocation";
+
 const socialMediaMarketingPageData = {
+  serviceSlug: "social-media-marketing",
   hero: {
     eyebrow: "SMM",
     breadcrumb: " / SOCIAL MEDIA MARKETING",
@@ -58,6 +61,11 @@ const socialMediaMarketingPageData = {
     poster: "/glamourandradiance/G&R-02.webp",
     alt: "Social media marketing alternate scroll video",
   },
+  locationSection: {
+    title: "LOCATIONS",
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera bassi" ],
+  },
+  locationPages,
   context: {
     label: "STRATEGY",
     title: "Every strong brand starts with a clear strategy.",
@@ -194,4 +202,3 @@ const socialMediaMarketingPageData = {
 };
 
 export default socialMediaMarketingPageData;
-

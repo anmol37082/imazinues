@@ -9,6 +9,7 @@ import LatestWorksSection from "@/features/home/components/LatestWorksSection.js
 import ResultsHighlightSection from "@/features/home/components/ResultsHighlightSection.jsx";
 import Gallery from "@/features/home/components/Gallery.jsx";
 import ReelsShowcase from "@/features/home/components/VideoShowcase.jsx";
+import LatestBlogsSection from "@/features/home/components/LatestBlogsSection.jsx";
 export default function Home() {
   return (
     <>
@@ -25,6 +26,7 @@ export default function Home() {
       <Gallery />
       <ReelsShowcase />
       <TestimonialShowcase />
+      <LatestBlogsSection />
     </>
   );
 }
