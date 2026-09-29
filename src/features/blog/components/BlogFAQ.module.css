@@ -46,7 +46,7 @@
   font-size: 17px;
   font-weight: 500;
   color: var(--subtitle-color);
-  line-height: 1.55;
+  line-height: 1.4;
   max-width: 680px;
   margin: 0 auto;
 }
@@ -118,7 +118,7 @@
   font-size: 16px;
   font-weight: 400;
   color: var(--subtitle-color);
-  line-height: 1.7;
+  line-height: 1.55;
   margin: 0;
   max-height: 0;
   overflow: hidden;

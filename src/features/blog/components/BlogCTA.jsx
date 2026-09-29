@@ -12,11 +12,10 @@ export default function BlogCTA() {
         <div className={styles.content}>
           <span className={styles.badge}>Web Build Support</span>
 
-          <h2>Your Success Is Our Next Project
-Together, We&apos;ll Build a Brand That Gets Noticed.</h2>
+          <h2>Ready to Grow Your Business Online?</h2>
 
           <p>
-           From startups to established businesses, we create digital solutions that deliver real results, not just promises.
+            Whether you need technical SEO, local SEO, content optimization, or a complete digital marketing strategy, Imazine Us is here to help. Let&apos;s improve your Google rankings and grow your business, one search at a time.
           </p>
 
           <Link href="/contact" className={styles.button}>
