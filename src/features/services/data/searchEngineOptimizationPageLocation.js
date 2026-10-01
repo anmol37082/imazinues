@@ -1,76 +1,118 @@
-const searchEngineOptimizationPageLocation = {
+const locations = {
   chandigarh: {
     label: "Chandigarh",
-    introTitle: "SEO pages tuned for Chandigarh search intent.",
-    intro:
-      "Chandigarh pages need clear structure and strong relevance. This content keeps the service focused on visibility and qualified traffic.",
-    details:
-      "We prioritize technical health, keyword intent, and local authority so the page feels credible to search users.",
-    contentTitle: "Organic growth built for city-level competition.",
-    content:
-      "The page frames SEO as a long-term system for rankings, traffic, and leads rather than a one-time fix.",
-    points: [
-      "Great for service pages and local landing pages.",
-      "Supports map visibility and organic discovery.",
-      "Keeps users focused on measurable outcomes.",
-    ],
-    focus: ["Keyword research", "Technical SEO", "Local relevance"],
-    highlights: ["Search intent", "Traffic growth", "Trust cues"],
+    introTitle: "SEO Services in Chandigarh for stronger local visibility",
+    intro: "Imazine Us helps Chandigarh businesses improve their visibility in Google search with practical SEO strategies. From local keyword research and on-page improvements to technical checks and useful content, we focus on helping the right customers find your business.",
+    details: "We review your website, services, competitors, and local search presence to identify opportunities. Our team builds an SEO roadmap around relevant Chandigarh searches, clear page structure, and measurable business goals.",
+    contentTitle: "A focused SEO strategy for Chandigarh businesses",
+    content: "Whether you serve customers across the city or in a specific sector, Imazine Us can help strengthen your local search presence. We improve service pages, technical foundations, Google Business Profile signals, and content relevance to support more qualified organic visits.",
+    points: ["Local keyword research based on Chandigarh search intent.", "Technical and on-page SEO improvements for your website.", "Content and local search guidance with regular progress reviews."],
+    focus: ["Chandigarh local SEO", "Technical SEO", "Service page optimization"],
+    highlights: ["Relevant local searches", "Clear SEO roadmap", "Organic visibility"],
+    hero: { description: "Imazine Us provides SEO services in Chandigarh to help businesses improve Google visibility, attract relevant visitors, and build sustainable organic growth.", serviceColumns: [
+      { label: "SEO FOCUS", items: ["Local SEO", "Technical SEO", "On-Page SEO"] },
+      { label: "RESEARCH", items: ["Keyword Research", "Search Intent", "Competitor Review"] },
+      { label: "CONTENT", items: ["Service Pages", "Landing Pages", "Blog Content"] },
+      { label: "GOALS", items: ["Local Visibility", "Qualified Traffic", "Enquiries"] },
+    ] },
+    context: { label: "CHANDIGARH SEO AUDIT", title: "Understand where your search visibility can grow", overview: "We review your website structure, technical health, current rankings, and Chandigarh search opportunities to see what is helping or limiting your visibility.", details: "Imazine Us turns the findings into a prioritized SEO plan, from fixing indexation issues to improving local landing pages and making important services easier to discover." },
+    concept: { label: "SEARCH-LED CONTENT", title: "Useful pages for the searches that matter", overview: "Strong SEO content answers the questions potential customers ask before choosing a business.", details: "We align service and landing pages with relevant Chandigarh search intent, using clear headings and helpful information that is easy for people and search engines to understand." },
+    creativeProcess: { eyebrow: "SEO PROCESS", title: "Research, improve, measure, and refine", description: "Imazine Us combines keyword research, content recommendations, on-page updates, and technical guidance in a structured SEO process. We track progress and use the data to shape practical next steps for your Chandigarh business." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "SEO improvements that build over time", description: "Search optimization is ongoing. We review performance, refine important pages, strengthen internal links, and address technical priorities as your website and Chandigarh market evolve." },
+    innovation: { eyebrow: "LOCAL SEARCH GROWTH", title: "Make it easier for local customers to find you", description: "With relevant local content, a well-structured website, and consistent business information, Imazine Us helps Chandigarh businesses build stronger organic visibility and attract more qualified search visits." },
+    credits: { heading: "SEO SERVICES", title: "Your SEO team in Chandigarh", subtitle: "Imazine Us brings research, website optimization, content, and reporting together in one focused SEO plan.", columns: [
+      [{ title: "FOUNDATIONS", items: [{ label: "AUDIT", names: ["Technical review", "Indexing checks", "Site structure"] }, { label: "RESEARCH", names: ["Local keywords", "Search intent", "Competitor review"] }] }],
+      [{ title: "GROWTH", items: [{ label: "OPTIMIZATION", names: ["Service pages", "Local SEO", "Content improvements"] }, { label: "REPORTING", names: ["Ranking trends", "Organic traffic", "Next steps"] }] }],
+    ] },
   },
   mohali: {
     label: "Mohali",
-    introTitle: "Straightforward SEO messaging for Mohali brands.",
-    intro:
-      "Mohali search pages should feel practical and conversion-oriented. The copy here stays direct and easy to understand.",
-    details:
-      "We highlight structure, indexing, and on-page improvements so the page speaks to business owners, not just marketers.",
-    contentTitle: "An SEO service page that makes the process clear.",
-    content:
-      "The layout shows how SEO improves visibility, rankings, and lead quality without overloading the visitor.",
-    points: [
-      "Ideal for local businesses and service providers.",
-      "Easy to scan on desktop and mobile.",
-      "Supports long-term organic growth goals.",
-    ],
-    focus: ["On-page SEO", "Local SEO", "Content optimization"],
-    highlights: ["Clear hierarchy", "Lead-focused", "Easy to scan"],
+    introTitle: "SEO Services in Mohali to grow your organic reach",
+    intro: "Imazine Us helps Mohali companies and local businesses improve their search presence with SEO built around their customers and services. We work on keyword strategy, website content, technical health, and local search signals to make your business easier to find online.",
+    details: "From growing businesses in the IT sector to clinics, education providers, and local services, each SEO plan starts with your market and goals. We identify relevant Mohali searches and prioritize changes that make your website clearer and more useful.",
+    contentTitle: "Practical SEO for Mohali companies and local brands",
+    content: "Our SEO services cover technical reviews, on-page optimization, local SEO, and content recommendations. Imazine Us helps connect your important pages with the searches your prospective customers use across Mohali and the Tricity area.",
+    points: ["Keyword research for Mohali services and audiences.", "Website structure, speed, and on-page SEO recommendations.", "Local search improvements and clear performance reporting."],
+    focus: ["Mohali SEO strategy", "Local search", "Technical and on-page SEO"],
+    highlights: ["Business-focused priorities", "Tricity search context", "Measurable progress"],
+    hero: { description: "Improve your visibility in Google with SEO services from Imazine Us, planned for businesses and companies in Mohali.", serviceColumns: [
+      { label: "SEO FOCUS", items: ["Local SEO", "Technical SEO", "On-Page SEO"] }, { label: "RESEARCH", items: ["Mohali Keywords", "Search Intent", "Competitor Review"] }, { label: "CONTENT", items: ["Service Pages", "Landing Pages", "Helpful Articles"] }, { label: "GOALS", items: ["Organic Reach", "Relevant Traffic", "Business Enquiries"] },
+    ] },
+    context: { label: "MOHALI SEO AUDIT", title: "Find the search opportunities for your business", overview: "We assess your website, services, and competition to understand how customers search for businesses like yours in Mohali.", details: "Imazine Us prioritizes technical fixes, page improvements, and local search opportunities so your SEO work supports real business objectives." },
+    concept: { label: "SEARCH-LED CONTENT", title: "Content that speaks to Mohali customers", overview: "Your website should answer the questions customers have when comparing services and providers.", details: "We improve service pages and recommend useful content based on search intent, giving your Mohali business a clearer and more relevant presence in organic search." },
+    creativeProcess: { eyebrow: "SEO PROCESS", title: "A clear workflow for lasting search growth", description: "Our process combines keyword research, technical review, content guidance, and on-page recommendations. Imazine Us reviews results regularly and adapts priorities to your market and website." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Keep your website aligned with search", description: "We monitor organic performance, improve key pages, strengthen internal links, and address technical issues as your Mohali business grows." },
+    innovation: { eyebrow: "LOCAL SEARCH GROWTH", title: "Connect your business with local search demand", description: "Imazine Us helps Mohali brands strengthen local relevance with useful pages, accurate business details, and a sound technical foundation that supports organic discovery." },
+    credits: { heading: "SEO SERVICES", title: "Your SEO team in Mohali", subtitle: "Research, website improvements, content guidance, and reporting from Imazine Us.", columns: [
+      [{ title: "FOUNDATIONS", items: [{ label: "AUDIT", names: ["Technical checks", "Indexing review", "Site structure"] }, { label: "RESEARCH", names: ["Mohali keywords", "Audience intent", "Competitor analysis"] }] }], [{ title: "GROWTH", items: [{ label: "OPTIMIZATION", names: ["Local SEO", "Service pages", "Content updates"] }, { label: "REPORTING", names: ["Organic visits", "Search visibility", "Action plan"] }] }],
+    ] },
   },
   panchkula: {
     label: "Panchkula",
-    introTitle: "Premium, balanced SEO positioning for Panchkula.",
-    intro:
-      "Panchkula pages perform best when the tone is calm, informative, and trustworthy. That’s the direction here.",
-    details:
-      "The content keeps the page professional while still explaining how search improvements create real business value.",
-    contentTitle: "SEO content that feels credible from the first scroll.",
-    content:
-      "The page supports brands that want a cleaner digital presence and better search visibility in competitive categories.",
-    points: [
-      "Good for professional and premium brands.",
-      "Keeps the service promise grounded and clear.",
-      "Supports both local and broader search goals.",
-    ],
-    focus: ["Search visibility", "Organic growth", "Content clarity"],
-    highlights: ["Premium tone", "Less clutter", "Search-ready"],
+    introTitle: "SEO Services in Panchkula built for local discovery",
+    intro: "Imazine Us helps Panchkula businesses strengthen their Google presence with considered SEO planning and clear website improvements. We align technical foundations, useful content, and local search relevance to help potential customers discover your services.",
+    details: "We begin by understanding your business, audience, and competition in Panchkula. Then we build a practical roadmap covering keyword opportunities, content quality, website structure, and local signals.",
+    contentTitle: "Build a more visible and trusted presence in Panchkula",
+    content: "From professional services and healthcare to retail and hospitality, a clear search strategy helps the right customers reach your website. Imazine Us improves key pages and local SEO foundations to support steady, qualified organic traffic.",
+    points: ["Panchkula-focused keyword and competitor research.", "Technical reviews and on-page recommendations.", "Useful service content and ongoing SEO performance reviews."],
+    focus: ["Panchkula local SEO", "Content optimization", "Technical health"],
+    highlights: ["Relevant local visibility", "Trust-building content", "Steady organic growth"],
+    hero: { description: "Imazine Us offers SEO services in Panchkula to improve local search visibility, strengthen your website, and attract more relevant organic visitors.", serviceColumns: [
+      { label: "SEO FOCUS", items: ["Local SEO", "On-Page SEO", "Technical SEO"] }, { label: "RESEARCH", items: ["Local Keywords", "Audience Intent", "Competitor Review"] }, { label: "CONTENT", items: ["Service Pages", "Local Landing Pages", "SEO Content"] }, { label: "GOALS", items: ["Search Visibility", "Relevant Visitors", "Enquiries"] },
+    ] },
+    context: { label: "PANCHKULA SEO AUDIT", title: "Build on a strong and trustworthy website", overview: "We review your website and current search presence to identify the improvements that matter to customers looking for services in Panchkula.", details: "Our audit covers technical health, content relevance, site structure, and local signals, then turns the findings into clear priorities for your team." },
+    concept: { label: "CONTENT OPTIMIZATION", title: "Clear information for people ready to choose", overview: "Useful, well-organized pages help customers understand your services and make confident decisions.", details: "Imazine Us aligns your content with relevant Panchkula searches and improves page structure so your expertise is easier to find and understand." },
+    creativeProcess: { eyebrow: "SEO PROCESS", title: "Careful research behind every recommendation", description: "We review search demand, website performance, and content gaps before recommending changes. Imazine Us combines technical and on-page SEO with helpful content planning for Panchkula businesses." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Maintain quality as your search presence grows", description: "We keep reviewing key pages, technical performance, and organic search trends, then refine the SEO roadmap as your Panchkula business and customer needs change." },
+    innovation: { eyebrow: "LOCAL SEARCH GROWTH", title: "Help nearby customers discover your services", description: "Imazine Us strengthens local relevance through focused service pages, accurate business information, and technically sound SEO foundations for Panchkula searchers." },
+    credits: { heading: "SEO SERVICES", title: "Your SEO team in Panchkula", subtitle: "Imazine Us supports your search growth with practical research, optimization, and reporting.", columns: [
+      [{ title: "FOUNDATIONS", items: [{ label: "AUDIT", names: ["Website health", "Indexing review", "Page structure"] }, { label: "RESEARCH", names: ["Panchkula keywords", "Search intent", "Local competition"] }] }], [{ title: "GROWTH", items: [{ label: "OPTIMIZATION", names: ["Service content", "Local SEO", "Technical fixes"] }, { label: "REPORTING", names: ["Search trends", "Traffic quality", "Recommendations"] }] }],
+    ] },
   },
-  "delhi-ncr": {
-    label: "Delhi NCR",
-    introTitle: "SEO messaging built for a wider Delhi NCR market.",
-    intro:
-      "Delhi NCR needs stronger positioning because the market is broader and more competitive. This page speaks with more authority.",
-    details:
-      "We present SEO as a scalable growth system so the page can support regional campaigns and competitive ranking goals.",
-    contentTitle: "Built to handle broader search demand.",
-    content:
-      "The structure is tuned for bigger audiences, stronger competition, and more ambitious organic visibility goals.",
-    points: [
-      "Works well for multi-city brands.",
-      "Helps explain authority and ranking strategy.",
-      "Good fit for competitive service niches.",
-    ],
-    focus: ["Regional reach", "Authority building", "Ranking strategy"],
-    highlights: ["Broader market", "Strong authority", "Performance-first"],
+  zirakpur: {
+    label: "Zirakpur",
+    introTitle: "SEO Services in Zirakpur for stronger local rankings",
+    intro: "Imazine Us helps Zirakpur businesses improve their visibility when local customers search online. We focus on relevant keywords, well-structured service pages, technical SEO, and local business signals that support organic discovery.",
+    details: "Whether you serve a neighborhood or customers across Zirakpur, we map your services to local search intent and identify practical opportunities to improve your website and Google presence.",
+    contentTitle: "Help Zirakpur customers find your business online",
+    content: "Our SEO work helps local service providers, retailers, and growing companies build a clearer path from search to website. Imazine Us improves on-page content, technical foundations, and local relevance to attract more qualified visitors.",
+    points: ["Keyword research for Zirakpur services and local searches.", "On-page and technical improvements for important website pages.", "Local SEO guidance and regular progress updates."],
+    focus: ["Zirakpur local SEO", "Google visibility", "Service page optimization"],
+    highlights: ["Local search relevance", "Clear website structure", "Qualified organic traffic"],
+    hero: { description: "Get found by more local customers with SEO services from Imazine Us, tailored to businesses in Zirakpur.", serviceColumns: [
+      { label: "SEO FOCUS", items: ["Local SEO", "Technical SEO", "On-Page SEO"] }, { label: "RESEARCH", items: ["Zirakpur Keywords", "Search Intent", "Local Competitors"] }, { label: "CONTENT", items: ["Service Pages", "Location Pages", "Business Content"] }, { label: "GOALS", items: ["Local Rankings", "Organic Visits", "Enquiries"] },
+    ] },
+    context: { label: "ZIRAKPUR SEO AUDIT", title: "Make your local website easier to discover", overview: "We assess your site and identify how customers search for your products and services in Zirakpur.", details: "Imazine Us checks technical health, page relevance, and local business information, then creates a prioritized plan to improve your organic search presence." },
+    concept: { label: "LOCAL SEO CONTENT", title: "Pages that clearly explain what you offer", overview: "Relevant local service pages help prospective customers understand your business and take the next step.", details: "We organize service information around real search questions and Zirakpur keywords, keeping every page useful, readable, and search-friendly." },
+    creativeProcess: { eyebrow: "SEO PROCESS", title: "Turn local search insight into practical changes", description: "Imazine Us combines keyword research, technical checks, content updates, and page optimization to build an actionable SEO plan for Zirakpur businesses." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Keep improving your local search presence", description: "We track organic performance, update important pages, improve internal links, and address technical priorities as your Zirakpur business adds services or reaches new customers." },
+    innovation: { eyebrow: "LOCAL SEARCH GROWTH", title: "Be present when nearby customers are searching", description: "With accurate local details, relevant location content, and a healthy website, Imazine Us helps Zirakpur businesses improve their chances of being discovered through organic search." },
+    credits: { heading: "SEO SERVICES", title: "Your SEO team in Zirakpur", subtitle: "Imazine Us connects local research, website optimization, and progress tracking.", columns: [
+      [{ title: "FOUNDATIONS", items: [{ label: "AUDIT", names: ["Technical review", "Page indexing", "Local details"] }, { label: "RESEARCH", names: ["Zirakpur keywords", "Search intent", "Competitor review"] }] }], [{ title: "GROWTH", items: [{ label: "OPTIMIZATION", names: ["Local landing pages", "Service content", "Internal links"] }, { label: "REPORTING", names: ["Organic visibility", "Traffic trends", "Next actions"] }] }],
+    ] },
+  },
+  "dera-bassi": {
+    label: "Dera Bassi",
+    introTitle: "SEO Services in Dera Bassi for local business growth",
+    intro: "Imazine Us helps Dera Bassi businesses get discovered through relevant Google searches. Our SEO services improve website content, technical foundations, and local search signals so people looking for your products or services can find clear information online.",
+    details: "We learn how your business serves Dera Bassi and nearby communities, then research the terms potential customers use. The resulting SEO roadmap focuses on useful pages, site health, and measurable organic visibility.",
+    contentTitle: "Straightforward SEO for Dera Bassi businesses",
+    content: "Whether you are a local service provider, manufacturer, retailer, or growing company, Imazine Us can help strengthen your organic presence. We review key pages, fix technical barriers, and make your services easier to understand for both customers and search engines.",
+    points: ["Local keyword research for Dera Bassi and nearby areas.", "Technical and on-page SEO recommendations for your website.", "Clear content priorities and regular performance reporting."],
+    focus: ["Dera Bassi local SEO", "Technical website health", "Useful service content"],
+    highlights: ["Nearby customer reach", "Practical SEO priorities", "Organic discovery"],
+    hero: { description: "Imazine Us provides practical SEO services for Dera Bassi businesses that want stronger local visibility and more relevant organic traffic.", serviceColumns: [
+      { label: "SEO FOCUS", items: ["Local SEO", "Technical SEO", "On-Page SEO"] }, { label: "RESEARCH", items: ["Local Keywords", "Customer Intent", "Market Review"] }, { label: "CONTENT", items: ["Service Pages", "Location Content", "Helpful Articles"] }, { label: "GOALS", items: ["Local Discovery", "Organic Traffic", "Qualified Leads"] },
+    ] },
+    context: { label: "DERA BASSI SEO AUDIT", title: "Build a useful foundation for local search", overview: "We review your website and business information to understand how people in Dera Bassi can find your services online.", details: "The audit identifies technical issues, content gaps, and local SEO opportunities. Imazine Us uses those findings to set clear, achievable priorities for your website." },
+    concept: { label: "SERVICE CONTENT", title: "Explain your services clearly in search", overview: "Helpful service pages let potential customers quickly see what you do and whether you can help.", details: "We organize your content around customer questions and relevant Dera Bassi searches, improving clarity while supporting organic visibility." },
+    creativeProcess: { eyebrow: "SEO PROCESS", title: "A practical plan shaped by local search", description: "Our process starts with local keyword research and a technical review, then moves into page recommendations, content improvements, and regular measurement for Dera Bassi businesses." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Steady improvements for lasting visibility", description: "Imazine Us monitors search performance, improves priority pages, and addresses technical SEO needs as your Dera Bassi business and online services develop." },
+    innovation: { eyebrow: "LOCAL SEARCH GROWTH", title: "Connect local searches with your services", description: "We strengthen website relevance and local business signals to help Dera Bassi customers discover accurate, useful information about your business in organic search." },
+    credits: { heading: "SEO SERVICES", title: "Your SEO team in Dera Bassi", subtitle: "Research, website health, local optimization, and reporting from Imazine Us.", columns: [
+      [{ title: "FOUNDATIONS", items: [{ label: "AUDIT", names: ["Technical health", "Indexing review", "Content gaps"] }, { label: "RESEARCH", names: ["Local keywords", "Customer searches", "Competitor review"] }] }], [{ title: "GROWTH", items: [{ label: "OPTIMIZATION", names: ["Service pages", "Local relevance", "Content updates"] }, { label: "REPORTING", names: ["Organic visits", "Visibility trends", "Next steps"] }] }],
+    ] },
   },
 };
 
-export default searchEngineOptimizationPageLocation;
+export default locations;

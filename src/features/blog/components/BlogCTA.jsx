@@ -7,8 +7,6 @@ export default function BlogCTA() {
   return (
     <section className={styles.cta}>
       <div className={styles.card}>
-        <div className={styles.accentLine} />
-
         <div className={styles.content}>
           <span className={styles.badge}>Web Build Support</span>
 

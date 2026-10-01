@@ -134,12 +134,13 @@ function Footer() {
   const isServicesPage =
     pathname === "/services" ||
     pathname?.startsWith("/services/");
+  const isBlogPage = pathname === "/blog" || pathname?.startsWith("/blog/");
 
   return (
     <footer
       className={`${styles.footer} ${footerSans.className}${
         isContactPage || isAboutPage || isServicesPage ? ` ${styles.footerContactPage}` : ""
-      }`}
+      }${isBlogPage ? ` ${styles.footerBlogPage}` : ""}`}
     >
       <div className={styles.shell}>
         <section className={styles.videoPanel}>

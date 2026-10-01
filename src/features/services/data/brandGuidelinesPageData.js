@@ -59,7 +59,7 @@ const brandGuidelinesPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Mohali", "Panchkula", "Remote"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

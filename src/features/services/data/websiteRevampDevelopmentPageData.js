@@ -59,7 +59,7 @@ const websiteRevampDevelopmentPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Mohali", "Zirakpur", "Remote"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

@@ -1,76 +1,114 @@
-const googleAdsCampaignsPageLocation = {
+const locations = {
   chandigarh: {
     label: "Chandigarh",
-    introTitle: "Google Ads pages built for Chandigarh lead generation.",
-    intro:
-      "The Chandigarh version keeps the offer direct and the value proposition tight so paid traffic has a clear destination.",
-    details:
-      "We position the page around search intent, budgets, and conversion tracking so it speaks to buyers fast.",
-    contentTitle: "Campaign pages that help clicks turn into enquiries.",
-    content:
-      "This version frames Google Ads as a measurable growth tool instead of a generic ad service.",
-    points: [
-      "Good for service brands and lead-gen funnels.",
-      "Explains targeting, ad copy, and tracking clearly.",
-      "Helps paid traffic understand what happens next.",
-    ],
-    focus: ["Search ads", "Conversion tracking", "Lead quality"],
-    highlights: ["High-intent traffic", "Clear CTA", "ROI focus"],
+    introTitle: "Google Ads Management in Chandigarh",
+    intro: "Imazine Us plans and manages Google Ads campaigns for Chandigarh businesses looking to reach people actively searching for their products and services. From keyword research and ad copy to conversion tracking, we build campaigns around clear objectives and considered budget use.",
+    details: "We research Chandigarh search demand, structure campaigns by service, and connect each ad to a relevant landing page. Ongoing review helps identify wasted spend and opportunities to improve lead quality.",
+    contentTitle: "Reach customers searching in Chandigarh",
+    content: "Whether you want more calls, enquiries, bookings, or online sales, Imazine Us can create a Google Ads strategy suited to your business. We monitor search terms, conversions, and campaign performance to guide practical improvements over time.",
+    points: ["Search campaigns organized around Chandigarh services and keywords.", "Relevant ad copy and landing page recommendations.", "Conversion tracking and clear performance reporting."],
+    focus: ["Google Search Ads", "Local campaign targeting", "Conversion tracking"],
+    highlights: ["Chandigarh search intent", "Budget visibility", "Lead quality focus"],
+    hero: { description: "Imazine Us manages Google Ads in Chandigarh to help your business reach high-intent searchers, generate qualified enquiries, and make better use of campaign budgets.", serviceColumns: [
+      { label: "CAMPAIGNS", items: ["Search Ads", "Display Ads", "Remarketing"] }, { label: "STRATEGY", items: ["Keyword Research", "Local Targeting", "Ad Copy"] }, { label: "TRACKING", items: ["Calls", "Forms", "Conversions"] }, { label: "GOALS", items: ["Qualified Leads", "Bookings", "Sales"] },
+    ] },
+    context: { label: "CHANDIGARH CAMPAIGN STRATEGY", title: "Start with what Chandigarh customers are searching for", overview: "We research the searches and services that matter to your business in Chandigarh before building your Google Ads campaign.", details: "Imazine Us structures campaigns around relevant keywords, locations, and conversion goals so your ads have a clear purpose and performance can be measured." },
+    concept: { label: "AD MESSAGING", title: "Make every click lead to a relevant next step", overview: "Useful ads set clear expectations and speak directly to what a customer is looking for.", details: "We align Chandigarh-focused ad copy with your offer and landing page, helping prospective customers move from search to enquiry with less friction." },
+    creativeProcess: { eyebrow: "CAMPAIGN BUILD", title: "Careful setup for measurable performance", description: "Our team researches keywords, organizes campaign groups, writes relevant ads, and checks conversion tracking before launch. Imazine Us makes sure each campaign is built around your Chandigarh audience and business goals." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Improve campaigns with real performance data", description: "After launch, we review search terms, conversions, and budget use, then refine bids, targeting, and ad messaging to improve campaign efficiency for your Chandigarh business." },
+    innovation: { eyebrow: "REMARKETING", title: "Reconnect with visitors considering your services", description: "Remarketing can help your brand reconnect with people who have already visited your website. Imazine Us uses relevant audience signals and campaign goals to support a thoughtful follow-up across Google's advertising network." },
+    credits: { heading: "GOOGLE ADS SERVICES", title: "Your Google Ads team in Chandigarh", subtitle: "Imazine Us brings campaign planning, tracking, and optimization together around your business goals.", columns: [
+      [{ title: "SETUP", items: [{ label: "RESEARCH", names: ["Chandigarh keywords", "Search intent", "Competitor review"] }, { label: "STRUCTURE", names: ["Campaign groups", "Location targeting", "Ad messaging"] }] }], [{ title: "PERFORMANCE", items: [{ label: "OPTIMIZATION", names: ["Search terms", "Budget review", "Ad testing"] }, { label: "REPORTING", names: ["Tracked conversions", "Lead quality", "Next steps"] }] }],
+    ] },
   },
   mohali: {
     label: "Mohali",
-    introTitle: "Practical Google Ads messaging for Mohali businesses.",
-    intro:
-      "Mohali brands usually need a no-nonsense explanation of what paid ads can do. The copy here stays direct and business-first.",
-    details:
-      "We keep the page focused on budgets, lead quality, and ad structure so it feels useful to decision-makers.",
-    contentTitle: "A paid campaign page that feels easy to trust.",
-    content:
-      "The layout shows how ads, landing pages, and tracking work together to produce measurable outcomes.",
-    points: [
-      "Useful for businesses that want predictable leads.",
-      "Easy to scan and understand quickly.",
-      "Works well for mobile visitors coming from ads.",
-    ],
-    focus: ["Targeting", "Ad copy", "Budget control"],
-    highlights: ["Business-first", "Clear value", "Conversion-led"],
+    introTitle: "Google Ads Management for Mohali Businesses",
+    intro: "Imazine Us helps companies and local businesses in Mohali use Google Ads to reach relevant customers and generate measurable enquiries. We plan search campaigns, write clear ads, and track the actions that matter to your business.",
+    details: "From IT and professional services to education, healthcare, and retail, we shape campaign structure around your offer and target audience. Our team reviews keywords, locations, landing pages, and conversion data to keep campaigns accountable.",
+    contentTitle: "Performance-focused Google Ads for Mohali",
+    content: "We manage the campaign details that connect search demand with business growth: keyword selection, ad groups, location targeting, ad copy, and conversion tracking. Imazine Us uses campaign insights to guide ongoing optimization across Mohali and the Tricity area.",
+    points: ["Google Search campaigns tailored to Mohali services and audiences.", "Ad messaging and landing page recommendations for better relevance.", "Conversion tracking and regular budget and performance reviews."],
+    focus: ["Search campaign strategy", "Mohali audience targeting", "Lead tracking"],
+    highlights: ["Business-led campaign goals", "Tricity market context", "Transparent reporting"],
+    hero: { description: "Generate more relevant enquiries with Google Ads management from Imazine Us, built around the goals and audiences of Mohali businesses.", serviceColumns: [
+      { label: "CAMPAIGNS", items: ["Search Ads", "Display Ads", "Remarketing"] }, { label: "STRATEGY", items: ["Keyword Research", "Mohali Targeting", "Ad Copy"] }, { label: "TRACKING", items: ["Calls", "Forms", "Sales"] }, { label: "GOALS", items: ["Qualified Leads", "Bookings", "Growth"] },
+    ] },
+    context: { label: "MOHALI CAMPAIGN STRATEGY", title: "Reach the customers most relevant to your offer", overview: "We learn about your services and target customers, then research the searches people use across Mohali to find businesses like yours.", details: "Imazine Us builds campaigns around relevant keywords, locations, and conversion actions, with clear tracking from the start." },
+    concept: { label: "AD MESSAGING", title: "Clear ads for high-intent searches", overview: "Good ad copy connects what people search for with the specific service your business provides.", details: "We write and test relevant messaging, then align each ad with an appropriate landing page to make it easy for Mohali prospects to take action." },
+    creativeProcess: { eyebrow: "CAMPAIGN BUILD", title: "A considered setup for every campaign", description: "Imazine Us researches keywords, groups campaigns by service, develops ad copy, and configures conversion tracking. Each setup is planned around your Mohali business objectives and budget." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Keep improving as campaign data comes in", description: "We review search terms, location performance, conversion quality, and budget use, then adjust campaigns to improve results for your Mohali business." },
+    innovation: { eyebrow: "REMARKETING", title: "Stay visible to people who have visited your site", description: "Remarketing campaigns can bring your offer back to the attention of previous website visitors. We plan follow-up ads around your audience, message, and conversion goals." },
+    credits: { heading: "GOOGLE ADS SERVICES", title: "Your Google Ads team in Mohali", subtitle: "Campaign strategy, tracking, and ongoing optimization from Imazine Us.", columns: [
+      [{ title: "SETUP", items: [{ label: "RESEARCH", names: ["Mohali keywords", "Audience intent", "Market review"] }, { label: "STRUCTURE", names: ["Search campaigns", "Location targeting", "Ad variations"] }] }], [{ title: "PERFORMANCE", items: [{ label: "OPTIMIZATION", names: ["Search terms", "Budget control", "Conversion review"] }, { label: "REPORTING", names: ["Lead tracking", "Campaign trends", "Action plan"] }] }],
+    ] },
   },
-  "delhi-ncr": {
-    label: "Delhi NCR",
-    introTitle: "A stronger Google Ads pitch for a larger Delhi NCR market.",
-    intro:
-      "Delhi NCR requires more confident positioning. This page is built to handle higher competition and broader reach.",
-    details:
-      "The messaging emphasizes performance, tracking, and optimization so the service feels scalable and serious.",
-    contentTitle: "Ads management for competitive regional markets.",
-    content:
-      "This version highlights smart targeting, campaign structure, and ongoing optimization for wider audiences.",
-    points: [
-      "Ideal for competitive categories.",
-      "Supports multi-location campaign strategies.",
-      "Makes ROI and tracking easy to understand.",
-    ],
-    focus: ["Audience targeting", "Performance optimization", "Scale"],
-    highlights: ["Region-ready", "Stronger authority", "Performance-first"],
+  panchkula: {
+    label: "Panchkula",
+    introTitle: "Google Ads Services in Panchkula",
+    intro: "Imazine Us plans Google Ads campaigns for Panchkula businesses that want to reach relevant customers at the moment they are searching. We combine thoughtful targeting, clear ad messaging, and conversion tracking to make paid search easier to understand and improve.",
+    details: "We learn about your services and ideal customers, then build a campaign structure around the searches and locations that support your goals. Every recommendation is grounded in campaign data and your business priorities.",
+    contentTitle: "Relevant paid search for Panchkula customers",
+    content: "From local services and clinics to retail and professional firms, Google Ads can help put your offer in front of people actively looking for it. Imazine Us manages keywords, ads, budgets, and tracking with regular reviews of lead quality and performance.",
+    points: ["Campaigns targeted to Panchkula services and local searches.", "Clear ad copy connected to relevant landing pages.", "Conversion measurement and ongoing optimization."],
+    focus: ["Google Search Ads", "Panchkula targeting", "Conversion optimization"],
+    highlights: ["Relevant local reach", "Clear campaign structure", "Performance insights"],
+    hero: { description: "Reach customers searching for your services with Google Ads managed by Imazine Us for businesses in Panchkula.", serviceColumns: [
+      { label: "CAMPAIGNS", items: ["Search Ads", "Display Ads", "Remarketing"] }, { label: "STRATEGY", items: ["Keyword Research", "Local Targeting", "Ad Messaging"] }, { label: "TRACKING", items: ["Calls", "Enquiries", "Conversions"] }, { label: "GOALS", items: ["Relevant Reach", "Lead Quality", "Sales"] },
+    ] },
+    context: { label: "PANCHKULA CAMPAIGN STRATEGY", title: "Build campaigns around your ideal customer", overview: "We explore your services, audience, and local competition to understand where paid search can support your Panchkula business.", details: "Our team groups keywords and locations into a clear campaign structure, defines conversion goals, and sets up measurement before launch." },
+    concept: { label: "AD MESSAGING", title: "Give searchers a clear reason to choose you", overview: "Relevant ads help people quickly see how your service matches what they are looking for.", details: "Imazine Us creates straightforward ad messaging for Panchkula searches and connects each campaign to a landing page that supports the next step." },
+    creativeProcess: { eyebrow: "CAMPAIGN BUILD", title: "Thoughtful targeting from the first click", description: "We research search intent, create focused campaign groups, prepare ad variations, and configure conversion tracking so your Panchkula campaign can be measured and refined." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Refine spend around what is working", description: "We review clicks, search terms, conversions, and lead quality, then make informed changes to targeting, bids, budgets, and creative for your Panchkula campaigns." },
+    innovation: { eyebrow: "REMARKETING", title: "Give interested visitors another opportunity to act", description: "With remarketing, Imazine Us can help your business reconnect with people who have previously visited your website, using relevant follow-up messaging based on your campaign objectives." },
+    credits: { heading: "GOOGLE ADS SERVICES", title: "Your Google Ads team in Panchkula", subtitle: "Imazine Us supports your campaigns from strategy and launch through tracking and refinement.", columns: [
+      [{ title: "SETUP", items: [{ label: "RESEARCH", names: ["Panchkula keywords", "Search intent", "Audience review"] }, { label: "STRUCTURE", names: ["Campaign groups", "Location settings", "Ad copy"] }] }], [{ title: "PERFORMANCE", items: [{ label: "OPTIMIZATION", names: ["Search queries", "Bid and budget review", "Landing pages"] }, { label: "REPORTING", names: ["Conversions", "Lead quality", "Next steps"] }] }],
+    ] },
   },
-  ludhiana: {
-    label: "Ludhiana",
-    introTitle: "Lead-focused Google Ads content for Ludhiana.",
-    intro:
-      "Ludhiana pages work best when they feel energetic and action-driven. The copy here keeps the momentum high.",
-    details:
-      "We frame paid campaigns around fast enquiries, clear offers, and measurable returns so the page feels practical.",
-    contentTitle: "A conversion page for brands that want direct results.",
-    content:
-      "The page makes it easy to understand how a campaign is built, tracked, and improved over time.",
-    points: [
-      "Strong fit for lead generation brands.",
-      "Simple enough for first-time paid advertisers.",
-      "Keeps the path to contact obvious.",
-    ],
-    focus: ["Lead generation", "Retargeting", "Optimization"],
-    highlights: ["Lead-ready", "Practical tone", "Clear messaging"],
+  zirakpur: {
+    label: "Zirakpur",
+    introTitle: "Google Ads Management in Zirakpur",
+    intro: "Imazine Us helps Zirakpur businesses use Google Ads to appear for relevant local searches and bring more potential customers to their website or phone line. We plan campaigns around your services, locations, budget, and desired actions.",
+    details: "Our team researches local keywords, organizes ad groups, and makes sure calls and enquiries can be tracked. Campaign reviews help us reduce irrelevant clicks and focus spend on stronger opportunities.",
+    contentTitle: "Turn Zirakpur searches into useful business leads",
+    content: "Whether you run a local service, retail store, clinic, or growing company, Imazine Us can help structure a campaign around what customers in Zirakpur are searching for. We manage ad copy, targeting, budgets, and conversion insights to improve the path from click to enquiry.",
+    points: ["Local search campaigns for Zirakpur products and services.", "Relevant keyword targeting and clear promotional ad copy.", "Call and form tracking with regular campaign reviews."],
+    focus: ["Zirakpur Search Ads", "Local lead generation", "Call and form tracking"],
+    highlights: ["Nearby customer targeting", "Reduced wasted spend", "Trackable enquiries"],
+    hero: { description: "Put your business in front of people searching nearby with Google Ads management from Imazine Us, tailored to Zirakpur.", serviceColumns: [
+      { label: "CAMPAIGNS", items: ["Search Ads", "Display Ads", "Remarketing"] }, { label: "STRATEGY", items: ["Local Keywords", "Zirakpur Targeting", "Ad Copy"] }, { label: "TRACKING", items: ["Calls", "Forms", "Conversions"] }, { label: "GOALS", items: ["Local Enquiries", "Bookings", "Sales"] },
+    ] },
+    context: { label: "ZIRAKPUR CAMPAIGN STRATEGY", title: "Show up for searches close to your business", overview: "We identify the products and services you want to promote and research how potential customers search for them in Zirakpur.", details: "Imazine Us organizes campaigns around local intent and sets up conversion tracking so calls, forms, and other valuable actions can be measured." },
+    concept: { label: "AD MESSAGING", title: "Make your local offer easy to understand", overview: "A focused ad tells people what you provide and why they should visit your website or contact you.", details: "We align keywords, Zirakpur-focused ad copy, and landing page messaging to create a clear experience from search result to enquiry." },
+    creativeProcess: { eyebrow: "CAMPAIGN BUILD", title: "Set up for meaningful local enquiries", description: "Imazine Us researches local search terms, builds service-based campaign groups, writes ad variations, and checks call or form tracking before launching your Zirakpur campaign." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Focus your budget on relevant search activity", description: "We review search queries, location performance, and tracked enquiries, then refine campaign settings and messaging to reduce irrelevant clicks and improve results in Zirakpur." },
+    innovation: { eyebrow: "REMARKETING", title: "Reconnect with potential customers after a visit", description: "Remarketing can help your business stay in view after someone visits your website. Imazine Us plans follow-up ads around relevant audiences and the action you want them to take." },
+    credits: { heading: "GOOGLE ADS SERVICES", title: "Your Google Ads team in Zirakpur", subtitle: "Imazine Us manages the targeting, creative, tracking, and optimization behind your campaigns.", columns: [
+      [{ title: "SETUP", items: [{ label: "RESEARCH", names: ["Zirakpur keywords", "Local search intent", "Offer review"] }, { label: "STRUCTURE", names: ["Service campaigns", "Location targeting", "Ad variations"] }] }], [{ title: "PERFORMANCE", items: [{ label: "OPTIMIZATION", names: ["Search terms", "Budget review", "Call tracking"] }, { label: "REPORTING", names: ["Forms and calls", "Lead trends", "Next actions"] }] }],
+    ] },
+  },
+  "dera-bassi": {
+    label: "Dera Bassi",
+    introTitle: "Google Ads Services for Dera Bassi Businesses",
+    intro: "Imazine Us helps Dera Bassi businesses reach people actively searching for their products and services through Google Ads. We plan focused campaigns, create relevant ads, and track calls or enquiries so you can understand how paid search supports your business.",
+    details: "We start with your service area, customer needs, and campaign goals. Then we research relevant searches, set up targeting, and connect ads to useful landing pages for Dera Bassi and nearby locations.",
+    contentTitle: "Reach nearby customers with focused Google Ads",
+    content: "From manufacturers and local services to retailers and professional businesses, Google Ads can help you reach customers with timely offers. Imazine Us manages campaign structure, keyword choices, budgets, and tracking, then uses performance data to guide improvements.",
+    points: ["Google Ads campaigns planned for Dera Bassi and nearby areas.", "Keyword research and ads matched to your services and offers.", "Call, form, and conversion tracking with clear reviews."],
+    focus: ["Local search campaigns", "Dera Bassi targeting", "Lead tracking"],
+    highlights: ["Nearby market reach", "Clear budget priorities", "Measurable results"],
+    hero: { description: "Reach more relevant customers with Google Ads managed by Imazine Us for businesses in Dera Bassi and nearby areas.", serviceColumns: [
+      { label: "CAMPAIGNS", items: ["Search Ads", "Display Ads", "Remarketing"] }, { label: "STRATEGY", items: ["Keyword Research", "Local Targeting", "Ad Messaging"] }, { label: "TRACKING", items: ["Calls", "Forms", "Conversions"] }, { label: "GOALS", items: ["Enquiries", "Bookings", "Sales"] },
+    ] },
+    context: { label: "DERA BASSI CAMPAIGN STRATEGY", title: "Plan ads around your local service area", overview: "We understand what you offer and where you serve customers, then research relevant searches in Dera Bassi and surrounding areas.", details: "Your campaign structure, location targeting, and conversion setup are planned to keep the budget focused and make results easier to evaluate." },
+    concept: { label: "AD MESSAGING", title: "Connect customer searches with your offer", overview: "Clear ads help potential customers understand your service and what to do next.", details: "Imazine Us writes relevant ad messaging and aligns it with your offer and landing page, helping Dera Bassi searchers move confidently toward a call or enquiry." },
+    creativeProcess: { eyebrow: "CAMPAIGN BUILD", title: "A measured launch for your local campaign", description: "We research keywords, build campaigns around your services, prepare ad copy, and configure conversion tracking. Imazine Us checks the setup carefully before your Dera Bassi ads go live." },
+    makingOf: { eyebrow: "ONGOING OPTIMIZATION", title: "Use campaign data to make better decisions", description: "We monitor searches, clicks, calls, and enquiries, then review targeting, budgets, and ad messaging to improve campaign efficiency for your Dera Bassi business." },
+    innovation: { eyebrow: "REMARKETING", title: "Bring interested visitors back to your offer", description: "Imazine Us can plan remarketing campaigns that reconnect with people who have already visited your website, giving them another relevant opportunity to contact your business." },
+    credits: { heading: "GOOGLE ADS SERVICES", title: "Your Google Ads team in Dera Bassi", subtitle: "Campaign planning, conversion tracking, and ongoing optimization from Imazine Us.", columns: [
+      [{ title: "SETUP", items: [{ label: "RESEARCH", names: ["Local keywords", "Service intent", "Area review"] }, { label: "STRUCTURE", names: ["Campaign setup", "Location targeting", "Ad messaging"] }] }], [{ title: "PERFORMANCE", items: [{ label: "OPTIMIZATION", names: ["Search queries", "Budget checks", "Conversion review"] }, { label: "REPORTING", names: ["Calls and forms", "Lead quality", "Next steps"] }] }],
+    ] },
   },
 };
 
-export default googleAdsCampaignsPageLocation;
+export default locations;

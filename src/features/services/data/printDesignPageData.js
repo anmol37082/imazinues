@@ -59,7 +59,7 @@ const printDesignPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Mohali", "Panchkula", "Baddi"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

@@ -1,76 +1,114 @@
-const websiteRevampDevelopmentPageLocation = {
+const locations = {
   chandigarh: {
     label: "Chandigarh",
-    introTitle: "Website revamp pages for Chandigarh businesses.",
-    intro:
-      "Chandigarh brands usually need a more polished digital presence. This page keeps the website message clean and conversion-ready.",
-    details:
-      "We focus on structure, performance, and clarity so the page matches the expectations of local visitors.",
-    contentTitle: "A website service page that feels modern and stable.",
-    content:
-      "The layout explains how UX, speed, and responsive design come together to improve outcomes.",
-    points: [
-      "Ideal for businesses that need stronger web presence.",
-      "Keeps the offer easy to understand.",
-      "Explains why structure and speed matter.",
-    ],
-    focus: ["UX", "Performance", "Responsive design"],
-    highlights: ["Modern feel", "Better clarity", "Strong UX"],
+    introTitle: "Website Development and Revamp in Chandigarh",
+    intro: "Imazine Us designs and develops websites for Chandigarh businesses that need a clearer, faster, and more effective online presence. We bring strategy, user experience, visual design, and development together to create websites that represent your brand and help visitors take action.",
+    details: "Whether you are launching a new business or refreshing an established website, our team plans the structure around your services and customers. We build responsive pages, improve navigation, and focus on performance across devices.",
+    contentTitle: "A better website experience for Chandigarh customers",
+    content: "From service websites and business portfolios to landing pages, Imazine Us creates digital experiences built around your goals. We make key information easy to find and create a clear path for Chandigarh visitors to call, enquire, book, or buy.",
+    points: ["Custom website design and development for Chandigarh businesses.", "Responsive layouts, clear navigation, and conversion-focused pages.", "Website revamp support for performance, usability, and brand consistency."],
+    focus: ["Website design and development", "Responsive UX", "Performance and conversion"],
+    highlights: ["Chandigarh business context", "Clear user journeys", "Built for growth"],
+    hero: { description: "Imazine Us builds and revamps websites for Chandigarh businesses, combining thoughtful design, responsive development, and clear user journeys.", serviceColumns: [
+      { label: "DESIGN", items: ["UX Strategy", "UI Design", "Brand Alignment"] }, { label: "BUILD", items: ["Business Websites", "Landing Pages", "Portfolios"] }, { label: "EXPERIENCE", items: ["Responsive Layouts", "Clear Navigation", "Fast Pages"] }, { label: "GOALS", items: ["Enquiries", "Bookings", "Online Growth"] },
+    ] },
+    context: { label: "WEBSITE STRATEGY", title: "Build around what Chandigarh customers need", overview: "A successful website makes it easy for visitors to understand your business and find the next step. We plan your page structure around your services, audience, and business goals.", details: "Imazine Us maps key user journeys, organizes content, and defines the information hierarchy before design and development begin." },
+    concept: { label: "UI / UX DESIGN", title: "A polished experience that feels easy to use", overview: "Strong design combines a clear visual identity with simple, intuitive navigation.", details: "We create responsive interfaces that help Chandigarh visitors move naturally from learning about your business to making an enquiry or purchase." },
+    creativeProcess: { eyebrow: "DESIGN AND DEVELOPMENT", title: "From the first wireframe to a working website", description: "Imazine Us brings planning, wireframes, visual design, and development into one connected process. We shape each part of your Chandigarh website around your brand and the experience you want customers to have." },
+    makingOf: { eyebrow: "WEB DEVELOPMENT", title: "A dependable build for everyday use and future growth", description: "We develop responsive pages, test across devices, and organize the site so it is easier to maintain and expand as your Chandigarh business grows." },
+    innovation: { eyebrow: "PERFORMANCE", title: "Make every visit feel faster and more focused", description: "Page speed, responsive layouts, and clear calls to action all shape the website experience. Imazine Us builds and improves websites to help Chandigarh customers find information and act with less friction." },
+    credits: { heading: "WEBSITE SERVICES", title: "Your website team in Chandigarh", subtitle: "Imazine Us brings UX, visual design, development, and launch support together.", columns: [
+      [{ title: "EXPERIENCE", items: [{ label: "UX", names: ["User journeys", "Navigation", "Page structure"] }, { label: "DESIGN", names: ["Responsive layouts", "Visual system", "Interface design"] }] }], [{ title: "DELIVERY", items: [{ label: "DEVELOPMENT", names: ["Website build", "Cross-device testing", "Performance checks"] }, { label: "LAUNCH", names: ["SEO foundations", "Analytics setup", "Post-launch support"] }] }],
+    ] },
   },
   mohali: {
     label: "Mohali",
-    introTitle: "Practical website pages for Mohali brands.",
-    intro:
-      "Mohali pages perform best when they feel business-first and simple to scan. The content follows that approach.",
-    details:
-      "We highlight results, responsiveness, and future growth so the page feels useful to both owners and visitors.",
-    contentTitle: "A clean explanation of website revamp value.",
-    content:
-      "This version shows how design and development work together to create a more effective website.",
-    points: [
-      "Good for service businesses and portfolios.",
-      "Easy to scan on mobile and desktop.",
-      "Supports both leads and brand trust.",
-    ],
-    focus: ["Landing pages", "Responsive build", "Lead flow"],
-    highlights: ["Business-friendly", "Clear structure", "Better UX"],
+    introTitle: "Website Development for Mohali Businesses",
+    intro: "Imazine Us creates and revamps websites for Mohali companies, startups, and local businesses. We combine modern design with practical functionality to help your website explain what you do, build trust, and support business growth.",
+    details: "From IT and professional services to education, healthcare, and retail, we shape the site around your audience and day-to-day needs. Our process covers structure, responsive design, development, and testing.",
+    contentTitle: "A business-ready website built for Mohali",
+    content: "Whether you need a new company website, a landing page, or a complete redesign, Imazine Us can help. We make services easy to explore, keep important calls to action visible, and build a responsive experience for customers across Mohali and the Tricity area.",
+    points: ["Website design and development for Mohali companies and startups.", "Responsive business, service, and landing pages.", "UX improvements and website revamps focused on clarity and leads."],
+    focus: ["Business website design", "Responsive development", "Lead generation UX"],
+    highlights: ["Mohali business needs", "Scalable structure", "Clear conversion paths"],
+    hero: { description: "Give your Mohali business a stronger digital foundation with website design, development, and revamp services from Imazine Us.", serviceColumns: [
+      { label: "DESIGN", items: ["UX Planning", "UI Design", "Brand System"] }, { label: "BUILD", items: ["Company Websites", "Landing Pages", "Service Sites"] }, { label: "EXPERIENCE", items: ["Mobile Responsive", "Easy Navigation", "Fast Performance"] }, { label: "GOALS", items: ["Lead Generation", "Brand Trust", "Business Growth"] },
+    ] },
+    context: { label: "MOHALI WEBSITE STRATEGY", title: "A digital foundation for your next stage of growth", overview: "Your website should support the way your Mohali business works and the way customers choose your services.", details: "We plan page structure, user journeys, and content priorities so the final website can serve your customers and adapt as your company grows." },
+    concept: { label: "UI / UX DESIGN", title: "Make your services easy to explore", overview: "A clear interface helps potential customers find the details they need without getting lost.", details: "Imazine Us designs responsive pages and straightforward navigation for Mohali audiences across phones, tablets, and desktop screens." },
+    creativeProcess: { eyebrow: "DESIGN AND DEVELOPMENT", title: "A coordinated process from concept to launch", description: "Our team connects discovery, wireframes, interface design, and development to create a cohesive website for your Mohali company, startup, or local business." },
+    makingOf: { eyebrow: "WEB DEVELOPMENT", title: "Build a site that can grow with your company", description: "We develop responsive page templates, test key interactions, and organize your website so it is practical to maintain and ready to support new services or content." },
+    innovation: { eyebrow: "PERFORMANCE", title: "A smoother experience for every potential customer", description: "Fast, responsive pages help Mohali visitors stay engaged and reach the information they need. We consider speed, usability, and clear calls to action throughout the build." },
+    credits: { heading: "WEBSITE SERVICES", title: "Your website team in Mohali", subtitle: "Imazine Us supports your website from planning and design through launch.", columns: [
+      [{ title: "EXPERIENCE", items: [{ label: "UX", names: ["Customer journeys", "Service structure", "Navigation"] }, { label: "DESIGN", names: ["UI system", "Mobile layouts", "Brand visuals"] }] }], [{ title: "DELIVERY", items: [{ label: "DEVELOPMENT", names: ["Website build", "Responsive testing", "Performance review"] }, { label: "LAUNCH", names: ["SEO setup", "Analytics", "Ongoing support"] }] }],
+    ] },
+  },
+  panchkula: {
+    label: "Panchkula",
+    introTitle: "Website Design and Development in Panchkula",
+    intro: "Imazine Us designs refined, user-friendly websites for businesses in Panchkula. We bring your brand identity, useful content, and intuitive navigation together to create a professional online experience that feels considered on every device.",
+    details: "From professional firms and clinics to hospitality, retail, and lifestyle brands, we plan each website around the audience and impression you want to create. Our team manages UX, interface design, development, and testing.",
+    contentTitle: "A polished website experience for Panchkula brands",
+    content: "We create new websites and revamp existing ones to improve clarity, usability, and visual consistency. Imazine Us helps Panchkula businesses present their services with confidence and makes it easy for visitors to find relevant information and get in touch.",
+    points: ["Professional website design for Panchkula brands and service firms.", "Clear page hierarchy, polished visuals, and responsive layouts.", "Website revamps to improve user experience and performance."],
+    focus: ["Brand-led web design", "UX and responsive layouts", "Website revamp"],
+    highlights: ["Panchkula audience context", "Polished visual experience", "Clear and useful structure"],
+    hero: { description: "Create a polished online presence with website design, development, and revamp services from Imazine Us in Panchkula.", serviceColumns: [
+      { label: "DESIGN", items: ["Brand-led UI", "UX Planning", "Visual Direction"] }, { label: "BUILD", items: ["Business Websites", "Professional Sites", "Landing Pages"] }, { label: "EXPERIENCE", items: ["Responsive Design", "Easy Navigation", "Accessible Content"] }, { label: "GOALS", items: ["Trust", "Enquiries", "Brand Growth"] },
+    ] },
+    context: { label: "PANCHKULA WEBSITE STRATEGY", title: "Present your brand with clarity and confidence", overview: "A thoughtful website reflects the quality of your business and helps visitors understand your services.", details: "We organize your content and user journeys around the needs of Panchkula customers, setting a clear foundation for design and development." },
+    concept: { label: "UI / UX DESIGN", title: "Considered design with an intuitive flow", overview: "Visual refinement works best when visitors can navigate naturally and find useful information quickly.", details: "Imazine Us balances your brand expression with accessible layouts and responsive interactions for Panchkula audiences." },
+    creativeProcess: { eyebrow: "DESIGN AND DEVELOPMENT", title: "Careful design, built to work in the real world", description: "We move from discovery and wireframes into visual design and development, checking that each page feels consistent, polished, and easy to use for your Panchkula customers." },
+    makingOf: { eyebrow: "WEB DEVELOPMENT", title: "A stable, responsive website for your brand", description: "Our development process focuses on clean page structures, responsive layouts, and careful testing so your website performs reliably as your Panchkula business evolves." },
+    innovation: { eyebrow: "PERFORMANCE", title: "A faster, simpler way to experience your brand", description: "We consider page speed, mobile usability, and intuitive navigation to create a smoother website experience for current and future Panchkula customers." },
+    credits: { heading: "WEBSITE SERVICES", title: "Your website team in Panchkula", subtitle: "Imazine Us connects brand expression, user experience, and reliable development.", columns: [
+      [{ title: "EXPERIENCE", items: [{ label: "UX", names: ["Audience journeys", "Information structure", "Navigation"] }, { label: "DESIGN", names: ["Brand-led UI", "Responsive layouts", "Visual details"] }] }], [{ title: "DELIVERY", items: [{ label: "DEVELOPMENT", names: ["Site build", "Device testing", "Speed review"] }, { label: "LAUNCH", names: ["Search foundations", "Analytics setup", "Support"] }] }],
+    ] },
   },
   zirakpur: {
     label: "Zirakpur",
-    introTitle: "Fast website messaging for Zirakpur visitors.",
-    intro:
-      "Zirakpur audiences often want quick answers. This page keeps the service explanation short and direct.",
-    details:
-      "The copy is geared toward getting visitors to understand the value fast and move toward enquiry.",
-    contentTitle: "A conversion-focused web page for local growth.",
-    content:
-      "We keep the web revamp message centered on speed, clarity, and the benefit of a better user journey.",
-    points: [
-      "Great for brands that depend on mobile traffic.",
-      "Makes the page easy to navigate quickly.",
-      "Supports stronger first impressions.",
-    ],
-    focus: ["Speed", "Flow", "Conversion"],
-    highlights: ["Quick scan", "Mobile-first", "Simple action"],
+    introTitle: "Website Development and Revamp in Zirakpur",
+    intro: "Imazine Us builds practical, mobile-friendly websites for Zirakpur businesses that want to make a strong first impression and generate more enquiries. We make your services easy to understand and help visitors quickly find the right way to contact you.",
+    details: "Whether you need a new website or a revamp, we focus on straightforward navigation, responsive design, fast pages, and clear calls to action for customers browsing on their phones or computers.",
+    contentTitle: "A mobile-ready website for Zirakpur customers",
+    content: "From local services and retailers to clinics and growing brands, Imazine Us creates websites that present your offer clearly and guide visitors toward a useful next step. We design around real customer journeys, not just appearance.",
+    points: ["Mobile-friendly websites for Zirakpur businesses.", "Clear service pages, navigation, and enquiry options.", "Website redesigns focused on speed and usability."],
+    focus: ["Mobile-first web design", "Service pages", "Enquiry flow"],
+    highlights: ["Zirakpur customer needs", "Quick access to information", "Conversion-ready layout"],
+    hero: { description: "Make it easier for Zirakpur customers to choose and contact your business with a responsive website from Imazine Us.", serviceColumns: [
+      { label: "DESIGN", items: ["Mobile UX", "Clear UI", "Brand Styling"] }, { label: "BUILD", items: ["Business Websites", "Service Pages", "Landing Pages"] }, { label: "EXPERIENCE", items: ["Fast Pages", "Easy Navigation", "Click-to-Call"] }, { label: "GOALS", items: ["Enquiries", "Bookings", "Local Growth"] },
+    ] },
+    context: { label: "ZIRAKPUR WEBSITE STRATEGY", title: "Help visitors find the right information quickly", overview: "Customers often visit a local business website to check services, location, and contact details. We make those essentials easy to find.", details: "Imazine Us plans a clear page hierarchy and direct user journey for Zirakpur visitors, with enquiry options placed where customers need them." },
+    concept: { label: "MOBILE UX", title: "A smooth experience on the devices people use", overview: "A responsive website should feel simple to browse whether a customer is on a phone, tablet, or desktop.", details: "We design readable content, clear buttons, and intuitive navigation so Zirakpur customers can explore your services without friction." },
+    creativeProcess: { eyebrow: "DESIGN AND DEVELOPMENT", title: "A clear route from your idea to launch", description: "We plan pages around your services, design the interface, develop responsive layouts, and test the key actions customers take on your website." },
+    makingOf: { eyebrow: "WEB DEVELOPMENT", title: "A practical build for everyday business", description: "Imazine Us develops clean, responsive websites and checks them across devices, helping Zirakpur businesses maintain a reliable online presence." },
+    innovation: { eyebrow: "PERFORMANCE", title: "Faster pages and clearer calls to action", description: "We focus on page speed, mobile usability, and clear enquiry paths to help Zirakpur visitors find what they need and contact your business more easily." },
+    credits: { heading: "WEBSITE SERVICES", title: "Your website team in Zirakpur", subtitle: "Imazine Us plans, designs, builds, and tests practical business websites.", columns: [
+      [{ title: "EXPERIENCE", items: [{ label: "UX", names: ["Mobile journeys", "Service structure", "Contact paths"] }, { label: "DESIGN", names: ["Clear interface", "Responsive pages", "Brand visuals"] }] }], [{ title: "DELIVERY", items: [{ label: "DEVELOPMENT", names: ["Website build", "Device testing", "Speed checks"] }, { label: "LAUNCH", names: ["Contact setup", "Search basics", "Post-launch help"] }] }],
+    ] },
   },
-  remote: {
-    label: "Remote",
-    introTitle: "Remote website support that still feels local.",
-    intro:
-      "When location matters less than responsiveness, this page explains how remote web work is handled clearly.",
-    details:
-      "We keep the design focused on delivery, communication, and performance so the service feels dependable.",
-    contentTitle: "Web revamp support for brands across regions.",
-    content:
-      "The page makes it easy for businesses to understand how remote website work still delivers a high-quality result.",
-    points: [
-      "Suitable for multi-city or online-first teams.",
-      "Maintains a strong service-page structure.",
-      "Makes communication expectations clear.",
-    ],
-    focus: ["Flexible delivery", "Fast response", "Clear scope"],
-    highlights: ["Flexible service", "Multi-city fit", "Trust cues"],
+  "dera-bassi": {
+    label: "Dera Bassi",
+    introTitle: "Website Development for Dera Bassi Businesses",
+    intro: "Imazine Us creates dependable websites for businesses in Dera Bassi, including manufacturers, local services, retailers, and growing companies. We help you present your work clearly, build customer confidence, and make it simple for people to get in touch.",
+    details: "We plan the website around your products, services, and customers, then design and develop responsive pages that are easy to navigate. Existing websites can also be revamped to improve clarity, usability, and performance.",
+    contentTitle: "A clear and professional website for your Dera Bassi business",
+    content: "From a focused service website to a complete business site, Imazine Us creates practical digital experiences that explain what you offer and how customers can take the next step. We support your online presence with considered structure, design, and development.",
+    points: ["Business website design and development for Dera Bassi.", "Clear service information and straightforward contact options.", "Website revamp support for responsive design and usability."],
+    focus: ["Business website design", "Service information", "Responsive development"],
+    highlights: ["Dera Bassi business context", "Professional first impression", "Easy customer contact"],
+    hero: { description: "Imazine Us builds professional, responsive websites for Dera Bassi businesses, helping customers understand your services and contact you with confidence.", serviceColumns: [
+      { label: "DESIGN", items: ["UX Planning", "Brand-led UI", "Clear Structure"] }, { label: "BUILD", items: ["Business Sites", "Service Websites", "Landing Pages"] }, { label: "EXPERIENCE", items: ["Responsive Design", "Easy Navigation", "Contact Options"] }, { label: "GOALS", items: ["Trust", "Enquiries", "Business Growth"] },
+    ] },
+    context: { label: "DERA BASSI WEBSITE STRATEGY", title: "Make your services clear to potential customers", overview: "A useful business website answers customers' main questions and explains how to work with you.", details: "We plan pages around your services, products, and customer needs in Dera Bassi, creating a clear structure before design and development." },
+    concept: { label: "UI / UX DESIGN", title: "Simple navigation, professional presentation", overview: "A well-organized website helps customers explore your business without confusion.", details: "Imazine Us combines clear content, brand-aligned visuals, and responsive design to create an accessible experience across devices." },
+    creativeProcess: { eyebrow: "DESIGN AND DEVELOPMENT", title: "Thoughtful planning through to a tested website", description: "We organize your page content, design the interface, develop responsive layouts, and test important interactions before launch for your Dera Bassi business." },
+    makingOf: { eyebrow: "WEB DEVELOPMENT", title: "A reliable website foundation for your business", description: "Our development work focuses on responsive pages, clear structure, and careful testing, giving your Dera Bassi business a website that can support future updates." },
+    innovation: { eyebrow: "PERFORMANCE", title: "Give customers a smoother way to connect", description: "We consider mobile usability, loading performance, and visible contact details so Dera Bassi customers can find information and reach your business more easily." },
+    credits: { heading: "WEBSITE SERVICES", title: "Your website team in Dera Bassi", subtitle: "Imazine Us supports your website from planning and design through development and launch.", columns: [
+      [{ title: "EXPERIENCE", items: [{ label: "UX", names: ["Customer needs", "Page hierarchy", "Contact journey"] }, { label: "DESIGN", names: ["Brand visuals", "Responsive layouts", "Clear interface"] }] }], [{ title: "DELIVERY", items: [{ label: "DEVELOPMENT", names: ["Website build", "Cross-device checks", "Performance review"] }, { label: "LAUNCH", names: ["Search foundations", "Contact setup", "Ongoing support"] }] }],
+    ] },
   },
 };
 
-export default websiteRevampDevelopmentPageLocation;
+export default locations;

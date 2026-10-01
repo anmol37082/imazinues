@@ -59,7 +59,7 @@ const contentCreationPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Mohali", "Panchkula", "Tricity"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

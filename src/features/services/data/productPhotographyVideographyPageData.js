@@ -59,7 +59,7 @@ const productPhotographyVideographyPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Mohali", "Panchkula", "Ludhiana"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

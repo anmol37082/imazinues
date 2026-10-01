@@ -1,76 +1,114 @@
-const contentCreationPageLocation = {
+const locations = {
   chandigarh: {
     label: "Chandigarh",
-    introTitle: "Content creation pages for Chandigarh brands.",
-    intro:
-      "The Chandigarh version focuses on clean storytelling and consistent output so the service feels reliable and premium.",
-    details:
-      "We keep the message around content systems, not one-off posts, so the page matches how brands actually grow.",
-    contentTitle: "A content service page that feels structured.",
-    content:
-      "The layout shows how content planning, visuals, and publishing work together across platforms.",
-    points: [
-      "Great for reels, blogs, and campaign assets.",
-      "Helps visitors understand the process quickly.",
-      "Supports brand consistency across channels.",
-    ],
-    focus: ["Storytelling", "Visual content", "Publishing systems"],
-    highlights: ["Cohesive copy", "Creative clarity", "Trust building"],
+    introTitle: "Content Creation Services in Chandigarh",
+    intro: "Imazine Us creates strategic content for Chandigarh businesses that want a consistent and recognisable online presence. From social media posts and reels to blogs, campaign visuals, and brand stories, we shape each asset around your audience and business goals.",
+    details: "We learn about your brand, customers, and marketing priorities before planning content themes and formats. Our team brings copywriting, design, video editing, and production together to make publishing easier and more consistent.",
+    contentTitle: "Creative content for Chandigarh brands",
+    content: "Whether you are building awareness, promoting a service, or sharing your expertise, Imazine Us can create content that fits your brand voice. We plan platform-ready assets that work together across Instagram, LinkedIn, websites, and campaign channels.",
+    points: ["Social media posts, reels, stories, and campaign creatives.", "Blog and website content aligned with your brand voice.", "Content planning and multi-format creative production."],
+    focus: ["Social media content", "Blogs and brand stories", "Campaign creative"],
+    highlights: ["Chandigarh audience insight", "Consistent brand voice", "Platform-ready formats"],
+    hero: { description: "Imazine Us creates social, blog, video, and campaign content for Chandigarh businesses, helping your brand communicate clearly across platforms.", serviceColumns: [
+      { label: "FORMATS", items: ["Reels", "Social Posts", "Blogs"] }, { label: "CREATIVE", items: ["Copywriting", "Design", "Video Editing"] }, { label: "PLANNING", items: ["Content Calendars", "Campaign Themes", "Brand Stories"] }, { label: "PURPOSE", items: ["Inform", "Engage", "Convert"] },
+    ] },
+    context: { label: "CONTENT STRATEGY", title: "Start with a clear story for your audience", overview: "Effective content begins with a clear understanding of your brand, customers, and goals. Imazine Us plans content themes that help Chandigarh businesses share useful and memorable messages.", details: "We define your voice, topics, and creative direction, then map them to a realistic content calendar across the platforms that matter to your business." },
+    concept: { label: "BRAND STORYTELLING", title: "Make every piece feel part of your brand", overview: "A consistent story helps people recognise your business wherever they encounter it.", details: "We connect social posts, reels, blogs, and campaign assets through a shared voice and visual direction, so your content feels cohesive rather than one-off." },
+    creativeProcess: { eyebrow: "CREATIVE PROCESS", title: "One clear idea, shaped for each platform", description: "Imazine Us turns research and campaign ideas into copy, design, and video content. We adapt each concept into the right formats for your Chandigarh audience, from short-form social creative to useful website articles." },
+    makingOf: { eyebrow: "CONTENT PRODUCTION", title: "From brief to ready-to-publish assets", description: "We organize the content plan, produce and edit creative, and prepare final files for your chosen channels. Your Chandigarh team gets consistent assets that are ready to schedule and share." },
+    innovation: { eyebrow: "MULTI-FORMAT CONTENT", title: "Extend good ideas across your channels", description: "A strong topic can become a reel, carousel, blog, story sequence, or campaign asset. Imazine Us helps Chandigarh businesses make more use of each idea while keeping the core message consistent." },
+    credits: { heading: "CONTENT SERVICES", title: "Your content creation team in Chandigarh", subtitle: "Imazine Us brings planning, writing, design, and production together for your brand.", columns: [
+      [{ title: "CREATION", items: [{ label: "FORMATS", names: ["Social posts and reels", "Blogs and articles", "Campaign visuals"] }, { label: "VOICE", names: ["Captions", "Brand messaging", "Storytelling"] }] }], [{ title: "DELIVERY", items: [{ label: "PLANNING", names: ["Content calendars", "Creative themes", "Platform formats"] }, { label: "PRODUCTION", names: ["Design", "Video editing", "Publishing assets"] }] }],
+    ] },
   },
   mohali: {
     label: "Mohali",
-    introTitle: "Straightforward content creation messaging for Mohali.",
-    intro:
-      "Mohali businesses need a practical explanation of what content creation includes. The copy stays clear and functional.",
-    details:
-      "We focus on monthly content, campaign assets, and brand storytelling so the service feels useful and measurable.",
-    contentTitle: "Content that supports ongoing brand communication.",
-    content:
-      "This version positions content as a repeatable system that makes marketing easier to manage.",
-    points: [
-      "Good for growing businesses with active channels.",
-      "Explains deliverables without overcomplicating them.",
-      "Keeps the page easy to navigate on mobile.",
-    ],
-    focus: ["Monthly content", "Campaign assets", "Brand voice"],
-    highlights: ["Practical tone", "Easy to scan", "Growth-focused"],
+    introTitle: "Content Creation for Mohali Businesses",
+    intro: "Imazine Us helps Mohali companies and local brands create useful, consistent content for their customers. We produce social media creative, reels, blogs, website copy, and campaign assets that make it easier to explain what your business does.",
+    details: "From IT and professional services to education, healthcare, and retail, each content plan is shaped around your audience and marketing priorities. We coordinate ideas, writing, design, and production into a reliable workflow.",
+    contentTitle: "Content that keeps your Mohali brand moving",
+    content: "Our team can plan a monthly calendar, create branded posts and short videos, write helpful articles, and prepare campaign materials. Imazine Us builds connected content for your website and social channels so your message stays clear across Mohali and the Tricity area.",
+    points: ["Monthly social media plans, posts, reels, and stories.", "Website copy, blogs, and educational content for your audience.", "Campaign assets developed to support launches and promotions."],
+    focus: ["Business content strategy", "Social and video creative", "Website and blog content"],
+    highlights: ["Mohali market context", "Reliable content workflow", "Connected brand messaging"],
+    hero: { description: "Imazine Us creates social media, website, blog, and campaign content for businesses in Mohali, with a clear plan behind every format.", serviceColumns: [
+      { label: "FORMATS", items: ["Posts and Reels", "Blogs", "Campaign Assets"] }, { label: "CREATIVE", items: ["Writing", "Graphic Design", "Video Editing"] }, { label: "PLANNING", items: ["Monthly Calendars", "Content Themes", "Brand Voice"] }, { label: "PURPOSE", items: ["Explain", "Engage", "Grow"] },
+    ] },
+    context: { label: "MOHALI CONTENT STRATEGY", title: "Plan useful content around your business goals", overview: "We learn about your products, services, customers, and marketing priorities before shaping a content direction for your Mohali business.", details: "Imazine Us creates content themes and a practical publishing plan, helping your team communicate regularly without scrambling for ideas." },
+    concept: { label: "BRAND STORYTELLING", title: "Make complex offers easier to understand", overview: "Clear content helps customers understand your expertise and the value your business provides.", details: "We turn your knowledge into approachable posts, videos, and articles that share a consistent story across social media and your website." },
+    creativeProcess: { eyebrow: "CREATIVE PROCESS", title: "Research and ideas, turned into useful assets", description: "Our team develops content concepts, writes copy, designs graphics, and edits video to suit your platforms. Imazine Us prepares each format to connect with the people your Mohali business wants to reach." },
+    makingOf: { eyebrow: "CONTENT PRODUCTION", title: "A dependable flow from planning to publishing", description: "We coordinate monthly plans, creative production, revisions, and final delivery so your Mohali brand has a steady supply of content ready for its channels." },
+    innovation: { eyebrow: "MULTI-FORMAT CONTENT", title: "Get more value from every content idea", description: "We adapt useful ideas into social posts, reels, blogs, and campaign assets, helping Mohali businesses keep their message consistent across customer touchpoints." },
+    credits: { heading: "CONTENT SERVICES", title: "Your content creation team in Mohali", subtitle: "Imazine Us supports your business with planned, platform-ready creative.", columns: [
+      [{ title: "CREATION", items: [{ label: "FORMATS", names: ["Social posts and reels", "Website copy", "Blogs and articles"] }, { label: "VOICE", names: ["Brand messaging", "Captions", "Campaign copy"] }] }], [{ title: "DELIVERY", items: [{ label: "PLANNING", names: ["Monthly calendars", "Topic research", "Content themes"] }, { label: "PRODUCTION", names: ["Graphic design", "Video editing", "Creative delivery"] }] }],
+    ] },
   },
   panchkula: {
     label: "Panchkula",
-    introTitle: "Premium content creation pages for Panchkula.",
-    intro:
-      "Panchkula brands usually respond well to a refined and polished presentation. The copy reflects that tone.",
-    details:
-      "We lean into story-driven content and premium visuals so the service feels established and trusted.",
-    contentTitle: "Content planning that feels intentional.",
-    content:
-      "The page explains how ideas become reels, carousels, blogs, and brand assets that stay consistent.",
-    points: [
-      "Suitable for premium lifestyle and service brands.",
-      "Keeps the value proposition simple.",
-      "Builds trust before the enquiry click.",
-    ],
-    focus: ["Content strategy", "Premium visuals", "Brand consistency"],
-    highlights: ["Refined feel", "Less clutter", "Clear value"],
+    introTitle: "Content Creation Services in Panchkula",
+    intro: "Imazine Us creates polished, brand-led content for businesses in Panchkula. We help professional firms, lifestyle brands, retailers, and growing companies tell a consistent story through social media, video, blogs, and campaign creative.",
+    details: "Our team builds a thoughtful content direction around your brand identity and audience. From the first concept to final edits, we keep quality, clarity, and consistency at the centre of production.",
+    contentTitle: "Thoughtful content for Panchkula brands",
+    content: "We create social posts, reels, stories, website copy, and articles that work together to build familiarity and trust. Imazine Us helps Panchkula businesses maintain a considered online presence with content tailored to each channel.",
+    points: ["Brand-led social posts, reels, and visual storytelling.", "Website and blog content with a clear, consistent voice.", "Creative campaign assets and planned content calendars."],
+    focus: ["Brand storytelling", "Polished visual content", "Consistent publishing"],
+    highlights: ["Panchkula audience relevance", "Cohesive brand feel", "Careful creative planning"],
+    hero: { description: "Create a more consistent brand presence with content services from Imazine Us for businesses in Panchkula.", serviceColumns: [
+      { label: "FORMATS", items: ["Branded Posts", "Reels and Stories", "Blogs"] }, { label: "CREATIVE", items: ["Visual Direction", "Copywriting", "Video Editing"] }, { label: "PLANNING", items: ["Content Themes", "Publishing Calendar", "Campaign Ideas"] }, { label: "PURPOSE", items: ["Tell Your Story", "Build Trust", "Stay Consistent"] },
+    ] },
+    context: { label: "PANCHKULA CONTENT STRATEGY", title: "A considered direction for your brand story", overview: "We take time to understand your brand identity, audience, and communication goals before developing content themes for your Panchkula business.", details: "A shared visual and editorial direction keeps every post, article, and campaign asset connected to your brand." },
+    concept: { label: "BRAND STORYTELLING", title: "Create a cohesive experience across channels", overview: "Consistent content helps people recognise your business and understand what makes it distinct.", details: "Imazine Us brings photography, design, video, and writing together to tell a clear story across social platforms and your website." },
+    creativeProcess: { eyebrow: "CREATIVE PROCESS", title: "Careful craft behind every content format", description: "From concept development to final edits, we create polished content that fits your brand and platform. Imazine Us adapts stories into visual and written formats for Panchkula audiences." },
+    makingOf: { eyebrow: "CONTENT PRODUCTION", title: "Quality creative, planned and delivered reliably", description: "We organize production timelines, prepare creative assets, and deliver content ready for your channels, helping your Panchkula team maintain a consistent standard." },
+    innovation: { eyebrow: "MULTI-FORMAT CONTENT", title: "One brand story, told in the right formats", description: "We shape core ideas into reels, carousels, articles, and campaign visuals while preserving your brand's voice and visual identity across every format." },
+    credits: { heading: "CONTENT SERVICES", title: "Your content creation team in Panchkula", subtitle: "Imazine Us connects brand strategy, creative production, and content delivery.", columns: [
+      [{ title: "CREATION", items: [{ label: "FORMATS", names: ["Branded social posts", "Reels and stories", "Editorial content"] }, { label: "VOICE", names: ["Brand narrative", "Captions", "Website copy"] }] }], [{ title: "DELIVERY", items: [{ label: "PLANNING", names: ["Content direction", "Publishing calendars", "Campaign concepts"] }, { label: "PRODUCTION", names: ["Visual design", "Video editing", "Creative review"] }] }],
+    ] },
   },
   zirakpur: {
     label: "Zirakpur",
-    introTitle: "Fast, direct content creation messaging for Zirakpur.",
-    intro:
-      "Zirakpur pages should move quickly. This content is designed to be easy to scan and easy to act on.",
-    details:
-      "We keep the page focused on deliverables so visitors understand how content creation helps them keep marketing active.",
-    contentTitle: "A simple explanation of what content creation delivers.",
-    content:
-      "The page puts output, planning, and storytelling front and center so the offer feels clear.",
-    points: [
-      "Useful for busy business owners.",
-      "Supports social and blog content together.",
-      "Makes the next step obvious.",
-    ],
-    focus: ["Hooks", "Carousels", "Monthly planning"],
-    highlights: ["Quick read", "Mobile-friendly", "Conversion-first"],
+    introTitle: "Content Creation for Zirakpur Businesses",
+    intro: "Imazine Us helps Zirakpur businesses keep their marketing active with useful, ready-to-publish content. We create social media posts, reels, promotional graphics, and website content that make your products and services easy to understand.",
+    details: "We plan content around your offers, audience, and schedule, then take care of writing, design, and editing. This gives busy business owners a more manageable way to stay visible online.",
+    contentTitle: "Practical content to keep your Zirakpur brand visible",
+    content: "From monthly social content to a campaign for a new offer, Imazine Us prepares creative that fits your business and the platforms your customers use. We make it straightforward to keep sharing relevant updates with local audiences.",
+    points: ["Social posts, reels, stories, and promotional graphics.", "Captions and content plans for consistent publishing.", "Website and blog content to explain your services clearly."],
+    focus: ["Social media content", "Promotional creative", "Monthly planning"],
+    highlights: ["Zirakpur customer focus", "Ready-to-publish assets", "Consistent brand messaging"],
+    hero: { description: "Keep your business visible with content creation from Imazine Us, planned for brands and local businesses in Zirakpur.", serviceColumns: [
+      { label: "FORMATS", items: ["Posts", "Reels", "Promotional Graphics"] }, { label: "CREATIVE", items: ["Captions", "Design", "Video Editing"] }, { label: "PLANNING", items: ["Monthly Content", "Offers", "Brand Stories"] }, { label: "PURPOSE", items: ["Inform", "Promote", "Engage"] },
+    ] },
+    context: { label: "ZIRAKPUR CONTENT PLAN", title: "Make content planning easier for your business", overview: "We identify the services, offers, and updates you want to share with customers in Zirakpur.", details: "Imazine Us organizes these ideas into a manageable calendar with clear formats and messages, so your business can stay active online." },
+    concept: { label: "LOCAL BRAND CONTENT", title: "Show customers what your business can do", overview: "Helpful, straightforward content makes it easier for local customers to understand your products and services.", details: "We create clear visuals, short videos, and captions that reflect your brand and give people a useful reason to connect." },
+    creativeProcess: { eyebrow: "CREATIVE PROCESS", title: "From business update to ready-to-share content", description: "Imazine Us turns your offers and ideas into platform-ready posts, reels, and promotional creative. We write, design, and edit assets for the channels your Zirakpur customers use." },
+    makingOf: { eyebrow: "CONTENT PRODUCTION", title: "Get your next month of content organized", description: "We plan topics, prepare creative, and package final assets for publishing, giving Zirakpur business owners a reliable way to keep marketing moving." },
+    innovation: { eyebrow: "MULTI-FORMAT CONTENT", title: "Reuse strong ideas across your channels", description: "A promotion or useful customer tip can become a post, reel, story, or website update. We adapt content into practical formats while keeping your Zirakpur brand message consistent." },
+    credits: { heading: "CONTENT SERVICES", title: "Your content creation team in Zirakpur", subtitle: "Imazine Us helps plan, create, and prepare content for your business.", columns: [
+      [{ title: "CREATION", items: [{ label: "FORMATS", names: ["Promotional posts", "Reels and stories", "Service graphics"] }, { label: "VOICE", names: ["Captions", "Offers", "Brand messages"] }] }], [{ title: "DELIVERY", items: [{ label: "PLANNING", names: ["Monthly calendar", "Content topics", "Publishing plan"] }, { label: "PRODUCTION", names: ["Graphic design", "Video editing", "Ready-to-post files"] }] }],
+    ] },
+  },
+  "dera-bassi": {
+    label: "Dera Bassi",
+    introTitle: "Content Creation Services in Dera Bassi",
+    intro: "Imazine Us creates clear, useful content for businesses in Dera Bassi, from local services and manufacturers to retailers and growing brands. We develop social media creative, videos, website copy, and campaign materials that help customers understand your business.",
+    details: "We start with your products, services, and audience, then plan content that supports your communication goals. Our team manages writing, design, and editing so you have polished assets ready to use.",
+    contentTitle: "Content that explains your Dera Bassi business",
+    content: "Build a consistent online presence with planned social posts, reels, stories, blogs, and promotional creative. Imazine Us helps Dera Bassi businesses share useful information and offers across the channels their customers use.",
+    points: ["Social media posts, reels, stories, and business updates.", "Website copy and blog content that explains your services.", "Campaign visuals and a practical content calendar."],
+    focus: ["Business storytelling", "Social and website content", "Campaign materials"],
+    highlights: ["Dera Bassi audience relevance", "Clear service messaging", "Organized production"],
+    hero: { description: "Imazine Us creates social, website, and campaign content for Dera Bassi businesses, helping you share clear messages with local customers.", serviceColumns: [
+      { label: "FORMATS", items: ["Social Posts", "Reels and Stories", "Website Copy"] }, { label: "CREATIVE", items: ["Writing", "Graphic Design", "Video Editing"] }, { label: "PLANNING", items: ["Content Calendar", "Business Updates", "Campaign Ideas"] }, { label: "PURPOSE", items: ["Explain", "Promote", "Connect"] },
+    ] },
+    context: { label: "DERA BASSI CONTENT STRATEGY", title: "Turn your business knowledge into helpful content", overview: "We learn what your business offers and what customers in Dera Bassi need to know before choosing you.", details: "Imazine Us plans useful topics and formats that help you explain your services clearly and communicate consistently." },
+    concept: { label: "BUSINESS STORYTELLING", title: "Share the people and value behind your business", overview: "Content can help customers understand your products, services, and the experience you provide.", details: "We develop clear visuals and messages that reflect your brand and make your business easier to recognize across social media and web channels." },
+    creativeProcess: { eyebrow: "CREATIVE PROCESS", title: "Useful ideas, crafted into polished assets", description: "Our team plans topics, writes copy, designs graphics, and edits video to create content for your channels. Each piece is shaped around your business and audience in Dera Bassi." },
+    makingOf: { eyebrow: "CONTENT PRODUCTION", title: "A simple workflow from planning to delivery", description: "We coordinate content plans, production, and final files so your Dera Bassi business has organized assets ready to publish and share." },
+    innovation: { eyebrow: "MULTI-FORMAT CONTENT", title: "Share your message in more than one way", description: "We adapt business stories, product information, and offers into social posts, reels, articles, and campaign creative while keeping your message consistent." },
+    credits: { heading: "CONTENT SERVICES", title: "Your content creation team in Dera Bassi", subtitle: "Imazine Us helps make your business communication clear, consistent, and ready to publish.", columns: [
+      [{ title: "CREATION", items: [{ label: "FORMATS", names: ["Social posts", "Reels and stories", "Website content"] }, { label: "VOICE", names: ["Service descriptions", "Captions", "Promotional copy"] }] }], [{ title: "DELIVERY", items: [{ label: "PLANNING", names: ["Content topics", "Publishing calendar", "Campaign ideas"] }, { label: "PRODUCTION", names: ["Graphic design", "Video editing", "Final assets"] }] }],
+    ] },
   },
 };
 
-export default contentCreationPageLocation;
+export default locations;

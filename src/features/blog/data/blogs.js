@@ -125,7 +125,6 @@
       { question: "Can SEO help local businesses?", answer: "Yes. Local SEO helps your business appear in searches made by people nearby. It's especially useful for businesses that want to attract customers in a specific city or region." },
       { question: "What are keywords in SEO?", answer: "Keywords are the words and phrases people type into Google when searching for products, services, or information. Using relevant keywords naturally helps search engines understand your content." }
     ],
-    relatedPosts: [2, 3]
   },
   {
     id: 2,
@@ -209,7 +208,6 @@
       { question: "Is content marketing important for social media growth?", answer: "Yes. Blogs, videos, social posts, case studies, and other useful content can work together to build credibility, attract potential customers, and support overall digital marketing efforts." },
       { question: "Can AI help with social media marketing?", answer: "Yes. AI can assist with content ideas, captions, planning, research, and other tasks. However, human creativity, brand voice, and genuine communication are still important." }
     ],
-    relatedPosts: [1, 3]
   },
   {
     id: 3,
@@ -291,7 +289,6 @@
       { question: "How does content marketing help generate customers?", answer: "Helpful content answers customer questions and builds trust. Once people see your business as a reliable source of information, they are more likely to enquire or purchase." },
       { question: "Does content marketing help improve Google rankings?", answer: "Yes. Original, useful, well-structured, and relevant content can support better search engine visibility and help attract organic website traffic." }
     ],
-    relatedPosts: [1, 2]
   },
   {
     id: 4,
@@ -372,7 +369,6 @@
       { question: "Why should I hire a Google Ads agency?", answer: "Managing a PPC campaign involves keyword research, ad creation, audience targeting, conversion tracking, budget management, and regular optimisation. An experienced agency can manage these areas and help reduce unnecessary ad spending." },
       { question: "How can Google Ads help my business?", answer: "Google Ads can help you reach the right customers, generate enquiries, increase website traffic, and promote your products or services. It can be especially useful for businesses that want quick and measurable results." }
     ],
-    relatedPosts: [1, 9]
   },
   {
     id: 5,
@@ -478,7 +474,6 @@
       { question: "What is email personalization?", answer: "Email personalization means creating messages based on information about the recipient, such as their name, interests, location, previous purchases, or interactions with your business." },
       { question: "What is a call-to-action in email marketing?", answer: "A call-to-action (CTA) tells the reader what to do next, such as \"Learn More,\" \"Book a Consultation,\" \"Visit Our Website,\" or \"Get a Quote.\"" }
     ],
-    relatedPosts: [3, 6]
   },
   {
     id: 6,
@@ -580,7 +575,6 @@
       { question: "Why should a website be mobile-friendly?", answer: "A large number of users browse websites on smartphones. A mobile-friendly website automatically adjusts to different screen sizes and provides a better experience across devices." },
       { question: "How does website speed affect conversions?", answer: "Slow websites can frustrate visitors and make them leave before taking action. A fast-loading website provides a better user experience and can help improve engagement and conversions." }
     ],
-    relatedPosts: [1, 9]
   },
   {
     id: 7,
@@ -666,7 +660,6 @@
       { question: "What makes a brand memorable?", answer: "A clear identity, consistent design, simple communication, useful content, and a good customer experience can make a brand easier to remember." },
       { question: "Why is consistency important in branding?", answer: "Using the same colours, fonts, logo, design style, and communication across different platforms helps customers recognize your business more easily." }
     ],
-    relatedPosts: [6, 3]
   },
   {
     id: 8,
@@ -775,7 +768,6 @@
       { question: "How do I choose the right influencer for my business?", answer: "Look at the influencer's audience, location, interests, engagement, content quality, and previous collaborations. Most importantly, their audience should match your potential customers." },
       { question: "Are micro-influencers good for marketing?", answer: "Yes. Micro-influencers often have focused audiences and strong engagement. They can be a good option for businesses with smaller budgets or specific target markets." }
     ],
-    relatedPosts: [2, 3]
   },
   {
     id: 9,
@@ -873,28 +865,7 @@
       { question: "Is website traffic enough to measure marketing success?", answer: "No. Website traffic shows how many people are visiting your website, but it does not tell you whether those visitors are becoming leads or customers. Traffic should be considered along with conversions and other business results." },
       { question: "What is a conversion rate?", answer: "Conversion rate shows the percentage of visitors who complete a desired action, such as submitting an enquiry form, making a purchase, booking a service, or signing up." }
     ],
-    relatedPosts: [4, 8]
   }
 ];
-
-// Helper functions
-export const getBlogBySlug = (slug) => {
-  return blogs.find(blog => blog.slug === slug) || null;
-};
-
-export const getRelatedPosts = (relatedIds) => {
-  return blogs.filter(blog => relatedIds.includes(blog.id));
-};
-
-export const getAllSlugs = () => {
-  return blogs.map(blog => blog.slug);
-};
-
-export const getAllCategories = () => {
-  return [...new Set(blogs.map(blog => blog.category))];
-};
-
-
-
 
 

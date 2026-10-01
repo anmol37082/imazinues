@@ -59,7 +59,7 @@ const googleAdsCampaignsPageData = {
   },
   locationSection: {
     title: "LOCATIONS",
-    locations: ["Chandigarh", "Delhi NCR", "Mohali", "Ludhiana"],
+    locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
   },
   locationPages,
   context: {

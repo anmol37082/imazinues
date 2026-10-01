@@ -128,8 +128,8 @@ const brandGuidelinesPageLocation = {
       alt: "Chandigarh alternate scroll video",
     },
     locationSection: {
-      title: "CHANDIGARH LOCATIONS",
-      locations: ["Chandigarh", "Mohali", "Panchkula", "Remote"],
+      title: "BRAND GUIDELINES LOCATIONS",
+      locations: ["Chandigarh", "Mohali", "Panchkula", "Zirakpur", "Dera Bassi"],
     },
     credits: {
       heading: "CREDITS",
@@ -198,57 +198,105 @@ const brandGuidelinesPageLocation = {
   },
   mohali: {
     label: "Mohali",
-    introTitle: "Straightforward brand guideline content for Mohali.",
+    introTitle: "Brand Guidelines Services in Mohali",
     intro:
-      "Mohali pages should feel practical and easy to apply. The copy keeps the focus on how guidelines help real teams.",
+      "Imazine Us creates practical brand guidelines for Mohali companies, startups, and growing businesses. We define how your logo, colors, typography, imagery, and tone should work together so your team can present a consistent identity across digital and print.",
     details:
-      "We present the brand system as a working tool, not just a design document, so the page feels more useful.",
-    contentTitle: "Guidelines that keep your team visually aligned.",
+      "From internal marketing teams to external designers and partners, clear standards make everyday brand decisions easier. We document the rules with examples your Mohali team can apply across websites, social media, presentations, and campaign materials.",
+    contentTitle: "A usable brand system for your Mohali team",
     content:
-      "The page explains the value of consistency in a way that is simple for teams to act on.",
+      "Imazine Us builds a clear reference for logo use, color combinations, typography, layouts, and brand voice. Your guidelines help everyone creating content for your business stay aligned as the company grows.",
     points: [
-      "Great for internal teams and partners.",
-      "Supports smooth rollout and adoption.",
-      "Keeps the brand easy to recognize.",
+      "Logo, typography, color, and layout rules documented clearly.",
+      "Useful examples for Mohali teams, vendors, and creative partners.",
+      "Consistent brand application across web, social, and print.",
     ],
-    focus: ["Color rules", "Layout rules", "Usage guidance"],
-    highlights: ["Business-friendly", "Clear hierarchy", "Easy adoption"],
+    focus: ["Visual identity rules", "Brand voice", "Team adoption"],
+    highlights: ["Mohali business needs", "Practical examples", "Consistent rollout"],
+    hero: { description: "Imazine Us develops clear brand guidelines for Mohali businesses, helping teams apply their visual identity consistently across every channel.", serviceColumns: [
+      { label: "IDENTITY", items: ["Logo", "Color", "Typography"] }, { label: "APPLICATION", items: ["Digital", "Print", "Social Media"] }, { label: "TEAM", items: ["Internal Teams", "Vendors", "Partners"] },
+    ] },
+    context: { label: "MOHALI BRAND SYSTEM", title: "Give every team a clear brand reference", overview: "As Mohali companies grow, more people create materials for the brand. A shared guide helps everyone work from the same visual and verbal foundation.", details: "Imazine Us documents your identity rules and practical examples so employees and partners can create consistent communications with confidence." },
+    concept: { label: "IDENTITY APPLICATION", title: "Make your identity easy to use every day", overview: "A useful guide turns brand decisions into clear, repeatable choices.", details: "We explain logo placement, colors, fonts, layouts, and tone with examples for websites, presentations, social media, and print materials." },
+    creativeProcess: { eyebrow: "GUIDELINE DEVELOPMENT", title: "From brand foundations to practical standards", description: "We review your brand strategy and visual identity, then translate them into organized rules and examples. The result gives Mohali teams a consistent reference for everyday creative work." },
+    makingOf: { eyebrow: "TEAM ENABLEMENT", title: "A guide your team can apply with confidence", description: "Clear sections and real usage examples make the guidelines easier to follow for your in-house team, suppliers, and creative partners in Mohali." },
+    innovation: { eyebrow: "CONSISTENT ROLLOUT", title: "Keep every brand touchpoint connected", description: "From digital campaigns to office materials and presentations, Imazine Us helps Mohali businesses apply their identity consistently wherever customers encounter the brand." },
+    credits: { heading: "BRAND GUIDELINE SERVICES", title: "Your brand guidelines team in Mohali", subtitle: "Imazine Us organizes your identity into a practical system for teams and partners.", columns: [
+      [{ title: "IDENTITY", items: [{ label: "VISUAL RULES", names: ["Logo usage", "Color palette", "Typography"] }, { label: "APPLICATION", names: ["Digital layouts", "Print examples", "Social templates"] }] }], [{ title: "ROLLOUT", items: [{ label: "DOCUMENTATION", names: ["Brand guide", "Usage examples", "Asset library"] }, { label: "SUPPORT", names: ["Team handoff", "Partner alignment", "Consistency review"] }] }],
+    ] },
   },
   panchkula: {
     label: "Panchkula",
-    introTitle: "Premium brand identity pages for Panchkula.",
+    introTitle: "Brand Guidelines Services in Panchkula",
     intro:
-      "Panchkula brands often value a refined, premium presentation. This page reflects that with a polished tone.",
+      "Imazine Us creates refined brand guidelines for Panchkula businesses that want a consistent, professional identity. We organize your logo, colors, typography, imagery, and brand voice into a clear system that supports a polished customer experience.",
     details:
-      "We position brand guidelines as a trust-building system that keeps the whole brand experience consistent.",
-    contentTitle: "A polished identity system for serious brands.",
+      "Whether you are a professional firm, hospitality brand, retailer, or growing company, clear standards help every team member protect the quality of your identity across customer touchpoints.",
+    contentTitle: "A cohesive identity for Panchkula brands",
     content:
-      "The page shows how consistent identity work supports trust, recognition, and growth.",
+      "Our guidelines include practical direction for logo use, typography, color, layouts, imagery, and tone. Imazine Us makes it easier for your in-house team and creative partners to produce consistent work across digital, social, print, and campaigns.",
     points: [
-      "Good for premium, professional brands.",
-      "Makes the identity feel stable and established.",
-      "Helps every asset look connected.",
+      "A considered visual system for professional and premium businesses.",
+      "Clear logo, color, typography, and imagery standards.",
+      "Consistent brand use across digital and physical materials.",
     ],
-    focus: ["Recognition", "System thinking", "Visual trust"],
-    highlights: ["Premium tone", "Less clutter", "Strong identity"],
+    focus: ["Visual consistency", "Brand recognition", "Guideline documentation"],
+    highlights: ["Panchkula brand context", "Refined presentation", "Confident application"],
+    hero: { description: "Build a polished and consistent identity with brand guidelines from Imazine Us for businesses in Panchkula.", serviceColumns: [
+      { label: "IDENTITY", items: ["Logo System", "Color Palette", "Typography"] }, { label: "EXPRESSION", items: ["Imagery", "Layout", "Brand Voice"] }, { label: "APPLICATION", items: ["Web", "Print", "Campaigns"] },
+    ] },
+    context: { label: "PANCHKULA BRAND SYSTEM", title: "Protect the details that make your brand distinctive", overview: "A considered identity needs consistent application to remain recognizable and trustworthy.", details: "Imazine Us defines the standards and examples that help Panchkula teams maintain a polished brand experience across every customer touchpoint." },
+    concept: { label: "VISUAL IDENTITY", title: "Build recognition through consistent design", overview: "A connected use of color, type, imagery, and layout helps create a confident brand impression.", details: "Our guide shows how the elements work together, making it easier to apply your identity across websites, social media, print, and presentations." },
+    creativeProcess: { eyebrow: "GUIDELINE DEVELOPMENT", title: "Thoughtful identity rules, ready for real use", description: "We translate your positioning and visual language into a clear system with practical examples. Your Panchkula team gets standards that support quality without slowing down creative work." },
+    makingOf: { eyebrow: "TEAM ENABLEMENT", title: "Keep your in-house and partner teams aligned", description: "A well-organized guide gives employees, designers, and suppliers a shared reference for maintaining your brand's quality and tone." },
+    innovation: { eyebrow: "CONSISTENT ROLLOUT", title: "A refined experience across every channel", description: "Imazine Us helps Panchkula brands carry a consistent identity through digital campaigns, websites, print materials, and customer communications." },
+    credits: { heading: "BRAND GUIDELINE SERVICES", title: "Your brand guidelines team in Panchkula", subtitle: "Imazine Us documents your identity and helps your team apply it consistently.", columns: [
+      [{ title: "IDENTITY", items: [{ label: "VISUAL RULES", names: ["Logo system", "Color and type", "Imagery direction"] }, { label: "APPLICATION", names: ["Digital design", "Print materials", "Brand layouts"] }] }], [{ title: "ROLLOUT", items: [{ label: "DOCUMENTATION", names: ["Guideline document", "Design examples", "Asset organization"] }, { label: "SUPPORT", names: ["Team alignment", "Partner handoff", "Brand review"] }] }],
+    ] },
   },
-  remote: {
-    label: "Remote",
-    introTitle: "Brand guidelines for remote teams and partners.",
-    intro:
-      "Remote teams need clear rules that are easy to apply. This page explains the system in a practical way.",
-    details:
-      "We keep the structure flexible so distributed teams can follow the same visual standards without confusion.",
-    contentTitle: "A guide that works wherever your team works.",
-    content:
-      "This version focuses on clarity, adoption, and consistency across different working environments.",
-    points: [
-      "Ideal for distributed or multi-location teams.",
-      "Keeps branding aligned across platforms.",
-      "Makes design decisions faster.",
-    ],
-    focus: ["Flexible use", "Team adoption", "Consistency"],
-    highlights: ["Flexible service", "Multi-team fit", "Clear scope"],
+  zirakpur: {
+    label: "Zirakpur",
+    introTitle: "Brand Guidelines Services in Zirakpur",
+    intro: "Imazine Us helps Zirakpur businesses create a consistent identity with clear, easy-to-use brand guidelines. We document your logo, colors, fonts, imagery, and tone so your business looks recognizable across social media, websites, print, and promotions.",
+    details: "Whether you run a local service, retail business, or growing brand, a shared guide helps your team create materials with confidence. We provide practical rules and examples suited to the channels you use most.",
+    contentTitle: "A clear brand identity for your Zirakpur business",
+    content: "Our guidelines make it easier to maintain a consistent look and message as your business grows. Imazine Us brings your visual elements and brand voice together in one reference for employees, designers, printers, and marketing partners.",
+    points: ["Logo, color, typography, and brand voice guidance.", "Practical examples for social media, web, and print.", "A shared reference for your team and creative partners."],
+    focus: ["Brand identity rules", "Consistent marketing", "Team guidance"],
+    highlights: ["Zirakpur business needs", "Easy-to-use standards", "Recognizable brand presence"],
+    hero: { description: "Imazine Us creates practical brand guidelines for Zirakpur businesses, helping your identity stay consistent wherever customers see it.", serviceColumns: [
+      { label: "IDENTITY", items: ["Logo", "Colors", "Typography"] }, { label: "APPLICATION", items: ["Social Media", "Website", "Print"] }, { label: "GUIDANCE", items: ["Brand Voice", "Imagery", "Layouts"] },
+    ] },
+    context: { label: "ZIRAKPUR BRAND SYSTEM", title: "Make your business easy to recognize", overview: "Consistent brand details help customers recognize your business across every interaction.", details: "We create clear standards for your visual identity and messaging so your Zirakpur team can produce aligned materials without guesswork." },
+    concept: { label: "VISUAL RULES", title: "Simple guidance for everyday brand use", overview: "A practical guide helps people use your identity correctly in real situations.", details: "Imazine Us provides examples for logos, colors, fonts, images, and layouts across social media, print, and digital materials." },
+    creativeProcess: { eyebrow: "GUIDELINE DEVELOPMENT", title: "Turn your brand identity into usable direction", description: "We organize your brand elements, define clear usage rules, and prepare examples that help Zirakpur teams and partners create consistent work." },
+    makingOf: { eyebrow: "TEAM ENABLEMENT", title: "Give everyone the tools to represent your brand", description: "A clear reference makes it easier for employees, designers, and vendors to create materials that feel like they belong to your business." },
+    innovation: { eyebrow: "CONSISTENT ROLLOUT", title: "Keep your identity connected across channels", description: "From social posts to signage and website pages, Imazine Us helps Zirakpur businesses maintain one recognizable visual and verbal identity." },
+    credits: { heading: "BRAND GUIDELINE SERVICES", title: "Your brand guidelines team in Zirakpur", subtitle: "Imazine Us turns your identity into clear direction for everyday use.", columns: [
+      [{ title: "IDENTITY", items: [{ label: "VISUAL RULES", names: ["Logo usage", "Color palette", "Typography"] }, { label: "APPLICATION", names: ["Social templates", "Website elements", "Print examples"] }] }], [{ title: "ROLLOUT", items: [{ label: "DOCUMENTATION", names: ["Brand guide", "Usage examples", "Asset files"] }, { label: "SUPPORT", names: ["Team handoff", "Partner guidance", "Consistency checks"] }] }],
+    ] },
+  },
+  "dera-bassi": {
+    label: "Dera Bassi",
+    introTitle: "Brand Guidelines for Dera Bassi Businesses",
+    intro: "Imazine Us creates straightforward brand guidelines for Dera Bassi businesses that want a professional, consistent presence. We define how your logo, colors, typography, imagery, and messaging should appear across customer-facing materials.",
+    details: "From manufacturers and local services to retailers and growing companies, clear brand standards help every team member communicate with confidence. We make the guidance practical for your everyday marketing needs.",
+    contentTitle: "Make your Dera Bassi brand consistent everywhere",
+    content: "Your brand appears in many places, from digital campaigns and social posts to packaging, signs, and sales materials. Imazine Us creates a shared guide that helps your employees and partners keep every touchpoint connected.",
+    points: ["Clear logo, color, typography, and messaging rules.", "Examples for the digital and printed materials your business uses.", "A practical guide for employees, vendors, and partners."],
+    focus: ["Brand consistency", "Visual identity", "Everyday usage guidance"],
+    highlights: ["Dera Bassi business context", "Professional brand presentation", "Simple team adoption"],
+    hero: { description: "Build a consistent and professional identity with brand guidelines from Imazine Us for Dera Bassi businesses.", serviceColumns: [
+      { label: "IDENTITY", items: ["Logo", "Color", "Typography"] }, { label: "APPLICATION", items: ["Digital", "Print", "Signage"] }, { label: "GUIDANCE", items: ["Imagery", "Layouts", "Messaging"] },
+    ] },
+    context: { label: "DERA BASSI BRAND SYSTEM", title: "Create a clear foundation for every brand touchpoint", overview: "Customers should experience the same recognizable business whether they see a website, a product, or a printed brochure.", details: "Imazine Us documents the core standards that help Dera Bassi teams and partners present your identity consistently." },
+    concept: { label: "IDENTITY APPLICATION", title: "Make brand decisions simpler for your team", overview: "Clear examples remove uncertainty about how the brand should look and sound.", details: "We explain logo use, typography, colors, imagery, layouts, and messaging in a practical format your team can refer to as it creates new materials." },
+    creativeProcess: { eyebrow: "GUIDELINE DEVELOPMENT", title: "A practical guide shaped around your business", description: "We review your existing identity, define its visual and verbal standards, and create examples that fit the way your Dera Bassi business communicates." },
+    makingOf: { eyebrow: "TEAM ENABLEMENT", title: "Help employees and partners stay on brand", description: "A shared document gives your team, suppliers, and creative partners a clear reference for producing consistent marketing and business materials." },
+    innovation: { eyebrow: "CONSISTENT ROLLOUT", title: "One recognizable identity across every channel", description: "Imazine Us helps Dera Bassi businesses carry the same visual standards across digital campaigns, printed materials, signage, and customer communications." },
+    credits: { heading: "BRAND GUIDELINE SERVICES", title: "Your brand guidelines team in Dera Bassi", subtitle: "Imazine Us documents your identity in a clear system your business can use every day.", columns: [
+      [{ title: "IDENTITY", items: [{ label: "VISUAL RULES", names: ["Logo standards", "Colors and fonts", "Imagery direction"] }, { label: "APPLICATION", names: ["Digital materials", "Print examples", "Brand layouts"] }] }], [{ title: "ROLLOUT", items: [{ label: "DOCUMENTATION", names: ["Guideline document", "Usage examples", "Brand assets"] }, { label: "SUPPORT", names: ["Team handoff", "Partner alignment", "Brand checks"] }] }],
+    ] },
   },
 };
 

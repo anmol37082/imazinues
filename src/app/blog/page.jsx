@@ -1,7 +1,5 @@
 import BlogHero from "@/features/blog/components/BlogHero";
 import BlogGrid from "@/features/blog/components/BlogGrid";
-import BlogCTA from "@/features/blog/components/BlogCTA";
-import BlogFAQ from "@/features/blog/components/BlogFAQ";
 
 export const metadata = {
   title: "Blog | Your Digital Marketing Agency",
@@ -14,12 +12,6 @@ export default function BlogPage() {
     <main>
       <BlogHero />
       <BlogGrid />
-      <BlogCTA />
-      <BlogFAQ
-        title="Blog FAQs"
-        subtitle="Answers to common questions about Imazine Us blogs, topics, and expertise."
-        badge="FAQs"
-      />
     </main>
   );
 }

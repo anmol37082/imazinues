@@ -1,19 +1,36 @@
-"use client";
-
 import Image from "next/image";
+import Link from "next/link";
+import { blogs } from "../data/blogs";
 import styles from "./BlogContent.module.css";
 
 export default function BlogContent({ content = [] }) {
+  const topics = content
+    .map((block, index) => ({ ...block, index }))
+    .filter((block) => block.type === "heading");
+
   return (
     <section className={styles.blogContent}>
       <div className={styles.container}>
-        <div className={styles.wrapper}>
+        <div className={styles.layout}>
+          <aside className={`${styles.sidebar} ${styles.blogSidebar}`} aria-label="All blogs">
+            <p className={styles.sidebarTitle}>Explore blogs</p>
+            <nav className={styles.sidebarNav}>
+              {blogs.map((blog) => (
+                <Link key={blog.id} href={`/blog/${blog.slug}`} className={styles.blogLink}>
+                  <span>{blog.category}</span>
+                  {blog.title}
+                </Link>
+              ))}
+            </nav>
+          </aside>
+
+          <article className={styles.wrapper}>
           {content.map((block, index) => {
             switch (block.type) {
               case "heading":
                 return (
                   <div key={index} className={styles.headingWrapper}>
-                    <h2 className={styles.heading}>
+                    <h2 id={`blog-topic-${index}`} className={styles.heading}>
                       {block.text}
                     </h2>
                   </div>
@@ -71,6 +88,18 @@ export default function BlogContent({ content = [] }) {
                 return null;
             }
           })}
+          </article>
+
+          <aside className={`${styles.sidebar} ${styles.tocSidebar}`} aria-label="Table of contents">
+            <p className={styles.sidebarTitle}>On this page</p>
+            <nav className={styles.sidebarNav}>
+              {topics.map((topic) => (
+                <a key={topic.index} href={`#blog-topic-${topic.index}`} className={styles.topicLink}>
+                  {topic.text}
+                </a>
+              ))}
+            </nav>
+          </aside>
         </div>
       </div>
     </section>

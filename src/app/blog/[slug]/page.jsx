@@ -4,9 +4,6 @@ import { blogs } from "@/features/blog/data/blogs";
 
 import BlogBanner from "@/features/blog/components/BlogBanner";
 import BlogContent from "@/features/blog/components/BlogContent";
-import BlogFAQ from "@/features/blog/components/BlogFAQ";
-import RelatedBlogs from "@/features/blog/components/RelatedBlogs";
-import BlogCTA from "@/features/blog/components/BlogCTA";
 
 export async function generateStaticParams() {
   return blogs.map((blog) => ({
@@ -51,19 +48,6 @@ export default async function BlogDetailsPage({ params }) {
     <main>
       <BlogBanner blog={blog} />
       <BlogContent content={blog.content} />
-
-      <RelatedBlogs currentSlug={blog.slug} />
-      <BlogCTA />
-
-      {blog.faq && blog.faq.length > 0 && (
-        <BlogFAQ
-          faqs={blog.faq}
-          title={`Questions About ${blog.category}`}
-          subtitle={`Common questions about ${blog.title.toLowerCase()}.`}
-          badge="Q&A"
-          firstOpen={false}
-        />
-      )}
     </main>
   );
 }
